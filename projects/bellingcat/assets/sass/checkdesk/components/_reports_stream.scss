@@ -1,0 +1,297 @@
+// Incoming reports 
+//
+// Report stream in the sidebar
+// 
+// Approximate HTML structure is like this:
+//
+// #incoming-reports
+//   .report-row
+//     .report-row-container-facebook
+//       .report-content
+//         .media-type-fbpost
+//           div.oembed facebook
+//             a
+//             div.oembed-content
+//               #fb-root
+//                 span 
+//                   iframe
+//             .oembed-attributes
+//               .favicon
+//               .author
+//               .permalink
+//                 a
+//                   span.icon-link
+//       .report-attributes
+//          .report-meta
+
+// The layout
+//
+%incoming-reports-layout {
+  @include span-columns(8);
+  min-width: 350px;
+  .view-content {
+    @include span-columns(8, 8);
+    .report-row {
+      @extend %clearfix;
+      position: relative;
+      margin-bottom: $absolute-line-height / 6;
+    }
+  }
+  form {
+    margin-bottom: 0;
+  }
+}
+
+// Load more button
+%load-more {
+  .pager-load-more {
+    position: fixed;
+    bottom: 10px;
+    border-top: 1px solid $firefly5;
+    @include reset-box-model;
+    padding: $absolute-line-height / 4 0;
+    // Dropshadow for depth
+    &:before {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      top: -12px;
+      left: 0;
+      right: 0;
+      height: 12px;
+      width: 100%;
+      @include background-image(linear-gradient(rgba(255, 255, 255, 0), rgba($firefly, 0.02)));
+    }
+  }
+}
+
+// Blank slate: no reports yet
+//
+%incoming-reports-empty {
+  .view-empty {
+    clear: both;
+    float: $alpha;
+    font-style: italic;
+    padding: $gutter-width;
+    color: $grey;
+  }
+}
+
+.filters-summary {
+  position: relative;
+  margin-top: $absolute-line-height / 4;
+  border-top: 1px solid rgba($firefly, 0.02);
+  padding: $absolute-line-height / 4 $gutter-width * 2 $absolute-line-height / 5;
+  font-size: $small-font-size;
+  @include sans-serif-family;
+  color: $firefly40;
+  // Dropshadow for depth
+  &:before {
+    position: absolute;
+    content: "";
+    z-index: -1;
+    bottom: -12px;
+    left: 0;
+    right: 0;
+    height: 12px;
+    width: 100%;
+    @include background-image(linear-gradient(rgba($firefly, 0.02), rgba(255, 255, 255, 0)));
+  }
+}
+
+// Incoming reports
+// 
+// A list of the incoming media submitted with the bookmarklet.
+#incoming-reports {
+  font-size: $small-font-size;
+  color: $gray;
+  padding-top: $absolute-line-height / 2;
+}
+
+// while dragging
+.ui-draggable-dragging {
+  border: 3px solid rgb(239, 202, 43);
+  .report-row-container {
+    border: 3px solid rgb(239, 202, 43);
+    background-color: rgba(239, 202, 43, 0.1);
+  }
+}
+
+// Incoming reports report-row
+//
+// A single report
+#incoming-reports .report-row {
+  border: 3px solid $white;
+  // hide ajax throbber in dropdown
+  .ajax-progress-throbber {
+    display: none;
+  }
+  .report-row-container {
+    cursor: move;
+    border: 1px solid rgba($firefly, 0.2);
+    background-color: $white;
+    @include sans-serif-family;
+  }
+}
+
+// incoming report content
+#incoming-reports .report-content {
+  @extend %clearfix;
+  padding: $absolute-line-height / 3 $gutter-width 0;
+  // Thumbnail type reports
+  .media-type-thumbnail {
+    max-width: 100%;
+    .media-thumbnail img {
+      @include opacity(0.9);
+    }
+    // The title
+    .media-title {
+      margin: $absolute-line-height / 4 0;
+      font-size: $small-font-size;
+      line-height: 1.1;
+      color: $firefly60;
+    }
+  }
+}
+
+// Incoming Twitter reports
+#incoming-reports  .media-type-tweet {
+  div > a {
+    display: none;
+  }
+  iframe {
+    // min-width: 100% !important;
+    // width: 100% !important;
+    // padding: 0 !important;
+    // margin: 0 !important;
+    // border: 0 none !important;
+    // box-shadow: none !important;
+    // height: auto!important;
+ 
+  }
+  .favicon, .domain, .author {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+// Incoming FB reports
+#incoming-reports .media-type-fbpost {
+  // overflow: hidden;
+  // max-width: 100%;
+  // overflow: hidden;
+  // border-right: 1px solid #d3d6db;
+  // clear: both;
+  .oembed-title, .favicon, .domain, .author {
+    display: none;
+  }
+}
+
+// Incoming report statuses
+//
+%report-status-icons {
+  // Report status icons
+  .verified {
+    color: rgba(0, 140, 0, 1);
+    background-color: rgba(0, 140, 0, 0.2);
+    span {
+      @include icon(ok-sign, 16px);
+    }
+  }
+  .false {
+    color: $red;
+    background-color: lighten($red, 50%);
+    span {
+      @include icon(remove-sign, 16px);
+    }
+  }
+  .undetermined {
+    color: darken($orange, 10%);
+    background-color: lighten($orange, 30%);
+    span {
+      @include icon(question-sign, 16px);
+    }
+  }
+  .in_progress {
+    color: rgba(239, 202, 43, 1);
+    background-color: rgba(239, 202, 43, 0.2);
+    span {
+      @include icon(refresh, 16px);
+    }
+  }
+}
+
+// Incoming report published indicator
+//
+%report-published-indicator {
+  // report published on an update
+  .report-published {
+    position: absolute;
+    top: 0;
+    #{$alpha}: auto;
+    #{$omega}: 0;
+    z-index: 2;
+    // over the report thumbnail
+    height: 54px;
+    // background image height
+    width: 51px;
+    // background image width
+    background-color: transparent;
+    background-position: center center;
+    background-repeat: no-repeat;
+    @if $alpha == "left" {
+      background-image: url(../imgs/published.png);
+    }
+    @if $alpha == "right" {
+      background-image: url(../imgs/published-ar.png);
+    }
+    span {
+      display: none;
+    }
+  }
+  // report-published
+}
+
+// Incoming report attributes
+//
+#incoming-reports  .report-attributes {
+  @extend %report-status-icons;
+  @extend %report-published-indicator;
+  @extend %clearfix;
+  padding: $absolute-line-height / 4 $gutter-width;
+  border-top: 1px solid rgba($firefly, 0.1);
+  font-size: 14px;
+  display: block;
+  color: $firefly40;
+  background-color: rgba($firefly, 0.02);
+  cursor: move;
+  &:hover {
+    background-color: rgba($firefly, 0.05);
+  }
+  &:active {
+    background-color: lighten($link-color, 40);
+    color: $firefly60;
+  }
+  .report-meta {
+    float: $alpha;
+    color: $firefly40;
+  }
+}
+
+//
+// CTools modal report
+//
+#modalContent.modal-report {
+  z-index: $z-index-modal;
+}
+
+// Fixed only for normal screen sizes
+@media all and (min-height: 40em) {
+  #modalContent.modal-report {
+    position: fixed !important;
+    top: 200px !important;
+  }
+}

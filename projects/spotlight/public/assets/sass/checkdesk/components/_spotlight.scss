@@ -1,0 +1,168 @@
+// Border box model; 
+//
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// spotlight body
+body {
+  font-family: "Mercury SSm A", "Mercury SSm B";
+  font-weight: 500;
+}
+
+.container {
+  padding: 25px 100px;
+  margin: 0 auto;
+  line-height: 1.6;
+  width: 1200px;
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Mercury Display A', 'Mercury Display B';
+  font-weight: 700;
+  font-style: normal;
+}
+
+// spotlight typography
+h1 {
+  font-family: sans-serif;
+  float: left;
+  font-size: 1.3em;
+  padding: 20px 0 40px 0;
+  width: 20%;
+}
+
+.lede {
+  float: right;
+  width: 630px;
+  padding-top: 20px;
+  padding-right: 0;
+  clear: none;
+  font-family: sans-serif;
+  font-weight: 100;
+  line-height: 1.4;
+  font-size: 16px;
+}
+
+figure {
+  padding: 1em 0;
+}
+
+blockquote {
+  display: block;
+  float: left;
+  font-size: 26px;
+}
+
+.attribution {
+  padding-top: 1em;
+  padding-bottom: 4em;
+  text-align: right;
+  display: block;
+}
+
+img.big {
+  display: block;
+  clear: both;
+  max-width: 100%;
+  margin-top: 60px;
+}
+
+img.medium {
+  float: right;
+  clear: both;
+  display: inline-block;
+  width: 55%;
+}
+
+img {
+  max-width: 100%;
+}
+
+section {
+  padding: 62px 15px 15px 30px;
+  float: left;
+  clear: both;
+  width: 100%;
+  p {
+    font-size: 18px;
+    line-height: 1.65;
+    width: 50%;
+    margin: 0 2em 2em;
+    float: right;
+  }
+  aside {
+    width: 40%;
+    font-size: smaller;
+    font-family: sans-serif;
+    font-weight: 300;
+    float: left;
+    p {
+      width: 60%;
+      margin: 0 20%;
+    }
+    h2 {
+      margin: 0 0 0 20px;
+      font-size: 46px;
+      line-height: 1.0;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+    h3 {
+      font-style: italic;
+      font-size: 33px;
+      font-weight: 100;
+      font-family: serif;
+      margin-top: 0;
+      padding-left: 0.6em;
+      padding-top: 0;
+    }
+    .map-wrap {
+      width: 260px;
+      height: 260px;
+      border-radius: 100%;
+      overflow: hidden;
+    }
+  }
+}
+
+.footer-container {
+  clear: both;
+  padding: 1em;
+}
+
+.overview {
+  padding: 1em;
+  h4 {
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  p {
+    padding: 0;
+    margin: 0;
+    float: left;
+  }
+}
+
+// Debuggers
+//
+// section {
+//   border: 1px solid red;
+// }
+
+body.wireframe .container {
+  background: url("../../design/spec.png") top left no-repeat;
+}
+
+// blockquote {
+//   background: aqua;
+// }
+
+// aside {
+//   background-color: pink;
+// }

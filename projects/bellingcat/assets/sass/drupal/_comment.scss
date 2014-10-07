@@ -1,0 +1,15 @@
+#comments {
+  margin-top: 15px;
+}
+
+.indented {
+  margin-#{$from-direction}: 25px;
+}
+
+.comment-unpublished {
+  background-color: #fff4f4;
+}
+
+.comment-preview {
+  background-color: #ffffea;
+}

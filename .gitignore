@@ -1,0 +1,7 @@
+.bundle/
+.sass-cache/
+.DS_Store
+tmp/**/*
+bower_components/
+node_modules/
+.rnpm

@@ -1,0 +1,24 @@
+{
+  "name": "meedan-ui-support-bellingcat",
+  "version": "0.0.0",
+  "description": "A environment for rapid prototyping.",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meedan/meedan-ui-support.git"
+  },
+  "author": "cblow@meedan.net",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meedan/meedan-ui-support/issues"
+  },
+  "homepage": "https://github.com/meedan/meedan-ui-support",
+  "devDependencies": {
+    "grunt-sass": "~0.14.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt": "~0.4.5"
+  }
+}

@@ -1,0 +1,13 @@
+## Example Profile
+
+This is a meedan-ui-support project, e.g., a sandbox for experimental things with CSS, HTML and JS. See the parent `../README`.
+
+This project uses bower, grunt and npm.
+
+## Purpose of this project
+
+To experiment with a responsive multilingual profile for a translator.
+
+## Quick start
+
+npm install && gulp

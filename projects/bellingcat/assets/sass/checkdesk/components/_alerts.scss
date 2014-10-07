@@ -1,0 +1,108 @@
+// Checkdesk Alerts
+//
+// Alerts and "messages" appear for many kinds of notifications and errors
+// We establish the basic alert and then alternates.
+// 
+// TODO: formalize language "notifications" vs. "alerts" vs. "messages"
+
+// The alert container
+.messages,
+.user-alert {
+  padding: rem(8px) rem(14px);
+  margin-bottom: rem($absolute-line-height / 2);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  background-color: $warning-background;
+  border: 1px solid $warning-border;
+  @include border-radius($radius);
+  font-size: $small-font-size;
+}
+
+// Alert Typography
+.messages,
+.user-alert,
+.messages-heading {
+  color: $warning-text;
+  a,
+  a:hover {
+    color: $warning-link;
+    text-decoration: none;
+  }
+}
+
+// Alternate styles
+// ----------------
+.success {
+  @include icon(ok-sign, $base-font-size, $success-text, $icon-position);
+  background-color: $success-background;
+  border-color: $success-border;
+}
+
+.success,
+.success .messages-heading {
+  color: $success-text;
+}
+
+.danger,
+.error {
+  @include icon(warning-sign, $base-font-size, $error-text, $icon-position);
+  background-color: $error-background;
+  border-color: $error-border;
+}
+
+.danger,
+.error,
+.danger .messages-heading,
+.error .messages-heading {
+  color: $error-text;
+}
+
+.status {
+  @include icon(info-sign, $base-font-size, $info-text, $icon-position);
+  background-color: $info-background;
+  border-color: $info-border;
+}
+
+.status,
+.status .messages-heading {
+  color: $info-text;
+}
+
+.messages ul {
+  padding-left: $gutter-width * 2;
+  margin: rem($absolute-line-height / 4 0);
+}
+
+// Dismiss alert
+.alert .close {
+  float: $omega;
+  font-size: $small-font-size;
+  font-weight: bold;
+  line-height: 1;
+  color: $black;
+  @include text-shadow(0 1px 0 0 rgba(black, 0.8));
+  @include opacity(0.2);
+  &:hover {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+    @include opacity(0.4);
+  }
+}
+
+// Close icons
+.close,
+.user-alert-close {
+  float: $omega;
+  font-size: rem(20px);
+  font-weight: bold;
+  line-height: rem($absolute-line-height);
+  color: $black;
+  @include text-shadow(0 1px 0 rgba(255, 255, 255, 1));
+  @include opacity(0.2);
+  &:hover {
+    color: $black;
+    text-decoration: none;
+    cursor: pointer;
+    @include opacity(0.4);
+  }
+}

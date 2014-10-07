@@ -1,0 +1,83 @@
+ul.pager {
+  margin-top: 1rem;
+  float: $from-direction;
+  clear: both;
+}
+
+// From drupal pager
+.pager {
+  @include reset-box-model;
+  @include reset-list-style;
+  @extend %clearfix;
+  margin: $absolute-line-height 0;
+  font-size: $small-font-size;
+  li {
+    display: inline;
+    margin: 0 2px 0 0;
+    padding: 0;
+    & > a,
+    & > span {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: $white;
+      border: 1px solid $gray-lighter;
+      @include border-radius(15px);
+    }
+    & > a:hover {
+      color: $gray;
+      text-decoration: none;
+      background-color: darken($gray-lighter, 1%);
+    }
+  }
+  .next > a,
+  .pager .next > span {
+    float: right;
+  }
+  .previous > a,
+  .previous > span {
+    float: left;
+  }
+  .disabled > a,
+  .disabled > a:hover,
+  .disabled > span {
+    color: $gray-light;
+    background-color: $white;
+    cursor: default;
+  }
+}
+
+// Load more pager from drupal
+.pager-load-more {
+  @extend %clearfix;
+  @include reset-list-style;
+  padding: $absolute-line-height / 2 0;
+  float: none;
+  clear: both;
+  position: relative;
+  text-align: center;
+  a {
+    width: 70%;
+    text-align: center;
+    font-size: $small-font-size;
+    font-weight: 700;
+    color: $firefly40;
+    background-color: rgba(255, 255, 255, 0.8);
+    @if $from-direction == "left" {
+      letter-spacing: 0.05em;
+    }
+    &:hover {
+      color: $white;
+      background-color: $identity;
+      border: 1px solid $identity;
+    }
+    @include border-radius(4px);
+  }
+  .ajax-progress-throbber {
+    position: absolute;
+    top: 4px;
+    #{$omega}: $gutter-width;
+    .throbber {
+      background: url("../imgs/icons/loader_white.gif");
+    }
+  }
+}

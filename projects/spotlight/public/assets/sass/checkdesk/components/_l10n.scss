@@ -1,0 +1,26 @@
+// Translation client
+//
+#l10n-client {
+  display: block !important;
+  visibility: visible !important;
+  form {
+    width: 100%;
+    .form-item {
+      textarea {
+        clear: both;
+        float: none;
+      }
+    }
+  }
+}
+
+// These are utility classes that may be mixed in either RTL or LTR content.
+.rtl {
+  text-align: right;
+  direction: rtl;
+}
+
+.ltr {
+  text-align: left;
+  direction: ltr;
+}

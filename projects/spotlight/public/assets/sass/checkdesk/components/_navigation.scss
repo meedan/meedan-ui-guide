@@ -1,0 +1,327 @@
+// 1. Drupal Navigation at the very top.
+// 2. Checkdesk #main-menu navigation
+
+// Navigation icons are always set as before, both RTL and LTR
+$icon-position: "before";
+
+// Icons in the navigation
+@mixin nav-icons($size: $xsmall-font-size, $color: $nav-color) {
+  $margin: 0 $gutter-width / 2 0 0;
+  @if $from-direction == right {
+    $margin: 0 0 0 $gutter-width / 2;
+  }
+  // add a post
+  a[href*="add/post"] {
+    @include icon("pencil", $size, $color, $icon-position, $margin);
+  }
+  // add a report
+  li.submit-report a {
+    @include icon("bookmark", $size, $color, $icon-position, $margin);
+  }
+  // add a story
+  a[href*="add/discussion"] {
+    @include icon("tag", $size, $color, $icon-position, $margin);
+  }
+  // home
+  li.home a {
+    @include icon("home", $size + 4, $color, $icon-position);
+  }
+  // tour
+  a[href*="checkdesk_take_tour"] {
+    // We were using an icon but it doesn"t look good...
+    font-weight: bold;
+  }
+  // additional menu options
+  li.additional a.dropdown-toggle {
+    @include icon("ellipsis-horizontal", $size, $color, $icon-position);
+  }
+}
+
+// Nav item container
+//
+// This makes any element behave properly with 1 or more <.nav-item> children.
+// It is used on both the outer parent and *some* children (where it is necessary to override).
+// This helps standardize the implementation of the contained nav-items
+// This is necessary because some nav-items are h2s, a, or divs.
+@mixin nav-item-container {
+  @include reset-box-model;
+  position: relative;
+  display: inline-block;
+  float: $from-direction;
+  clear: none;
+  background: $nav-container-bkg-color;
+  line-height: $nav-line-height;
+}
+
+// "Nav item" — single nav unit in the navigation
+//
+// Could be a dropdown, header, anchor or div; and can contain an img.
+@mixin nav-item {
+  @include reset-box-model;
+  // Transitions
+  @include meedan-transition($nav-color, $nav-active-color, ".2s", "color");
+  @content;
+  position: relative;
+  display: inline-block;
+  float: $from-direction;
+  // z-index: $zindexDropdown + 1;
+  & > a {
+    color: $nav-color;
+    display: inline-block;
+    letter-spacing: .05px;
+    line-height: $nav-height - 4px;
+    padding: 0 $nav-gutter;
+    text-decoration: none;
+  }
+  // remove border for first items
+  &:first-child {
+    border-#{$from-direction}: 0 none;
+  }
+  // Hover style for chunky element
+  &:hover {
+    background-color: $nav-hover-bkg-color;
+    color: $nav-hover-color;
+    & > a:hover {
+      color: $nav-hover-color;
+      &:before {
+        color: $nav-hover-color;
+      }
+    }
+  }
+  // Base style for active chunky element
+  &.active,
+  &.active:hover,
+  &:active {
+    @include border-radius($radius $radius 0 0);
+    margin-bottom: -7px;
+    background-color: $nav-active-bkg-color;
+    color: $nav-active-color;
+    font-weight: 700;
+    // An anchor inside the chunky block
+    & > a,
+    & > a:hover,
+    & > a:active {
+      padding-bottom: 8px;
+      color: $nav-active-color;
+      cursor: default;
+      // don"t forget the icons
+      &:before {
+        color: $nav-active-color;
+      }
+    }
+  }
+  span.avatar img {
+    @include reset-box-model;
+    // images in nav items
+    width: $base-font-size;
+    height: $base-font-size;
+  }
+}
+
+// This nav contains two rows of nav-items with icons.
+nav[role="navigation"] {
+  @include sans-serif-family;
+  // Apply nav icons
+  // Warning: The line height must remain more than the icons" generated height.
+  @include nav-icons(15px);
+  float: $from-direction;
+  padding: $nav-font-size / 2 0;
+  width: 100%;
+  background-color: $nav-container-bkg-color;
+  font-size: $small-font-size;
+  li:last-of-type:after {
+    display: block;
+    float: $from-direction;
+    clear: both;
+  }
+  // set the distance from the bottom of the button top of the dropdown
+  .dropdown-menu,
+  #block-views-my-notifications-block .content {
+    top: $nav-line-height * 2;
+  }
+  .nav {
+    @include nav-item-container;
+    margin: 0;
+    padding: 0;
+    // A container for some nav items
+    & > div {
+      @include nav-item-container;
+      // reapply container reset
+      h2 {
+        @include nav-item;
+        // Why is this nav item an h2? CGB
+     
+      }
+    }
+    & > a.btn,
+    & > li {
+      @include nav-item;
+      // default: the rest of the li"s in the navigation
+   
+    }
+  }
+}
+
+// padding for the home icon
+#main-menu {
+  padding-#{$alpha}: $gutter-width;
+}
+
+#navigation-region,
+#user-menu {
+  float: $omega;
+  // at a larger breakpoint these fall in line
+  span.avatar img {
+    width: $nav-icon-height;
+    height: $nav-icon-height;
+    margin-#{$alpha}: $nav-gutter;
+  }
+  // add bell icon for notifications.
+  .icon-bell {
+    @include icon("bell");
+  }
+  li.open {
+    a.dropdown-toggle {
+      text-shadow: none;
+    }
+  }
+  // hide ajax throbber in dropdown
+  .ajax-progress-throbber {
+    display: none;
+  }
+}
+
+// Position dropdown menu
+#main-menu {
+  .dropdown-menu {
+    #{$from-direction}: 0;
+    #{opposite-position($from-direction)}: auto;
+    @if $from-direction == left {
+      @include border-radius(0 $radius $radius $radius);
+    }
+    @else {
+      @include border-radius($radius 0 $radius $radius);
+    }
+  }
+}
+
+#block-locale-language {
+  .language-switcher-locale-url {
+    li {
+      @include nav-item;
+      &.active {
+        display: none;
+      }
+    }
+  }
+}
+
+// Drupal toolbars at the very top
+//
+div.region-page-top {
+  #toolbar {
+    // This can be cleaned up with toolbar css is removed.
+    @include box-shadow(0 0 0 0);
+    // disable box shadow
+    position: fixed;
+    z-index: $z-index-fixed-navbar;
+    overflow: hidden;
+    // removes scroll?
+    margin: 0;
+    padding: 0;
+    background: $nav-container-bkg-color;
+    li {
+      @include reset-box-model;
+      a {
+        padding: $gutter-width;
+        color: $nav-color;
+      }
+    }
+    div.toolbar-menu {
+      // height: $toolbarMenuHeight;
+      // padding: 0;
+      // background-color: $nav-container-bkg-color;
+   
+    }
+  }
+}
+
+// make navbar fixed at the top
+.navbar-fixed-top {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: $z-index-fixed-navbar;
+}
+
+// when toolbar is present
+.toolbar .navbar-fixed-top {
+  top: $toolbar-height;
+}
+
+body.toolbar-drawer {
+  #main #widgets {
+    top: $toolbar-height + $navbar-height !important;
+  }
+  #main {
+    #content {
+      margin-top: $toolbar-height + $navbar-height !important;
+    }
+  }
+}
+
+// My account dropdown in the primary navigation
+//
+#my-account {
+  width: 438px;
+  // User picture
+  //
+  .user-picture,
+  .info,
+  #account-menu {
+    float: $from-direction;
+    padding: 0 $gutter-width;
+  }
+  .user-picture {
+    width: 60px;
+    height: 60px;
+    a {
+      @include reset-box-model;
+    }
+  }
+  .info {
+    max-width: 200px;
+    a.username {
+      @include reset-box-model;
+      color: $grey;
+      font-weight: bold;
+      font-size: $small-font-size;
+    }
+    .linked-account {
+      .icon-twitter {
+        @include icon("twitter-sign", 21.5px, $twitter-blue);
+        &:before {
+          margin: 0;
+        }
+      }
+      a {
+        @include reset-box-model;
+        display: inline;
+        color: $firefly;
+      }
+      small {
+        font-size: $font-size-mini;
+        color: $grey;
+      }
+    }
+    .bio {
+      word-wrap: break-word;
+    }
+  }
+  #account-menu {
+    float: opposite-position($from-direction);
+    a {
+      @include dropdown-link;
+    }
+  }
+}
