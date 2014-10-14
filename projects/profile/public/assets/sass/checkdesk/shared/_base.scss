@@ -77,6 +77,10 @@ $font-size-mini: $base-font-size * 0.75;
 //
 // @import "susy/sass/susyone";
 
+* {
+  @include box-sizing("border-box");
+}
+
 $from-direction: left;
 $alpha: $from-direction;
 $omega: opposite-position($from-direction);
@@ -145,8 +149,6 @@ $gutter-width: 10px;
 $debug: true;
 
 $total-columns: 24;
-
-
 
 @mixin container() {
   @extend clearfix;
