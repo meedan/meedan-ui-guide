@@ -1,4 +1,4 @@
-## Meedan UI
+## Bridge UI
 
 A team reference for UI production techniques and build processes.
 

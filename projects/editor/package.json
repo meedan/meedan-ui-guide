@@ -1,22 +1,22 @@
 {
-  "name": "bridge-ui",
-  "version": "0.7.3",
+  "name": "meedan-ui-profile",
+  "version": "0.0.1",
   "private": "true",
-  "description": "a small HTML prototype environment",
-  "main": "echo \"No main specified\"",
+  "description": "a small HTML prototype",
+  "main": "gruntfile.js",
   "scripts": {
-    "test": "echo \"No test specified\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/meedan/bridge-ui.git"
+    "url": "https://github.com/meedan/meedan-ui.git"
   },
   "author": "cblow@meedan.net",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/meedan/bridge-ui/issues"
+    "url": "https://github.com/meedan/meedan-ui/issues"
   },
-  "homepage": "https://github.com/meedan/bridge-ui",
+  "homepage": "https://github.com/meedan/meedan-ui",
   "devDependencies": {
     "grunt-contrib-sass": "~0.8.1",
     "grunt-contrib-watch": "~0.6.1",
@@ -27,7 +27,9 @@
     "gulp-sass": "~0.7.3",
     "gulp": "~3.8.8",
     "gulp-webp": "~1.0.0",
-    "gulp-watch": "~1.0.4",
+    "gulp-watch": "~1.0.4"
+  },
+  "dependencies": {
     "rnpm": "~0.3.1"
   }
 }
