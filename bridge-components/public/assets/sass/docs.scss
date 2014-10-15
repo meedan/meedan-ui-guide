@@ -1,0 +1,29 @@
+// Meta documentation
+.docs {
+  @include columns(1);
+  background: $firefly90;
+  color: $firefly;
+  a {
+    color: $firefly;
+  }
+  h1 {
+    background-color: $firetruck-red;
+    color: white;
+    padding: 10px;
+    @extend %font--hfj-whitney-bolditalic;
+  }
+  .container {
+    margin-top: 100px;
+    background: $firefly10;
+    padding: 0.5em 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 50%;
+    p {
+      padding: 0 1em;
+    }
+    ul {
+      list-style-type: bullet;
+    }
+  }
+}

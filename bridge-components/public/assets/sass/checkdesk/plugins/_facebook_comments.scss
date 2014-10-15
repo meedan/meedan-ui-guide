@@ -1,0 +1,19 @@
+.fb-comments-header {
+  cursor: pointer;
+}
+
+.fb-comments {
+  display: none !important;
+}
+
+.fb-comments.fb-comments-visible {
+  display: block !important;
+}
+
+// Full width
+.fb-comments-wrapper,
+.fb-comments > span,
+.fb-comments,
+.fb-comments iframe[style] {
+  width: 100% !important;
+}

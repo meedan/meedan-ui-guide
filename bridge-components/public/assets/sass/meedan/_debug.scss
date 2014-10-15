@@ -1,0 +1,106 @@
+// # Meedan Debugging 
+// 
+// These are mixins for debugging things with CSS borders and labels carefully applied.
+
+// ## Deugging colors
+// 
+// Applies features common to all types of debugging
+@mixin debug-colors($color: $default-debug-color) {
+  border-top: 1px solid $color !important;
+  background-color: rgba($color, 0.8);
+}
+
+// Label
+// Useful for debugging
+@mixin label($color: #ff628c, $selector: div, $label-text: false) {
+  position: relative;
+  display: block;
+  &:before {
+    display: inline-block;
+    background-color: $color;
+    position: absolute;
+    top: 0px;
+    #{opposite-position($from-direction)}: 0;
+    line-height: $small-font-size;
+    font-size: $smallest-font-size;
+    color: #000000;
+    content: $selector;
+    @if $label-text {
+      content: "#{$label-text}: #{$selector}";
+    }
+  }
+}
+
+// Debug by selector
+//
+// $selectors - a list of selectors: ".first, .second, .third"
+// $want_labels - boolean option to enable labels in addition to colors.
+// For use on a container element such as a <form>.
+// Limitations: it only handles up to six colors right now.
+// TODO: refactor binding between debug_by_selector and debug_drupal_form
+//
+// Examples for explosive bright debuggers on your elements: 
+// 
+//   @include debug('.self, li, .form-actions, span, .form-item, a');
+//   @include debug('.self, *');
+//
+@mixin debug($selectors, $want-labels: true) {
+  @each $s in $selectors {
+    @if $s == ".self" {
+      @include debug-colors($color);
+    }
+    @else {
+      #{$s} {
+        @include debug-colors($color);
+        @if $want-labels == true {
+          @include label($color, $s);
+        }
+      }
+    }
+  }
+}
+
+// Common Drupal 7 form classnames
+$drupal-layout-selectors: ".content", "div.tabs", "#foo", "#content-footer", ".something";
+$drupal-report-selectors: ".report", ".oembed", ".report-description", ".report .container", ".report-activity", ".report-content p";
+$drupal-fyre-selectors: ".fyre-editor", ".fyre-comment-stream", ".fyre-stream-sort", "#foo", "#foo";
+$drupal-form-selectors: ".item-list", ".form-item", ".form-actions", ".something", ".content form";
+
+// Mixin for all Drupal debugs
+@mixin debug-drupal($reports: true, $forms: true, $layout: true, $livefyre: true) {
+  @if $forms {
+    @include debug-drupal-forms;
+  }
+  @if $reports {
+    @include debug-drupal-reports;
+  }
+  @if $layout {
+    @include debug-drupal-layout;
+  }
+  @if $livefyre {
+    @include debug-livefyre;
+  }
+}
+
+// ========================================================================
+// Third party debugs
+
+// Livefyre debug
+// @mixin debug_livefyre { @include debug_by_selector($drupal_fyre_selectors); }
+
+// Quick debugger
+@mixin d {
+  @debug "Debugging!";
+  & {
+    background-color: rgba(cyan, 0.2);
+  }
+  & > div {
+    background-color: red;
+  }
+  & > span {
+    background-color: pink;
+  }
+  * {
+    border-top: 1px solid rgba(cyan, 0.5);
+  }
+}

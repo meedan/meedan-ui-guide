@@ -1,0 +1,84 @@
+@if $from-direction == left {
+  $position: "after";
+}
+
+@if $from-direction == right {
+  $position: "before";
+}
+
+// Icons on updates
+.icon-time {
+  @include icon(time, $base-font-size, $firefly20);
+}
+
+.icon-share {
+  @include icon(share, $small-font-size, $firefly20);
+}
+
+.icon-edit-sign {
+  @include icon(edit-sign, $small-font-size, $firefly20);
+}
+
+// Icons on the reports
+.icon-link {
+  @include icon(link, $large-font-size);
+}
+
+.icon-ellipsis-horizontal {
+  @include icon(ellipsis-horizontal, $large-font-size);
+}
+
+.icon-flag {
+  @include icon(flag, $large-font-size);
+}
+
+.icon-share {
+  @include icon(share, $large-font-size);
+}
+
+// report flag icon is red when flagged
+.report
+.flagged .icon-flag {
+  @include icon(flag, $large-font-size, $red);
+}
+
+// icon modifiers
+.icon-muted {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.icon-light {
+  color: $white;
+}
+
+.icon-dark {
+  color: $gray-dark;
+}
+
+// verified
+.icon-ok-sign {
+  color: rgba(0, 140, 0, 1);
+  @include icon(ok-sign, $base-font-size);
+}
+
+// in-progress
+.icon-random {
+  color: rgba(239, 202, 43, 1);
+  @include icon(random, $small-font-size);
+}
+
+.icon-circle {
+  color: rgba(239, 202, 43, 1);
+}
+
+// undetermined
+.icon-question-sign {
+  color: $orange;
+  @include icon(question-sign, $base-font-size);
+}
+
+// false
+.icon-remove-sign {
+  color: $red;
+  @include icon(remove-sign, $base-font-size);
+}
