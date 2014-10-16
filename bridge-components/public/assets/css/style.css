@@ -232,55 +232,64 @@ a {
     .docs .container ul {
       list-style-type: bullet; }
 
-.comic li.andre--working, .comic li.andre--thinking, .comic li.andre--happy, .comic li.andre--confused {
+.comic li.tre--working, .comic li.tre--working, .comic li.tre--happy, .comic li.tre--confused, .comic li.clarice--happy {
   position: relative; }
-  .comic li.andre--working:after, .comic li.andre--thinking:after, .comic li.andre--happy:after, .comic li.andre--confused:after {
+  .comic li.tre--working:after, .comic li.tre--working:after, .comic li.tre--happy:after, .comic li.tre--confused:after, .comic li.clarice--happy:after {
     content: "";
     position: absolute;
     z-index: 1;
     display: block;
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 100px;
     right: 0;
     bottom: 0;
-    background: url("../images/clarice.png") no-repeat;
-    background-position: 0 0; }
+    background-size: cover; }
 
-.comic li.andre--thinking {
-  border: 1px solid aqua; }
-  .comic li.andre--thinking:after {
-    background: url("../images/andre-thinking.png") no-repeat; }
-.comic li.andre--happy {
-  border: 1px solid pink; }
-  .comic li.andre--happy:after {
-    background: url("../images/andre-happy.png") no-repeat; }
-.comic li.andre--confused {
-  border: 1px solid blue; }
-  .comic li.andre--confused:after {
-    background: url("../images/andre-confused.png") no-repeat; }
-.comic li.clarice:after {
-  background: url("../images/clarice.png") no-repeat; }
+.comic li.tre--working:after {
+  background: url("../images/tre--thinking.png") no-repeat; }
+.comic li.tre--happy:after {
+  background: url("../images/tre--happy.png") no-repeat; }
+.comic li.tre--confused:after {
+  background: url("../images/tre--confused.png") no-repeat; }
+.comic li.clarice--happy:after {
+  background: url("../images/clarice--happy.png") no-repeat; }
 
 .comics {
-  -webkit-columns: 4;
-  -moz-columns: 4;
-  -ms-columns: 4;
-  -o-columns: 4;
-  columns: 4; }
+  width: 600px;
+  margin: 0 auto;
+  padding: 0; }
+  .comics section {
+    margin: 0;
+    background-color: white; }
+    .comics section ol {
+      padding: 0; }
 
 .comic li {
   background-color: #e0e0e0;
-  margin: 1em;
+  margin: 1em auto;
   display: inline-block;
   list-style-type: none;
-  width: 30%;
-  height: 300px;
-  padding: 1em; }
+  height: 280px;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #000; }
+
+.pain-point {
+  background: #b80900;
+  color: white; }
+
+table {
+  border: 1px solid red; }
+  table th {
+    border: 1px solid green; }
+  table td {
+    border: 1px solid green; }
 
 .comic li p {
   background: white;
   color: #283743;
-  font: "marker felt", "comic sans", "courier", monospace;
+  font-family: "courier", monospace;
+  margin: 0;
   padding: 1em;
   position: relative; }
 .comic li p:after {

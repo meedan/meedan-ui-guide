@@ -5,43 +5,40 @@
     position: absolute;
     z-index: 1;
     display: block;
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 100px;
     right: 0;
     bottom: 0;
-    background: url("../images/clarice.png") no-repeat;
-    background-position: 0 0;
+    background-size: cover;
   }
 }
 
 %comic-states {
-  &.andre--working {
+  &.tre--working {
     @extend %comic-state-base;
   }
-  &.andre--thinking {
-    border: 1px solid aqua;
+  &.tre--working {
     @extend %comic-state-base;
     &:after {
-      background: url("../images/andre-thinking.png") no-repeat;
+      background: url("../images/tre--thinking.png") no-repeat;
     }
   }
-  &.andre--happy {
-    border: 1px solid pink;
+  &.tre--happy {
     @extend %comic-state-base;
     &:after {
-      background: url("../images/andre-happy.png") no-repeat;
+      background: url("../images/tre--happy.png") no-repeat;
     }
   }
-  &.andre--confused {
-    border: 1px solid blue;
+  &.tre--confused {
     @extend %comic-state-base;
     &:after {
-      background: url("../images/andre-confused.png") no-repeat;
+      background: url("../images/tre--confused.png") no-repeat;
     }
   }
-  &.clarice {
+  &.clarice--happy {
+    @extend %comic-state-base;
     &:after {
-      background: url("../images/clarice.png") no-repeat;
+      background: url("../images/clarice--happy.png") no-repeat;
     }
   }
 }
@@ -50,17 +47,46 @@ $mercury-grey: #e8e8e8;
 $alto-grey: #e0e0e0;
 
 .comics {
-  @include columns(4);
+  width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  // border: 1px solid red;
+  section {
+    ol {
+      padding: 0;
+    }
+    margin: 0;
+    background-color: white;
+  }
 }
 
 %comic-panel-style {
   background-color: $alto-grey;
-  margin: 1em;
+  margin: 1em auto;
   display: inline-block;
   list-style-type: none;
-  width: 30%;
-  height: 300px;
-  padding: 1em;
+  height: 280px;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid #000;
+}
+
+.pain-point {
+  // display: none;
+  background: $firetruck-red;
+  color: white;
+}
+
+.comics {}
+
+table {
+  border: 1px solid red;
+  th {
+    border: 1px solid green;
+  }
+  td {
+    border: 1px solid green;
+  }
 }
 
 .comic li {
@@ -69,7 +95,8 @@ $alto-grey: #e0e0e0;
   p {
     background: white;
     color: $firefly90;
-    font: "marker felt", "comic sans", "courier", monospace;
+    font-family: "courier", monospace;
+    margin: 0;
     padding: 1em;
     position: relative;
   }
