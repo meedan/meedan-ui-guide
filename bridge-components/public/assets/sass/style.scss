@@ -22,12 +22,26 @@
 
 @import "bridge/typography";
 
+// Documentation site style
+//
 @import "docs";
 
+// User Scenario Comics
+//
+@import "comics";
+
+// The default body
 body {
-  @include columns(2);
   padding: 1em;
 }
+
+// body.editor {
+//   @include columns(1);
+// }
+
+// body.profile {
+//   @include columns(2);
+// }
 
 button {
   line-height: 1.7;

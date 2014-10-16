@@ -46,7 +46,6 @@ $xx-large-font-size: 48px;
 $xxx-large-font-size: 60px;
 $largest-font-size: 72px;
 
-
 // These are legacy values from bootstrap
 $font-size-large: $base-font-size * 1.25;
 $font-size-small: $base-font-size * 0.85;
@@ -151,12 +150,12 @@ $debug: true;
 
 $total-columns: 24;
 
-@mixin container() {
+@mixin container {
   @extend clearfix;
 }
 
 @mixin span-columns($columns: 6, $total-columns: 24, $gutter-width: $gutter-width) {
-  width: ($columns / $total-columns) * 100%;
+  width: $columns / $total-columns * 100%;
 }
 
 @mixin reset-columns {
@@ -165,6 +164,4 @@ $total-columns: 24;
   margin-left: auto;
 }
 
-@mixin pad($foo: bar, $baz: bazbar, $quux: quuxbar) {
-
-}
+@mixin pad($foo: bar, $baz: bazbar, $quux: quuxbar) {}

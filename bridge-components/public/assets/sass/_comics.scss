@@ -1,0 +1,85 @@
+%comic-state-base {
+  position: relative;
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 160px;
+    height: 160px;
+    right: 0;
+    bottom: 0;
+    background: url("../images/clarice.png") no-repeat;
+    background-position: 0 0;
+  }
+}
+
+%comic-states {
+  &.andre--working {
+    @extend %comic-state-base;
+  }
+  &.andre--thinking {
+    border: 1px solid aqua;
+    @extend %comic-state-base;
+    &:after {
+      background: url("../images/andre-thinking.png") no-repeat;
+    }
+  }
+  &.andre--happy {
+    border: 1px solid pink;
+    @extend %comic-state-base;
+    &:after {
+      background: url("../images/andre-happy.png") no-repeat;
+    }
+  }
+  &.andre--confused {
+    border: 1px solid blue;
+    @extend %comic-state-base;
+    &:after {
+      background: url("../images/andre-confused.png") no-repeat;
+    }
+  }
+  &.clarice {
+    &:after {
+      background: url("../images/clarice.png") no-repeat;
+    }
+  }
+}
+
+$mercury-grey: #e8e8e8;
+$alto-grey: #e0e0e0;
+
+.comics {
+  @include columns(3);
+}
+
+%comic-panel-style {
+  background-color: $alto-grey;
+  margin: 1em;
+  display: inline-block;
+  list-style-type: none;
+  width: 30%;
+  height: 300px;
+  padding: 1em;
+}
+
+.comic li {
+  @extend %comic-states;
+  @extend %comic-panel-style;
+  p {
+    background: white;
+    color: $firefly90;
+    font: "marker felt", "comic sans", "courier", monospace;
+    padding: 1em;
+    position: relative;
+  }
+  p:after {
+    content: ' ';
+    height: 0;
+    position: absolute;
+    bottom: -16px;
+    width: 0;
+    border: 10px solid transparent;
+    border-top-color: #fff;
+  }
+}
