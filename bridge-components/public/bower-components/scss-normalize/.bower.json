@@ -1,0 +1,22 @@
+{
+  "name": "scss-normalize",
+  "version": "2.1.3",
+  "main": "_normalize.scss",
+  "author": "Reda Lemeden",
+  "ignore": [
+    ".gitignore",
+    "bower.json",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "homepage": "https://github.com/kaishin/scss-normalize",
+  "_release": "2.1.3",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.3",
+    "commit": "c99ccb3556e3ab386a710a6c23707aa31e28de74"
+  },
+  "_source": "git://github.com/kaishin/scss-normalize.git",
+  "_target": "~2.1.3",
+  "_originalSource": "scss-normalize"
+}
