@@ -4,7 +4,7 @@ var reload          = browserSync.reload;
 var sass            = require('gulp-sass');
 var scssFiles       = "./public/assets/sass/**/*.scss";
 var cssCompileDir   = "./public/assets/css";
-var bowerDir        = "./bower_components/";
+var bowerDir        = "./public/bower-components";
 
 var serverConfig = {
   server: {

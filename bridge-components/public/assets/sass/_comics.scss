@@ -50,7 +50,7 @@ $mercury-grey: #e8e8e8;
 $alto-grey: #e0e0e0;
 
 .comics {
-  @include columns(3);
+  @include columns(4);
 }
 
 %comic-panel-style {
