@@ -276,45 +276,6 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.feed-icon a {
-  display: none; }
-
-#skip a:link, #skip a:hover, #skip a:visited {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden; }
-#skip a:active, #skip a:focus {
-  position: static;
-  width: auto;
-  height: auto; }
-
-div.views-admin-links {
-  width: auto; }
-
-div.block {
-  position: relative; }
-  div.block .edit {
-    display: none;
-    position: absolute;
-    right: -20px;
-    top: -5px;
-    z-index: 40;
-    padding: 3px 8px 0;
-    font-size: 10px;
-    line-height: 16px;
-    background-color: white;
-    border: 1px solid #cccccc; }
-    div.block .edit a {
-      display: block;
-      border: 0;
-      padding: 0;
-      margin: 0; }
-  div.block:hover .edit {
-    display: block; }
-
 @font-face {
   font-family: "FontAwesome";
   src: font-files("fontawesome-webfont-webfont.woff", "fontawesome-webfont-webfont.ttf"); }
@@ -324,58 +285,6 @@ div.block {
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
  * readers do not read off random characters that represent icons */
 /* incase an inverted custom gradient isn't specified */
-body {
-  font-family: "Whitney SSm A", "Whitney SSm B";
-  font-weight: 400;
-  font-style: normal; }
-
-table th {
-  font-family: "Whitney SSm A", "Whitney SSm B";
-  font-weight: 700;
-  font-style: normal; }
-
-.docs h1 {
-  font-family: "Whitney SSm A", "Whitney SSm B";
-  font-weight: 700;
-  font-style: italic; }
-
-h1, h2 {
-  font-family: 'Mercury Display A', 'Mercury Display B';
-  font-weight: 700;
-  font-style: normal; }
-
-body {
-  color: #404d59; }
-
-a {
-  color: #10212f; }
-
-.docs {
-  -webkit-columns: 1;
-  -moz-columns: 1;
-  -ms-columns: 1;
-  -o-columns: 1;
-  columns: 1;
-  background: #283743;
-  color: #10212f; }
-  .docs a {
-    color: #10212f; }
-  .docs h1 {
-    background-color: #b80900;
-    color: white;
-    padding: 10px; }
-  .docs .container {
-    margin-top: 100px;
-    background: #e7e8ea;
-    padding: 0.5em 0;
-    margin: 0 auto;
-    border-radius: 10px;
-    width: 50%; }
-    .docs .container p {
-      padding: 0 1em; }
-    .docs .container ul {
-      list-style-type: bullet; }
-
 .comic li.tre--working, .comic li.tre--working, .comic li.tre--happy, .comic li.tre--confused, .comic li.clarice--happy {
   position: relative; }
   .comic li.tre--working:after, .comic li.tre--working:after, .comic li.tre--happy:after, .comic li.tre--confused:after, .comic li.clarice--happy:after {
@@ -464,20 +373,31 @@ table {
   border: 10px solid transparent;
   border-top-color: #fff; }
 
-body {
-  padding: 1em; }
-
-button {
-  line-height: 1.7; }
-
-section {
-  break-inside: avoid-column;
-  padding: 2em;
-  background-color: #e7e8ea;
-  margin: 0 1em 1em 1em; }
-
-ul li {
-  list-style-type: none; }
+.docs {
+  -webkit-columns: 1;
+  -moz-columns: 1;
+  -ms-columns: 1;
+  -o-columns: 1;
+  columns: 1;
+  background: #283743;
+  color: #10212f; }
+  .docs a {
+    color: #10212f; }
+  .docs h1 {
+    background-color: #b80900;
+    color: white;
+    padding: 10px; }
+  .docs .container {
+    margin-top: 100px;
+    background: #e7e8ea;
+    padding: 0.5em 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 50%; }
+    .docs .container p {
+      padding: 0 1em; }
+    .docs .container ul {
+      list-style-type: bullet; }
 
 .translation-editor {
   color: #c3c3c3;
@@ -533,6 +453,47 @@ ul li {
   width: 25%;
   font-size: 0.8em;
   clear: none; }
+
+body {
+  padding: 1em; }
+
+button {
+  line-height: 1.7; }
+
+section {
+  break-inside: avoid-column;
+  padding: 2em;
+  background-color: #e7e8ea;
+  margin: 0 1em 1em 1em; }
+
+ul li {
+  list-style-type: none; }
+
+body {
+  font-family: "Whitney SSm A", "Whitney SSm B";
+  font-weight: 400;
+  font-style: normal; }
+
+table th {
+  font-family: "Whitney SSm A", "Whitney SSm B";
+  font-weight: 700;
+  font-style: normal; }
+
+.docs h1 {
+  font-family: "Whitney SSm A", "Whitney SSm B";
+  font-weight: 700;
+  font-style: italic; }
+
+h1, h2 {
+  font-family: 'Mercury Display A', 'Mercury Display B';
+  font-weight: 700;
+  font-style: normal; }
+
+body {
+  color: #404d59; }
+
+a {
+  color: #10212f; }
 
 html body.i18n-ar, .rtl {
   text-align: right;

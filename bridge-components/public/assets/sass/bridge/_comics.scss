@@ -1,3 +1,5 @@
+// User scenarios
+// 
 %comic-state-base {
   position: relative;
   &:after {
@@ -46,9 +48,6 @@
     }
   }
 }
-
-$mercury-grey: #e8e8e8;
-$alto-grey: #e0e0e0;
 
 .comics {
   width: 600px;

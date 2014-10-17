@@ -1,0 +1,25 @@
+// Bridge layouts
+
+%primary {
+  float: left;
+  width: 65%;
+}
+
+%secondary {
+  float: left;
+  width: 25%;
+  font-size: 0.8em;
+  clear: none;
+}
+
+.layout-primary {
+  @extend %primary;
+}
+
+.layout-secondary {
+  @extend %secondary;
+}
+
+.layout-tertiary {
+  @extend %primary;
+}

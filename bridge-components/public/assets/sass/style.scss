@@ -13,136 +13,19 @@
 
 // ## meedan common base styles
 //
-@import "meedan/drupal";
 @import "meedan/debug";
 @import "meedan/transition";
 @import "meedan/icons/icon_helpers";
 @import "meedan/icons/fontawesome";
 @import "meedan/gradients";
 
+// ## bridge 
+// 
+@import "bridge/colors";
+@import "bridge/comics";
+@import "bridge/docs";
+@import "bridge/editor";
+@import "bridge/layout";
+@import "bridge/profile";
+@import "bridge/shared";
 @import "bridge/typography";
-
-// Documentation site style
-//
-@import "docs";
-
-// User Scenario Comics
-//
-@import "comics";
-
-// The default body
-body {
-  padding: 1em;
-}
-
-// body.editor {
-//   @include columns(1);
-// }
-
-// body.profile {
-//   @include columns(2);
-// }
-
-button {
-  line-height: 1.7;
-}
-
-// Basic grey boxes
-section {
-  break-inside: avoid-column;
-  padding: 2em;
-  background-color: $firefly10;
-  margin: 0 1em 1em 1em;
-}
-
-ul li {
-  list-style-type: none;
-}
-
-.translation-editor {
-  color: #c3c3c3;
-  width: 100%;
-  padding: 1em;
-}
-
-%blocky {
-  height: 2em;
-  width: 2em;
-  background: rgba(0, 0, 0, 0.1);
-  margin: 0.5em;
-  float: left;
-}
-
-.timestamp {
-  float: right;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-.avatar {
-  @extend %blocky;
-}
-
-.translation-support {
-  display: block;
-  background: rgba(0, 0, 0, 0.1);
-  div {
-    @extend %blocky;
-    width: 20%;
-    height: 20%;
-    max-height: 100px;
-    max-width: 100px;
-    font-size: 10px;
-    padding: 10px;
-  }
-}
-
-.translation {
-  clear: both;
-  padding-top: 10px;
-}
-
-.comment {
-  p {
-    margin: 0.5em;
-  }
-  .avatar {
-    margin: 0;
-    margin-right: 0.5em;
-    border-radius: 100%;
-  }
-  h4 {
-    padding: 0;
-    margin: 0;
-    line-height: 2em;
-  }
-}
-
-.reply {
-  padding-left: 20%;
-}
-
-// LAYOUT
-
-%primary {
-  float: left;
-  width: 65%;
-}
-
-%secondary {
-  float: left;
-  width: 25%;
-  font-size: 0.8em;
-  clear: none;
-}
-
-.layout-primary {
-  @extend %primary;
-}
-
-.layout-secondary {
-  @extend %secondary;
-}
-
-.layout-tertiary {
-  @extend %primary;
-}

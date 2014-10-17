@@ -1,0 +1,21 @@
+ // Bridge shared styles
+ //
+body {
+  padding: 1em;
+}
+
+button {
+  line-height: 1.7;
+}
+
+// Basic grey boxes
+section {
+  break-inside: avoid-column;
+  padding: 2em;
+  background-color: $firefly10;
+  margin: 0 1em 1em 1em;
+}
+
+ul li {
+  list-style-type: none;
+}
