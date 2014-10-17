@@ -50,7 +50,6 @@ $alto-grey: #e0e0e0;
   width: 600px;
   margin: 0 auto;
   padding: 0;
-  // border: 1px solid red;
   section {
     ol {
       padding: 0;
@@ -69,23 +68,41 @@ $alto-grey: #e0e0e0;
   width: 100%;
   padding: 0.5em;
   border: 1px solid #000;
+  line-height: 1.4;
 }
 
 .pain-point {
   // display: none;
   background: $firetruck-red;
   color: white;
+  padding: 0.5em 0.3em;
+  position: absolute; 
+  left: -200px;
+  width: 200px;
+  &:before { 
+    content: "OOEW pain point — ";
+    text-transform: uppercase;
+  }
 }
 
 .comics {}
+.comic {
+  position: relative;
+}
 
 table {
-  border: 1px solid red;
+  width: 55%;
+  border: 1px solid rgba(0,0,0,0.5);
+  font-size: 0.5em;
+  margin: 1em;
+  clear: both;
+  bottom: 10px;
+  position: absolute;
   th {
-    border: 1px solid green;
+    @extend %font--hfj-whitney-bold;
   }
   td {
-    border: 1px solid green;
+    border: 1px solid rgba(0,0,0,0.5);
   }
 }
 
