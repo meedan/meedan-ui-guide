@@ -251,13 +251,17 @@ a {
     background-size: cover; }
 
 .comic li.tre--working:after {
-  background: url("../images/tre--thinking.png") no-repeat; }
+  background: url("../images/tre--working.png") no-repeat;
+  content: "T. Working"; }
 .comic li.tre--happy:after {
-  background: url("../images/tre--happy.png") no-repeat; }
+  background: url("../images/tre--happy.png") no-repeat;
+  content: "T."; }
 .comic li.tre--confused:after {
-  background: url("../images/tre--confused.png") no-repeat; }
+  background: url("../images/tre--confused.png") no-repeat;
+  content: "T."; }
 .comic li.clarice--happy:after {
-  background: url("../images/clarice--happy.png") no-repeat; }
+  background: url("../images/clarice--happy.png") no-repeat;
+  content: "C."; }
 
 .comics {
   width: 600px;

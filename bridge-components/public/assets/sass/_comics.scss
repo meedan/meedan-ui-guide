@@ -20,25 +20,29 @@
   &.tre--working {
     @extend %comic-state-base;
     &:after {
-      background: url("../images/tre--thinking.png") no-repeat;
+      background: url("../images/tre--working.png") no-repeat;
+      content: "T. Working";
     }
   }
   &.tre--happy {
     @extend %comic-state-base;
     &:after {
       background: url("../images/tre--happy.png") no-repeat;
+      content: "T.";
     }
   }
   &.tre--confused {
     @extend %comic-state-base;
     &:after {
       background: url("../images/tre--confused.png") no-repeat;
+      content: "T.";
     }
   }
   &.clarice--happy {
     @extend %comic-state-base;
     &:after {
       background: url("../images/clarice--happy.png") no-repeat;
+      content: "C.";
     }
   }
 }
