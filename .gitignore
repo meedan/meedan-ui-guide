@@ -3,5 +3,6 @@
 .DS_Store
 tmp/**/*
 bower_components/
+bower-components/
 node_modules/
 .rnpm
