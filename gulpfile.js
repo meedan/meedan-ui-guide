@@ -12,13 +12,12 @@ var serverConfig = {
   }
 };
 
-// browser-sync task for starting the server.
+// start browser-sync
 gulp.task('browser-sync', function () {
   browserSync(serverConfig);
 });
 
-// Sass task, will run when any SCSS files change & BrowserSync
-// will auto-update browsers
+// parse sass
 gulp.task('sass', function () {
   return gulp.src(scssFiles)
     .pipe(sass({includePaths: [bowerDir]}))
@@ -26,11 +25,7 @@ gulp.task('sass', function () {
     .pipe(reload({stream: true}));
 });
 
-// "manually" reload browsers instead of stream-injection
-// e.g. for when you edit the html
-// 
-// via http://www.browsersync.io/docs/gulp/
-// 
+// reload bs without stream
 gulp.task('bs-reload', function () {
     browserSync.reload();
 });
