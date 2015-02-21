@@ -15,9 +15,11 @@
 }
 
 %icon-base {
+  width: 25px;
+  height: 25px;
   background-position: 50% 45%;
   background-repeat: no-repeat;
-  padding: 0.5em 1em;
+  background-size: cover;
   @extend %hide-text;
   @include opacity(0.8);
   &:hover {
@@ -60,13 +62,17 @@
 }
 
 %icon-heart {
-  background-image: url("/assets/images/icons/heart-7.png");
-  background-image: url("/assets/images/icons/crown-7.png");
+  // background-image: url("/assets/images/icons/heart-7.png");
+  // background-image: url("/assets/images/icons/crown-7.png");
   background-image: url("/assets/images/icons/star-7.png");
 }
 
-%icon-settings {
+%icon-branch {
   background-image: url("/assets/images/icons/spanner-7.png");
+}
+
+%icon-settings {
+  // background-image: url("/assets/images/icons/spanner-7.png");
   background-image: url("/assets/images/icons/gear-7.png");
 }
 
