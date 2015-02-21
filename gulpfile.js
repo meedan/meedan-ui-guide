@@ -16,6 +16,13 @@ var dusthtml      = require('gulp-dust-html');
 var pkg           = require('./package.json');
 var config        = require('./config/config.js');
 
+
+var scssFiles     = "www/assets/**/*.scss";
+var cssCompileDir = "www/assets/css";
+var bowerPaths    = [ 
+    "bower_components"
+];
+
 //
 // Dust template example
 //
@@ -109,11 +116,6 @@ gulp.task('lint', function() {
 
 // SASS
 //
-var scssFiles     = "src/sass/**/*.scss";
-var cssCompileDir = "www/css";
-var bowerPaths    = [ 
-    "bower_components"
-];
 gulp.task('sass', function () {
   return gulp.src(scssFiles)
     .pipe(sass({

@@ -1,23 +1,65 @@
 <!DOCTYPE html>
-<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
 <head>
-  <title>Bridge</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bridge Components</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6545452/628984/css/fonts.css" />
+
+    <link rel="stylesheet" href="assets/css/sass/style.css">
+
+    <!-- <script src="assets/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script> -->
 </head>
-<body>
 
-  <p> <code><%= @source.text %></code></p>
-  <p>Source Author<%= @source.author_name %></code></small></p>
-  <p>Jen la teksto de mia traduko. Ĝi iras ĉirkaŭ du linioj kiel tiu.<code><%= @translation.text %></code></p>
-  <p>Translation Author. <code><%= @translation.author_name %></code></p>
-  <ol>
-    <code><% @translation.mentions.each do |mention| %></code>
-      <li>Mentioned on twitter.com. <code><%= render_mention(@translation.provider, mention) %></code></li>
-    <code><% end %></code>
-  </ol>
+<body class="bridge-translation-page">
 
+    <div class="container">
+
+        <section class="bridge--header">
+            <div class="logo">Bridge</div>
+            <div class="page-byline">Posted by @meedanbridgeusername Feb 8 2015</div>
+            <div class="share">Share</div>
+            <div class="flag">Flag as inappropriate</div>
+            <div class="bookmark">Bookmark for later</div>
+            <ul class="tags">
+                <li class="tag">Tags</li>
+                <li class="tag">for</li>
+                <li class="tag">this</li>
+                <li class="tag">page</li>
+            </ul>
+        </section>
+        <section class="bridge--bridgeout">
+            <div class="translation-image"><img src="http://placehold.it/550x350" /> </div>
+        </section>
+        <section class="bridge--translation"></section>
+
+
+        <p> <code><%= @source.text %></code>
+        </p>
+        <p>Source Author
+            <code><%=@ source.author_name %></code>
+        </p>
+        <p>Jen la teksto de mia traduko. Ĝi iras ĉirkaŭ du linioj kiel tiu.<code><%= @translation.text %></code>
+        </p>
+        <p>Translation Author. <code><%= @translation.author_name %></code>
+        </p>
+        <ol>
+            <code><% @translation.mentions.each do |mention| %></code>
+            <li>Mentioned on twitter.com. <code><%= render_mention(@translation.provider, mention) %></code>
+            </li>
+            <code><% end %></code>
+        </ol>
+    </div>
 
 </body>
+
 </html>
