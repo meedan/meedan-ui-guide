@@ -119,6 +119,7 @@ gulp.task('lint', function() {
 gulp.task('sass', function () {
   return gulp.src(scssFiles)
     .pipe(sass({
+        errLogToConsole: true,
         includePaths: bowerPaths, 
         outputStyle: "compressed"
     }))

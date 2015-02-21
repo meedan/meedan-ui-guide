@@ -27,31 +27,41 @@
         <section class="bridge--header">
             <div class="logo">Bridge</div>
             <div class="page-byline">Posted by @meedanbridgeusername Feb 8 2015</div>
-            <div class="share">Share</div>
-            <div class="flag">Flag as inappropriate</div>
-            <div class="bookmark">Bookmark for later</div>
-            <ul class="tags">
-                <li class="tag">Tags</li>
-                <li class="tag">for</li>
-                <li class="tag">this</li>
-                <li class="tag">page</li>
+            <div class="page-actions">
+                <div class="share">Share</div>
+                <div class="flag">Flag as inappropriate</div>
+                <div class="bookmark">Bookmark for later</div>
+            </div>
+            <ul class="page-tags">
+                <li class="tag"><a href="#">Tags</a></li>
+                <li class="tag"><a href="#">for</a></li>
+                <li class="tag"><a href="#">this</a></li>
+                <li class="tag"><a href="#">page</a></li>
             </ul>
         </section>
         <section class="bridge--bridgeout">
             <div class="translation-image"><img src="http://placehold.it/550x350" /> </div>
         </section>
-        <section class="bridge--translation"></section>
+        <section class="bridge--source">
+            <p> <code><%= @source.text %></code>
+            </p>
+            <p>Source Author
+                <code><%=@ source.author_name %></code>
+            </p>    
+        </section>
+        <section class="bridge--translation">
+            <p>
+                Jen la teksto de mia traduko. Ĝi iras ĉirkaŭ du linioj kiel tiu.
+                <code><%= @translation.text %></code>
+            </p>
+            <p>
+                <span classs="translation-author">Translation Author. </span>
+                <code><%= @translation.author_name %></code>
+            </p>    
+        </section>
 
-
-        <p> <code><%= @source.text %></code>
-        </p>
-        <p>Source Author
-            <code><%=@ source.author_name %></code>
-        </p>
-        <p>Jen la teksto de mia traduko. Ĝi iras ĉirkaŭ du linioj kiel tiu.<code><%= @translation.text %></code>
-        </p>
-        <p>Translation Author. <code><%= @translation.author_name %></code>
-        </p>
+        
+        
         <ol>
             <code><% @translation.mentions.each do |mention| %></code>
             <li>Mentioned on twitter.com. <code><%= render_mention(@translation.provider, mention) %></code>

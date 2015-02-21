@@ -1,21 +1,53 @@
 // Translation page
 
+$tanzanite-blue: #4910db;
+$xiaowei-pink: #db107c;
+
 .bridge-translation-page {
-  border: 10px solid pink;
-  background-image: url("/assets/images/translation-page.jpg");
-  p {}
-  .logo {
-    padding: 5em 2em;
-    width: 150px;
-    font-size: larger;
-    background-color: rgba(yellow, 0.7);
-  }
+  background: url("/assets/images/translation-page.jpg") no-repeat;
+  padding: 0;
   .container {
     @include opacity(0.5);
     background-color: rgba(cyan, 0.5);
     border: 1px solid black;
-    padding: 5em;
     width: 850px;
-    margin-left: 5em;
+  }
+  .logo {
+    width: 150px;
+    height: 80px;
+    padding: 20px 10px 10px 30px;
+    font-size: 25px;
+    background-color: rgba(yellow, 0.7);
+    float: left;
+  }
+  section {
+    padding: 0;
+    border: 1px solid pink;
+  }
+  .bridge--header {
+    .page-byline {
+      width: 250px;
+      margin: 0 auto;
+      font-size: 12px;
+    }
+    .page-actions {
+      float: right;
+      width: 200px;
+      background-color: red;
+    }
+    ul.page-tags {
+      background-color: $tanzanite-blue;
+      text-align: center;
+      clear: both;
+      li {
+        display: inline-block;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 3em;
+      }
+    }
   }
 }
