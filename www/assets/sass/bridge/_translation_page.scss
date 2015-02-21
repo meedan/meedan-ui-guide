@@ -4,7 +4,7 @@ $tanzanite-blue: #4910db;
 $xiaowei-pink: #db107c;
 
 .bridge-translation-page {
-  background: url("/assets/images/translation-page.jpg") no-repeat;
+  // background: url("/assets/images/translation-page.jpg") no-repeat;
   padding: 0;
   .container {
     @include opacity(0.5);
@@ -22,7 +22,6 @@ $xiaowei-pink: #db107c;
   }
   section {
     padding: 0;
-    border: 1px solid pink;
   }
   .bridge--header {
     .page-byline {
@@ -32,17 +31,32 @@ $xiaowei-pink: #db107c;
     }
     .page-actions {
       float: right;
-      width: 200px;
-      background-color: red;
+      width: 300px;
+      li {
+        float: left;
+        &.icon {
+          @extend %icon-base;
+          @extend %icon-flag;
+        }
+      }
     }
-    ul.page-tags {
+    .page-tags {
       background-color: $tanzanite-blue;
       text-align: center;
       clear: both;
+      padding: 0% 20%;
       li {
         display: inline-block;
+        float: left;
+        border: 1px solid green;
+        &.primary {
+          clear: both;
+          width: 100%;
+          border: 2px solid blue;
+        }
       }
       a {
+        font-size: 1.3em;
         color: white;
         text-decoration: none;
         display: inline-block;
