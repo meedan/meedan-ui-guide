@@ -28,14 +28,14 @@
             <div class="logo">Bridge</div>
             <div class="page-byline">Posted by <a href="#">@meedanbridgeusername</a> Feb 8 2015</div>
             <ul class="page-actions">
-                <li class="share icon">Share</li>
-                <li class="flag icon">Flag</li>
-                <li class="bookmark icon">Bookmark</li>
-                <li class="feedback icon">Help</li>
+                <li class="icon share">Share</li>
+                <li class="icon flag">Flag</li>
+                <li class="icon bookmark">Bookmark</li>
+                <li class="icon help">Help</li>
             </ul>
             <ul class="page-tags">
                 <li class="primary tag"><a href="#">#primarytag</a></li>
-                <li class="tag"><a href="#">More</a></li>
+                <li class="tag"><a href="#">more</a></li>
                 <li class="tag"><a href="#">tags</a></li>
                 <li class="tag"><a href="#">for</a></li>
                 <li class="tag"><a href="#">this</a></li>
@@ -43,9 +43,11 @@
             </ul>
         </section>
         <section class="bridge--bridgeout">
+            <h2>Bridge out</h2>
             <div class="translation-image"><img src="http://placehold.it/550x350" /> </div>
         </section>
         <section class="bridge--source">
+            <h2>Source</h2>
             <p> <code><%= @source.text %></code>
             </p>
             <p>Source Author
@@ -53,6 +55,7 @@
             </p>    
         </section>
         <section class="bridge--translation">
+            <h2>Translation</h2>
             <p>
                 Jen la teksto de mia traduko. Ĝi iras ĉirkaŭ du linioj kiel tiu.
                 <code><%= @translation.text %></code>
@@ -64,13 +67,15 @@
         </section>
 
         
-        
-        <ol>
-            <code><% @translation.mentions.each do |mention| %></code>
-            <li>Mentioned on twitter.com. <code><%= render_mention(@translation.provider, mention) %></code>
-            </li>
-            <code><% end %></code>
-        </ol>
+        <section class="bridge-trackbacks">
+          <h2>Buzz</h2>
+          <ol>
+              <code><% @translation.mentions.each do |mention| %></code>
+              <li>Mentioned on twitter.com. <code><%= render_mention(@translation.provider, mention) %></code>
+              </li>
+              <code><% end %></code>
+          </ol>
+        </section>
     </div>
 
 </body>

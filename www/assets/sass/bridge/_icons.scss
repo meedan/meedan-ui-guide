@@ -6,16 +6,28 @@
 //   @extend %icon-base; 
 //   @extend %icon-share;
 //  }
-//
+
+// http://www.zeldman.com/2012/03/01/replacing-the-9999px-hack-new-image-replacement/
+%hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 %icon-base {
-  background-position: top left;
+  background-position: 50% 45%;
   background-repeat: no-repeat;
-  padding-left: 1em;
+  padding: 0.5em 1em;
+  @extend %hide-text;
+  @include opacity(0.8);
+  &:hover {
+    @include opacity(1);
+    cursor: pointer;
+  }
 }
 
 %icon-share {
   background-image: url("/assets/images/icons/paper-plane-7.png");
-  // background-image: url("/assets/images/icons/share-7.png");
 }
 
 %icon-flag {
@@ -27,80 +39,80 @@
 }
 
 %icon-bookmark {
-  background-image: url("/assets/images/icons/24-around-7.png");
+  background-image: url("/assets/images/icons/star-7.png");
 }
 
 %icon-message {
-  background: url("/assets/images/icons/message-7.png");
+  background-image: url("/assets/images/icons/message-7.png");
 }
 
 %icon-layers {
-  background: url("/assets/images/icons/layers-7.png");
+  background-image: url("/assets/images/icons/layers-7.png");
 }
 
 %icon-notification {
-  // background: url("/assets/images/icons/bell-7.png");
-  background: url("/assets/images/icons/bell-off-7.png");
+  // background-image: url("/assets/images/icons/bell-7.png");
+  background-image: url("/assets/images/icons/bell-off-7.png");
 }
 
 %icon-tag {
-  background: url("/assets/images/icons/tag-7.png");
+  background-image: url("/assets/images/icons/tag-7.png");
 }
 
 %icon-heart {
-  background: url("/assets/images/icons/heart-7.png");
-  // background: url("/assets/images/icons/crown-7.png");
-  // background: url("/assets/images/icons/star-7.png");
+  background-image: url("/assets/images/icons/heart-7.png");
+  background-image: url("/assets/images/icons/crown-7.png");
+  background-image: url("/assets/images/icons/star-7.png");
 }
 
 %icon-settings {
-  background: url("/assets/images/icons/spanner-7.png");
-  // background: url("/assets/images/icons/gear-7.png");
+  background-image: url("/assets/images/icons/spanner-7.png");
+  background-image: url("/assets/images/icons/gear-7.png");
 }
 
 %icon-help {
-  background: url("/assets/images/icons/lifebuoy-7.png");
+  background-image: url("/assets/images/icons/lifebuoy-7.png");
 }
 
 %icon-feedback {
-  // background: url("/assets/images/icons/lifebuoy-7.png");
-  background: url("/assets/images/icons/emoticon-smile-7.png");
-  // background: url("/assets/images/icons/emoticon-sad-7.png");
+  // background-image: url("/assets/images/icons/lifebuoy-7.png");
+  // background-image: url("/assets/images/icons/emoticon-smile-7.png");
+  background-image: url("/assets/images/icons/emoticon-sad-7.png");
 }
 
 %icon-wallet {
-  background: url("/assets/images/icons/wallet-7.png");
+  background-image: url("/assets/images/icons/wallet-7.png");
 }
 
 %icon-compose {
-  background: url("/assets/images/icons/write-simple-7.png");
-  // background: url("/assets/images/icons/pencil-7.png");
+  // background-image: url("/assets/images/icons/write-simple-7.png");
+  background-image: url("/assets/images/icons/pencil-7.png");
 }
 
 %icon-security {
-  background: url("/assets/images/icons/lock-7.png");
+  background-image: url("/assets/images/icons/lock-7.png");
 }
 
 %icon-checklist {
-  background: url("/assets/images/icons/file-list-tick-7.png");
+  background-image: url("/assets/images/icons/file-list-tick-7.png");
 }
 
 %icon-winner {
-  background: url("/assets/images/icons/trophy-7.png");
+  background-image: url("/assets/images/icons/trophy-7.png");
 }
 
 %icon-attachment {
-  background: url("/assets/images/icons/file-three-7.png");
+  background-image: url("/assets/images/icons/file-three-7.png");
 }
 
 %icon-arrows {
-  background: url("/assets/images/icons/connect-arrow-left-right-7.png");
+  background-image: url("/assets/images/icons/connect-arrow-left-right-7.png");
 }
 
 %icon-log {
-  background: url("/assets/images/icons/clock-stopwatch-7.png");
+  background-image: url("/assets/images/icons/clock-stopwatch-7.png");
 }
 
 %icon-user {
-  background: url("/assets/images/icons/circle-user-7.png");
+  background-image: url("/assets/images/icons/circle-user-7.png");
 }
