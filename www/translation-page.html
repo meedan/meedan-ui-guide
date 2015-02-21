@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bridge</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <p> <code><%= @source.text %></code></p>
+  <p>Source Author<%= @source.author_name %></code></small></p>
+  <p>Jen la teksto de mia traduko. Ĝi iras ĉirkaŭ du linioj kiel tiu.<code><%= @translation.text %></code></p>
+  <p>Translation Author. <code><%= @translation.author_name %></code></p>
+  <ol>
+    <code><% @translation.mentions.each do |mention| %></code>
+      <li>Mentioned on twitter.com. <code><%= render_mention(@translation.provider, mention) %></code></li>
+    <code><% end %></code>
+  </ol>
+
+
+</body>
+</html>
