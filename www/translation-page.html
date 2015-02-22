@@ -55,10 +55,7 @@
         </section>
         <section class="bridge--translation">
             <h2>Translation</h2>
-            <p>
-                Jen la teksto de mia traduko. Ĝi iras ĉirkaŭ du linioj kiel tiu.
-                <code><%= @translation.text %></code>
-            </p>
+            <p>Jen la teksto de mia traduko. Ĝi iras ĉirkaŭ du linioj kiel tiu.</p>
             <p>
                 <span classs="translation-author">Translation Author. </span>
                 <code><%= @translation.author_name %></code>
@@ -68,13 +65,15 @@
 
         
         <section class="bridge-trackbacks">
+        <!-- Render mentions of the translation on a given translation page -->
           <h2>Buzz</h2>
-          <ol>
-              <code><% @translation.mentions.each do |mention| %></code>
-              <li>Mentioned on twitter.com. <code><%= render_mention(@translation.provider, mention) %></code>
-              </li>
-              <code><% end %></code>
-          </ol>
+          <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p><a href="https://twitter.com/meedan">@meedan</a> <a href="https://twitter.com/Zeinobia">@Zeinobia</a> <a href="https://twitter.com/NoraYounis">@NoraYounis</a> <a href="https://twitter.com/NaderElsayed13">@NaderElsayed13</a> it is not cairo stadium</p>&mdash; Mohamed El-Kholy (@kholy) <a href="https://twitter.com/kholy/status/564661077502611459">February 9, 2015</a></blockquote>
+          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          
+          <blockquote class="twitter-tweet" data-conversation="none" lang="en"><p>correction - Air Defense Stadium - thx <a href="https://twitter.com/kholy">@kholy</a> cc: <a href="https://twitter.com/NoraYounis">@NoraYounis</a> <a href="https://twitter.com/NaderElsayed13">@NaderElsayed13</a></p>&mdash; meedan (@meedan) <a href="https://twitter.com/meedan/status/564664161976590337">February 9, 2015</a></blockquote>
+        <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
         </section>
     </div>
 
