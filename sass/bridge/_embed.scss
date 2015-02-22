@@ -1,0 +1,115 @@
+// ## Style Guide
+//
+// .moduleName {}
+// .moduleName__element {}
+// .moduleName__element–is–modified {}
+
+// ## Main structure
+//
+body.bridgeEmbed {
+  @include animation("fade-in 2s");
+  font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  margin: 0 auto;
+  padding: 1em 0.5em;
+  background-color: lighten($warm-color, 15%);
+  @media all and (min-width: 500px) {
+    @include columns(2);
+    #bridgeEmbed__footer {
+      -webkit-column-span: all;
+      -moz-column-span: all;
+      column-span: all;
+    }
+    .bridgeEmbed__item {
+      @include column-break(inside, avoid);
+    }
+  }
+  @media all and (min-width: 1550px) {
+    @include columns(3);
+  }
+  @media all and (min-width: 1900px) {
+    @include columns(4);
+    @include column-gap(1em);
+  }
+}
+
+.byline {
+  color: rgba($photo-feb10-blue, 1);
+  margin-top: 0.5em;
+  font-size: smaller;
+}
+
+.bridgeEmbed__item {
+  background-color: rgba(white, 0.8);
+  @include border-radius(8px);
+  padding: 0.3em 1em 1em;
+  & > iframe {
+    margin-bottom: 0 !important;
+    // background-color: white;
+ 
+  }
+  margin: 1em auto;
+  position: relative;
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.bridgeEmbed__item-translation {
+  color: rgba(black, 0.9);
+  overflow: hidden;
+  .translation {
+    padding: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+    a {
+      color: rgba(darken($another-blue, 10%), 1);
+      text-decoration: none;
+      border-bottom: 2px solid $light-blue;
+      &:hover {
+        border-bottom: 2px solid darken($light-blue, 10%);
+      }
+    }
+  }
+  .byline {
+    font-style: italic;
+    font-weight: 700;
+    color: $byline-color;
+    padding: 0.5em 2em 1em;
+    margin: 0;
+    &:before {
+      content: "—";
+    }
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.bridgeEmbed__item-comment {
+  padding: 0 1em;
+  font-size: smaller;
+  color: $translation-comment-blue;
+  font-weight: 200;
+  clear: both;
+  a {
+    color: $translation-comment-link-blue;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+#bridgeEmbed__footer {
+  display: block;
+  padding: 2em;
+  text-align: center;
+  @include opacity(0.3);
+}
+
+.bridgeEmbed__item:first-of-type .bridgeEmbed__item-embedly-card {
+  @extend %loading;
+  display: block;
+}

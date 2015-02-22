@@ -4,11 +4,11 @@ $tanzanite-blue: #4910db;
 $xiaowei-pink: #db107c;
 
 .bridge-translation-page {
-  // background: url("/assets/images/translation-page.jpg") no-repeat;
+  background: url("/assets/images/translation-page.jpg") no-repeat;
   padding: 0;
   .container {
-    // @include opacity(0.5);
-    // background-color: rgba(cyan, 0.5);
+    @include opacity(0.5);
+    background-color: rgba(cyan, 0.5);
     width: 800px;
   }
   .logo {
@@ -19,9 +19,8 @@ $xiaowei-pink: #db107c;
     float: left;
   }
   section {
-    padding: 0;
-    width: 600px;
-    padding: 2em;
+    width: 550px;
+    padding: 0.5em 2.5em;
     & > h2 {
       border-bottom: 1px solid grey;
     }
@@ -79,11 +78,12 @@ $xiaowei-pink: #db107c;
         }
       }
       a {
-        font-size: 1.3em;
+        font-size: 1.2em;
         color: white;
         text-decoration: none;
         display: inline-block;
-        padding: 0.5em 1em;
+        padding: 0.3em 1em;
+        font-weight: 200;
       }
     }
   }
@@ -92,7 +92,7 @@ $xiaowei-pink: #db107c;
 .branch {
   background-color: $xiaowei-pink;
   padding: 1em;
-  font-size: 15px;
+  font-size: 12px;
   color: white;
   text-decoration: none;
   float: right;

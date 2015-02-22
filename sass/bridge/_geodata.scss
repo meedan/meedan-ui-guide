@@ -1,0 +1,53 @@
+// The geodata on an item
+
+%pin-to-corner {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 100;
+}
+
+%icon-size {
+  width: 12px;
+  height: 12px;
+}
+
+%show-on-hover {
+  overflow: hidden;
+  @include opacity(0.5);
+  &:hover {
+    @include opacity(1);
+    overflow: visible;
+    display: block;
+    width: auto;
+    height: auto;
+    a {
+      color: $another-blue;
+      text-decoration: underline;
+    }
+    .icon {
+      display: none;
+    }
+  }
+}
+
+.bridgeEmbed__item-geodata {
+  @extend %pin-to-corner;
+  @extend %icon-size;
+  @extend %show-on-hover;
+  font-size: 10px;
+  a {
+    text-decoration: none;
+  }
+  .icon {
+    @extend %icon-size;
+    display: inline-block;
+    background-size: cover;
+    background-image: url("/assets/images/icons/pin-map-7.png");
+    background-repeat: no-repeat;
+    margin-right: 5px;
+    &:hover {
+      @include opacity(0.8);
+    }
+  }
+}
