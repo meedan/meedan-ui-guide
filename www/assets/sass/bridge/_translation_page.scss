@@ -109,3 +109,16 @@ $xiaowei-pink: #db107c;
     margin-right: 1em;
   }
 }
+
+.bridge--translation {
+  .section-nav {
+    a {
+      padding: 1em;
+      display: inline-block;
+      border-bottom: 1px solid rgba(black, 0.5);
+    }
+    .current {
+      border-bottom: 2px solid $xiaowei-pink;
+    }
+  }
+}
