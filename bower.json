@@ -15,6 +15,7 @@
     "mathsass": "~0.9.5",
     "normalize-scss": "~3.0.2",
     "lodash": "~3.0.0",
-    "modernizr": "~2.8.3"
+    "modernizr": "~2.8.3",
+    "dustjs-linkedin": "~2.5.1"
   }
 }

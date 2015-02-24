@@ -20,19 +20,22 @@
 // @import "meedan/icons/fontawesome";
 @import "meedan/gradients";
 
+@import "compass-mixins/lib/animation/core";
+@import "compass-mixins/lib/animation/animate/fading";
+
 // ## bridge 
 //
+@import "bridge/shared";
 @import "bridge/colors";
-@import "bridge/comics";
+@import "bridge/icons";
 @import "bridge/docs";
 @import "bridge/editor";
 @import "bridge/layout";
 @import "bridge/profile";
-@import "bridge/shared";
 @import "bridge/typography";
-@import "bridge/icons";
-@import "bridge/translation_page";
 @import "bridge/animation";
 @import "bridge/loading";
+@import "bridge/comics";
+@import "bridge/translation_page";
 @import "bridge/geodata";
 @import "bridge/embed";

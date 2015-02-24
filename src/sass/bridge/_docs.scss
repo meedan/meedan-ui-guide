@@ -1,0 +1,45 @@
+// Bridge meta documentation
+//
+.docs {
+  background: $firefly90;
+  color: $firefly;
+  a {
+    color: $firefly;
+  }
+  h1 {
+    background-color: $firetruck-red;
+    color: white;
+    padding: 10px;
+    @extend %font--hfj-whitney-bolditalic;
+  }
+  .container {
+    margin-top: 100px;
+    background: $firefly10;
+    padding: 0.5em 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    // At larger sizes
+    @media all and (min-width: 500px) {
+      max-width: 500px;
+    }
+    p {
+      padding: 0 1em;
+    }
+    ul {
+      list-style-type: disc !important;
+      // At smaller sizes
+      @media all and (max-width: 500px) {
+        li {
+          line-height: 2em;
+        }
+        a {
+          padding: 0.5em;
+          background-color: #c3c3c3;
+          display: inline-block;
+          @include border-radius(4px);
+          margin: 4px;
+        }
+      }
+    }
+  }
+}

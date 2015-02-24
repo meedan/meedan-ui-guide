@@ -12,6 +12,15 @@
   height: 12px;
 }
 
+%icon-geodata {
+  @extend %icon-size;
+  display: inline-block;
+  background-size: cover;
+  background-image: url("/assets/images/icons/pin-map-7.png");
+  background-repeat: no-repeat;
+  margin-right: 5px;
+}
+
 %show-on-hover {
   overflow: hidden;
   @include opacity(0.5);
@@ -21,9 +30,16 @@
     display: block;
     width: auto;
     height: auto;
+    &:after {
+      content: "Map it!";
+      @include animation(fadeInUp 0.5s);
+      @extend %icon-geodata;
+    }
     a {
+      @include animation(fadeInUp 1s);
       color: $another-blue;
       text-decoration: underline;
+      padding: 0.3em;
     }
     .icon {
       display: none;
@@ -40,12 +56,7 @@
     text-decoration: none;
   }
   .icon {
-    @extend %icon-size;
-    display: inline-block;
-    background-size: cover;
-    background-image: url("/assets/images/icons/pin-map-7.png");
-    background-repeat: no-repeat;
-    margin-right: 5px;
+    @extend %icon-geodata;
     &:hover {
       @include opacity(0.8);
     }
