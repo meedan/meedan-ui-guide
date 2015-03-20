@@ -1,3 +1,8 @@
+@import "bridge/geodata";
+@import "bridge/loading";
+
+$embedly-max-width: 580px;
+
 // ## Style Guide
 //
 // .moduleName {}
@@ -12,44 +17,27 @@ body.bridgeEmbed {
   line-height: 1.4;
   margin: 0 auto;
   padding: 1em 0.5em;
-  background-color: lighten($warm-color, 15%);
-  @media all and (min-width: 500px) {
-    @include columns(2);
-    #bridgeEmbed__footer {
-      -webkit-column-span: all;
-      -moz-column-span: all;
-      column-span: all;
-    }
-    .bridgeEmbed__item {
-      @include column-break(inside, avoid);
-    }
-  }
-  @media all and (min-width: 1550px) {
-    @include columns(3);
-  }
-  @media all and (min-width: 1900px) {
-    @include columns(4);
-    @include column-gap(1em);
-  }
+  background-color: $light-warm-color;
 }
 
 .byline {
-  color: rgba($photo-feb10-blue, 1);
+  color: rgba($portland-purple, 0.8) !important;
   margin-top: 0.5em;
-  font-size: smaller;
 }
 
 .bridgeEmbed__item {
+  clear: both;
+  overflow: hidden;
   background-color: rgba(white, 0.8);
   @include border-radius(8px);
   padding: 0.3em 1em 1em;
-  & > iframe {
-    margin-bottom: 0 !important;
-    // background-color: white;
- 
-  }
   margin: 1em auto;
   position: relative;
+  @include box-shadow(0px 4px 40px rgba(0,0,0,0.05));
+  & > iframe {
+    margin: 0 auto;
+    max-width: $embedly-max-width!important;
+  }
   &:first-of-type {
     margin-top: 0;
   }
@@ -57,9 +45,11 @@ body.bridgeEmbed {
 
 .bridgeEmbed__item-translation {
   color: rgba(black, 0.9);
-  overflow: hidden;
+  margin: 0 auto;
+  max-width: $embedly-max-width;
+
   .translation {
-    padding: 1em;
+    max-width: $embedly-max-width;
     font-size: 1.2em;
     font-weight: 500;
     a {
@@ -69,6 +59,13 @@ body.bridgeEmbed {
       &:hover {
         border-bottom: 2px solid darken($light-blue, 10%);
       }
+    }
+    p {
+      max-width: $embedly-max-width;
+      padding: 1em;
+    }
+    p:empty {
+      display: none;
     }
   }
   .byline {
@@ -92,6 +89,9 @@ body.bridgeEmbed {
   color: $translation-comment-blue;
   font-weight: 200;
   clear: both;
+  margin: 0 auto;
+  max-width: $embedly-max-width;
+
   a {
     color: $translation-comment-link-blue;
     text-decoration: none;

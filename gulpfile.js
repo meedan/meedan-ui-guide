@@ -21,7 +21,8 @@ var reload = browserSync.reload;
 var dust = require('gulp-dust');
 dust.helpers = require('dustjs-helpers').helpers;
 var dusthtml = require('gulp-dust-html');
-var dustTemplates = "src/dust_templates";
+var dustTemplates = "src";
+
 var dustConfig = {
   basePath: dustTemplates,
   whitespace: true,
@@ -32,35 +33,34 @@ var dustConfig = {
   }
 }
 
-gulp.task('dustindex', function (cb) {
-  return gulp.src('src/index.dust.html').pipe(
+// Dust templating
+gulp.task('dustify', function (cb) {
+  return gulp.src('src/*.dust').pipe(
       dusthtml(
         dustConfig
       ))
     .on('error', cb)
-    .pipe(rename('index.html'))
     .pipe(gulp.dest('www/'));
 });
 
-// templates
-gulp.task('dust', function () {
-  return gulp.src('src/dust_templates/*.html')
-    .pipe(dust())
-    .on('error', ehandler)
-    .pipe(gulp.dest('src/dust_templates/compiled'));
-});
+// Templates
+// gulp.task('dust', function () {
+//   return gulp.src('src/dust_templates/*.js')
+//     .pipe(dust())
+//     .on('error', ehandler)
+//     .pipe(gulp.dest('src/dust_templates/compiled'));
+// });
 
-
-// nodemon
-gulp.task('nodemon', function () {
-  nodemon({
-    script: 'server.js',
-    ext: 'js json',
-    env: {
-      'NODE_ENV': 'development'
-    }
-  }).on('restart', 'lint')
-});
+// // Nodemon
+// gulp.task('nodemon', function () {
+//   nodemon({
+//     script: 'server.js',
+//     ext: 'js json',
+//     env: {
+//       'NODE_ENV': 'development'
+//     }
+//   }).on('restart', 'lint')
+// });
 
 // Browser sync 
 var browserSyncConfig = {
@@ -82,7 +82,7 @@ gulp.task('bs-reload', ['uglify', 'sass'], function () {
 });
 
 // uglify
-gulp.task('uglify', ['dust', 'dustindex'], function () {
+gulp.task('uglify', ['dustify'], function () {
   return gulp.src([
       'node_modules/dustjs-linkedin/dist/dust-core.js',
       'node_modules/dustjs-helpers/dist/dust-helpers.min.js',
@@ -101,15 +101,15 @@ gulp.task('uglify', ['dust', 'dustindex'], function () {
     .pipe(rename(pkg.name + '.min.js'))
     .pipe(gulp.dest('www/js/'))
 });
+// lint task for js
+// 
+// gulp.task('lint', function () {
+//   return gulp.src('src/**/*.js')
+//     .pipe(jshint())
+//     .on('error', ehandler)
+// });
 
-// lint
-gulp.task('lint', function () {
-  return gulp.src('src/**/*.js')
-    .pipe(jshint())
-    .on('error', ehandler)
-});
-
-// Sass
+// Sass task configuration
 //
 // Configure sass compiler
 var sass = require('gulp-sass');
@@ -131,29 +131,35 @@ gulp.task('sass', function () {
 });
 
 
-// WATCH EVERYTHING
+// Watch HTML, js and sass
 //
-gulp.task('watch', ['browser-sync'], function () {
+// gulp.task('watch', ['browser-sync'], function () {
+//   var watcher = gulp.watch(
+//     ['src/**/*', 'src/*', '!src/dust/compiled/*', '!.#*'], ['lint', 'dustify', 'dust', 'sass', 'uglify', 'bs-reload']
+//   );
+
+//   watcher.on('change', function (event) {
+//     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
+//     reload;
+//   });
+// });
+
+// Watch only sass (for performance)
+gulp.task('watch', ['sass', 'browser-sync'], function () {
   var watcher = gulp.watch(
-    ['src/**/*', 'src/*', '!src/dust/compiled/*', '!.#*'], ['lint', 'dustindex', 'dust', 'sass', 'uglify', 'bs-reload']
+    ['src/**/*', 'src/*'], ['dustify', 'sass', 'bs-reload']
   );
 
   watcher.on('change', function (event) {
     console.log('File ' + event.path + ' was ' + event.type + ', running tasks...');
-    //      console.log(event);
     reload;
   });
 });
 
-// WATCH SASS
-gulp.task('watch-sass', ['sass', 'browser-sync'], function () {
-  gulp.watch(scssFiles, ['sass']);
-});
-
-// DEFAULT
+// Default task is watch everything
 gulp.task('default', ['watch']);
 
-// ERROR HANDLING
+// Error handling
 var ehandler = function (err) {
   console.log('ehandler');
   console.log(err.message);
