@@ -1,0 +1,16 @@
+{>head /}
+
+<body>
+  <div class="container">
+    <ul class="stack">
+      <li>
+        <div class="avatar"></div>
+        <h3>List item title</h3>
+        <div class="body">This is a list item</li>
+        <footer></footer>
+      </div>
+    </section>
+  </div>
+</body>
+
+{>footer /}

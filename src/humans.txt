@@ -1,15 +1,20 @@
 # humanstxt.org/
-# The humans responsible & technology colophon
+# The humans responsible
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Chris Blow
+    Ben Foote
+    Caio Almeida
 
 # THANKS
 
-    <name>
+    Meedan
 
-# TECHNOLOGY COLOPHON
+# TECHNOLOGY
 
     HTML5, CSS3
+    Dust, Sass
+    NPM, Bower
+    Gulp, Browser Sync
     jQuery, Modernizr

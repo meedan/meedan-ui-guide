@@ -1,0 +1,7 @@
+{>head /}
+
+<body>
+  <h1>Ah, 404!</h1>
+</body>
+
+{>footer /}

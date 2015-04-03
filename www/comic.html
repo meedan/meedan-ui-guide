@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Bridge Components</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6545452/628984/css/fonts.css" />
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- This copied from Caio's work on the Rails app -->
+  <script src="/assets/js/embed-child.js"></script>
+  <script async src="//cdn.embedly.com/widgets/platform.js" charset="UTF-8"></script>
+</head>
+<body>
+
+<div class="comics">
+  <section class="comic">
+    <h3>1. Stack Building Scenario</h3>
+    <ol>
+      <li class="clarice--happy">
+        <p>This guy Paul is walking around the planet. I want to translate all the stuff near him. I create a spreadsheet of all the things I want translated. Like this: </p>
+
+        <table>
+          <th>ID</th>
+          <th>URL</th>
+          <th>Source</th>
+          <th>Lang</th>
+          <tr>
+            <td>1</td>
+            <td>twitter.com/post/1</td>
+            <td>"Hi this is my first tweet!"</td>
+            <td>en</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>twitter.com/post/2</td>
+            <td>"... and my second tweet!"</td>
+            <td>en</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>twitter.com/post/3</td>
+            <td>"Wow this is my THIRD tweet!"</td>
+            <td>en</td>
+          </tr>
+        </table>
+
+      </li>
+
+      <li class="clarice--happy">
+        <p>The spreadsheet is our private <a href="#stack">stack</a> of work-jobs for translators ... I add things to the stack in various ways — I usually add small bits of social media content.</p>
+      </li>
+      <li class="clarice--happy">
+        <p>Each row in the spreadsheet is a job that a translator can perform. When I find something I want translated, I add it to the spreadsheet.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="comic">
+    <h3>2. Stacks: Tre finds translation</h3>
+    <ol>
+      <li class="tre--happy">
+        <p>Before you can translate something, you have to find something worth translating. For now we just do this with Gdocs.</p>
+      </li>
+      <!-- <li>[SPREADSHEET]</li> -->
+      <li class="tre--happy">
+        <p>So, because I have a gmail address, Clarice just invited me to this spreadsheet. Each row is a tweet that could be translated.</p>
+      </li>
+      <li class="tre--happy">
+        <p>In this spreadsheet, not everything needs to be translated.</p>
+      </li>
+      <li>
+        <p>You just choose which one you want to work on by clicking a link in the row.</p>
+      </li>
+
+    </ol>
+  </section>
+
+  <section class="comic">
+    <h3>3. Editing: Tre is translating</h3>
+    <ol>
+      <li class="tre--happy">
+        <p>After I <a href="">signed up</a> and <a href="">logged in</a> and <a href="">chosen some work</a> ... I get into this editor. It's pretty simple. I create the translation and click done.</p>
+      </li>
+
+      <li class="tre--working">
+        <p>I see here I can use some
+          <em>basic support tools</em>... Then I just type the translation out, and maybe read it out loud to myself ...</p>
+      </li>
+
+      <li class="tre--confused">
+        <p>I click "done" ... and Clarice gets it. Usually that is the last I see of the translation job, but sometimes Clarice the Client does a <a href="">review</a> of my work.</p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="comic">
+    <h3>4. Embedding: Clarice publishes her Stack</h3>
+    <ol>
+      <li class="clarice--happy">
+        <span class="pain-point">It's hard to read the spreadsheet.</span>
+        <p>Once all of the translations are done by translators like Tre .. I go to my stack page and there is this little embed button ... When I click it I get these simple options for how to embed the stack.</p>
+      </li>
+      <!-- <li>[EMBED BUTTON]</li> -->
+
+      <li class="clarice--happy">
+        <span class="pain-point">The embed is not very easy to read.</span>
+        <p>I get the embed code and I know the embed will always look like what I am seeing here. The embed is really simple one-column view that works almost anywhere.
+          <em>I am presenting the result of our curation and translation.</em>
+        </p>
+      </li>
+    </ol>
+  </section>
+
+
+  <section class="comic">
+    <h3>5. Getting Help</h3>
+    <ol>
+      <li class="tre--happy clarice--happy">
+        <p>Sometimes as a translator I need guidelines and help. For now, I just use this PDF that they sent me.</p>
+      </li>
+      <li class="tre--happy clarice--happy">
+        <p>I exchange a few emails a month with Clarice directly. She gives me everything I need to know!</p>
+      </li>
+    </ol>
+  </section>
+
+</div>
+
+</body>
+
+<script type='text/javascript'>
+//<![CDATA[
+document.write("<script async src='//HOST:3000/browser-sync-client.1.3.7.js'><\/script>".replace(/HOST/g, location.hostname));
+//]]>
+</script>

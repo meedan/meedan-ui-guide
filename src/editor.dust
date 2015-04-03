@@ -1,0 +1,98 @@
+{> _head /}
+
+<body>
+
+<div class="container">
+
+  <section class="layout-primary">
+    <div class="translation-direction">Translating En > Ar</div>
+    <a href="#">Save for later</a>
+
+    <form>
+      <div class="translation-source-tweet">
+        <div class="avatar"></div>
+        <h3>@username</h3>
+        <span class="timestamp">22 Nov</span>
+        <p>Hello everybody! This is a tweet!</p>
+
+        <textarea class="translation-editor">Translate to Arabic</textarea>
+
+      </div>
+
+      <button>Discard</button>
+      <button>Save Draft</button>
+      <button>Submit</button>
+    </form>
+
+    <div class="translation-support">
+      <div class="memory">
+        <em>Translation Memory</em>
+      </div>
+      <div class="dictionary">
+        <em>Dictionary Lookup</em>
+      </div>
+      <div class="mt">
+        <em>Machine Translation</em>
+      </div>
+      <div class="glossary">
+        <em>Glossary</em>
+        <ol>
+          <li>Term [Term in AR]</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="layout-secondary">
+    <div class="comment">
+      <div class="avatar"></div>
+      <h4>Dima</h4>
+      <p>This is a comment.</p>
+      <a href="#">Reply</a>
+    </div>
+    <div class="comment">
+      <div class="avatar"></div>
+      <h4>Peter</h4>
+      <p>This is another comment.</p>
+    </div>
+    <div class="comment reply">
+      <div class="avatar"></div>
+      <h4>Eli</h4>
+      <p>Peter, this is a reply.</p>
+    </div>
+    <div class="comment reply">
+      <div class="avatar"></div>
+      <h4>Leo</h4>
+      <p>Yeah, this is a reply, Peter!</p>
+    </div>
+  </section>
+
+  <section class="layout-tertiary">
+    <h3>Other translations</h3>
+    <div class="translation">
+      <div class="avatar"></div>
+      <span class="author">Saman Treg</span>
+      <span class="timestamp">10min</span>
+      <div class="translation-target-text">[Translation into Arabic]</div>
+    </div>
+
+    <div class="translation">
+      <div class="avatar"></div>
+      <span class="author">Saman Treg</span>
+      <span class="timestamp">10min</span>
+      <div class="translation-target-text">[Translation into Arabic]</div>
+    </div>
+
+    <div class="translation">
+      <div class="avatar"></div>
+      <span class="author">Saman Treg</span>
+      <span class="timestamp">10min</span>
+      <div class="translation-target-text">[Translation into Arabic]</div>
+    </div>
+  </section>
+</div>
+
+</body>
+
+{> _footer /}
