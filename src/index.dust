@@ -1,12 +1,12 @@
 
-{>_head /}
+{> _head /}
 
 <body class="docs">
 
-  {>_homepage-content /}
+  {> _homepage-content /}
 
 </body>
 
-{>footer /}
+{> _footer /}
 
 </html>

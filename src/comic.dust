@@ -118,4 +118,4 @@
 
 </body>
 
-{>footer /}
+{> _footer /}

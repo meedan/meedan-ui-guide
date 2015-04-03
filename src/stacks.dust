@@ -1,4 +1,4 @@
-{>head /}
+{> _head /}
 
 <body>
   <div class="container">
@@ -13,4 +13,4 @@
   </div>
 </body>
 
-{>footer /}
+{> _footer /}

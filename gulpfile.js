@@ -2,25 +2,15 @@ var gulp = require('gulp');
 var rename = require("gulp-rename");
 var concat = require('gulp-concat');
 var sass = require('gulp-sass');
-
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
-
 var dust = require('gulp-dust');
 dust.helpers = require('dustjs-helpers').helpers;
 var dusthtml = require('gulp-dust-html');
-
 var pkg = require('./package.json');
 var config = require('./config/config.js');
-
 var scssFiles = "src/sass/**/*.scss";
 var cssCompileDir = "www/assets/css";
-
-// Error Handling
-var ehandler = function (err) {
-  console.log('ehandler');
-  console.log(err.message);
-}
 
 // Browser-sync
 //
@@ -44,7 +34,7 @@ var dustConfig = {
 }
 
 // Sass stylesheets
-// 
+//
 var sassConfig = {
   errLogToConsole: true,
   includePaths: ["www/bower_components"],
@@ -52,8 +42,7 @@ var sassConfig = {
 }
 
 gulp.task('dust', function (cb) {
-  return gulp.src(['src/*.dust', '!src/_*.dust']).pipe(
-      dusthtml(dustConfig))
+  return gulp.src(['src/*.dust', '!src/_*.dust']).pipe(dusthtml(dustConfig))
     .on('error', cb)
     .pipe(gulp.dest('www/'));
 });
