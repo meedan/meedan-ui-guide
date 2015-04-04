@@ -1,17 +1,20 @@
 // User scenarios
-// 
+//
 %comic-state-base {
   position: relative;
+  font-size: 0.8em;
   &:after {
+    border-radius: 50%;
     content: "";
     position: absolute;
     z-index: 1;
     display: block;
-    width: 200px;
-    height: 100px;
+    width: 5em;
+    height: 5em;
     right: 0;
     bottom: 0;
     background-size: cover;
+    background-position: center;
   }
 }
 
@@ -22,28 +25,32 @@
   &.tre--working {
     @extend %comic-state-base;
     &:after {
-      background: url("../images/tre--working.png") no-repeat;
+      // background: url("../images/tre--working.png") no-repeat;
+      background: url("../images/amira.jpg") no-repeat;
       content: "T. Working";
     }
   }
   &.tre--happy {
     @extend %comic-state-base;
     &:after {
-      background: url("../images/tre--happy.png") no-repeat;
+      // background: url("../images/tre--happy.png") no-repeat;
+      background: url("../images/amira.jpg") no-repeat;
       content: "T.";
     }
   }
   &.tre--confused {
     @extend %comic-state-base;
     &:after {
-      background: url("../images/tre--confused.png") no-repeat;
+      // background: url("../images/tre--confused.png") no-repeat;
+      background: url("../images/amira.jpg") no-repeat;
       content: "T.";
     }
   }
   &.clarice--happy {
     @extend %comic-state-base;
     &:after {
-      background: url("../images/clarice--happy.png") no-repeat;
+      // background: url("../images/clarice--happy.png") no-repeat;
+      background: url("../images/amira.jpg") no-repeat;
       content: "C.";
     }
   }
@@ -79,10 +86,10 @@
   background: $firetruck-red;
   color: white;
   padding: 0.5em 0.3em;
-  position: absolute; 
+  position: absolute;
   left: -200px;
   width: 200px;
-  &:before { 
+  &:before {
     content: "OOEW pain point — ";
     text-transform: uppercase;
   }

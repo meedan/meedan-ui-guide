@@ -1,0 +1,18 @@
+<section class="comic">
+  <h3>4. Embedding: Clarice publishes her Stack</h3>
+  <ol>
+    <li class="clarice--happy">
+      <span class="pain-point">It's hard to read the spreadsheet.</span>
+      <p>Once all of the translations are done by translators like Tre .. I go to my stack page and there is this little embed button ... When I click it I get these simple options for how to embed the stack.</p>
+    </li>
+
+    <!-- <li>[EMBED BUTTON]</li> -->
+
+    <li class="clarice--happy">
+      <span class="pain-point">The embed is not very easy to read.</span>
+      <p>I get the embed code and I know the embed will always look like what I am seeing here. The embed is really simple one-column view that works almost anywhere.
+        <em>I am presenting the result of our curation and translation.</em>
+      </p>
+    </li>
+  </ol>
+</section>

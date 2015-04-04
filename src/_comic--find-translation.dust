@@ -1,0 +1,19 @@
+<section class="comic">
+  <h3>Stacks: Tre finds translation</h3>
+  <ol>
+    <li class="tre--happy">
+      <p>Before you can translate something, you have to find something worth translating. For now we just do this with Gdocs.</p>
+    </li>
+    <!-- <li>[SPREADSHEET]</li> -->
+    <li class="tre--happy">
+      <p>So, because I have a gmail address, Clarice just invited me to this spreadsheet. Each row is a tweet that could be translated.</p>
+    </li>
+    <li class="tre--happy">
+      <p>In this spreadsheet, not everything needs to be translated.</p>
+    </li>
+    <li>
+      <p>You just choose which one you want to work on by clicking a link in the row.</p>
+    </li>
+
+  </ol>
+</section>

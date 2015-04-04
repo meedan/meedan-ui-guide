@@ -11,6 +11,7 @@ var pkg = require('./package.json');
 var config = require('./config/config.js');
 var scssFiles = "src/sass/**/*.scss";
 var cssCompileDir = "www/assets/css";
+var changed = require('gulp-changed');
 
 // Browser-sync
 //
@@ -41,8 +42,14 @@ var sassConfig = {
   outputStyle: "compressed"
 }
 
+gulp.task('images', function () {
+  return gulp.src(['src/assets/images/*', 'src/assets/images/**/*'])
+    .pipe(gulp.dest('www/assets/images/'));
+});
+
 gulp.task('dust', function (cb) {
-  return gulp.src(['src/*.dust', '!src/_*.dust']).pipe(dusthtml(dustConfig))
+  return gulp.src(['src/*.dust', '!src/_*.dust'])
+    .pipe(dusthtml(dustConfig))
     .on('error', cb)
     .pipe(gulp.dest('www/'));
 });
@@ -59,6 +66,6 @@ gulp.task('sass', function () {
 // Default task
 gulp.task('default', function () {
   gulp.watch(scssFiles, ['sass']);
-  gulp.watch('src/*.dust', ['dust']).on('change', reload);
+  gulp.watch('src/*.dust', ['dust', 'misc']).on('change', reload);
   browserSync(browserSyncConfig);
 });

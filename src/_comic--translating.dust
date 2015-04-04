@@ -1,0 +1,17 @@
+<section class="comic">
+  <h3>Editing: Tre is translating</h3>
+  <ol>
+    <li class="tre--happy">
+      <p>After I <a href="">signed up</a> and <a href="">logged in</a> and <a href="">chosen some work</a> ... I get into this editor. It's pretty simple. I create the translation and click done.</p>
+    </li>
+
+    <li class="tre--working">
+      <p>I see here I can use some
+        <em>basic support tools</em>... Then I just type the translation out, and maybe read it out loud to myself ...</p>
+    </li>
+
+    <li class="tre--confused">
+      <p>I click "done" ... and Clarice gets it. Usually that is the last I see of the translation job, but sometimes Clarice the Client does a <a href="">review</a> of my work.</p>
+    </li>
+  </ol>
+</section>
