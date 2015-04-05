@@ -1,19 +1,19 @@
 <section class="comic layout-four">
-  <h3>Stacks: Tre finds translation</h3>
+  <h3>Finding Things to Translate</h3>
   <ol>
     <li class="tre--happy">
-      <p>Before you can translate something, you have to find something worth translating. For now we just do this with Gdocs.</p>
+      <p>I want to find something worth translating.</p>
     </li>
-
-    {> _comic--twitter-spreadsheet /}
-
+    <li class="tre--happy spreadsheet small">
+      {> _comic--twitter-spreadsheet /}
+    </li>
     <li class="tre--happy">
-      <p>So, because I have a gmail address, Amira just invited me to this spreadsheet. Each row is a tweet that could be translated.</p>
+      <p>Amira just invited me to this spreadsheet. Each row is a tweet.</p>
     </li>
     <li class="tre--happy">
       <p>In this spreadsheet, not everything needs to be translated.</p>
     </li>
-    <li>
+    <li class="tre--happy">
       <p>You just choose which one you want to work on by clicking a link in the row.</p>
     </li>
 

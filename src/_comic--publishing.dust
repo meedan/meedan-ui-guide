@@ -1,12 +1,12 @@
 <section class="comic layout-three">
-  <h3>4. Embedding: Amira publishes her Stack</h3>
+  <h3>Publishing Translations</h3>
   <ol>
     <li class="amira--happy">
-      <span class="pain-point">It's hard to read the spreadsheet.</span>
+      <span class="pain-point">The spreadsheet is not easy to read.</span>
       <p>Once all of the translations are done by translators like Tre .. I go to my stack page and there is this little embed button ... When I click it I get these simple options for how to embed the stack.</p>
     </li>
 
-    <!-- <li>[EMBED BUTTON]</li> -->
+    <li class="amira--happy"><button>EMBED BUTTON</button><p>click</p></li>
 
     <li class="amira--happy">
       <span class="pain-point">The embed is not very easy to read.</span>
