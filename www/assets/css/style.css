@@ -945,9 +945,15 @@ a {
     -webkit-transform: scale(1);
     opacity: 0; } }
 
+section.comic li p {
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 2% 10% 10%;
+  box-shadow: -100px -200px 0 200px white, 60px -20px 0 20px white; }
+
 section.comic li {
   position: relative; }
-  section.comic li:after {
+  section.comic li[class*='--']:after {
     border-radius: 50%;
     border: 0.3em white solid;
     box-shadow: 0 0.1em 0.3em rgba(0, 0, 0, 0.2);
@@ -962,6 +968,16 @@ section.comic li {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; }
+  section.comic li.tre--working:after {
+    background-image: url("../images/avatars/beard-dude.jpg"); }
+  section.comic li.tre--happy:after {
+    background-image: url("../images/avatars/beard-dude.jpg"); }
+  section.comic li.tre--confused:after {
+    background-image: url("../images/avatars/beard-dude.jpg"); }
+  section.comic li.amira--happy:after {
+    background-image: url("../images/avatars/amira.jpg"); }
+  section.comic li.patrick--happy:after {
+    background-image: url("../images/avatars/blue-dude.jpg"); }
 
 .comics {
   font-size: 0.9em;
@@ -1009,30 +1025,20 @@ section.comic {
     -webkit-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    background-color: white;
-    margin: 0.5em;
-    padding: 1em;
+    margin: 0em 1em;
+    padding: 0.5em 0.5em 5em;
     list-style-type: none;
     line-height: 1.4;
     overflow: hidden; }
-    section.comic li.tre--working:after {
-      background-image: url("../images/avatars/beard-dude.jpg"); }
-    section.comic li.tre--happy:after {
-      background-image: url("../images/avatars/beard-dude.jpg"); }
-    section.comic li.tre--confused:after {
-      background-image: url("../images/avatars/beard-dude.jpg"); }
-    section.comic li.amira--happy:after {
-      background-image: url("../images/avatars/amira.jpg"); }
-    section.comic li.patrick--happy:after {
-      background-image: url("../images/avatars/blue-dude.jpg"); }
     section.comic li.spreadsheet {
       -webkit-box-flex: 2;
       -webkit-flex: 2;
           -ms-flex: 2;
-              flex: 2; }
+              flex: 2;
+      font-size: 0.1em; }
     section.comic li p {
-      color: #283743;
-      position: relative; }
+      background-color: white;
+      color: #283743; }
 
 .pain-point {
   color: #b80900;
@@ -1056,9 +1062,6 @@ table {
   table td {
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1em; }
-
-.spreadsheet.small table {
-  font-size: 0.1em; }
 
 .bridge-translation-page {
   background: url("/assets/images/translation-page.jpg") no-repeat;

@@ -1,9 +1,19 @@
+%comics-thought {
+  border-bottom-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  padding: 2% 10% 10%;
+  box-shadow:
+    -100px -200px 0 200px white,
+    60px -20px 0 20px white;
+}
+
 // User scenarios
 //
-%comic-state-base {
+%comic-avatar {
   position: relative;
+
   // The avatar of the person
-  &:after {
+  &[class*='--']:after {
     border-radius: 50%;
     border: 0.3em white solid;
     box-shadow: 0 0.1em 0.3em rgba(black, 0.2);
@@ -19,6 +29,11 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
+  &.tre--working:after { background-image: url("../images/avatars/beard-dude.jpg"); }
+  &.tre--happy:after { background-image: url("../images/avatars/beard-dude.jpg"); }
+  &.tre--confused:after { background-image: url("../images/avatars/beard-dude.jpg"); }
+  &.amira--happy:after { background-image: url("../images/avatars/amira.jpg"); }
+  &.patrick--happy:after { background-image: url("../images/avatars/blue-dude.jpg"); }
 }
 
 .comics {
@@ -47,25 +62,23 @@ section.comic {
   }
   li {
     flex: 1;
-    background-color: white;
+    // background-color: white;
     // box-shadow: 3px 3px 10px rgba(black, 0.2);
-    margin: 0.5em;
-    padding: 1em;
+    margin: 0em 1em;
+    padding: 0.5em 0.5em 5em;
     list-style-type: none;
     line-height: 1.4;
     overflow: hidden;
-    @extend %comic-state-base;
-    &.tre--working:after { background-image: url("../images/avatars/beard-dude.jpg"); }
-    &.tre--happy:after { background-image: url("../images/avatars/beard-dude.jpg"); }
-    &.tre--confused:after { background-image: url("../images/avatars/beard-dude.jpg"); }
-    &.amira--happy:after { background-image: url("../images/avatars/amira.jpg"); }
-    &.patrick--happy:after { background-image: url("../images/avatars/blue-dude.jpg"); }
+    @extend %comic-avatar;
+
     &.spreadsheet {
       flex: 2;
+      font-size: 0.1em;
     }
     p {
+      background-color: white;
+      @extend %comics-thought;
       color: $firefly90;
-      position: relative;
     }
   }
 }
@@ -98,9 +111,4 @@ table {
     border: 1px solid rgba(0,0,0,0.1);
     padding: 1em;
   }
-}
-
-
-.spreadsheet.small table {
-  font-size: 0.1em;
 }

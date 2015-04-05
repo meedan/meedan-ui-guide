@@ -2,18 +2,18 @@
   <h3>Building a Stack</h3>
   <ol>
     <li class="patrick--happy">
-      <p>I want to translate all the stuff in this area. I create a spreadsheet of all the things I want translated.</p>
+      <p>I create a spreadsheet of all the things I want translated.</p>
     </li>
 
-    <li class="patrick--happy spreadsheet">
+    <li class="spreadsheet">
       {> _comic--twitter-spreadsheet /}
     </li>
 
     <li class="patrick--happy">
-      <p>The spreadsheet is our private <a href="#stack">stack</a> of work-jobs for translators ... I add things to the stack in various ways — I usually add small bits of social media content.</p>
+      <p>Each row in the spreadsheet is a job that a translator can perform. </p>
     </li>
     <li class="patrick--happy">
-      <p>Each row in the spreadsheet is a job that a translator can perform. When I find something I want translated, I add it to the spreadsheet.</p>
+      <p>When I find something I want translated, I add it to the spreadsheet.</p>
     </li>
   </ol>
 </section>

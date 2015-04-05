@@ -2,16 +2,15 @@
   <h3>Translating</h3>
   <ol>
     <li class="tre--happy">
-      <p>After I <a href="">signed up</a> and <a href="">logged in</a> and <a href="">chosen some work</a> ... I get into this editor. It's pretty simple. I create the translation and click done.</p>
+      <p>I open the <em>Translation Editor</em>.</p>
     </li>
 
     <li class="tre--working">
-      <p>I see here I can use some
-        <em>basic support tools</em>... Then I just type the translation out, and maybe read it out loud to myself ...</p>
+      <p>I want <em>basic support tools</em>... I just type the translation out, and maybe read it out loud to myself ...</p>
     </li>
 
     <li class="tre--confused">
-      <p>I click "done" ... and Amira gets it. Usually that is the last I see of the translation job, but sometimes Amira the Client does a <a href="">review</a> of my work.</p>
+      <p>I click "done" to send it to Amira so she can publish it.</p>
     </li>
   </ol>
 </section>

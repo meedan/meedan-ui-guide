@@ -4,17 +4,17 @@
     <li class="tre--happy">
       <p>I want to find something worth translating.</p>
     </li>
-    <li class="tre--happy spreadsheet small">
+    <li class="spreadsheet small">
       {> _comic--twitter-spreadsheet /}
     </li>
     <li class="tre--happy">
-      <p>Amira just invited me to this spreadsheet. Each row is a tweet.</p>
+      <p>Amira invited me. Each row is a tweet.</p>
     </li>
     <li class="tre--happy">
-      <p>In this spreadsheet, not everything needs to be translated.</p>
+      <p>Not everything needs to be translated.</p>
     </li>
     <li class="tre--happy">
-      <p>You just choose which one you want to work on by clicking a link in the row.</p>
+      <p>Click the link to start to translate.</p>
     </li>
 
   </ol>

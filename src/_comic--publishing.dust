@@ -2,16 +2,15 @@
   <h3>Publishing Translations</h3>
   <ol>
     <li class="amira--happy">
-      <span class="pain-point">The spreadsheet is not easy to read.</span>
-      <p>Once all of the translations are done by translators like Tre .. I go to my stack page and there is this little embed button ... When I click it I get these simple options for how to embed the stack.</p>
+      <!-- <span class="pain-point">The spreadsheet is not easy to read.</span> -->
+      <p>Once all of the translations are done I look for this button.</p>
     </li>
 
     <li class="amira--happy"><button>EMBED BUTTON</button><p>click</p></li>
 
     <li class="amira--happy">
-      <span class="pain-point">The embed is not very easy to read.</span>
-      <p>I get the embed code and I know the embed will always look like what I am seeing here. The embed is really simple one-column view that works almost anywhere.
-        <em>I am presenting the result of our curation and translation.</em>
+      <!-- <span class="pain-point">The embed is not very easy to read.</span> -->
+      <p>I get the embed code so I can show off our curation and translation.</em>
       </p>
     </li>
   </ol>
