@@ -40,7 +40,6 @@ var dustConfig = {
 var sassConfig = {
   errLogToConsole: true,
   includePaths: ["www/bower_components"],
-  outputStyle: "compressed"
 }
 
 gulp.task('images', function () {
@@ -58,7 +57,7 @@ gulp.task('dust', function (cb) {
 gulp.task('sass', function () {
   return gulp.src(scssFiles)
     .pipe(sass(sassConfig))
-    .pipe(autoprefixer("last 4 versions", "> 1%"))
+    // .pipe(autoprefixer("last 4 versions", "> 1%"))
     .pipe(gulp.dest(cssCompileDir))
     .pipe(reload({
       stream: true
