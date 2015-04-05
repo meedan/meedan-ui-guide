@@ -945,11 +945,28 @@ a {
     -webkit-transform: scale(1);
     opacity: 0; } }
 
-section.comic li p {
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  padding: 2% 10% 10%;
-  box-shadow: -100px -200px 0 200px white, 60px -20px 0 20px white; }
+* {
+  box-sizing: border-box; }
+
+section.comic li.on-screen {
+  position: relative;
+  margin: 0 0;
+  background: white;
+  border: 1em solid rgba(0, 0, 0, 0.2);
+  display: none;
+  border-radius: 50%/10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  font-size: 0.1em; }
+  section.comic li.on-screen:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    border-radius: 5%/50%; }
 
 section.comic li {
   position: relative; }
@@ -980,46 +997,26 @@ section.comic li {
     background-image: url("../images/avatars/blue-dude.jpg"); }
 
 .comics {
-  font-size: 0.9em;
   font-family: 'Patrick Hand', cursive; }
 
 section.comic {
   position: relative;
   background-color: rgba(0, 0, 0, 0.1);
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0;
+  font-size: 0.7em; }
   section.comic h3 {
-    font-family: 'Patrick Hand SC', cursive;
-    -webkit-box-flex: 1;
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1;
-    font-size: 2em; }
+    font-family: 'Patrick Hand SC', cursive; }
   section.comic ol {
     margin: 0;
     padding: 0;
-    -webkit-box-flex: 7;
-    -webkit-flex: 7;
-        -ms-flex: 7;
-            flex: 7;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-align-content: stretch;
-        -ms-flex-line-pack: stretch;
-            align-content: stretch; }
+    display: flex; }
   section.comic li {
     -webkit-box-flex: 1;
     -webkit-flex: 1;
@@ -1030,14 +1027,10 @@ section.comic {
     list-style-type: none;
     line-height: 1.4;
     overflow: hidden; }
-    section.comic li.spreadsheet {
-      -webkit-box-flex: 2;
-      -webkit-flex: 2;
-          -ms-flex: 2;
-              flex: 2;
-      font-size: 0.1em; }
     section.comic li p {
       background-color: white;
+      height: 50%;
+      padding: 1em;
       color: #283743; }
 
 .pain-point {
@@ -1046,8 +1039,7 @@ section.comic {
   font-family: 'Patrick Hand SC', cursive;
   text-transform: uppercase; }
   .pain-point:before {
-    content: "☞ ";
-    font-size: 1.3em; }
+    content: "☞ "; }
 
 table {
   border: 1px solid rgba(0, 0, 0, 0.2);

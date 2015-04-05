@@ -1,10 +1,27 @@
-%comics-thought {
-  border-bottom-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  padding: 2% 10% 10%;
-  box-shadow:
-    -100px -200px 0 200px white,
-    60px -20px 0 20px white;
+* {
+  box-sizing: border-box;
+}
+
+%on-screen {
+  position: relative;
+  margin: 0 0;
+  background: white;
+  border: 1em solid rgba(black, 0.2);
+  display: none;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  font-size: 0.1em;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    right: -5%;
+    left: -5%;
+    border-radius: 5% / 50%;
+  }
 }
 
 // User scenarios
@@ -37,33 +54,37 @@
 }
 
 .comics {
-  font-size: 0.9em;
   font-family: 'Patrick Hand', cursive;
 }
 
 section.comic {
   position: relative;
   background-color: rgba(black, 0.1);
-  display: flex;
+  flex: 1;
+  padding: 0;
+  font-size: 0.7em;
+
+  // &.tre {
+  //   border:10px solid red;
+  // }
+  // &.patrick, &.amira {
+  //   border:10px solid pink;
+  // }
   h3 {
     font-family: 'Patrick Hand SC', cursive;
-    flex: 1;
-    font-size: 2em;
   }
 
   ol {
     margin: 0;
     padding: 0;
-    flex: 7;
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    align-content: stretch;
   }
   li {
     flex: 1;
+    // flex-direction: column;
+    // justify-content: flex-start;
+    // align-content: stretch;
     // background-color: white;
-    // box-shadow: 3px 3px 10px rgba(black, 0.2);
     margin: 0em 1em;
     padding: 0.5em 0.5em 5em;
     list-style-type: none;
@@ -71,13 +92,13 @@ section.comic {
     overflow: hidden;
     @extend %comic-avatar;
 
-    &.spreadsheet {
-      flex: 2;
-      font-size: 0.1em;
+    &.on-screen {
+      @extend %on-screen;
     }
     p {
       background-color: white;
-      @extend %comics-thought;
+      height: 50%;
+      padding: 1em;
       color: $firefly90;
     }
   }
@@ -90,7 +111,6 @@ section.comic {
   text-transform: uppercase;
   &:before {
     content: "☞ ";
-    font-size: 1.3em;
   }
 }
 

@@ -1,4 +1,4 @@
-<section class="comic layout-three">
+<section class="comic layout-three amira">
   <h3>Publishing Translations</h3>
   <ol>
     <li class="amira--happy">
@@ -6,7 +6,7 @@
       <p>Once all of the translations are done I look for this button.</p>
     </li>
 
-    <li class="amira--happy"><button>EMBED BUTTON</button><p>click</p></li>
+    <li class="on-screen"><button>EMBED</button></li>
 
     <li class="amira--happy">
       <!-- <span class="pain-point">The embed is not very easy to read.</span> -->

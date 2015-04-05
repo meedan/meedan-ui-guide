@@ -1,10 +1,10 @@
-<section class="comic layout-four">
+<section class="comic layout-four tre">
   <h3>Finding Things to Translate</h3>
   <ol>
     <li class="tre--happy">
       <p>I want to find something worth translating.</p>
     </li>
-    <li class="spreadsheet small">
+    <li class="on-screen">
       {> _comic--twitter-spreadsheet /}
     </li>
     <li class="tre--happy">
