@@ -2,9 +2,8 @@
 //
 %comic-state-base {
   position: relative;
-  font-size: 0.8em;
 
-  // The person saying it
+  // The avatar of the person saying it
   &:after {
     border-radius: 50%;
     content: "";
@@ -28,44 +27,39 @@
   &.tre--working {
     @extend %comic-state-base;
     &:after {
-      // background: url("../images/tre--working.png");
       background-image: url("../images/avatars/beard-dude.jpg");
-      content: "T. Working";
     }
   }
   &.tre--happy {
     @extend %comic-state-base;
     &:after {
-      // background: url("../images/tre--happy.png");
       background-image: url("../images/avatars/beard-dude.jpg");
-      content: "T.";
     }
   }
   &.tre--confused {
     @extend %comic-state-base;
     &:after {
-      // background-image: url("../images/tre--confused.png");
       background-image: url("../images/avatars/beard-dude.jpg");
-      content: "T.";
     }
   }
   &.clarice--happy {
     @extend %comic-state-base;
     &:after {
-      // background-image: url("../images/clarice--happy.png");
       background-image: url("../images/avatars/amira.jpg");
-      content: "C.";
     }
   }
 }
 
 .comics {
-  width: 600px;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
+  font-size: 0.6em;
+
   section {
     ol {
       padding: 0;
+      columns: 3;
     }
     margin: 0;
     background-color: white;
@@ -73,29 +67,18 @@
 }
 
 %comic-panel-style {
-  background-color: $alto-grey;
   margin: 1em auto;
   display: inline-block;
   list-style-type: none;
-  height: 280px;
-  width: 100%;
-  padding: 0.5em;
-  border: 1px solid #000;
+  height: 25em;
+  width: 33%;
+  padding-bottom: 10em;
   line-height: 1.4;
 }
 
 .pain-point {
-  // display: none;
-  background: $firetruck-red;
-  color: white;
-  padding: 0.5em 0.3em;
-  position: absolute;
-  left: -200px;
-  width: 200px;
-  &:before {
-    content: "OOEW pain point — ";
-    text-transform: uppercase;
-  }
+  color: $firetruck-red;
+  padding: 0.5em 0.3em
 }
 
 .comics {}
@@ -127,7 +110,7 @@ table {
     color: $firefly90;
     font-family: "courier", monospace;
     margin: 0;
-    padding: 1em;
+    padding: 1em 0 0;
     position: relative;
   }
   p:after {
