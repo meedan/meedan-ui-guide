@@ -19,44 +19,33 @@
   }
 }
 
-%comic-panel-style {
-  background-color: white;
-  margin: 1em auto;
-  display: inline-block;
-  list-style-type: none;
-  height: 25em;
-  padding-bottom: 10em;
-  line-height: 1.4;
-}
-
-.layout-two ol { columns: 2; }
-.layout-three ol { columns: 3; }
-.layout-four ol { columns: 4; }
-
 .comics {
   width: 100%;
   margin: 0 auto;
   padding: 0;
   font-size: 0.6em;
-  section {
-    background-color: black;
-    margin: 0;
-    ol {
-      padding: 0;
-    }
-  }
 }
 
-.comic {
+section.comic {
   position: relative;
+  background-color: black;
+  margin: 0;
+  &.layout-two ol { column-count: 2; }
+  &.layout-three ol { column-count: 3; }
+  &.layout-four ol { column-count: 4; }
   li {
     display: inline-block;
-    @extend %comic-panel-style;
+    background-color: white;
+    margin: 1em auto;
+    list-style-type: none;
+    height: 25em;
+    padding-bottom: 10em;
+    line-height: 1.4;
     @extend %comic-state-base;
     &.tre--working:after { background-image: url("../images/avatars/beard-dude.jpg"); }
     &.tre--happy:after { background-image: url("../images/avatars/beard-dude.jpg"); }
     &.tre--confused:after { background-image: url("../images/avatars/beard-dude.jpg"); }
-    &.clarice--happy:after { background-image: url("../images/avatars/amira.jpg"); }
+    &.amira--happy:after { background-image: url("../images/avatars/amira.jpg"); }
     p {
       background: white;
       color: $firefly90;
