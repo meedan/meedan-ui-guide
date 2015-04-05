@@ -3,6 +3,8 @@
 %comic-state-base {
   position: relative;
   font-size: 0.8em;
+
+  // The person saying it
   &:after {
     border-radius: 50%;
     content: "";
@@ -13,8 +15,9 @@
     height: 5em;
     right: 0;
     bottom: 0;
-    background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -25,32 +28,32 @@
   &.tre--working {
     @extend %comic-state-base;
     &:after {
-      // background: url("../images/tre--working.png") no-repeat;
-      background: url("../images/amira.jpg") no-repeat;
+      // background: url("../images/tre--working.png");
+      background-image: url("../images/avatars/beard-dude.jpg");
       content: "T. Working";
     }
   }
   &.tre--happy {
     @extend %comic-state-base;
     &:after {
-      // background: url("../images/tre--happy.png") no-repeat;
-      background: url("../images/amira.jpg") no-repeat;
+      // background: url("../images/tre--happy.png");
+      background-image: url("../images/avatars/beard-dude.jpg");
       content: "T.";
     }
   }
   &.tre--confused {
     @extend %comic-state-base;
     &:after {
-      // background: url("../images/tre--confused.png") no-repeat;
-      background: url("../images/amira.jpg") no-repeat;
+      // background-image: url("../images/tre--confused.png");
+      background-image: url("../images/avatars/beard-dude.jpg");
       content: "T.";
     }
   }
   &.clarice--happy {
     @extend %comic-state-base;
     &:after {
-      // background: url("../images/clarice--happy.png") no-repeat;
-      background: url("../images/amira.jpg") no-repeat;
+      // background-image: url("../images/clarice--happy.png");
+      background-image: url("../images/avatars/amira.jpg");
       content: "C.";
     }
   }
