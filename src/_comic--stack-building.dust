@@ -1,36 +1,11 @@
-<section class="comic layout-three">
+<section class="comic layout-four">
   <h3>Stack Building Scenario</h3>
   <ol>
     <li class="patrick--happy">
       <p>I want to translate all the stuff in this area. I create a spreadsheet of all the things I want translated.</p>
     </li>
 
-    <li>
-      <table>
-        <th>ID</th>
-        <th>URL</th>
-        <th>Source</th>
-        <th>Lang</th>
-        <tr>
-          <td>1</td>
-          <td>twitter.com/post/1</td>
-          <td>"Hi this is my first tweet!"</td>
-          <td>en</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>twitter.com/post/2</td>
-          <td>"... and my second tweet!"</td>
-          <td>en</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>twitter.com/post/3</td>
-          <td>"Wow this is my THIRD tweet!"</td>
-          <td>en</td>
-        </tr>
-      </table>
-    </li>
+    {> _comic--twitter-spreadsheet /}
 
     <li class="patrick--happy">
       <p>The spreadsheet is our private <a href="#stack">stack</a> of work-jobs for translators ... I add things to the stack in various ways — I usually add small bits of social media content.</p>

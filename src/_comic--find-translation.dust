@@ -4,7 +4,9 @@
     <li class="tre--happy">
       <p>Before you can translate something, you have to find something worth translating. For now we just do this with Gdocs.</p>
     </li>
-    <!-- <li>[SPREADSHEET]</li> -->
+
+    {> _comic--twitter-spreadsheet /}
+
     <li class="tre--happy">
       <p>So, because I have a gmail address, Amira just invited me to this spreadsheet. Each row is a tweet that could be translated.</p>
     </li>

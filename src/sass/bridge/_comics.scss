@@ -11,8 +11,8 @@
     display: block;
     width: 5em;
     height: 5em;
-    right: 0;
-    bottom: 0;
+    right: 0.1em;
+    bottom: 0.1em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,49 +20,52 @@
 }
 
 .comics {
-  width: 100%;
-  margin: 0 auto;
-  padding: 0;
   font-size: 0.6em;
   font-family: 'Patrick Hand', cursive;
 }
 
 section.comic {
   position: relative;
-  background-color: black;
-  margin: 0;
-  &.layout-two ol { column-count: 2; }
-  &.layout-three ol { column-count: 3; }
-  &.layout-four ol { column-count: 4; }
+  background-color: rgba(black, 0.1);
+
+  h3 {
+    position: absolute;
+    background-color: red;
+    color: white;
+    top: 0;
+    right: 0;
+    padding: 3em 10em 3em 3em;
+  }
+
+  ol {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-content: stretch;
+  }
   li {
-    display: inline-block;
+    flex: 1;
     background-color: white;
-    padding: 1em;
+    box-shadow: 3px 3px 10px rgba(black, 0.2);
+    margin: 1em;
+    padding: 4em;
     list-style-type: none;
-    height: 20em;
     line-height: 1.4;
+    overflow: hidden;
     @extend %comic-state-base;
     &.tre--working:after { background-image: url("../images/avatars/beard-dude.jpg"); }
     &.tre--happy:after { background-image: url("../images/avatars/beard-dude.jpg"); }
     &.tre--confused:after { background-image: url("../images/avatars/beard-dude.jpg"); }
     &.amira--happy:after { background-image: url("../images/avatars/amira.jpg"); }
     &.patrick--happy:after { background-image: url("../images/avatars/blue-dude.jpg"); }
-
+    &.spreadsheet {
+      flex: 2;
+    }
     p {
-      background: white;
       color: $firefly90;
-      margin: 0;
-      padding: 1em 0 0;
       position: relative;
-      &>:after {
-        content: ' ';
-        height: 0;
-        position: absolute;
-        bottom: -16px;
-        width: 0;
-        border: 10px solid transparent;
-        border-top-color: #fff;
-      }
     }
   }
 }
@@ -71,16 +74,24 @@ section.comic {
   color: $firetruck-red;
   padding: 0.5em 0.3em;
   font-family: 'Patrick Hand SC', cursive;
+  text-transform: uppercase;
 }
 
 // a table represents a CSV file in the comic :)
 table {
-  border: 1px solid rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,0,0,0.2);
+  color: rgba(0,0,0,0.8);
   margin: 1em;
   th {
-    @extend %font--hfj-whitney-bold;
+    // @extend %font--hfj-whitney-bold;
+    background-color: green;
+    color: rgba(white, 0.8);
+    padding: 0.3em;
+    text-transform: uppercase;
+    font-family: 'Patrick Hand SC', cursive;
   }
   td {
-    border: 1px solid rgba(0,0,0,0.5);
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 1em;
   }
 }
