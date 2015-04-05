@@ -12,6 +12,7 @@ var config = require('./config/config.js');
 var scssFiles = "src/sass/**/*.scss";
 var cssCompileDir = "www/assets/css";
 var changed = require('gulp-changed');
+var autoprefixer = require('gulp-autoprefixer');
 
 // Browser-sync
 //
@@ -57,6 +58,7 @@ gulp.task('dust', function (cb) {
 gulp.task('sass', function () {
   return gulp.src(scssFiles)
     .pipe(sass(sassConfig))
+    .pipe(autoprefixer("last 4 versions", "> 1%"))
     .pipe(gulp.dest(cssCompileDir))
     .pipe(reload({
       stream: true
@@ -66,6 +68,6 @@ gulp.task('sass', function () {
 // Default task
 gulp.task('default', function () {
   gulp.watch(scssFiles, ['sass']);
-  gulp.watch('src/*.dust', ['dust', 'misc']).on('change', reload);
+  gulp.watch('src/*.dust', ['dust', 'images']).on('change', reload);
   browserSync(browserSyncConfig);
 });

@@ -2,8 +2,7 @@
 //
 %comic-state-base {
   position: relative;
-
-  // The avatar of the person saying it
+  // The avatar of the person
   &:after {
     border-radius: 50%;
     content: "";
@@ -20,60 +19,62 @@
   }
 }
 
-%comic-states {
-  &.tre--working {
-    @extend %comic-state-base;
-  }
-  &.tre--working {
-    @extend %comic-state-base;
-    &:after {
-      background-image: url("../images/avatars/beard-dude.jpg");
-    }
-  }
-  &.tre--happy {
-    @extend %comic-state-base;
-    &:after {
-      background-image: url("../images/avatars/beard-dude.jpg");
-    }
-  }
-  &.tre--confused {
-    @extend %comic-state-base;
-    &:after {
-      background-image: url("../images/avatars/beard-dude.jpg");
-    }
-  }
-  &.clarice--happy {
-    @extend %comic-state-base;
-    &:after {
-      background-image: url("../images/avatars/amira.jpg");
-    }
-  }
+%comic-panel-style {
+  background-color: white;
+  margin: 1em auto;
+  display: inline-block;
+  list-style-type: none;
+  height: 25em;
+  padding-bottom: 10em;
+  line-height: 1.4;
 }
+
+.layout-two ol { columns: 2; }
+.layout-three ol { columns: 3; }
+.layout-four ol { columns: 4; }
 
 .comics {
   width: 100%;
   margin: 0 auto;
   padding: 0;
   font-size: 0.6em;
-
   section {
+    background-color: black;
+    margin: 0;
     ol {
       padding: 0;
-      columns: 3;
     }
-    margin: 0;
-    background-color: white;
   }
 }
 
-%comic-panel-style {
-  margin: 1em auto;
-  display: inline-block;
-  list-style-type: none;
-  height: 25em;
-  width: 33%;
-  padding-bottom: 10em;
-  line-height: 1.4;
+.comic {
+  position: relative;
+  li {
+    display: inline-block;
+    @extend %comic-panel-style;
+    @extend %comic-state-base;
+    &.tre--working:after { background-image: url("../images/avatars/beard-dude.jpg"); }
+    &.tre--happy:after { background-image: url("../images/avatars/beard-dude.jpg"); }
+    &.tre--confused:after { background-image: url("../images/avatars/beard-dude.jpg"); }
+    &.clarice--happy:after { background-image: url("../images/avatars/amira.jpg"); }
+    p {
+      background: white;
+      color: $firefly90;
+      font-family: "courier", monospace;
+      margin: 0;
+      padding: 1em 0 0;
+      position: relative;
+      &>:after {
+        content: ' ';
+        height: 0;
+        position: absolute;
+        bottom: -16px;
+        width: 0;
+        border: 10px solid transparent;
+        border-top-color: #fff;
+      }
+    }
+  }
 }
 
 .pain-point {
@@ -81,11 +82,7 @@
   padding: 0.5em 0.3em
 }
 
-.comics {}
-.comic {
-  position: relative;
-}
-
+// a table represents a CSV file in the comic :)
 table {
   width: 55%;
   border: 1px solid rgba(0,0,0,0.5);
@@ -99,27 +96,5 @@ table {
   }
   td {
     border: 1px solid rgba(0,0,0,0.5);
-  }
-}
-
-.comic li {
-  @extend %comic-states;
-  @extend %comic-panel-style;
-  p {
-    background: white;
-    color: $firefly90;
-    font-family: "courier", monospace;
-    margin: 0;
-    padding: 1em 0 0;
-    position: relative;
-  }
-  p:after {
-    content: ' ';
-    height: 0;
-    position: absolute;
-    bottom: -16px;
-    width: 0;
-    border: 10px solid transparent;
-    border-top-color: #fff;
   }
 }
