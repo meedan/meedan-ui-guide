@@ -24,6 +24,7 @@
   margin: 0 auto;
   padding: 0;
   font-size: 0.6em;
+  font-family: 'Patrick Hand', cursive;
 }
 
 section.comic {
@@ -36,20 +37,20 @@ section.comic {
   li {
     display: inline-block;
     background-color: white;
-    margin: 1em auto;
+    padding: 1em;
     list-style-type: none;
-    height: 25em;
-    padding-bottom: 10em;
+    height: 20em;
     line-height: 1.4;
     @extend %comic-state-base;
     &.tre--working:after { background-image: url("../images/avatars/beard-dude.jpg"); }
     &.tre--happy:after { background-image: url("../images/avatars/beard-dude.jpg"); }
     &.tre--confused:after { background-image: url("../images/avatars/beard-dude.jpg"); }
     &.amira--happy:after { background-image: url("../images/avatars/amira.jpg"); }
+    &.patrick--happy:after { background-image: url("../images/avatars/blue-dude.jpg"); }
+
     p {
       background: white;
       color: $firefly90;
-      font-family: "courier", monospace;
       margin: 0;
       padding: 1em 0 0;
       position: relative;
@@ -68,18 +69,14 @@ section.comic {
 
 .pain-point {
   color: $firetruck-red;
-  padding: 0.5em 0.3em
+  padding: 0.5em 0.3em;
+  font-family: 'Patrick Hand SC', cursive;
 }
 
 // a table represents a CSV file in the comic :)
 table {
-  width: 55%;
   border: 1px solid rgba(0,0,0,0.5);
-  font-size: 0.5em;
   margin: 1em;
-  clear: both;
-  bottom: 10px;
-  position: absolute;
   th {
     @extend %font--hfj-whitney-bold;
   }

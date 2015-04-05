@@ -10,6 +10,7 @@
 //
 @import "meedan/typography";
 @import "checkdesk/shared/fonts";
+@import url(http://fonts.googleapis.com/css?family=Patrick+Hand|Patrick+Hand+SC);
 
 // ## meedan common base styles
 //
@@ -23,7 +24,7 @@
 @import "compass-mixins/lib/animation/core";
 @import "compass-mixins/lib/animation/animate/fading";
 
-// ## bridge 
+// ## bridge
 //
 @import "bridge/shared";
 @import "bridge/colors";

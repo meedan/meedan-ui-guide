@@ -1,9 +1,11 @@
 <section class="comic layout-three">
   <h3>Stack Building Scenario</h3>
   <ol>
-    <li class="amira--happy">
-      <p>This guy Paul is walking around the planet. I want to translate all the stuff near him. I create a spreadsheet of all the things I want translated. Like this: </p>
+    <li class="patrick--happy">
+      <p>I want to translate all the stuff in this area. I create a spreadsheet of all the things I want translated.</p>
+    </li>
 
+    <li>
       <table>
         <th>ID</th>
         <th>URL</th>
@@ -28,13 +30,12 @@
           <td>en</td>
         </tr>
       </table>
-
     </li>
 
-    <li class="amira--happy">
+    <li class="patrick--happy">
       <p>The spreadsheet is our private <a href="#stack">stack</a> of work-jobs for translators ... I add things to the stack in various ways — I usually add small bits of social media content.</p>
     </li>
-    <li class="amira--happy">
+    <li class="patrick--happy">
       <p>Each row in the spreadsheet is a job that a translator can perform. When I find something I want translated, I add it to the spreadsheet.</p>
     </li>
   </ol>
