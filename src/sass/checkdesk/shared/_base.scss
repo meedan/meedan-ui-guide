@@ -5,7 +5,7 @@
 // First: Apply Normalize.css
 //
 // This standardizes browser behavior.
-@import "scss-normalize/normalize";
+// @import "../bower_components/scss-normalize/normalize";
 
 // Line heights
 //
@@ -53,25 +53,25 @@ $font-size-mini: $base-font-size * 0.75;
 
 // Now that default variables are set, import compass
 //
-@import "compass-mixins/lib/compass/reset/utilities";
-@import "compass-mixins/lib/compass/support";
-
-@import "compass-mixins/lib/compass/css3/background-clip";
-@import "compass-mixins/lib/compass/css3/background-origin";
-@import "compass-mixins/lib/compass/css3/border-radius";
-@import "compass-mixins/lib/compass/css3/box-shadow";
-@import "compass-mixins/lib/compass/css3/box-sizing";
-@import "compass-mixins/lib/compass/css3/font-face";
-@import "compass-mixins/lib/compass/css3/hyphenation";
-@import "compass-mixins/lib/compass/css3/images";
-@import "compass-mixins/lib/compass/css3/opacity";
-@import "compass-mixins/lib/compass/css3/transform";
-@import "compass-mixins/lib/compass/css3/transition";
-@import "compass-mixins/lib/compass/css3/text-shadow";
-@import "compass-mixins/lib/compass/css3/columns";
+// @import "compass-mixins/lib/compass/reset/utilities";
+// @import "compass-mixins/lib/compass/support";
+//
+// @import "compass-mixins/lib/compass/css3/background-clip";
+// @import "compass-mixins/lib/compass/css3/background-origin";
+// @import "compass-mixins/lib/compass/css3/border-radius";
+// @import "compass-mixins/lib/compass/css3/box-shadow";
+// @import "compass-mixins/lib/compass/css3/box-sizing";
+// @import "compass-mixins/lib/compass/css3/font-face";
+// @import "compass-mixins/lib/compass/css3/hyphenation";
+// @import "compass-mixins/lib/compass/css3/images";
+// @import "compass-mixins/lib/compass/css3/opacity";
+// @import "compass-mixins/lib/compass/css3/transform";
+// @import "compass-mixins/lib/compass/css3/transition";
+// @import "compass-mixins/lib/compass/css3/text-shadow";
+// @import "compass-mixins/lib/compass/css3/columns";
 
 // @import "compass-mixins/lib/compass/typography/vertical_rhythm";
-@import "compass-mixins/lib/compass/typography/links/link-colors";
+// @import "compass-mixins/lib/compass/typography/links/link-colors";
 
 // @import "compass-mixins/lib/compass/typography/text/replacement";
 
@@ -80,7 +80,7 @@ $font-size-mini: $base-font-size * 0.75;
 // @import "susy/sass/susyone";
 
 * {
-  @include box-sizing("border-box");
+  box-sizing: border-box;
 }
 
 $from-direction: left;

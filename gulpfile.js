@@ -39,7 +39,7 @@ var dustConfig = {
 //
 var sassConfig = {
   errLogToConsole: true,
-  includePaths: ["www/bower_components"],
+  includePaths: ["./bower_components"],
 }
 
 gulp.task('images', function () {
