@@ -16,6 +16,7 @@
     "normalize-scss": "~3.0.2",
     "lodash": "~3.0.0",
     "modernizr": "~2.8.3",
-    "dustjs-linkedin": "~2.5.1"
+    "dustjs-linkedin": "~2.5.1",
+    "chart.js": "~0.1.0"
   }
 }
