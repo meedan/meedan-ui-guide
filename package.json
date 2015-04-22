@@ -23,6 +23,8 @@
     "dustjs-helpers": "^1.5.0",
     "dustjs-linkedin": "^2.5.1",
     "gulp": "^3.8.10",
+    "gulp-autoprefixer": "^2.1.0",
+    "gulp-changed": "^1.2.1",
     "gulp-concat": "^2.4.3",
     "gulp-cssmin": "^0.1.6",
     "gulp-dust": "^1.0.2",
