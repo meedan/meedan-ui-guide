@@ -1325,3 +1325,6 @@ body.bridgeEmbed {
 
 .bridgeEmbed__item:first-of-type .bridgeEmbed__item-embedly-card {
   display: block; }
+
+body.flowchart {
+  background-color: #ffffff; }
