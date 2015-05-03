@@ -3,6 +3,8 @@
 
 <body class="docs">
 
+  {> _nav /}
+
   {> _homepage-content /}
 
 </body>
