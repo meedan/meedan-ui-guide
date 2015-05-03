@@ -23,3 +23,7 @@
 .layout-tertiary {
   @extend %primary;
 }
+
+* {
+  box-sizing: border-box;
+}

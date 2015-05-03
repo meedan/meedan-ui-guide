@@ -849,6 +849,9 @@ ul li {
   font-size: 0.8em;
   clear: none; }
 
+* {
+  box-sizing: border-box; }
+
 h2, h3, body {
   font-family: "Whitney SSm A", "Whitney SSm B";
   font-weight: 400;
@@ -1440,20 +1443,103 @@ h3 {
     font-size: 14px;
     top: 32px; }
 
+.mercury-grey:before, .alto-grey:before, .accent-blue:before, .photo-feb10-blue:before, .another-blue:before, .light-blue:before, .shadow-grey:before, .translation-border-color:before, .translation-background-color:before, .ooew-red:before, .translation-comment-link-blue:before, .translation-comment-blue:before, .warm-color:before, .light-warm-color:before, .byline-background-color:before, .byline-color:before, .tanzanite-blue:before, .cerise-pink:before, .portland-purple:before {
+  content: " ";
+  padding: 0em;
+  width: 2em;
+  height: 2em;
+  display: inline-block;
+  margin: 0 1em 0 0; }
+
 .style-guide .container {
   border-radius: 4px;
-  padding: 2em; }
+  padding: 2em;
+  margin: 0 auto;
+  width: 800px;
+  position: relative; }
+  .style-guide .container > h1 {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 7em;
+    line-height: 1;
+    font-style: italic; }
+  .style-guide .container > h2 {
+    color: rgba(255, 255, 255, 0.9);
+    text-align: left;
+    font-size: 2em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0 0 1em; }
 
 dl {
-  margin: 2em; }
+  margin: 2em auto; }
   dl dt {
-    margin-top: 1em;
-    color: white; }
+    margin-top: 2em;
+    color: white;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right; }
   dl dd {
     background-color: white;
     padding: 1em;
     border-radius: 4px;
-    width: 500px; }
+    margin-top: 1em;
+    display: block; }
+
+.mercury-grey:before {
+  background-color: #e8e8e8; }
+
+.alto-grey:before {
+  background-color: #e0e0e0; }
+
+.accent-blue:before {
+  background-color: #6d9ed3; }
+
+.photo-feb10-blue:before {
+  background-color: #596d74; }
+
+.another-blue:before {
+  background-color: #1d5ca2; }
+
+.light-blue:before {
+  background-color: white; }
+
+.shadow-grey:before {
+  background-color: #c3c3c3; }
+
+.translation-border-color:before {
+  background-color: #c3c3c3; }
+
+.translation-background-color:before {
+  background-color: #888888; }
+
+.ooew-red:before {
+  background-color: #960808; }
+
+.translation-comment-link-blue:before {
+  background-color: rgba(29, 92, 162, 0.6); }
+
+.translation-comment-blue:before {
+  background-color: rgba(89, 109, 116, 0.5); }
+
+.warm-color:before {
+  background-color: #d2c6b7; }
+
+.light-warm-color:before {
+  background-color: #f2f0eb; }
+
+.byline-background-color:before {
+  background-color: rgba(255, 255, 0, 0.3); }
+
+.byline-color:before {
+  background-color: rgba(0, 0, 0, 0.85); }
+
+.tanzanite-blue:before {
+  background-color: #4910db; }
+
+.cerise-pink:before {
+  background-color: #db107c; }
+
+.portland-purple:before {
+  background-color: #42476f; }
 
 body.flowchart {
   background-color: #ffffff; }

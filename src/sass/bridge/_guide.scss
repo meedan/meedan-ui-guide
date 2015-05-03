@@ -1,24 +1,182 @@
+%guide--color {
+  content: " ";
+  padding: 0em;
+  width: 2em;
+  height: 2em;
+  display: inline-block;
+  margin: 0 1em 0 0;
+}
+
 .style-guide {
   .container {
     border-radius: 4px;
     padding: 2em;
+    margin: 0 auto;
+    width: 800px;
+    position: relative;
+    & > h1 {
+      color: rgba(white, 0.3);
+      font-size: 7em;
+      line-height: 1;
+      font-style: italic;
+    }
+    & > h2 {
+      color: rgba(white, 0.9);
+      text-align: left;
+      font-size: 2em;
+      border-bottom: 1px solid rgba(white, 0.3);
+      padding: 0 0 1em;
+    }
   }
 }
 
 dl {
-  margin: 2em;
+  margin: 2em auto;
   dt {
-    margin-top: 1em;
-    color: white;
+    margin-top: 2em;
+    color: $white;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
   }
   dd {
-    background-color: white;
+    background-color: $white;
     padding: 1em;
     border-radius: 4px;
-    width: 500px;
+    margin-top: 1em;
+    display: block;
   }
 }
 
-.container {
+.mercury-grey {
+  &:before {
+    @extend %guide--color;
+    background-color: $mercury-grey;
+  }
+}
 
+.alto-grey {
+  &:before {
+    @extend %guide--color;
+    background-color: $alto-grey;
+  }
+}
+
+.accent-blue {
+  &:before {
+    @extend %guide--color;
+    background-color: $accent-blue;
+  }
+}
+
+.photo-feb10-blue {
+  &:before {
+    @extend %guide--color;
+    background-color: $photo-feb10-blue;
+  }
+}
+
+.another-blue {
+  &:before {
+    @extend %guide--color;
+    background-color: $another-blue;
+  }
+}
+
+.light-blue {
+  &:before {
+    @extend %guide--color;
+    background-color: $light-blue;
+  }
+}
+
+.shadow-grey {
+  &:before {
+    @extend %guide--color;
+    background-color: $shadow-grey;
+  }
+}
+
+.translation-border-color {
+  &:before {
+    @extend %guide--color;
+    background-color: $translation-border-color;
+  }
+}
+
+.translation-background-color {
+  &:before {
+    @extend %guide--color;
+    background-color: $translation-background-color;
+  }
+}
+
+.ooew-red {
+  &:before {
+    @extend %guide--color;
+    background-color: $ooew-red;
+  }
+}
+
+.translation-comment-link-blue {
+  &:before {
+    @extend %guide--color;
+    background-color: $translation-comment-link-blue;
+  }
+}
+
+.translation-comment-blue {
+  &:before {
+    @extend %guide--color;
+    background-color: $translation-comment-blue;
+  }
+}
+
+.warm-color {
+  &:before {
+    @extend %guide--color;
+    background-color: $warm-color;
+  }
+}
+
+.light-warm-color {
+  &:before {
+    @extend %guide--color;
+    background-color: $light-warm-color;
+  }
+}
+
+.byline-background-color {
+  &:before {
+    @extend %guide--color;
+    background-color: $byline-background-color;
+  }
+}
+
+.byline-color {
+  &:before {
+    @extend %guide--color;
+    background-color: $byline-color;
+  }
+}
+
+.tanzanite-blue {
+  &:before {
+    @extend %guide--color;
+    background-color: $tanzanite-blue;
+  }
+}
+
+.cerise-pink {
+  &:before {
+    @extend %guide--color;
+    background-color: $cerise-pink;
+  }
+}
+
+.portland-purple {
+  &:before {
+    @extend %guide--color;
+    background-color: $portland-purple;
+  }
 }
