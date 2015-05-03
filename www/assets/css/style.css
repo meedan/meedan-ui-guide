@@ -1328,3 +1328,7 @@ body.bridgeEmbed {
 
 body.flowchart {
   background-color: #ffffff; }
+
+.bridge-tweetshot {
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white; }

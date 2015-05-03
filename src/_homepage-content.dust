@@ -8,12 +8,18 @@
     <li><a href="editor.html">Bridge Editor UI</a></li>
     <li><a href="profile.html">Bridge Profile UI</a></li>
     <li><a href="stacks.html">Bridge Stacks UI</a></li>
+    <li><a href="auth.html">Bridge Authentication UI</li>
+
     <li>Bridge Stack Builder UI</li>
-    
+
     <li>Bridge Payment UI</li>
-    <li>Bridge Authentication UI</li>
+
     <li>Bridge Publishing UI</li>
+
+    <li>Draft user scenario <a href="comic.html">comics</a></li>
+    <li>Draft <a href="flow.html">flow charts</a></li>
   </ul>
 
-  <p>Take me to the <a href="comic.html">comics</a> already!</p>
+
+
 </div>
