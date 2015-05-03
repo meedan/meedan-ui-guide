@@ -849,7 +849,7 @@ ul li {
   font-size: 0.8em;
   clear: none; }
 
-h2, body {
+h2, h3, body {
   font-family: "Whitney SSm A", "Whitney SSm B";
   font-weight: 400;
   font-style: normal; }
@@ -1327,14 +1327,10 @@ body.bridgeEmbed {
   display: block; }
 
 body {
-  margin: 0;
-  padding: 10px;
-  background: #f9f9f9;
-  font-family: helvetica;
-  box-sizing: border-box; }
+  background: #404d59; }
 
 h3 {
-  color: #787878;
+  color: #10212f;
   margin-top: 0;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.07); }
@@ -1443,6 +1439,21 @@ h3 {
     font-weight: 400;
     font-size: 14px;
     top: 32px; }
+
+.style-guide .container {
+  border-radius: 4px;
+  padding: 2em; }
+
+dl {
+  margin: 2em; }
+  dl dt {
+    margin-top: 1em;
+    color: white; }
+  dl dd {
+    background-color: white;
+    padding: 1em;
+    border-radius: 4px;
+    width: 500px; }
 
 body.flowchart {
   background-color: #ffffff; }

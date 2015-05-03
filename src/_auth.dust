@@ -1,7 +1,0 @@
-"This is the authentication helper text."
-<form>
-<input></input>
-<input></input>
-<input name="password"></input>
-<label for="password">Password</label>
-</form>

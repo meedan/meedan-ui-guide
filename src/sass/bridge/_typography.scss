@@ -1,11 +1,11 @@
 // Bridge Typography
-// 
-// 
+//
+//
 // Font Setup
-// 
+//
 // Using %pseudoclasses that are @extended.
-// 
-// USAGE: Serif 
+//
+// USAGE: Serif
 // .example-class--active { @extend %font--hfj-mercury-display-normal; }
 
 // USAGE: Sans serif
@@ -59,8 +59,8 @@
   font-style: italic;
 }
 
-// Font application 
-// 
+// Font application
+//
 // Each of the major font styles can be implemented with @extend
 h1 {
   @extend %font--hfj-mercury-display-bold;
@@ -69,6 +69,11 @@ h1 {
 h2 {
   @extend %font--hfj-whitney-normal;
 }
+
+h3 {
+  @extend %font--hfj-whitney-normal;
+}
+
 
 body {
   @extend %font--hfj-whitney-normal;

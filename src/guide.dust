@@ -1,0 +1,25 @@
+{> _head /}
+
+<body class="style-guide">
+  <div class="container">
+
+    <dl>
+      <dt>h1</dt>
+      <dd>
+        <h1>A sample or test case or as random, meaningless nonsense</h1>
+      </dd>
+      <dt>h2<dt>
+      <dd>
+        <h2>The twelve most commonly used letters</h2>
+      </dd>
+      <dt>h3</dt>
+      <dd>
+        <h3>It is also a common learning tool for keyboard classes, since all four keys are located on Home row.</h3>
+      </dd>
+      <dt>h4</dt>
+      <dd>
+        <h4>A coherent, short phrase that uses every letter of the alphabet. See pangram for more examples</h4>
+      </dd>
+    </dl>
+  </div>
+</body>
