@@ -73,6 +73,6 @@ gulp.task('sass', function () {
 // Default task
 gulp.task('default', function () {
   gulp.watch(scssFiles, ['sass']);
-  gulp.watch('src/*.dust', ['dust', 'images', 'js']).on('change', reload);
+  gulp.watch('src/*.{dust,html}', ['dust', 'images', 'js']).on('change', reload);
   browserSync(browserSyncConfig);
 });
