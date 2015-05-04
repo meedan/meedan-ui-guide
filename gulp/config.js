@@ -3,13 +3,17 @@ var dest = './www';
 
 module.exports = {
   misc: {
-    src: src + '/{CNAME, *.pdf, images/favicons/*, robots.txt}',
+    src: src + '/{CNAME, *.js, *.pdf, images/favicons/*, robots.txt}',
     dest: dest
   },
   browserSync: {
     server: {
       baseDir: dest
     }
+  },
+  images: {
+    src: [src + '/assets/images/*', src + '/assets/images/**/*'],
+    dest: 'www/assets/images/'
   },
   sass: {
     settings: {

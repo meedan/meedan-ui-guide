@@ -2,8 +2,7 @@
   "name": "bridge-ui",
   "version": "0.9.0",
   "private": "true",
-  "description": "a small HTML prototype environment",
-  "main": "echo \"No main specified\"",
+  "description": "a small HTML prototype environment"
   "scripts": {
     "test": "echo \"No test specified\""
   },
@@ -40,12 +39,7 @@
     "domready": "~1.0.8",
     "screenfull": "~2.0.0",
     "gulp-bower-files": "~0.2.7",
-    "watchify": "~3.2.1",
-    "vinyl-source-stream": "~1.1.0",
-    "gulp-util": "~3.0.4",
-    "vinyl-buffer": "~1.0.0",
-    "lodash": "~3.8.0",
-    "browserify": "~10.0.0"
+    "watchify": "~3.2.1"
   },
   "dependencies": {}
 }

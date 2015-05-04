@@ -8,14 +8,13 @@ var handleErrors = require('../util/handleErrors');
 
 gulp.task('sass', function () {
   return gulp.src(config.sass.src)
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(sass(config.sass.settings))
     .on('error', handleErrors)
     // .pipe(console.log(config.sass.settings))
     // .pipe(sourcemaps.write())
     .pipe(autoprefixer("last 4 versions", "> 1%"))
     .pipe(gulp.dest(config.sass.dest))
-    // .pipe(console.log("Writing to #{config.sass.dest}"))
     .pipe(browserSync.reload({
       stream: true
     }));

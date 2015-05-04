@@ -1,6 +1,7 @@
 var gulp = require('gulp');
+var config = require('../config');
 
 gulp.task('images', function () {
-  return gulp.src(['src/assets/images/*', 'src/assets/images/**/*'])
-    .pipe(gulp.dest('www/assets/images/'));
+  return gulp.src(config.images.src)
+    .pipe(gulp.dest(config.images.dest));
 });

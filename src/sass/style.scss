@@ -1,28 +1,4 @@
-// @import "checkdesk/shared/base";
-// @import "checkdesk/shared/colors";
-
-// @import "checkdesk/shared/backgrounds";
-// @import "checkdesk/shared/mixins";
-// @import "checkdesk/shared/buttons";
-// @import "checkdesk/shared/breakpoints";
-// @import "checkdesk/shared/if_direction";
-
-// ## typography
-//
-// @import "meedan/typography";
-// @import "checkdesk/shared/fonts";
-
 @import url(http://fonts.googleapis.com/css?family=Patrick+Hand|Patrick+Hand+SC);
-
-// ## meedan common base styles
-//
-// @import "meedan/debug";
-
-// @import "meedan/transition";
-
-// @import "meedan/icons/icon_helpers";
-// @import "meedan/icons/fontawesome";
-// @import "meedan/gradients";
 
 // ## bridge
 //
@@ -49,3 +25,4 @@
 @import "flowchart";
 @import "tweetshot";
 @import "navigation";
+@import "d3";

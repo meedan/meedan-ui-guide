@@ -35,3 +35,36 @@ That will start the compiler for both the stylesheets ([Sass](sass-lang.com/)) a
 
 While the gulp compiler is running, edit the source files in `src/` and the web-ready files in `www` will be regenerated.
 
+Read about it on the [Browserify homepage](https://www.npmjs.com/package/browserify)
+
+## Working with browserify 
+
+Browserify makes it easy to combine javascript modules via NPM. 
+
+- Install a cool npm module with `npm install --save-dev`
+- Open app.js and `require` the npm module
+- Run the bundler command to create bundle.js
+
+## Working with bower components in browserify 
+
+Bower components are installed into `src/bower_components`. Run `bower install` to get these.  
+
+The sass pulls from the bower_components directory directly. 
+
+For example, say we want to use the burger component, which is installed with bower but not npm: 
+
+        @import "../bower_components/burger/dist/scss/burger.scss";
+
+The javascript is bundled in app.js: 
+
+        var burger = require('burger');
+
+## Using watchify
+
+Then we must bundle the js with a separate command. This command is not integrated with the build system yet, so you need to run it in a separate console: 
+
+        `watchify -t debowerify -d src/app.js -o www/bundle.js -v`
+
+Watchify will automatically parse the bower paths to create a bundle.js with all the bower libraries included.
+
+See: [Debowerfiy on Github](https://github.com/eugeneware/debowerify).
