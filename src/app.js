@@ -1,12 +1,4 @@
-var _screenfull = require('screenfull'); // the bower component
-var domready = require('domready'); // a regular browserify npm component
-
-domready(function () {
-  var button = document.getElementById('fullscreen');
-  button.addEventListener('click', function (evt) {
-    // screenfull adds itself to window.screenfull - but we can get to it
-    if (screenfull.enabled) {
-      screenfull.toggle(this);
-    }
-  });
-});
+// Burger is a bower component installed with `bower install burger`
+// But we want to bundle it so we use the debundleify module when we run browserify 
+// eg using: `watchify -t debowerify -d src/app.js -o www/bundle.js -v`
+var burger = require('burger');

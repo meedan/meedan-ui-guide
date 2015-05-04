@@ -28,7 +28,6 @@
 //
 %comic-avatar {
   position: relative;
-
   // The avatar of the person
   &[class*='--']:after {
     border-radius: 50%;
@@ -46,11 +45,21 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-  &.tre--working:after { background-image: url("../images/avatars/beard-dude.jpg"); }
-  &.tre--happy:after { background-image: url("../images/avatars/beard-dude.jpg"); }
-  &.tre--confused:after { background-image: url("../images/avatars/beard-dude.jpg"); }
-  &.amira--happy:after { background-image: url("../images/avatars/amira.jpg"); }
-  &.patrick--happy:after { background-image: url("../images/avatars/blue-dude.jpg"); }
+  &.tre--working:after {
+    background-image: url("../assets/images/avatars/beard-dude.jpg");
+  }
+  &.tre--happy:after {
+    background-image: url("../assets/images/avatars/beard-dude.jpg");
+  }
+  &.tre--confused:after {
+    background-image: url("../assets/images/avatars/beard-dude.jpg");
+  }
+  &.amira--happy:after {
+    background-image: url("../assets/images/avatars/amira.jpg");
+  }
+  &.patrick--happy:after {
+    background-image: url("../assets/images/avatars/blue-dude.jpg");
+  }
 }
 
 .comics {
@@ -63,7 +72,6 @@ section.comic {
   flex: 1;
   padding: 0;
   font-size: 0.7em;
-
   // &.tre {
   //   border:10px solid red;
   // }
@@ -73,7 +81,6 @@ section.comic {
   h3 {
     font-family: 'Patrick Hand SC', cursive;
   }
-
   ol {
     margin: 0;
     padding: 0;
@@ -91,7 +98,6 @@ section.comic {
     line-height: 1.4;
     overflow: hidden;
     @extend %comic-avatar;
-
     &.on-screen {
       @extend %on-screen;
     }
@@ -116,8 +122,8 @@ section.comic {
 
 // a table represents a CSV file in the comic :)
 table {
-  border: 1px solid rgba(0,0,0,0.2);
-  color: rgba(0,0,0,0.8);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.8);
   margin: 1em 0;
   th {
     // @extend %font--hfj-whitney-bold;
@@ -128,7 +134,7 @@ table {
     font-family: 'Patrick Hand SC', cursive;
   }
   td {
-    border: 1px solid rgba(0,0,0,0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 1em;
   }
 }
