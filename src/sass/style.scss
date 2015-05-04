@@ -1,12 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Patrick+Hand|Patrick+Hand+SC);
 
-// ## bridge
+// ## Bridge
 //
 @import "bridge/colors";
-
 @import "bridge/shared";
-
-// @import "bridge/icons";
+@import "bridge/icons";
 @import "bridge/docs";
 @import "bridge/editor";
 @import "bridge/layout";
@@ -24,5 +22,6 @@
 // WIP
 @import "flowchart";
 @import "tweetshot";
-@import "navigation";
-@import "d3";
+
+// This hamburger is incompatible with bridge/auth
+// @import "navigation";

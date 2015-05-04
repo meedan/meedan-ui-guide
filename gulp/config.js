@@ -3,7 +3,7 @@ var dest = './www';
 
 module.exports = {
   misc: {
-    src: src + '/{CNAME, *.js, *.pdf, images/favicons/*, robots.txt}',
+    src: src + '/{bower_components/**/*.js, CNAME, *.js, *.pdf, images/favicons/*, robots.txt}',
     dest: dest
   },
   browserSync: {
@@ -12,11 +12,12 @@ module.exports = {
     }
   },
   images: {
-    src: [src + '/assets/images/*', src + '/assets/images/**/*'],
-    dest: 'www/assets/images/'
+    src: src + '/images/*',
+    dest: dest + 'images/'
   },
   sass: {
     settings: {
+      includePath: './src/bower_components',
       errLogToConsole: true,
       outputStyle: "compressed"
     },

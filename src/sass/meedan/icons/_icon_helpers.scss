@@ -23,20 +23,20 @@ $icon-position: before !default;
 // $size - the width and height of the icon
 // $font-name - Required for Foundicons: Specify one font from the family.
 
-$default-icon-font-size: 14px; // fontawesome 3.0 is optimized for 14px
+$default-icon-font-size: 14px;
+
+// fontawesome 3.0 is optimized for 14px
 $large-icon-font-size: 18px;
 
 @include meedan-font-face("FontAwesome", "fontawesome-webfont-webfont", "normal", "normal");
 
 // Just for icons on words or elements, before or after
-@mixin icon($icon, $size: $default-icon-font-size, $color: "black", $position: "before", $margin: 0 $gutter-width/2) {
-
+@mixin icon($icon, $size: $default-icon-font-size, $color: "black", $position: "before", $margin: 0 $gutter-width / 2) {
   &:#{$position} {
-
-    font-family: "FontAwesome"; // 1. set the font name
-
-    @extend %icon-#{$icon}:before; // 2. class selector with dynamic name w/ @extend'ed placeholder
-
+    font-family: "FontAwesome";
+    // 1. set the font name
+    @extend %icon-#{$icon}:before;
+    // 2. class selector with dynamic name w/ @extend'ed placeholder
     // 3. basic layout
     font-size: $size;
     line-height: inherit;
@@ -45,10 +45,10 @@ $large-icon-font-size: 18px;
     width: auto;
     vertical-align: baseline;
     -webkit-font-smoothing: antialiased;
-    *margin-right: .3em; // fixes ie7 issues
+    *margin-right: .3em;
+    // fixes ie7 issues
     font-weight: normal;
     text-decoration: none;
-
     // 4. content (for any extra)
     @content;
   }
@@ -56,5 +56,5 @@ $large-icon-font-size: 18px;
 
 // A small triangle, eg for dropdowns
 @mixin caret {
-  @include icon('caret-down', 12px, white, 'after');
+  @include icon("caret-down", 12px, white, "after");
 }
