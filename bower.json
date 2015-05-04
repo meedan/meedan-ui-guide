@@ -1,6 +1,6 @@
 {
   "name": "meedan-bridge-ui",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "private": true,
   "ignore": [
     "**/.*",
@@ -10,15 +10,8 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-sass": "~3.3.3",
-    "compass-mixins": "~1.0.2",
-    "mathsass": "~0.9.5",
-    "normalize-scss": "~3.0.2",
-    "lodash": "~3.0.0",
-    "modernizr": "~2.8.3",
     "angular": "~1.3.15",
-    "burger": "~1.3.2",
-    "screenfull": "~2.0.0"
+    "burger": "~1.3.2"
   },
   "resolutions": {
     "burger": "~1.3.2"
