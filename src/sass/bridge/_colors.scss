@@ -1,38 +1,32 @@
 // Bridge colors
 //
-$mercury-grey: #e8e8e8;
-$alto-grey: #e0e0e0;
-
 $accent-blue: #6d9ed3;
-$photo-feb10-blue: #596d74;
+$alto-grey: #e0e0e0;
 $another-blue: desaturate(#005bbe, 30%);
-$light-blue: lighten($accent-blue, 80%);
-$shadow-grey: #c3c3c3;
-$translation-border-color: #c3c3c3;
-$translation-background-color: #888888;
-$ooew-red: #960808;
-$translation-comment-link-blue: rgba($another-blue, 0.6);
-$translation-comment-blue: rgba($photo-feb10-blue, 0.5);
-
-$warm-color: #d2c6b7;
-$light-warm-color: #f2f0eb;
-
 $byline-background-color: rgba(yellow, 0.3);
 $byline-color: rgba(black, 0.85);
-
-$tanzanite-blue: #4910db;
 $cerise-pink: #db107c;
-$portland-purple: #42476f;
-
-$firefly: #10212f;
-$firefly90: #283743;
-$firefly80: #404d59;
-$firefly60: #6f7a82;
-$firefly40: #9fa6ac;
-$firefly30: #b7bcc0;
-$firefly20: #cfd3d5;
 $firefly10: #e7e8ea;
-$firefly5: #f3f4f4;
+$firefly20: #cfd3d5;
 $firefly2: #fafbfb;
-
+$firefly30: #b7bcc0;
+$firefly40: #9fa6ac;
+$firefly5: #f3f4f4;
+$firefly60: #6f7a82;
+$firefly80: #404d59;
+$firefly90: #283743;
+$firefly: #10212f;
 $firetruck-red: hsl(3, 100%, 36%);
+$light-blue: lighten($accent-blue, 80%);
+$light-warm-color: #f2f0eb;
+$mercury-grey: #e8e8e8;
+$ooew-red: #960808;
+$photo-feb10-blue: #596d74;
+$portland-purple: #42476f;
+$shadow-grey: #c3c3c3;
+$tanzanite-blue: #4910db;
+$translation-background-color: #888888;
+$translation-border-color: #c3c3c3;
+$translation-comment-blue: rgba($photo-feb10-blue, 0.5);
+$translation-comment-link-blue: rgba($another-blue, 0.6);
+$warm-color: #d2c6b7;

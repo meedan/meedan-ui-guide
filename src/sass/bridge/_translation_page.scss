@@ -1,8 +1,5 @@
 // Translation page
 
-$tanzanite-blue: #4910db;
-$xiaowei-pink: #db107c;
-
 .bridge-translation-page {
   background: url("/assets/images/translation-page.jpg") no-repeat;
   padding: 0;
@@ -90,7 +87,7 @@ $xiaowei-pink: #db107c;
 }
 
 .branch {
-  background-color: $xiaowei-pink;
+  background-color: $cerise-pink;
   padding: 1em;
   font-size: 12px;
   color: white;
@@ -118,7 +115,7 @@ $xiaowei-pink: #db107c;
       border-bottom: 1px solid rgba(black, 0.5);
     }
     .current {
-      border-bottom: 2px solid $xiaowei-pink;
+      border-bottom: 2px solid $cerise-pink;
     }
   }
 }

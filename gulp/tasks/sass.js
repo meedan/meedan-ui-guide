@@ -13,7 +13,7 @@ gulp.task('sass', function () {
     .on('error', handleErrors)
     // .pipe(console.log(config.sass.settings))
     // .pipe(sourcemaps.write())
-    // .pipe(autoprefixer("last 4 versions", "> 1%"))
+    .pipe(autoprefixer("last 4 versions", "> 1%"))
     .pipe(gulp.dest(config.sass.dest))
     // .pipe(console.log("Writing to #{config.sass.dest}"))
     .pipe(browserSync.reload({
