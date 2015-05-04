@@ -21,9 +21,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   @extend %hide-text;
-  @include opacity(0.8);
+  filter: opacity(0.8);
   &:hover {
-    @include opacity(1);
+    filter: opacity(1);
     cursor: pointer;
   }
 }

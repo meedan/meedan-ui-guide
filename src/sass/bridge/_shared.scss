@@ -1,5 +1,5 @@
- // Bridge shared styles
- //
+// Bridge shared styles
+//
 body {
   padding: 1em;
 }
@@ -18,4 +18,10 @@ section {
 
 ul li {
   list-style-type: none;
+}
+
+@mixin reset-box-model {
+  border-width: 0;
+  margin: 0;
+  padding: 0;
 }

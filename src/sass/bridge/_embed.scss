@@ -4,14 +4,12 @@ $embedly-max-width: 580px;
 
 // ## Style Guide: how to name classes
 //
-// .moduleName {}
-// .moduleName__element {}
-// .moduleName__element–is–modified {}
+// .moduleName--element-variation {}
 
 // ## Main structure
 //
 body.bridgeEmbed {
-  @include animation("fade-in 2s");
+  // @include animation("fade-in 2s");
   font-family: 'PT Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   line-height: 1.4;
   margin: 0 auto;
@@ -28,14 +26,14 @@ body.bridgeEmbed {
   clear: both;
   overflow: hidden;
   background-color: rgba(white, 0.8);
-  @include border-radius(8px);
+  border-radius: 8px;
   padding: 0.3em 1em 1em;
   margin: 1em auto;
   position: relative;
-  @include box-shadow(0px 4px 40px rgba(0,0,0,0.05));
+  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
   & > iframe {
     margin: 0 auto;
-    max-width: $embedly-max-width!important;
+    max-width: $embedly-max-width !important;
   }
   &:first-of-type {
     margin-top: 0;
@@ -46,7 +44,6 @@ body.bridgeEmbed {
   color: rgba(black, 0.9);
   margin: 0 auto;
   max-width: $embedly-max-width;
-
   .translation {
     max-width: $embedly-max-width;
     font-size: 1.2em;
@@ -90,7 +87,6 @@ body.bridgeEmbed {
   clear: both;
   margin: 0 auto;
   max-width: $embedly-max-width;
-
   a {
     color: $translation-comment-link-blue;
     text-decoration: none;
@@ -105,7 +101,7 @@ body.bridgeEmbed {
   display: block;
   padding: 2em;
   text-align: center;
-  @include opacity(0.3);
+  filter: opacity(0.3);
 }
 
 .bridgeEmbed__item:first-of-type .bridgeEmbed__item-embedly-card {

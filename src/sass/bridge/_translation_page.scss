@@ -7,7 +7,7 @@ $xiaowei-pink: #db107c;
   background: url("/assets/images/translation-page.jpg") no-repeat;
   padding: 0;
   .container {
-    @include opacity(0.5);
+    filter: opacity(0.5);
     background-color: rgba(cyan, 0.5);
     width: 800px;
   }

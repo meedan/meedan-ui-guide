@@ -15,16 +15,16 @@
     width: 800px;
     position: relative;
     & > h1 {
-      color: rgba(white, 0.3);
+      color: rgba(#ffffff, 0.3);
       font-size: 7em;
       line-height: 1;
       font-style: italic;
     }
     & > h2 {
-      color: rgba(white, 0.9);
+      color: rgba(#ffffff, 0.9);
       text-align: left;
       font-size: 2em;
-      border-bottom: 1px solid rgba(white, 0.3);
+      border-bottom: 1px solid rgba(#ffffff, 0.3);
       padding: 0 0 1em;
     }
   }
@@ -34,13 +34,13 @@ dl {
   margin: 2em auto;
   dt {
     margin-top: 2em;
-    color: $white;
+    color: #ffffff;
     display: inline-block;
     vertical-align: top;
     text-align: right;
   }
   dd {
-    background-color: $white;
+    background-color: #ffffff;
     padding: 1em;
     border-radius: 4px;
     margin-top: 1em;

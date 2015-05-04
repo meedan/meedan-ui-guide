@@ -23,9 +23,9 @@
 
 %show-on-hover {
   overflow: hidden;
-  @include opacity(0.5);
+  filter: opacity(0.5);
   &:hover {
-    @include opacity(1);
+    filter: opacity(1);
     overflow: visible;
     display: block;
     width: auto;
@@ -58,7 +58,7 @@
   .icon {
     @extend %icon-geodata;
     &:hover {
-      @include opacity(0.8);
+      filter: opacity(0.8);
     }
   }
 }

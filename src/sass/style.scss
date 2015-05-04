@@ -1,15 +1,17 @@
-@import "checkdesk/shared/base";
-@import "checkdesk/shared/colors";
-@import "checkdesk/shared/backgrounds";
-@import "checkdesk/shared/mixins";
-@import "checkdesk/shared/buttons";
-@import "checkdesk/shared/breakpoints";
-@import "checkdesk/shared/if_direction";
+// @import "checkdesk/shared/base";
+// @import "checkdesk/shared/colors";
+
+// @import "checkdesk/shared/backgrounds";
+// @import "checkdesk/shared/mixins";
+// @import "checkdesk/shared/buttons";
+// @import "checkdesk/shared/breakpoints";
+// @import "checkdesk/shared/if_direction";
 
 // ## typography
 //
-@import "meedan/typography";
-@import "checkdesk/shared/fonts";
+// @import "meedan/typography";
+// @import "checkdesk/shared/fonts";
+
 @import url(http://fonts.googleapis.com/css?family=Patrick+Hand|Patrick+Hand+SC);
 
 // ## meedan common base styles
@@ -21,14 +23,12 @@
 // @import "meedan/icons/fontawesome";
 @import "meedan/gradients";
 
-@import "compass-mixins/lib/animation/core";
-@import "compass-mixins/lib/animation/animate/fading";
-
 // ## bridge
 //
-@import "bridge/shared";
 @import "bridge/colors";
-@import "bridge/icons";
+@import "bridge/shared";
+
+// @import "bridge/icons";
 @import "bridge/docs";
 @import "bridge/editor";
 @import "bridge/layout";
