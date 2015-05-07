@@ -13,7 +13,7 @@
 						"has-success": form.name.$valid,
 						"has-error": form.name.$invalid && (form.$submitted || form.name.$touched),
 						"is-empty": !form.name.$viewValue }'>
-					<label for="name">Enter a Name</label>
+					<label for="name">ADD YOUR NAME</label>
 					<input type="text" name="name" ng-model="user.name" required
 						ng-focus='form.name.hasFocus=true', ng-blur='form.name.hasFocus=false'>
 					<p ng-show="form.name.$error.required && (form.name.$touched || submitted)" 

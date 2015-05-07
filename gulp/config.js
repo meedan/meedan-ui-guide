@@ -12,8 +12,8 @@ module.exports = {
     }
   },
   images: {
-    src: src + '/images/*',
-    dest: dest + 'images/'
+    src: [src + '/images/*', src + '/images/**/*'],
+    dest: dest + '/images/'
   },
   sass: {
     settings: {
