@@ -8,10 +8,11 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6545452/628984/css/fonts.css" />
-  <!-- <script src="/assets/js/mermaid.full.js"></script>
+<!--   <script src="/assets/js/mermaid.full.js"></script>
   <script src="/assets/js/embed-child.js"></script>
-  <script src="/bower_components/burger/dist/scripts/burger.js"></script>
-   --><link rel="stylesheet" type="text/css" href="css/style.css" />
+  <script src="/bower_components/burger/dist/scripts/burger.js"></script> -->
+  <script src="/bower_components/angular/angular.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
   <!-- <script async src="//cdn.embedly.com/widgets/platform.js"> </script> -->
 </head>
 
@@ -47,21 +48,20 @@
 				</div>
 
 				<div class="form-group"
--            ng-class='{ "has-focus": form.password.hasFocus,
--            "has-success": form.password.$valid,
--            "has-error": form.password.$invalid && (form.$submitted || form.password.$touched),
--            "is-empty": !form.password.$viewValue }'>
--          <label for="password">Password</label>
--          <input type="password" name="password" ng-model="user.password" required
--            ng-focus='form.password.hasFocus=true', ng-blur='form.password.hasFocus=false' autocomplete="off">
--          <p ng-show="form.password.$error.required && (form.password.$touched || submitted)" class="error-block">Password is Required</p>
--          <p ng-show="form.password.$error.password && (form.password.$touched || submitted)" class="error-block">Password is Invalid</p>
--        </div>
+            ng-class='{ "has-focus": form.password.hasFocus,
+            "has-success": form.password.$valid,
+            "has-error": form.password.$invalid && (form.$submitted || form.password.$touched),
+            "is-empty": !form.password.$viewValue }'>
+          <label for="password">Password</label>
+          <input type="password" name="password" ng-model="user.password" required
+            ng-focus='form.password.hasFocus=true', ng-blur='form.password.hasFocus=false' autocomplete="off">
+          <p ng-show="form.password.$error.required && (form.password.$touched || submitted)" class="error-block">Password is Required</p>
+          <p ng-show="form.password.$error.password && (form.password.$touched || submitted)" class="error-block">Password is Invalid</p>
+        </div>
 			</form>
 		</div>
 	</div>
 	
-	<script src="/bower_components/angular/angular.js"></script>
 	<!-- Using angular for validation ala https://github.com/sambhav-gore/material-input-fields -->
 	<script>
 	  'use strict'

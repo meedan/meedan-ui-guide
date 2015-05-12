@@ -2,26 +2,29 @@
 
 // ## Bridge
 //
-@import "bridge/colors";
-@import "bridge/shared";
-@import "bridge/icons";
-@import "bridge/docs";
-@import "bridge/editor";
-@import "bridge/layout";
-@import "bridge/profile";
-@import "bridge/typography";
-@import "bridge/animation";
-@import "bridge/loading";
-@import "bridge/comics";
-@import "bridge/translation_page";
-@import "bridge/geodata";
-@import "bridge/embed";
-@import "bridge/auth";
-@import "bridge/guide";
+@import "bridge-css/colors";
+@import "bridge-css/shared";
 
-// WIP
-@import "flowchart";
-@import "tweetshot";
+// @import "bridge-css/icons";
+@import "bridge-css/docs";
 
-// This hamburger is incompatible with bridge/auth
-// @import "navigation";
+// @import "bridge-css/editor";
+// @import "bridge-css/layout";
+// @import "bridge-css/profile";
+// @import "bridge-css/typography";
+// @import "bridge-css/animation";
+// @import "bridge-css/loading";
+// @import "bridge-css/comics";
+// @import "bridge-css/translation_page";
+// @import "bridge-css/geodata";
+// @import "bridge-css/embed";
+@import "bridge-css/auth";
+
+// @import "bridge-css/guide";
+
+// // WIP
+// @import "flowchart";
+// @import "tweetshot";
+
+// // This hamburger is incompatible with bridge/auth
+// // @import "navigation";
