@@ -1,6 +1,6 @@
 {
   "name": "meedan-ui-guide",
-  "version": "0.10.1",
+  "version": "0.10.2",
   "private": true,
   "main": "src/app.js",
   "ignore": [
@@ -15,7 +15,8 @@
     "burger": "~1.3.2",
     "meedan-style": "https://github.com/meedan/meedan-style.git#~0.0.5",
     "bridge-style": "https://github.com/meedan/bridge-style.git#~0.0.1",
-    "checkdesk-style": "https://github.com/meedan/checkdesk-style.git#~0.0.1"
+    "checkdesk-style": "https://github.com/meedan/checkdesk-style.git#~0.0.7",
+    "modular-scale": "~2.0.7"
   },
   "resolutions": {
     "burger": "~1.3.2"
