@@ -5,5 +5,4 @@ gulp.task('watch', ['bs'], function () {
   gulp.watch(config.misc.src, ['misc']);
   gulp.watch(config.sass.src, ['sass']);
   gulp.watch(config.markup.src, ['markup']);
-  gulp.watch(config.js.src, ['js']);
 });
