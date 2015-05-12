@@ -4,21 +4,30 @@
 
 // Bridge
 //
-@import "bridge-style/colors";
-@import "bridge-style/shared";
-@import "bridge-style/docs";
-@import "bridge-style/editor";
-@import "bridge-style/layout";
-@import "bridge-style/profile";
-@import "bridge-style/typography";
-@import "bridge-style/animation";
-@import "bridge-style/loading";
-@import "bridge-style/comics";
-@import "bridge-style/translation_page";
-@import "bridge-style/embed";
-@import "bridge-style/auth";
-@import "bridge-style/guide";
+// @import "bridge-style/colors";
+// @import "bridge-style/shared";
+// @import "bridge-style/docs";
+// @import "bridge-style/editor";
+// @import "bridge-style/layout";
+// @import "bridge-style/profile";
+// @import "bridge-style/typography";
+// @import "bridge-style/animation";
+// @import "bridge-style/loading";
+// @import "bridge-style/comics";
+// @import "bridge-style/translation_page";
+// @import "bridge-style/embed";
+// @import "bridge-style/auth";
+// @import "bridge-style/guide";
 
 // Checkdesk 
+// 
+// Import the "official" checkdesk-style components via bower
 //
 @import "checkdesk-style/shared/colors";
+
+// Work in progress
+// 
+// New experiments
+.auth * {
+  border: 1px solid pink;
+}

@@ -29,7 +29,7 @@ module.exports = {
     dest: dest + "/css"
   },
   markup: {
-    src: src + "/markup/*.html",
+    src: src + "/markup/**/*.html",
     dest: dest
   }
 };
