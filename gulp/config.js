@@ -13,7 +13,7 @@ module.exports = {
   },
   images: {
     src: src + '/images/*',
-    dest: dest + 'images/'
+    dest: dest + '/images/'
   },
   sass: {
     settings: {
