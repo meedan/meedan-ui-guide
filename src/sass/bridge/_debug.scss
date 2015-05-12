@@ -1,8 +1,0 @@
-@mixin label($label: "", $color: "red") {
-  border: 4px solid $color;
-  &:before {
-    content: $label;
-    background-color: yellow;
-    color: black;
-  }
-}
