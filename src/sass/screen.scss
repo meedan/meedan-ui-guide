@@ -21,13 +21,12 @@
 
 // Checkdesk 
 // 
-// Import the "official" checkdesk-style components via bower
+// Import the "official" checkdesk-style components 
+// via bower
 //
 @import "checkdesk-style/shared/colors";
 
-// Work in progress
+// Checkdesk Work in progress
 // 
-// New experiments
-.auth * {
-  border: 1px solid pink;
-}
+// These files are stored locally (not official and bower'd yet).
+@import "checkdesk-auth";

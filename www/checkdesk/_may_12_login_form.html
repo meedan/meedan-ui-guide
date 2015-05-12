@@ -1,0 +1,47 @@
+<!-- This markup is based on a March 12, 2015 snapshot of:  -->
+<!-- http://meedan.checkdesk.org/en/user/login?destination=liveblog -->
+<!-- Any changes to this template need to be migrated into the main codebase -->
+
+<div class="user-login-wrapper">
+    <div id="block-system-main" class="block block-system">
+        <div class="content">
+            <form class="ife" action="/en/user/login?destination=liveblog" method="post" id="user-login" accept-charset="UTF-8">
+                <div>
+                    <div class="social-signin-wrapper">
+                        <div id="edit-social-media-signin" class="form-item form-type-item">
+                            <div class="item-list">
+                                <ul>
+                                    <li class="first"><a href="/en/twitter/redirect" class="twitter-action-signin" title="Sign In with Twitter">Twitter</a></li>
+                                    <li class="last"><a class="facebook-action-connect fb-button-en" href="https://www.facebook.com/v2.3/dialog/oauth?client_id=123854264442935&amp;redirect_uri=http%3A//meedan.checkdesk.org/en/fboauth/connect&amp;scope=email%2Cuser_posts" alt="" target="_blank">Facebook</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="or"><span>or</span></div>
+                    <div class="form-item form-type-textfield form-item-name">
+                        <label for="edit-name">E-mail <span class="form-required" title="This field is required.">*</span></label>
+                        <input tabindex="1" type="text" id="edit-name" name="name" value="" size="60" maxlength="60" class="form-text required">
+                    </div>
+                    <div class="form-item form-type-password form-item-pass">
+                        <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+                        <input tabindex="1" type="password" id="edit-pass" name="pass" size="60" maxlength="128" class="form-text required">
+                    </div>
+                    <div class="user-links">
+                        <div class="user-forgot-pass-link"><a href="/en/user/password">Forgot your password?</a></div>
+                        <div class="form-item form-type-checkbox form-item-remember-me">
+                            <input tabindex="1" type="checkbox" id="edit-remember-me" name="remember_me" value="1" checked="checked" class="form-checkbox">
+                            <label class="option" for="edit-remember-me">Remember me </label>
+                        </div>
+                    </div>
+                    <input type="hidden" name="form_build_id" value="form-Teb2_a6I_bpuh8jRPqqoPZuEFr_vsSNebbDfLj-tka0">
+                    <input type="hidden" name="form_id" value="user_login">
+                    <div class="form-actions form-wrapper" id="edit-actions">
+                        <input tabindex="1" type="submit" id="edit-submit" name="op" value="Sign in" class="form-submit">
+                        <div class="user-new-account-link"><span>Don't have an account? </span>
+                            <a href="/en/user/register?destination=liveblog" class="register" title="Sign Up">Sign Up</a></div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
