@@ -9,7 +9,7 @@ module.exports = {
   javascript: {
     src: [src + '/bower_components/**/*.js', src + '/js'],
     src: dest + '/js',
-  }
+  },
   browserSync: {
     server: {
       baseDir: dest
@@ -21,7 +21,7 @@ module.exports = {
   },
   sass: {
     settings: {
-      includePath: './src/bower_components',
+      includePaths: [src + '/bower_components'],
       errLogToConsole: true,
       outputStyle: "compressed"
     },

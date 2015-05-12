@@ -2,7 +2,7 @@
   "name": "meedan-ui-guide",
   "version": "0.10.0",
   "private": "true",
-  "description": "a small HTML prototype environment",
+  "description": "a small HTML prototyping environment",
   "scripts": {
     "test": "echo \"No test specified\""
   },
