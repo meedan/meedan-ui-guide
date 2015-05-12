@@ -18,16 +18,22 @@ Most of the code we use is packaged with [NPM](https://www.npmjs.com/ "npm"). To
 
 This installs the tools listed in the file `package.json`.
 
+    bower install
+
+This installs the things listed in `bower.json`. 
+
+Among our bower packages are checkdesk-style, meedan-style and bridge-style. Because `bower_components` is searched by node-sass when the stylesheets are parsed, you can import them like this in a stylesheet: `@import bridge-style/filename.scss`.
+
 ## Working locally
 
 It's hosted on github pages. But, it's the local development environment that makes it easy to work with these little HTML prototypes.
 
-We use a tool called gulp. Once you've done the `npm install` step, you should be able to do something like this:
+We use a tool called gulp. Once you've done the previous steps, you should be able to do something like this:
 
     cd REPO_NAME
     gulp
 
-That will start the compiler.
+That should start the compiler and open a browser to the homepage.
 
 While the gulp compiler is running, edit the source files in `src/` and the web-ready files in `www` will be regenerated.
 
