@@ -3,13 +3,13 @@ var dest = './www';
 
 module.exports = {
   misc: {
-    src: src + '/{CNAME, *.pdf, images/favicons/*, robots.txt}',
+    src: src + '/{CNAME, *.pdf, images/favicons/*, robots.txt }',
     dest: dest
   },
-  javascript: {
-    src: [src + '/bower_components/**/*.js', src + '/js'],
-    src: dest + '/js',
-  },
+  // javascript: {
+  //   src: [src + '/bower_components/**/*.js', src + '/js', src + '/data/bridge-ios.js'],
+  //   src: dest + '/js',
+  // },
   browserSync: {
     server: {
       baseDir: dest

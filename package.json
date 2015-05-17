@@ -39,7 +39,9 @@
     "domready": "~1.0.8",
     "screenfull": "~2.0.0",
     "gulp-bower-files": "~0.2.7",
-    "watchify": "~3.2.1"
+    "watchify": "~3.2.1",
+    "gulp-preprocess": "~1.2.0",
+    "jquery": "~2.1.4"
   },
   "dependencies": {}
 }
