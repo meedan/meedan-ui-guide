@@ -6,10 +6,6 @@ module.exports = {
     src: src + '/{CNAME, *.pdf, images/favicons/*, robots.txt }',
     dest: dest
   },
-  // javascript: {
-  //   src: [src + '/bower_components/**/*.js', src + '/js', src + '/data/bridge-ios.js'],
-  //   src: dest + '/js',
-  // },
   browserSync: {
     server: {
       baseDir: dest

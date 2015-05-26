@@ -45,6 +45,8 @@ While the gulp compiler is running, edit the source files in `src/` and the web-
 - Open app.js and `require` the npm module
 - Run the bundler command to create bundle.js
 
+    browserify -d src/app.js -o www/bundle.js -v
+
 ## WIP: Working with Bower components in Browserify 
 
 Bower components are installed into `src/bower_components`. Run `bower install` to get these.  

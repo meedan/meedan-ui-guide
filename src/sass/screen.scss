@@ -1,6 +1,22 @@
 // Meedan shared
+
+// Colors used in all of Meedan
+//
 @import "meedan-style/colors";
+
+// Typography used 
+//
 @import "meedan-style/typography";
+
+.ui-guide--navigation {
+  width: 20%;
+  float: left;
+  font-family: "open sans", "sans serif";
+  a {
+    text-decoration: underline;
+    color: $tanzanite-blue;
+  }
+}
 
 // Bridge
 //
