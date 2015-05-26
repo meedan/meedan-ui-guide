@@ -8,23 +8,14 @@
 //
 @import "meedan-style/typography";
 
-.ui-guide--navigation {
-  width: 20%;
-  float: left;
-  font-family: "open sans", "sans serif";
-  a {
-    text-decoration: underline;
-    color: $tanzanite-blue;
-  }
-}
-
 // Bridge
 //
 // @import "bridge-style/colors";
 // @import "bridge-style/shared";
 // @import "bridge-style/docs";
 // @import "bridge-style/editor";
-// @import "bridge-style/layout";
+@import "bridge-style/layout";
+
 // @import "bridge-style/profile";
 // @import "bridge-style/typography";
 // @import "bridge-style/animation";
@@ -50,3 +41,30 @@
 // 
 // These files are stored locally (not official and bower'd yet).
 @import "checkdesk-auth";
+
+// WIP
+//
+.ui-guide--navigation {
+  width: 20%;
+  margin: 0 auto;
+  font-family: "open sans", "sans serif";
+  a {
+    text-decoration: underline;
+    color: $tanzanite-blue;
+  }
+}
+
+.embeds {
+  @extend %clearfix;
+  background: $firefly80;
+  color: rgba(white, 0.8);
+  font-family: "open sans", "sans serif";
+  .embed {
+    float: left;
+    clear: none;
+    width: 25%;
+    height: 100%;
+    overflow: scroll;
+    padding: 0.5%;
+  }
+}
