@@ -1,9 +1,4 @@
 $ = require('jquery')
-configValue = '/* @echo FOO */' || 'default value'
-uiData = require('../src/data/bridge-ios')
-RELEASE_TAG = "123"
-
-$ = require('jquery')
 uiData = require('../src/data/bridge-ios')
 
 $ ->
