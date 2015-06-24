@@ -1,0 +1,63 @@
+/*doc
+---
+title: Docs
+name: documentation
+category: docs
+---
+
+This is the stylesheet that controls the hologram-generated pages.
+
+```
+<div class="exampleOutput">This is exampleOutput</div> 
+<div class="codeExample">This is a code example</div>
+```
+
+*/
+
+.hologram {
+  font-family: Akkurat, Source Sans Pro, Deja Vu Sans, courier, monospace;
+  padding: 1em;
+  &:before {
+    content: "Generated with hologram";
+    border: 1px solid aqua;
+    background: aqua;
+    color: $firefly80;
+    font-size: 0.7em;
+    padding: 0.6em;
+  }
+  .styleguide {
+    background-color: $firefly10;
+    max-width: 500px;
+    padding: 0.6em;
+    line-height: 1.3;
+  }
+  .codeExample {
+    border: 1px solid pink;
+    margin: 1em;
+  }
+  footer {
+    padding: 1em;
+  }
+  .codeBlock {
+    .highlight {
+      background-color: aqua;
+      color: $firefly80;
+      padding: 0.6em 1em;
+    }
+  }
+  nav {
+    border: 3px solid $firefly90;
+    margin: 1em;
+    padding: 0;
+    border-radius: 3px;
+    ul {
+      list-style-type: none;
+      display: flex;
+      li {
+        border-right: 3px solid $firefly90;
+        padding: 0.8em;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

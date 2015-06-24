@@ -6,22 +6,18 @@ var browserSync = require('browser-sync');
 var debug = require('gulp-debug');
 var colors = require('colors');
 var handleErrors = require('../util/handleErrors');
-var preprocess = require('gulp-preprocess');
+var fileinclude = require('gulp-file-include');
 
 gulp.task('markup', function () {
   return gulp.src(config.markup.src)
-    .pipe(debug(config.markup.src))
     .pipe(changed(config.markup.dest))
-    .pipe(preprocess({
-      context: {
-        NODE_ENV: 'production',
-        DEBUG: true
-      }
+    .pipe(fileinclude({
+      prefix: '@@'
     }))
-
-  // .on('error', handleErrors)
-  .pipe(gulp.dest(config.markup.dest))
+    .on('error', handleErrors)
+    .pipe(gulp.dest(config.markup.dest))
     .pipe(browserSync.reload({
-      stream: true
+      stream: true,
+      notify: false
     }));
 });
