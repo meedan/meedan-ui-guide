@@ -8,7 +8,7 @@ This repo keeps track of them.
 
 We're designing in the browser. To get started, install the dependencies and run the compiler.
 
-In general, each component is a single template HTML file with a .dust extension.
+In general, each component is a single template HTML file.
 
 ## Installing dependencies
 
@@ -41,7 +41,7 @@ While the gulp compiler is running, edit the source files in `src/` and the web-
 
 [Browserify](https://www.npmjs.com/package/browserify) can help us bundle modules via NPM. 
 
-- Install a cool npm module with `npm install --save-dev`
+- Install a cool npm module with `npm install MODULENAME --save-dev`
 - Open app.js and `require` the npm module
 - Run the bundler command to create bundle.js
 

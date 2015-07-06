@@ -5,7 +5,7 @@ var config = require('../config');
 gulp.task('sassdoc', function () {
   var options = {
     dest: './www/sassdoc',
-    verbose: true,
+    verbose: false,
     display: {
       access: ['public', 'private'],
       alias: true,
