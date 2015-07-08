@@ -15,17 +15,29 @@ module.exports = {
     src: [src + '/images/*', src + '/images/**/*'],
     dest: dest + '/images/'
   },
+  documentation: {
+    src: [src + "/**/*.scss", "./README.md", "./bower_components/**/*.scss"],
+    dest: dest + "/docs",
+    sassdocOptions: {
+      dest: dest + "/docs",
+      verbose: true,
+      display: {
+        access: ['public', 'private'],
+        alias: true
+      }
+    }
+  },
   sass: {
     settings: {
       includePaths: [src + '/bower_components'],
       errLogToConsole: true,
       outputStyle: "compressed"
     },
-    src: src + "/sass/**/*.scss",
+    src: [src + '/bower_components', src + "/sass/**/*.scss"],
     dest: dest + "/css"
   },
   markup: {
-    src: [src + "/markup/**/*.html", src + "/markup/**/*.html"],
+    src: [src + "/markup/**/*.html"],
     dest: dest
   }
 };

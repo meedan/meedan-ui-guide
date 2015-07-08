@@ -1,0 +1,204 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Meedan-ui-guide - v0.10.1</title><link rel="stylesheet" href="assets/css/main.css"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Meedan-ui-guide - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>a small HTML prototyping environment</p>
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/meedan/meedan-ui-guide">Meedan-ui-guide - v0.10.1</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="meedan-style"><a href="#meedan-style">meedan-style</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="meedan-style-placeholder"><a href="#meedan-style-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="clearfix" data-type="placeholder"><a href="#placeholder-clearfix">clearfix</a></li><li class="sidebar__item sassdoc__item" data-name="flex-container" data-type="placeholder"><a href="#placeholder-flex-container">flex-container</a></li><li class="sidebar__item sassdoc__item" data-name="flex-item" data-type="placeholder"><a href="#placeholder-flex-item">flex-item</a></li><li class="sidebar__item sassdoc__item" data-name="flex-container-stacked-when-small" data-type="placeholder"><a href="#placeholder-flex-container-stacked-when-small">flex-container-stacked-when-small</a></li><li class="sidebar__item sassdoc__item" data-name="flex-vertical" data-type="placeholder"><a href="#placeholder-flex-vertical">flex-vertical</a></li><li class="sidebar__item sassdoc__item" data-name="section-defaults" data-type="placeholder"><a href="#placeholder-section-defaults">section-defaults</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="meedan-ui-guide"><a href="#meedan-ui-guide">meedan-ui-guide</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="meedan-ui-guide-placeholder"><a href="#meedan-ui-guide-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="nav" data-type="placeholder"><a href="#placeholder-nav">nav</a></li><li class="sidebar__item sassdoc__item" data-name="bridge-docs" data-type="placeholder"><a href="#placeholder-bridge-docs">bridge-docs</a></li></ul></div><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="international-orange" data-type="variable"><a href="#variable-international-orange">international-orange</a></li><li class="sidebar__item sassdoc__item" data-name="keyboard-grey" data-type="variable"><a href="#variable-keyboard-grey">keyboard-grey</a></li><li class="sidebar__item sassdoc__item" data-name="light-keyboard-grey" data-type="variable"><a href="#variable-light-keyboard-grey">light-keyboard-grey</a></li><li class="sidebar__item sassdoc__item" data-name="light-international-orange" data-type="variable"><a href="#variable-light-international-orange">light-international-orange</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-placeholder"><a href="#undefined-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="embed-item" data-type="placeholder"><a href="#placeholder-embed-item">embed-item</a></li><li class="sidebar__item sassdoc__item" data-name="translator-byline" data-type="placeholder"><a href="#placeholder-translator-byline">translator-byline</a></li><li class="sidebar__item sassdoc__item" data-name="translation" data-type="placeholder"><a href="#placeholder-translation">translation</a></li><li class="sidebar__item sassdoc__item" data-name="translator-annotation" data-type="placeholder"><a href="#placeholder-translator-annotation">translator-annotation</a></li><li class="sidebar__item sassdoc__item" data-name="pin-to-corner" data-type="placeholder"><a href="#placeholder-pin-to-corner">pin-to-corner</a></li><li class="sidebar__item sassdoc__item" data-name="loading" data-type="placeholder"><a href="#placeholder-loading">loading</a></li><li class="sidebar__item sassdoc__item" data-name="project-page" data-type="placeholder"><a href="#placeholder-project-page">project-page</a></li><li class="sidebar__item sassdoc__item" data-name="project-page-description" data-type="placeholder"><a href="#placeholder-project-page-description">project-page-description</a></li><li class="sidebar__item sassdoc__item" data-name="scrollbars" data-type="placeholder"><a href="#placeholder-scrollbars">scrollbars</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="meedan-style"><div class="container">meedan-style</div></h1><section class="main__sub-section" id="meedan-style-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="placeholder-clearfix"><h3 class="item__heading"><a class="item__name" href="#placeholder-clearfix">clearfix</a></h3><span class="item__since">Since v0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%clearfix { 
+  *zoom: 1;
+  &amp;:before, &amp;:after {
+    content: &quot; &quot;;
+    display: table;
+  }
+  &amp;:after {
+    clear: both;
+  }
+ }" data-collapsed="%clearfix { ... }"><code>%clearfix { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Gallagher Clearfix</p></div></section><section class="main__item container item" id="placeholder-flex-container"><h3 class="item__heading"><a class="item__name" href="#placeholder-flex-container">flex-container</a></h3><span class="item__since">Since v0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%flex-container { 
+  display: flex;
+  flex-flow: wrap row;
+  justify-content: center;
+  flex-align: center;
+  align-items: center;
+ }" data-collapsed="%flex-container { ... }"><code>%flex-container { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Flex container</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-project-page"><code>project-page</code></a></li></ul></section><section class="main__item container item" id="placeholder-flex-item"><h3 class="item__heading"><a class="item__name" href="#placeholder-flex-item">flex-item</a></h3><span class="item__since">Since v0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%flex-item { 
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+ }" data-collapsed="%flex-item { ... }"><code>%flex-item { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Flex item</p><p>Flex grow - This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up. If all items have flex-grow set to 1, every child will set to an equal size inside the container. If you were to give one of the children a value of 2, that child would take up twice as much space as the others. Flex shrink — This defines the ability for a flex item to shrink if necessary. Flex basis — This defines the default size of an element before the remaining space is distributed. The main-size value makes it match the width or height, depending on which is relevant based on the flex-direction. @url <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox/</a></p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-project-page"><code>project-page</code></a></li></ul></section><section class="main__item container item" id="placeholder-flex-container-stacked-when-small"><h3 class="item__heading"><a class="item__name" href="#placeholder-flex-container-stacked-when-small">flex-container-stacked-when-small</a></h3><span class="item__since">Since v0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%flex-container-stacked-when-small { 
+  @media (max-width: 600px) {
+    flex-flow: wrap column;
+    &amp; &gt; * {
+      width: 100%;
+    }
+  }
+ }" data-collapsed="%flex-container-stacked-when-small { ... }"><code>%flex-container-stacked-when-small { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Flex container stacked when small</p></div></section><section class="main__item container item" id="placeholder-flex-vertical"><h3 class="item__heading"><a class="item__name" href="#placeholder-flex-vertical">flex-vertical</a></h3><span class="item__since">Since v0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%flex-vertical { 
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  flex-align: center;
+  align-items: center;
+ }" data-collapsed="%flex-vertical { ... }"><code>%flex-vertical { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Flex vertically</p><p>Using the <code>column</code> value to flow the content vertically.</p></div><h3 class="item__sub-heading">See</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-flex-container"><code>flex-container</code></a></li></ul></section><section class="main__item container item" id="placeholder-section-defaults"><h3 class="item__heading"><a class="item__name" href="#placeholder-section-defaults">section-defaults</a></h3><span class="item__since">Since v0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%section-defaults { 
+  padding-bottom: 4em;
+  width: 100%;
+  overflow-x: hidden;
+ }" data-collapsed="%section-defaults { ... }"><code>%section-defaults { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Section defaults</p><p>Section elements are the primary building blocks. Each section should have a header.</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="meedan-ui-guide"><div class="container">meedan-ui-guide</div></h1><section class="main__sub-section" id="meedan-ui-guide-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="placeholder-nav"><h3 class="item__heading"><a class="item__name" href="#placeholder-nav">nav</a></h3><span class="item__since">Since v0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%nav { 
+  margin: 0 auto;
+  padding: 2em 4em;
+  background-color: white;
+  width: 100%;
+  font-size: 12px;
+  a {
+    text-decoration: underline;
+    color: $tanzanite-blue;
+  }
+ }" data-collapsed="%nav { ... }"><code>%nav { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>UI Guide Navigation</p></div></section><section class="main__item container item" id="placeholder-bridge-docs"><h3 class="item__heading"><a class="item__name" href="#placeholder-bridge-docs">bridge-docs</a></h3><span class="item__since">Since v0.1</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%bridge-docs { 
+  color: $firefly;
+  a {
+    color: $firefly;
+  }
+  h1 {
+    background-color: $firetruck-red;
+    color: white;
+    padding: 10px;
+    @extend %font--hfj-whitney-bolditalic;
+  }
+  .doc-note {
+    background-color: yellow;
+  }
+  .container {
+    margin-top: 100px;
+    background: $firefly10;
+    padding: 0.5em 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    // At larger sizes
+    @media all and (min-width: 500px) {
+      max-width: 500px;
+    }
+    p {
+      padding: 0 1em;
+    }
+    ul {
+      list-style-type: disc !important;
+      // At smaller sizes
+      @media all and (max-width: 500px) {
+        li {
+          line-height: 2em;
+        }
+        a {
+          padding: 0.5em;
+          background-color: #c3c3c3;
+          display: inline-block;
+          border-radius: 4px;
+          margin: 4px;
+        }
+      }
+    }
+  }
+ }" data-collapsed="%bridge-docs { ... }"><code>%bridge-docs { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Documentation styles</p><p>General styles used in the UI guide.</p></div></section></section></section><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="variable-international-orange"><h3 class="item__heading"><a class="item__name" href="#variable-international-orange">international-orange</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$international-orange: #ff4f00;</code></pre><span class="color-preview--block" style="background: #ff4f00"></span></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>International Orange</p></div><h3 class="item__sub-heading">Type</h3><p><code>Color</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translation"><code>translation</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translator-annotation"><code>translator-annotation</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-project-page-description"><code>project-page-description</code></a></li></ul></section><section class="main__item container item" id="variable-keyboard-grey"><h3 class="item__heading"><a class="item__name" href="#variable-keyboard-grey">keyboard-grey</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$keyboard-grey: #abb5bd;</code></pre><span class="color-preview--block" style="background: #abb5bd"></span></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Keyboard Grey</p></div><h3 class="item__sub-heading">Type</h3><p><code>Color</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-project-page-description"><code>project-page-description</code></a></li></ul></section><section class="main__item container item" id="variable-light-keyboard-grey"><h3 class="item__heading"><a class="item__name" href="#variable-light-keyboard-grey">light-keyboard-grey</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$light-keyboard-grey: #d1d6db;</code></pre><span class="color-preview--block" style="background: #d1d6db"></span></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Keyboard Light Grey</p></div><h3 class="item__sub-heading">Type</h3><p><code>Color</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-project-page-description"><code>project-page-description</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-scrollbars"><code>scrollbars</code></a></li></ul></section><section class="main__item container item" id="variable-light-international-orange"><h3 class="item__heading"><a class="item__name" href="#variable-light-international-orange">light-international-orange</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$light-international-orange: #fff6f1;</code></pre><span class="color-preview--block" style="background: #fff6f1"></span></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Light International Orange</p></div><h3 class="item__sub-heading">Type</h3><p><code>Color</code></p><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translator-annotation"><code>translator-annotation</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="placeholder-embed-item"><h3 class="item__heading"><a class="item__name" href="#placeholder-embed-item">embed-item</a></h3><span class="item__since">Since v0.6</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%embed-item { 
+  position: relative;
+  overflow: hidden;
+  padding: 0.3em 2em 0em;
+  margin: 2em auto 0;
+  max-width: $max-width;
+  &amp; &gt; iframe {
+    margin: 0 auto;
+    max-width: $max-width !important;
+  }
+  &amp;:first-of-type {
+    margin-top: 0;
+  }
+ }" data-collapsed="%embed-item { ... }"><code>%embed-item { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Bridge Embed item</p><p>A single translation object: a media object + translation + optional annotation.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-scrollbars"><code>scrollbars</code></a> &mdash; fancy scrollbars when embedded</li><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-loading"><code>loading</code></a> &mdash; animates while the page renders</li></ul></section><section class="main__item container item" id="placeholder-translator-byline"><h3 class="item__heading"><a class="item__name" href="#placeholder-translator-byline">translator-byline</a></h3><span class="item__since">Since v0.6</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%translator-byline { 
+  font-weight: 400;
+  margin-top: 0.5em;
+  padding: 0.6em 1em 1em;
+  margin: 0;
+  font-weight: 700;
+ }" data-collapsed="%translator-byline { ... }"><code>%translator-byline { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Bridge Translator byline</p><p>The byline says the post is by. The author of the post with avatar and related attributes of the translation owner or metadata about the translation creation.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-scrollbars"><code>scrollbars</code></a> &mdash; fancy scrollbars when embedded</li><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-loading"><code>loading</code></a> &mdash; animates while the page renders</li></ul></section><section class="main__item container item" id="placeholder-translation"><h3 class="item__heading"><a class="item__name" href="#placeholder-translation">translation</a></h3><span class="item__since">Since v0.6</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%translation { 
+  margin: 0 16px;
+  border-left: 3px solid $international-orange;
+  &amp;.rtl {
+    direction: rtl;
+    text-align: right;
+    border-left-width: 0;
+    border-right: 3px solid $international-orange;
+  }
+  p {
+    max-width: $max-width;
+    padding: 0.6em 1em;
+    margin: 0;
+  }
+  p:empty {
+    display: none;
+  }
+  p {
+    margin: 0;
+  }
+ }" data-collapsed="%translation { ... }"><code>%translation { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Bridge Translation</p><p>The actual target language content. The translation itself. Contained by a single p. Sometimes it is .rtl.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#variable-international-orange"><code>international-orange</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-scrollbars"><code>scrollbars</code></a> &mdash; fancy scrollbars when embedded</li><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-loading"><code>loading</code></a> &mdash; animates while the page renders</li></ul></section><section class="main__item container item" id="placeholder-translator-annotation"><h3 class="item__heading"><a class="item__name" href="#placeholder-translator-annotation">translator-annotation</a></h3><span class="item__since">Since v0.6</span><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%translator-annotation { 
+  font-size: smaller;
+  background-color: $light-international-orange;
+  border-left: 3px solid $international-orange;
+  font-weight: 200;
+  padding: 0.2em 1em;
+  margin: 0 16px;
+  max-width: $max-width;
+ }" data-collapsed="%translator-annotation { ... }"><code>%translator-annotation { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Translator annotation</p><p>A translator&#39;s commentary on a translation. A translator-oriented comment.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#variable-light-international-orange"><code>light-international-orange</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#variable-international-orange"><code>international-orange</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-scrollbars"><code>scrollbars</code></a> &mdash; fancy scrollbars when embedded</li><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-loading"><code>loading</code></a> &mdash; animates while the page renders</li></ul></section><section class="main__item container item" id="placeholder-pin-to-corner"><h3 class="item__heading"><a class="item__name" href="#placeholder-pin-to-corner">pin-to-corner</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%pin-to-corner { 
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  z-index: 100;
+ }" data-collapsed="%pin-to-corner { ... }"><code>%pin-to-corner { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Absolutely position the map icon to the top of the parent element. The parent must be relatively positioned.</p></div></section><section class="main__item container item" id="placeholder-loading"><h3 class="item__heading"><a class="item__name" href="#placeholder-loading">loading</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%loading { 
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #333;
+  border-radius: 100%;
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+ }" data-collapsed="%loading { ... }"><code>%loading { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Loading indicator</p><p>Pulsing dot style loader ported from spinkit.</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-embed-item"><code>embed-item</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translator-byline"><code>translator-byline</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translation"><code>translation</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translator-annotation"><code>translator-annotation</code></a></li></ul><h3 class="item__sub-heading">Author</h3><ul class="list-unstyled"><li><p>tobiasahlin</p></li></ul></section><section class="main__item container item" id="placeholder-project-page"><h3 class="item__heading"><a class="item__name" href="#placeholder-project-page">project-page</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%project-page { 
+  @extend %flex-container;
+  align-items: flex-start;
+  background-color: white;
+  @extend %scrollbars;
+  .embed {
+    @extend %flex-item;
+    height: 100%;
+    padding-top: 4em;
+    overflow: scroll;
+  }
+ }" data-collapsed="%project-page { ... }"><code>%project-page { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Bridge Project Page</p><p>A page that contains many embeds as columns.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-flex-container"><code>flex-container</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-scrollbars"><code>scrollbars</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-flex-item"><code>flex-item</code></a></li></ul></section><section class="main__item container item" id="placeholder-project-page-description"><h3 class="item__heading"><a class="item__name" href="#placeholder-project-page-description">project-page-description</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%project-page-description { 
+  position: absolute;
+  font-size: smaller;
+  background-color: white;
+  padding: 0.6em 1em;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  border-bottom: 1px solid $light-keyboard-grey;
+  p {
+    padding: 0;
+  }
+  &amp;.top {
+    font-weight: 700;
+    color: $international-orange;
+  }
+  &amp;.bottom {
+    border-top: 1px solid $keyboard-grey;
+    bottom: 0;
+    border-bottom-width: 0;
+  }
+  a {
+    border-radius: 4px;
+    padding: 0 0.4em;
+    transition: 0.4s;
+  }
+  a.translate:after {
+    content: &quot;.&quot;;
+  }
+  a.translate:hover:after {
+    content: &quot;!&quot;;
+  }
+ }" data-collapsed="%project-page-description { ... }"><code>%project-page-description { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>A Bridge Project Page Description</p><p>The context and call to action a project page with (eg a page with multiple bridge channels, like the guardian demo).</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#variable-light-keyboard-grey"><code>light-keyboard-grey</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#variable-international-orange"><code>international-orange</code></a></li><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#variable-keyboard-grey"><code>keyboard-grey</code></a></li></ul></section><section class="main__item container item" id="placeholder-scrollbars"><h3 class="item__heading"><a class="item__name" href="#placeholder-scrollbars">scrollbars</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%scrollbars { 
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $light-keyboard-grey;
+    border-radius: 3px;
+  }
+ }" data-collapsed="%scrollbars { ... }"><code>%scrollbars { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Minimalist scrollbars</p><p>Used by embeds, when needed. See the project section.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#variable-light-keyboard-grey"><code>light-keyboard-grey</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-embed-item"><code>embed-item</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translator-byline"><code>translator-byline</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translation"><code>translation</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-translator-annotation"><code>translator-annotation</code></a></li><li><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-project-page"><code>project-page</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><a class="project-info__name" href="https://github.com/meedan/meedan-ui-guide">Meedan-ui-guide</a><!-- Version --> <span class="project-info__version">- v0.10.1</span><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
