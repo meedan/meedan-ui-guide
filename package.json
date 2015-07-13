@@ -1,8 +1,8 @@
 {
   "name": "meedan-ui-guide",
-  "version": "0.12",
+  "version": "0.12.0",
   "private": "true",
-  "description": "a small HTML prototyping environment",
+  "description": "a nice documentation website",
   "scripts": {
     "test": "echo \"No test specified\""
   },
