@@ -17,9 +17,8 @@ module.exports = {
   },
   documentation: {
     src: [src + "/**/*.scss", "./README.md", "./bower_components/**/*.scss"],
-    dest: dest + "/docs",
     sassdocOptions: {
-      dest: dest + "/docs",
+      dest: dest + "/sassdoc",
       groups: {
         undefined: "ungrouped"
       },
