@@ -22,7 +22,7 @@ module.exports = {
       dest: dest + "/docs",
       groups: {
         undefined: "ungrouped"
-      }
+      },
       verbose: true,
       display: {
         access: ['public', 'private'],
