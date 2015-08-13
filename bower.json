@@ -11,8 +11,6 @@
     "tests"
   ],
   "dependencies": {
-    "meedan-style": "https://github.com/meedan/meedan-style.git#master",
-    "bridge-style": "https://github.com/meedan/bridge-style.git#master",
-    "checkdesk-style": "https://github.com/meedan/checkdesk-style.git#master"
+    "meedan-style": "https://github.com/meedan/meedan-style.git#master"
   }
 }

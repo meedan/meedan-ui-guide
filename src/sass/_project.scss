@@ -1,0 +1,82 @@
+/// A Bridge Project Page Description and CTA
+///
+/// The call to action on a project page with (eg a page with multiple bridge channels, like the guardian demo).
+%project-page-description {
+  position: fixed;
+  font-size: smaller;
+  background-color: white;
+  padding: 0.6em 1em;
+  width: 100%;
+  border-bottom: 1px solid $light-keyboard-grey;
+
+  p {
+    padding: 0;
+  }
+
+  &.top {
+    font-weight: 700;
+    color: $bridge-orange;
+  }
+
+  &.bottom {
+    border-top: 1px solid $light-keyboard-grey;
+    bottom: 0;
+    border-bottom-width: 0;
+  }
+
+  a {
+    border-radius: 4px;
+    padding: 0 0.4em;
+    transition: 0.4s;
+  }
+}
+
+
+// Bridge Multicolumn Project Page Embeds
+// 
+// When the page is wide enough, 
+// Apply the project page styles.
+.embeds {
+  @extend %flex-container;
+  background-color: white;
+
+  .embed-wrapper {
+    @extend %flex-item;
+  }
+
+  .header {
+      margin-top: 4vh;
+      padding-top: 2vh;
+    }
+
+  // Small screens only
+  @media (max-width: 1399px) {
+    flex-flow: column nowrap;
+
+    .embed-wrapper {
+      height: auto;
+      padding: 2em 1em;
+      width: 100%;
+      html, body { 
+        // Ensure scrollbars don't appear.
+        // I am not sure why this is necessary — CGB 2015 August 1
+        height: 100%;
+      }
+    }
+  }
+
+  // Larger screens only
+  @media (min-width: 1400px) {
+    @extend %scrollbars;
+    align-items: flex-start;
+    .embed-wrapper {
+      height: 98vh;
+      padding: 2vh 1em;
+      overflow: scroll;
+    }
+  }
+}
+
+.description {
+  @extend %project-page-description;
+}

@@ -1,0 +1,65 @@
+/// Absolutely position the map icon to the top of the parent element.
+/// The parent must be relatively positioned.
+%pin-to-top {
+  position: absolute;
+  top: 20px;
+  z-index: 100;
+}
+
+%icon-map-pin {
+  background-image: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDE2IDE2IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy4zLjIgKDEyMDQzKSAtIGh0dHA6Ly93d3cuYm9oZW1pYW5jb2RpbmcuY29tL3NrZXRjaCAtLT4KICAgIDx0aXRsZT5pY29uLWxvY2F0aW9uPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGRlZnM+PC9kZWZzPgogICAgPGcgaWQ9IlBhZ2UtMSIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc2tldGNoOnR5cGU9Ik1TUGFnZSI+CiAgICAgICAgPGcgaWQ9Imljb24tbG9jYXRpb24iIHNrZXRjaDp0eXBlPSJNU0FydGJvYXJkR3JvdXAiIGZpbGw9IiNBQkI1QkQiPgogICAgICAgICAgICA8cGF0aCBkPSJNNy44OTcxNDQ4NCwxNS45Mjc2NDMzIEwxMi43MjMxMjU2LDYuNTc1NjMyNTQgQzEyLjcyMzEyNTYsNi41NzU2MzI1NCAxNC41NTkyODY5LDAgNy44OTcxNDQ5MywwIEMxLjIzNTAwMjkyLDAgMy4zNzExMTQ4Nyw2LjU3NTYzMjU0IDMuMzcxMTE0ODcsNi41NzU2MzI1NCBMNy44OTcxNDQ4NCwxNS45Mjc2NDMzIFogTTguMDQ5MDg4MzEsNy4xODkzMTIzMSBDOS4zNTQ1Mjk4OCw3LjE4OTMxMjMxIDEwLjQxMjc5OTQsNi4xMjk0ODg5MyAxMC40MTI3OTk0LDQuODIyMTMwNTMgQzEwLjQxMjc5OTQsMy41MTQ3NzIxNCA5LjM1NDUyOTg4LDIuNDU0OTQ4NzYgOC4wNDkwODgzMSwyLjQ1NDk0ODc2IEM2Ljc0MzY0Njc0LDIuNDU0OTQ4NzYgNS42ODUzNzcyNiwzLjUxNDc3MjE0IDUuNjg1Mzc3MjYsNC44MjIxMzA1MyBDNS42ODUzNzcyNiw2LjEyOTQ4ODkzIDYuNzQzNjQ2NzQsNy4xODkzMTIzMSA4LjA0OTA4ODMxLDcuMTg5MzEyMzEgWiIgaWQ9IlRyaWFuZ2xlLTEtQ29weSIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCI+PC9wYXRoPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+");
+}
+
+%show-on-hover {
+  overflow: hidden;
+  width: 12px;
+  height: 12px;
+
+  &:hover {
+    overflow: visible;
+    display: block;
+    width: auto;
+    height: auto;
+
+    &:after {
+      content: "Map this";
+
+      @extend %icon-geodata;
+    }
+
+    a {
+      color: $another-blue;
+      text-decoration: underline;
+      padding: 0.3em;
+    }
+
+    .icon {
+      display: none;
+    }
+  }
+}
+
+.bridgeEmbed__item-geodata {
+  @extend %pin-to-top;
+
+  right: 55px;
+
+  @extend %show-on-hover;
+
+  font-size: 10px;
+  transition: 0.5s;
+
+  a {
+    text-decoration: none;
+  }
+
+  .icon {
+    @extend %icon-map-pin;
+
+    width: $icon-size;
+    height: $icon-size;
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
