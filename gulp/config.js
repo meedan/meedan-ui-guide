@@ -22,7 +22,7 @@ module.exports = {
       groups: {
         undefined: "ungrouped"
       },
-      verbose: true,
+      verbose: false,
       display: {
         access: ['public', 'private'],
         alias: true

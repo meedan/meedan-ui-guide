@@ -1,3 +1,84 @@
 @import "meedan-style/colors";
 @import "meedan-style/typography";
-@import "meedan-style/docs";
+
+////
+/// Meedan-style meta documentation
+/// 
+/// @group meedan-ui-guide
+/// @since v0.1
+
+/// UI Guide Navigation
+///
+%nav {
+  margin: 0 auto;
+  padding: 2em 4em;
+  background-color: white;
+  width: 100%;
+  font-size: 12px;
+  a {
+    text-decoration: underline;
+    color: $tanzanite-blue;
+  }
+}
+
+/// Generated with http://www.patternify.com
+%image-pattern {
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQYV2NcvWXv/1AfZ0YGAoCgApj+UYV4Q5Lo4AEAZS8EC9qICkMAAAAASUVORK5CYII=") repeat;
+}
+
+/// Documentation styles
+///
+/// General styles used in the UI guide.
+%docs {
+  color: $firefly;
+  @extend %image-pattern;
+  a {
+    color: $firefly;
+  }
+  h1 {
+    background-color: $firetruck-red;
+    color: white;
+    padding: 10px;
+    @extend %font--hfj-whitney-bolditalic;
+  }
+  .doc-note {
+    background-color: yellow;
+  }
+  .container {
+    margin-top: 100px;
+    background: $firefly10;
+    padding: 0.5em 0;
+    margin: 0 auto;
+    border-radius: 10px;
+    // At larger sizes
+    @media all and (min-width: 500px) {
+      max-width: 500px;
+    }
+    p {
+      padding: 0 1em;
+    }
+    ul {
+      list-style-type: disc !important;
+      // At smaller sizes
+      @media all and (max-width: 500px) {
+        li {
+          line-height: 2em;
+        }
+        a {
+          padding: 0.5em;
+          background-color: #c3c3c3;
+          display: inline-block;
+          border-radius: 4px;
+          margin: 4px;
+        }
+      }
+    }
+  }
+}
+
+.docs, .style-guide {
+  @extend %docs;
+  .ui-guide-navigation {
+    @extend %nav;
+  }
+}
