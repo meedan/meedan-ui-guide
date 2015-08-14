@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Format.js test page</title>
+  <!-- <link rel="stylesheet" type="text/css" href="../style.css"> -->
+</head>
+<body>
+
+<h1 class="header"></h1>
+<h2 class="subheader"></h2>
+
+<script src="intl-messageformat/intl-messageformat.js"></script>
+<script src="intl-messageformat/locale-data/en.js"></script>
+<script src="intl-messageformat/locale-data/ar.js"></script>
+<script src="./localization.js"></script>
+
+<script type="text/javascript">
+  
+  var enHeaderPrimary = new IntlMessageFormat(MESSAGES['en-US'].HEADER_PRIMARY, 'en-US');
+  var enHeaderSecondary = new IntlMessageFormat(MESSAGES['en-US'].HEADER_SECONDARY, 'en-US');
+  
+  document.getElementsByClassName('header')[0].innerHTML += enHeaderPrimary.format();
+  document.getElementsByClassName('subheader')[0].innerHTML += enHeaderSecondary.format();
+
+</script>
+</body>
+</html>

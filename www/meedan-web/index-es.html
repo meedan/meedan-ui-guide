@@ -6,16 +6,13 @@
 </head>
 <body>
 
-<h1>Welcome to our format.js test!</h1>
+<h1 class="header"></h1>
+<h2 class="subheader"></h2>
 
-<p>This is some content in English!</p>
-<p>
-  ٬خقثونتايبنستيا مسينبات
-</p>
-
-<script src="../intl-messageformat/intl-messageformat.js"></script>
-<script src="../intl-messageformat/locale-data/en.js"></script>
-<script src="../intl-messageformat/locale-data/ar.js"></script>
+<script src="intl-messageformat/intl-messageformat.js"></script>
+<script src="intl-messageformat/locale-data/en.js"></script>
+<script src="intl-messageformat/locale-data/ar.js"></script>
+<script src="./localization.js"></script>
 
 <script type="text/javascript">
   var MESSAGES = {
@@ -29,19 +26,15 @@
         }
   };
 
-  var output;
 
-  var enHeaderPrimary = new IntlMessageFormat(MESSAGES['en-US'].HEADER_PRIMARY, 'en-US');
-  var enHeaderSecondary = new IntlMessageFormat(MESSAGES['en-US'].HEADER_SECONDARY, 'en-US');
-  
-  console.log(enHeaderPrimary.format);
-  console.log(enHeaderSecondary.format);
 
   var esHeaderPrimary = new IntlMessageFormat(MESSAGES['es-MX'].HEADER_PRIMARY, 'es-MX');
   var esHeaderSecondary = new IntlMessageFormat(MESSAGES['es-MX'].HEADER_SECONDARY, 'es-MX');
   
-  console.log(esHeaderPrimary.format);
-  console.log(esHeaderSecondary.format);
+  document.getElementsByClassName('header')[0].innerHTML += esHeaderPrimary.format();
+  document.getElementsByClassName('subheader')[0].innerHTML += esHeaderSecondary.format();
+
 </script>
+
 </body>
 </html>
