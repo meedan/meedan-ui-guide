@@ -2,6 +2,10 @@ var src = './src';
 var dest = './www';
 
 module.exports = {
+  javascript: {
+    src: src + '/js',
+    dest: dest + '/js'
+  },
   misc: {
     src: src + '/{CNAME, *.pdf, images/favicons/*, robots.txt }',
     dest: dest
