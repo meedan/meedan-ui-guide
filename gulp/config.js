@@ -3,7 +3,7 @@ var dest = './www';
 
 module.exports = {
   javascript: {
-    src: src + '/js',
+    src: src + '/js/*',
     dest: dest + '/js'
   },
   misc: {
