@@ -1,79 +1,97 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><title>Meedan-ui-guide - v0.13.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="http://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Meedan-ui-guide - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="<p>a nice documentation website</p>
-"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/meedan/meedan-ui-guide">Meedan-ui-guide - v0.13.0</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">ungrouped</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-placeholder"><a href="#undefined-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="pullquote" data-type="placeholder"><a href="#placeholder-pullquote">pullquote</a></li><li class="sidebar__item sassdoc__item" data-name="nav" data-type="placeholder"><a href="#placeholder-nav">nav</a></li><li class="sidebar__item sassdoc__item" data-name="image-pattern" data-type="placeholder"><a href="#placeholder-image-pattern">image-pattern</a></li><li class="sidebar__item sassdoc__item" data-name="docs" data-type="placeholder"><a href="#placeholder-docs">docs</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">ungrouped</div></h1><section class="main__sub-section" id="undefined-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="placeholder-pullquote"><h3 class="item__heading"><a class="item__name" href="#placeholder-pullquote">pullquote</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%pullquote { 
+"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title"><a href="https://github.com/meedan/meedan-ui-guide">Meedan-ui-guide - v0.13.0</a></h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">ungrouped</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="pullquote-manassa" data-type="mixin"><a href="#mixin-pullquote-manassa">pullquote-manassa</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-placeholder"><a href="#undefined-placeholder">placeholders</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-name="nav" data-type="placeholder"><a href="#placeholder-nav">nav</a></li><li class="sidebar__item sassdoc__item" data-name="image-pattern" data-type="placeholder"><a href="#placeholder-image-pattern">image-pattern</a></li><li class="sidebar__item sassdoc__item" data-name="docs" data-type="placeholder"><a href="#placeholder-docs">docs</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">ungrouped</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="mixin-pullquote-manassa"><h3 class="item__heading"><a class="item__name" href="#mixin-pullquote-manassa">pullquote-manassa</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin pullquote-manassa() { 
   font-family: &quot;Merriweather&quot;,Georgia,&quot;Times New Roman&quot;,Times,serif;
   font-size: 18px;
   word-wrap: break-word;
   line-height: 26px;
   letter-spacing: -0.23px;
-  position: relative!important;
-  margin: 1em 0 1em 0 !important;
-  max-width: 100%!important;
-  border-left-width: 0!important;
-  background-color: #E6E9EC !important; 
+  position: relative;
+  margin: 1em 0;
+  border-left-width: 0;
+  background-color: #E6E9EC; 
 
   @media (min-width: 600px) {
-    width: 75% !important;
-    padding: 2em 2.5% 2em!important;
+    padding: 2em 2.5%;
   }
-
+  
   // Position the logo in the bottom corner
   &amp;:before {
-    position: absolute !important;
-    content: &quot; &quot; !important;
-    background-size: cover !important;
-    display: block !important;
-    width: 80px !important;
-    bottom: 0 !important;
-    right: 0 !important;
-    height: 80px !important;
+    position: absolute;
+    content: &quot; &quot;;
+    background-size: cover;
+    display: block;
+    width: 80px;
+    bottom: 0;
+    height: 80px;
     @extend %logo--manassa;
-    background-position: bottom right !important;
-    background-repeat: no-repeat !important;
-    left: auto;
+    background-repeat: no-repeat;
     top: auto;
+    @if $direction == &quot;ltr&quot; {
+      right: 0;
+      background-position: bottom right;  
+      left: auto;
+    } @else {
+      left: 0;
+      background-position: bottom left;  
+      right: auto;
+      transform: rotateY(180deg);
+    }
   }
 
   // Position the quote glyph
   &amp;:after {
-    position: absolute !important;
-    content: &quot; &quot; !important;
-    background-size: cover !important;
-    display: block !important;
+    position: absolute;
+    content: &quot; &quot;;
+    background-size: cover;
+    display: block;
     @extend %glyph--quote;
-    top: 1em !important;
-    width: 56px !important;
-    left: 1.4em !important;
-    height: 54px !important;
+    top: 1em;
+    width: 56px;
+    height: 54px;
+    @if $direction == &quot;ltr&quot; {
+      left: 1.4em;
+    } @else {
+      right: 1.4em;
+      transform: rotateY(180deg);
+    }
   }
 
   &amp;&gt;p {
-    color: #3e4c57 !important;
-    padding: 1em 2em 0 4em !important;
-    margin: 0 !important;
+    color: #3e4c57;
+    padding-top: 1em;
+    padding-bottom: 0;
+    margin: 0;
+    @if $direction == &quot;ltr&quot; {
+      padding-left:4em;
+      padding-right: 2em;
+    } @else {
+      padding-right:4em;
+      padding-left: 2em;
+    }
   }
 
   // At smaller sizes
   // make things more compact
   @media (max-width: 600px) {
     &amp;&gt;p {
-      padding-left: 0!important;
+      padding: 0;
+      font-size: smaller;
     }
     &amp;:after {
-      opacity: 0.2;
+      display: none;
     }
   }
 
-
   &amp;&gt;p&gt;a {
-    color: #ABB5BD !important;
-    font-size: smaller !important;
-    width: 80%!important;
-    display: block !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis!important;
-    white-space: nowrap !important;
+    color: #ABB5BD;
+    font-size: smaller;
+    width: 80%;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
- }" data-collapsed="%pullquote { ... }"><code>%pullquote { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Pullquotes for Manassa</p></div></section><section class="main__item container item" id="placeholder-nav"><h3 class="item__heading"><a class="item__name" href="#placeholder-nav">nav</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%nav { 
+ }" data-collapsed="@mixin pullquote-manassa() { ... }"><code>@mixin pullquote-manassa() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Custom Pullquotes for Manassa</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section></section><section class="main__sub-section" id="undefined-placeholder"><h2 class="main__heading--secondary"><div class="container">placeholders</div></h2><section class="main__item container item" id="placeholder-nav"><h3 class="item__heading"><a class="item__name" href="#placeholder-nav">nav</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%nav { 
   margin: 0 auto;
   padding: 2em 0;
   width: 100%;

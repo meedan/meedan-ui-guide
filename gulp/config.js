@@ -37,7 +37,7 @@ module.exports = {
     settings: {
       includePaths: [src + '/bower_components'],
       errLogToConsole: true,
-      outputStyle: "compressed"
+      outputStyle: "expanded"
     },
     src: [src + '/bower_components', src + "/sass/**/*.scss"],
     dest: dest + "/css"
