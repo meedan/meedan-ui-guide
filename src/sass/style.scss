@@ -11,41 +11,6 @@ $link-color-hover: #333333;
 
 @import "pullquote";
 
-%pullquote {
-  background-color: #E6E9EC;
-  width: 100%;
-  border-width: 0;
-  padding: 84px 111px;
-
-  p {
-    font-size: 26px;
-    font-family: Lato;
-    &:before {
-      content: "";
-      border: 1px soild red;
-      display: block;
-      color: red;
-      font-size: 150px;
-    }
-  }
-  footer {
-    a {
-      font-weight: 700;
-    }
-    cite {
-      display: block;
-    }
-  }
-  &.smaller {
-  }
-}
-
-blockquote.pullquote {
-  @extend %pullquote;
-}
-
-
-
 * {
   box-sizing: border-box;
 }
@@ -149,7 +114,7 @@ body {
   padding: 2em 0;
   width: 100%;
   font-size: 16px;
-  line-height: 1.4!important;
+  line-height: 1.4;
   @extend %fancy-counters;
 
   h3 {
@@ -264,7 +229,8 @@ li.deprecated a {
   color: $firefly;
   @extend %image-pattern;
   font-family: Lato, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 20px;
   padding: 0;
   margin: 0;
   main {
@@ -281,13 +247,13 @@ li.deprecated a {
   
   main {
     margin-top: 100px;
-    padding: 0.5em 1em;
+    padding: 10px 1em;
     margin: 0 auto;
     border-radius: 10px;
 
     // At larger sizes
     @media all and (min-width: 500px) {
-      max-width: 500px;
+      max-width: 700px;
     }
     p {
       padding: 0 1em;
