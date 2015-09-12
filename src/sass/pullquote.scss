@@ -33,7 +33,6 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADGCAYA
     @extend %logo--manassa;
     background-position: bottom right !important;
     background-repeat: no-repeat !important;
-    
   }
 
   &:after {
@@ -59,6 +58,6 @@ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADGCAYA
   }
 }
 
-body blockquote {
+body #main #content blockquote {
   @extend %pullquote;
 }
