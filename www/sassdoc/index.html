@@ -4,35 +4,97 @@
   padding: 2em 0;
   width: 100%;
   font-size: 16px;
+  line-height: 1.4!important;
+  @extend %fancy-counters;
+
   h3 {
-    border-bottom: 1px solid #FE0557;
+    // border-bottom: 1px solid $light-keyboard-grey;
     padding: 1em;
 
   }
   h4 {
     font-size: 18px;
-    border-bottom: 1px solid $tanzanite-blue;
     color: black;
     padding: 0.6em;
-    margin-top: 2em;
   }
-  ul {
-    list-style-type: none;
-    padding-left: 0em;
-    ul {
-      margin-left: 1em;
-      border-left: 1px solid $tanzanite-blue;
+
+  &amp; &gt; ol {
+    padding: 2em 0em;
+    width: 100%;
+    list-style-position: inside;
+
+    &amp; &gt; li {
+      border-bottom: 1px solid $light-keyboard-grey;
+      width: 100%;
+      padding: 0.3em;
+      text-indent: 1em;
+      font-weight: 600;
+
+      &amp; &gt; ol {
+        text-indent: 2em;
+        &amp; &gt; li {
+          font-weight: 600;
+          padding: 0.2em;
+
+          &amp; &gt; ol {
+            font-weight: 400;
+            text-indent: 3em; 
+            li {
+              margin: 0.3em;
+            }
+          }
+        }
+      }
     }
   }
   a {
     text-decoration: none;
-    color: $tanzanite-blue;
-    
-    padding: 1em;
-    display: block;
-    margin-top: 0.5em;
+    padding: 0.2em 1em;
+    display: inline;
+    color: blue;
+    vertical-align: middle;
     &amp;:hover {
       background-color: lighten($light-keyboard-grey, 10%);
+    }
+  }
+  .tag {
+    clear: both;
+    &amp;:after {
+      content: &quot;W.I.P.&quot;;
+      // width: 100px;
+      background-color: #5B7A8A;
+      padding: 0.2em 0.4em;
+      border-radius: 4px;
+      color: white;
+      font-size: 0.8em;
+      float: right;
+      text-indent: 0; 
+      display: inline-block;
+    }
+    &amp;.embeddable {
+      &amp;:after {
+        background-color: #F2C052;
+        color: black;
+        content: &quot;embeddable&quot;;  
+      }
+    }
+    &amp;.static {
+      &amp;:after {
+        background-color: #1FB731;
+        content: &quot;static&quot;;
+      }
+    }
+    &amp;.graphics {
+      &amp;:after {
+        background-color: #4100AC;
+        content: &quot;graphics&quot;;
+      }
+    } 
+    &amp;.form {
+      &amp;:after {
+        background-color: #BA3C1D;
+        content: &quot;form&quot;;
+      }
     }
   }
  }" data-collapsed="%nav { ... }"><code>%nav { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>UI Guide Navigation</p></div></section><section class="main__item container item" id="placeholder-image-pattern"><h3 class="item__heading"><a class="item__name" href="#placeholder-image-pattern">image-pattern</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="%image-pattern { 
@@ -41,7 +103,7 @@
   color: $firefly;
   @extend %image-pattern;
   font-family: Lato, sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   padding: 0;
   margin: 0;
   main {
@@ -68,21 +130,6 @@
     }
     p {
       padding: 0 1em;
-    }
-    ul {
-      list-style-type: none;
-      @media all and (max-width: 500px) {
-        li {
-          line-height: 2em;
-        }
-        a {
-          padding: 0.5em;
-          background-color: #c3c3c3;
-          display: inline-block;
-          border-radius: 4px;
-          margin: 4px;
-        }
-      }
     }
   }
  }" data-collapsed="%docs { ... }"><code>%docs { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Documentation styles</p><p>General styles used in the UI guide.</p></div><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[placeholder]</span> <a href="#placeholder-image-pattern"><code>image-pattern</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><a class="project-info__name" href="https://github.com/meedan/meedan-ui-guide">Meedan-ui-guide</a><!-- Version --> <span class="project-info__version">- v0.13.0</span><!-- License --></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>
