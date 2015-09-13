@@ -9,7 +9,7 @@ body #main #content blockquote:after, body.rtl #main #content blockquote:after {
   text-align: right; }
 
 body #main #content blockquote {
-  font-family: "Merriweather",Georgia,"Times New Roman",Times,serif;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times,serif;
   font-size: 18px;
   word-wrap: break-word;
   line-height: 26px;
@@ -17,10 +17,12 @@ body #main #content blockquote {
   position: relative;
   margin: 1em 0;
   border-left-width: 0;
-  background-color: #E6E9EC; }
+  background-color: #E6E9EC;
+  min-height: 80px;
+  padding: 0 !important; }
   @media (min-width: 600px) {
     body #main #content blockquote {
-      padding: 2em 2.5%; } }
+      padding: 2em 2.5% !important; } }
   body #main #content blockquote:before {
     position: absolute;
     content: " ";
@@ -31,6 +33,7 @@ body #main #content blockquote {
     height: 80px;
     background-repeat: no-repeat;
     top: auto;
+    z-index: -1;
     right: 0;
     background-position: bottom right;
     left: auto; }
@@ -45,15 +48,15 @@ body #main #content blockquote {
     left: 1.4em; }
   body #main #content blockquote > p {
     color: #3e4c57;
-    padding-top: 1em;
+    padding-top: 1em !important;
     padding-bottom: 0;
     margin: 0;
     padding-left: 4em;
     padding-right: 2em; }
   @media (max-width: 600px) {
     body #main #content blockquote > p {
-      padding: 0;
-      font-size: smaller; }
+      font-size: smaller;
+      padding: 2em !important; }
     body #main #content blockquote:after {
       display: none; } }
   body #main #content blockquote > p > a {
@@ -66,7 +69,7 @@ body #main #content blockquote {
     white-space: nowrap; }
 
 body.rtl #main #content blockquote {
-  font-family: "Merriweather",Georgia,"Times New Roman",Times,serif;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times,serif;
   font-size: 18px;
   word-wrap: break-word;
   line-height: 26px;
@@ -74,10 +77,12 @@ body.rtl #main #content blockquote {
   position: relative;
   margin: 1em 0;
   border-left-width: 0;
-  background-color: #E6E9EC; }
+  background-color: #E6E9EC;
+  min-height: 80px;
+  padding: 0 !important; }
   @media (min-width: 600px) {
     body.rtl #main #content blockquote {
-      padding: 2em 2.5%; } }
+      padding: 2em 2.5% !important; } }
   body.rtl #main #content blockquote:before {
     position: absolute;
     content: " ";
@@ -88,6 +93,7 @@ body.rtl #main #content blockquote {
     height: 80px;
     background-repeat: no-repeat;
     top: auto;
+    z-index: -1;
     left: 0;
     background-position: bottom left;
     right: auto;
@@ -106,15 +112,15 @@ body.rtl #main #content blockquote {
             transform: rotateY(180deg); }
   body.rtl #main #content blockquote > p {
     color: #3e4c57;
-    padding-top: 1em;
+    padding-top: 1em !important;
     padding-bottom: 0;
     margin: 0;
     padding-right: 4em;
     padding-left: 2em; }
   @media (max-width: 600px) {
     body.rtl #main #content blockquote > p {
-      padding: 0;
-      font-size: smaller; }
+      font-size: smaller;
+      padding: 2em !important; }
     body.rtl #main #content blockquote:after {
       display: none; } }
   body.rtl #main #content blockquote > p > a {
@@ -126,9 +132,9 @@ body.rtl #main #content blockquote {
     text-overflow: ellipsis;
     white-space: nowrap; }
 
-body.docs.pullquotes #content blockquote:nth-of-type(3) {
-  width: 500px !important; }
+body.docs.pullquotes #content blockquote:nth-of-type(1) {
+  max-width: 400px !important; }
+body.docs.pullquotes #content blockquote:nth-of-type(2) {
+  max-width: 600px !important; }
 body.docs.pullquotes #content blockquote:nth-of-type(4) {
-  width: 800px !important; }
-body.docs.pullquotes #content blockquote:nth-of-type(5) {
-  width: 1000px !important; }
+  max-width: 1000px !important; }
