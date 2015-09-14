@@ -11,7 +11,26 @@
   text-align: right;
 }
 
+/// Manassa Light background color
+/// @type: color
+$color--light-manassa: #e6e9ec;
+
+/// Manassa Dark - text
+/// @type: color
+/// 
+$color--dark-manassa: #3e4c57;
+
+/// Manassa Medium - links
+/// @type: color
+$color--medium-manassa: #abb5bd;
+
+/// Pullquote logo size
+$size--pullquote-logo: 80px;
+
 /// Custom Pullquotes for Manassa
+/// @param: $direction - ltr or rtl 
+/// Must be called twice, one for each direction.
+///
 @mixin pullquote-manassa($direction) {
   font-family: "Merriweather", Georgia, "Times New Roman", Times,serif;
   font-size: 18px;
@@ -21,8 +40,8 @@
   position: relative;
   margin: 1em 0;
   border-left-width: 0;
-  background-color: #E6E9EC; 
-  min-height: 80px;
+  background-color: $color--light-manassa; 
+  min-height: $size--pullquote-logo;
   padding: 0!important;
   @media (min-width: 600px) {
     padding: 2em 2.5%!important;
@@ -34,9 +53,9 @@
     content: " ";
     background-size: cover;
     display: block;
-    width: 80px;
+    width: $size--pullquote-logo;
     bottom: 0;
-    height: 80px;
+    height: $size--pullquote-logo;
     @extend %logo--manassa;
     background-repeat: no-repeat;
     top: auto;
@@ -72,7 +91,7 @@
   }
 
   &>p {
-    color: #3e4c57;
+    color: $color--dark-manassa;
     padding-top: 1em!important;
     padding-bottom: 0;
     margin: 0;
@@ -86,7 +105,7 @@
   }
 
   // At smaller sizes
-  // make things more compact
+  // make the pullquote more compact
   @media (max-width: 600px) {
     &>p {
       font-size: smaller;
@@ -97,8 +116,9 @@
     }
   }
 
+  // The links inside 
   &>p>a {
-    color: #ABB5BD;
+    color: $color--medium-manassa;
     font-size: smaller;
     width: 80%;
     display: block;
@@ -114,15 +134,18 @@ body #main #content blockquote {
   @include pullquote-manassa(ltr);
 }
 
-body.rtl #main #content blockquote {
+// Apply the RTL pullquote
+// With a powerful selector
+body.i18n-ar #main #content blockquote {
   @include pullquote-manassa(rtl);
 }
 
+// Pullquote documentation styles
 // Display several pullquotes
-// Each with a different width
+// Each with a different (arbitrary) width (for demonstration purposes)
+// This does not need to be included in the production styles
 body.docs.pullquotes {
   #content {
-
     blockquote {
       &:nth-of-type(1) {
         max-width: 400px!important;
