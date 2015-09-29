@@ -1,6 +1,6 @@
 @charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic,900);
-@import url(http://fonts.googleapis.com/css?family=Droid+Serif);
 * {
   box-sizing: border-box; }
 
@@ -13,8 +13,6 @@ body a {
 body a:hover {
   color: #333333;
   text-decoration: underline; }
-body p {
-  margin: 0; }
 body small {
   font-size: 0.8em; }
 body strong {
@@ -25,7 +23,8 @@ body cite {
   font-style: normal; }
 body ul, body ol {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  list-style-position: inside; }
 body ul ul, body ul ol, body ol ol, body ol ul {
   margin-bottom: 0; }
 body hr {
@@ -66,10 +65,12 @@ body blockquote {
 
 .docs .ui-guide-navigation, .style-guide .ui-guide-navigation {
   margin: 0 auto;
-  padding: 2em 0;
+  padding: 2em;
   width: 100%;
   font-size: 16px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  max-width: 500px;
+  min-width: 400px; }
   .docs .ui-guide-navigation h3, .style-guide .ui-guide-navigation h3 {
     padding: 1em; }
   .docs .ui-guide-navigation h4, .style-guide .ui-guide-navigation h4 {
@@ -84,16 +85,16 @@ body blockquote {
       border-bottom: 1px solid #d1d6db;
       width: 100%;
       padding: 0.3em;
-      text-indent: 1em;
+      text-indent: 0.5em;
       font-weight: 600; }
       .docs .ui-guide-navigation > ol > li > ol, .style-guide .ui-guide-navigation > ol > li > ol {
-        text-indent: 2em; }
+        text-indent: 1em; }
         .docs .ui-guide-navigation > ol > li > ol > li, .style-guide .ui-guide-navigation > ol > li > ol > li {
           font-weight: 600;
           padding: 0.2em; }
           .docs .ui-guide-navigation > ol > li > ol > li > ol, .style-guide .ui-guide-navigation > ol > li > ol > li > ol {
             font-weight: 400;
-            text-indent: 3em; }
+            text-indent: 1em; }
             .docs .ui-guide-navigation > ol > li > ol > li > ol li, .style-guide .ui-guide-navigation > ol > li > ol > li > ol li {
               margin: 0.3em; }
   .docs .ui-guide-navigation a, .style-guide .ui-guide-navigation a {
@@ -143,7 +144,7 @@ li.deprecated a {
   color: #10212f;
   font-family: Lato, sans-serif;
   font-size: 16px;
-  line-height: 20px;
+  line-height: 1.7;
   padding: 0;
   margin: 0; }
   .docs main, .style-guide main {
@@ -156,10 +157,42 @@ li.deprecated a {
     margin-top: 100px;
     padding: 10px 1em;
     margin: 0 auto;
-    border-radius: 10px; }
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
     @media all and (min-width: 500px) {
       .docs main, .style-guide main {
-        max-width: 700px; } }
+        max-width: 100%; } }
     .docs main p, .style-guide main p {
-      padding: 0 1em; }
+      padding: 0.5em 0;
+      margin: 0;
+      font-family: 'Playfair Display', serif; }
 
+.written-style {
+  padding: 5em;
+  font-size: 19px;
+  background-color: white; }
+  @media all and (min-width: 1000px) {
+    .written-style {
+      -webkit-columns: 2;
+         -moz-columns: 2;
+              columns: 2;
+      -webkit-column-gap: 10em;
+         -moz-column-gap: 10em;
+              column-gap: 10em; } }
+  .written-style p:first-of-type {
+    font-size: 2em; }
+  .written-style table {
+    border: 4px double #d1d6db;
+    width: 100%; }
+    .written-style table td {
+      padding: 1em;
+      vertical-align: top; }
+      .written-style table td ul {
+        list-style-type: none; }
+        .written-style table td ul li {
+          padding: 0.2em; }
+      .written-style table td li:first-of-type {
+        font-weight: bold; }
