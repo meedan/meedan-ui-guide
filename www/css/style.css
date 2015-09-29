@@ -196,3 +196,9 @@ li.deprecated a {
           padding: 0.2em; }
       .written-style table td li:first-of-type {
         font-weight: bold; }
+
+.logos {
+  width: 100%; }
+  .logos img {
+    max-width: 40px;
+    max-height: 20px; }
