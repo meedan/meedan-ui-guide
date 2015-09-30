@@ -10,6 +10,17 @@ $bridge-orange: #ff4f00;
 $link-color: black;
 $link-color-hover: #333333;
 
+$meedanlabs-orange: #f17522;
+$meedanlabs-rich-orange: #ea4918;
+$meedanlabs-burnt-orange: #843f18;
+$meedanlabs-green: #9dc538;
+$meedanlabs-green-dark: #01722f;
+$meedanlabs-green-saturated: #00a013;
+$meedanlabs-green-alt: #91a000;
+$meedanlabs-yellow: #fbd202;
+$meedanlabs-blue: #37a0de;
+$meedanlabs-grey: #7f7f7f;
+
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic,900);
 
@@ -76,9 +87,36 @@ body {
   @extend %typography-default;
 }
 
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  10%{background-position:10% 15%}
+  20%{background-position:20% 25%}
+  30%{background-position:30% 35%}
+  40%{background-position:40% 45%}
+  50%{background-position:50% 55%}
+  60%{background-position:60% 65%}
+  70%{background-position:70% 75%}
+  80%{background-position:80% 85%}
+  90%{background-position:90% 95%}
+  100%{background-position:100% 100%}
+}
 
 %header {
-  background: linear-gradient(110deg, $bridge-orange, $tanzanite-blue );
+  // background: linear-gradient(110deg, $bridge-orange, $tanzanite-blue );
+  background: linear-gradient(120deg, 
+    black,
+    $meedanlabs-green-dark,
+    $meedanlabs-blue,
+    $meedanlabs-green, 
+    $meedanlabs-green-saturated,
+    $meedanlabs-yellow, 
+    $meedanlabs-orange,
+    $meedanlabs-rich-orange,
+    $meedanlabs-burnt-orange,
+    $meedanlabs-grey);
+  background-size: 600% 600%;
+  animation: gradient 3s ease infinite;
+
   padding: 1em;
   h1, h2 {
     color: white;
