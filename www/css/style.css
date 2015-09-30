@@ -109,15 +109,18 @@ body blockquote {
   100% {
     background-position: 100% 100%; } }
 
-.docs .header, .style-guide .header {
-  background: -webkit-linear-gradient(330deg, black, #01722f, #37a0de, #9dc538, #00a013, #fbd202, #f17522, #ea4918, #843f18, #7f7f7f);
-  background: linear-gradient(120deg, black, #01722f, #37a0de, #9dc538, #00a013, #fbd202, #f17522, #ea4918, #843f18, #7f7f7f);
+.stripe {
+  background: -webkit-linear-gradient(330deg, black, #01722f, #37a0de, #9dc538, #00a013, #fbd202, #f17522, #ea4918, #843f18, black);
+  background: linear-gradient(120deg, black, #01722f, #37a0de, #9dc538, #00a013, #fbd202, #f17522, #ea4918, #843f18, black);
   background-size: 600% 600%;
-  -webkit-animation: gradient 3s ease infinite;
-          animation: gradient 3s ease infinite;
+  -webkit-animation: gradient 14s ease infinite;
+          animation: gradient 14s ease infinite;
+  height: 1em; }
+
+.docs .header, .style-guide .header {
   padding: 1em; }
   .docs .header h1, .style-guide .header h1, .docs .header h2, .style-guide .header h2 {
-    color: white;
+    color: black;
     padding: 10px;
     font-size: 1.5em; }
   .docs .header h2, .style-guide .header h2 {
@@ -172,7 +175,7 @@ body blockquote {
     text-decoration: none;
     padding: 0.2em 1em;
     display: inline;
-    color: blue;
+    color: black;
     vertical-align: middle; }
     .docs .ui-guide-navigation a:hover, .style-guide .ui-guide-navigation a:hover {
       background-color: #eeeff1; }
@@ -244,7 +247,9 @@ li.deprecated a {
 .written-style {
   padding: 5em;
   font-size: 19px;
-  background-color: white; }
+  background-color: white;
+  border: 1px solid #d1d6db;
+  margin-right: 2em; }
   @media all and (min-width: 1000px) {
     .written-style {
       -webkit-columns: 2;
@@ -273,3 +278,4 @@ li.deprecated a {
   .logos img {
     max-width: 40px;
     max-height: 20px; }
+

@@ -101,25 +101,29 @@ body {
   100%{background-position:100% 100%}
 }
 
-%header {
-  // background: linear-gradient(110deg, $bridge-orange, $tanzanite-blue );
+.stripe {
   background: linear-gradient(120deg, 
     black,
     $meedanlabs-green-dark,
     $meedanlabs-blue,
     $meedanlabs-green, 
     $meedanlabs-green-saturated,
-    $meedanlabs-yellow, 
+    $meedanlabs-yellow,
     $meedanlabs-orange,
     $meedanlabs-rich-orange,
     $meedanlabs-burnt-orange,
-    $meedanlabs-grey);
+    black);
   background-size: 600% 600%;
-  animation: gradient 3s ease infinite;
+  animation: gradient 14s ease infinite;
+  height: 1em;
+}
+
+%header {
+  // background: linear-gradient(110deg, $bridge-orange, $tanzanite-blue );
 
   padding: 1em;
   h1, h2 {
-    color: white;
+    color: black;
     padding: 10px;
     font-size: 1.5em;
   }
@@ -133,7 +137,7 @@ body {
   }
 }
 
-%fancy-counters {
+%fancy-counters { 
   ol {
     counter-reset: section;
     list-style-type: none;
@@ -200,7 +204,7 @@ body {
     text-decoration: none;
     padding: 0.2em 1em;
     display: inline;
-    color: blue;
+    color: black;
     vertical-align: middle;
     &:hover {
       background-color: lighten($light-keyboard-grey, 10%);
@@ -301,22 +305,13 @@ li.deprecated a {
   }
 }
 
-.docs, 
-.style-guide {
-  @extend %docs;
-
-  .header {
-    @extend %header;
-  }
-  .ui-guide-navigation {
-    @extend %nav;
-  }
-}
-
 .written-style {
   padding: 5em;
   font-size: 19px;
   background-color: white;
+  border: 1px solid $light-keyboard-grey;
+  margin-right: 2em;
+
   @media all and (min-width: 1000px) {
     columns: 2;
     column-gap: 10em;
@@ -348,5 +343,18 @@ li.deprecated a {
   img {
     max-width: 40px;
     max-height: 20px;
+  }
+}
+
+
+.docs, 
+.style-guide {
+  @extend %docs;
+
+  .header {
+    @extend %header;
+  }
+  .ui-guide-navigation {
+    @extend %nav;
   }
 }
