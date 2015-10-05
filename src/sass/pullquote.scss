@@ -17,7 +17,7 @@ $color--light-manassa: #e6e9ec;
 
 /// Manassa Dark - text
 /// @type: color
-/// 
+///
 $color--dark-manassa: #3e4c57;
 
 /// Manassa Medium - links
@@ -28,7 +28,7 @@ $color--medium-manassa: #abb5bd;
 $size--pullquote-logo: 80px;
 
 /// Custom Pullquotes for Manassa
-/// @param: $direction - ltr or rtl 
+/// @param: $direction - ltr or rtl
 /// Must be called twice, one for each direction.
 ///
 @mixin pullquote-manassa($direction) {
@@ -40,13 +40,13 @@ $size--pullquote-logo: 80px;
   position: relative;
   margin: 1em 0;
   border-left-width: 0;
-  background-color: $color--light-manassa; 
+  background-color: $color--light-manassa;
   min-height: $size--pullquote-logo;
   padding: 0!important;
   @media (min-width: 600px) {
     padding: 2em 2.5%!important;
   }
-  
+
   // Position the logo in the bottom corner
   &:before {
     position: absolute;
@@ -62,11 +62,11 @@ $size--pullquote-logo: 80px;
     z-index:-1;
     @if $direction == "ltr" {
       right: 0;
-      background-position: bottom right;  
+      background-position: bottom right;
       left: auto;
     } @else {
       left: 0;
-      background-position: bottom left;  
+      background-position: bottom left;
       right: auto;
       transform: rotateY(180deg);
     }
@@ -116,12 +116,12 @@ $size--pullquote-logo: 80px;
     }
   }
 
-  // The links inside 
+  // The links inside
   &>p>a {
     color: $color--medium-manassa;
     font-size: smaller;
-    width: 80%;
-    display: block;
+    width: auto;
+    display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -130,35 +130,14 @@ $size--pullquote-logo: 80px;
 
 // Apply the pullquote
 // With a powerful selector
-body #main .story-body > blockquote, 
+body #main .story-body > blockquote,
 body #main .update-body > blockquote {
   @include pullquote-manassa(ltr);
 }
 
 // Apply the RTL pullquote
 // With a powerful selector
-body.i18n-ar #main .story-body > blockquote, 
+body.i18n-ar #main .story-body > blockquote,
 body.i18n-ar #main .update-body > blockquote  {
   @include pullquote-manassa(rtl);
-}
-
-// Pullquote documentation styles
-// Display several pullquotes
-// Each with a different (arbitrary) width (for demonstration purposes)
-// This does not need to be included in the production styles
-body.docs.pullquotes,
-body .update-body > blockquote  {
-  #content {
-    blockquote {
-      &:nth-of-type(1) {
-        max-width: 400px!important;
-      }
-      &:nth-of-type(2) {
-        max-width: 600px!important;
-      }
-      &:nth-of-type(4) {
-        max-width: 1000px!important;
-      }
-    }
-  }
 }

@@ -62,8 +62,8 @@ body #main .story-body > blockquote, body #main .update-body > blockquote {
   body #main .story-body > blockquote > p > a, body #main .update-body > blockquote > p > a {
     color: #abb5bd;
     font-size: smaller;
-    width: 80%;
-    display: block;
+    width: auto;
+    display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
@@ -126,15 +126,8 @@ body.i18n-ar #main .story-body > blockquote, body.i18n-ar #main .update-body > b
   body.i18n-ar #main .story-body > blockquote > p > a, body.i18n-ar #main .update-body > blockquote > p > a {
     color: #abb5bd;
     font-size: smaller;
-    width: 80%;
-    display: block;
+    width: auto;
+    display: inline-block;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap; }
-
-body.docs.pullquotes #content blockquote:nth-of-type(1), body .update-body > blockquote #content blockquote:nth-of-type(1) {
-  max-width: 400px !important; }
-body.docs.pullquotes #content blockquote:nth-of-type(2), body .update-body > blockquote #content blockquote:nth-of-type(2) {
-  max-width: 600px !important; }
-body.docs.pullquotes #content blockquote:nth-of-type(4), body .update-body > blockquote #content blockquote:nth-of-type(4) {
-  max-width: 1000px !important; }
