@@ -1,0 +1,31 @@
+
+@keyframes gradient { 
+  0%{background-position:0% 0%}
+  10%{background-position:10% 15%}
+  20%{background-position:20% 25%}
+  30%{background-position:30% 35%}
+  40%{background-position:40% 45%}
+  50%{background-position:50% 55%}
+  60%{background-position:60% 65%}
+  70%{background-position:70% 75%}
+  80%{background-position:80% 85%}
+  90%{background-position:90% 95%}
+  100%{background-position:100% 100%}
+}
+
+.stripe {
+  background: linear-gradient(120deg, 
+    black,
+    $meedan-green-dark,
+    $meedan-blue,
+    $meedan-green, 
+    $meedan-green-saturated,
+    $meedan-yellow,
+    $meedan-orange,
+    $meedan-rich-orange,
+    $meedan-burnt-orange,
+    black);
+  background-size: 600% 600%;
+  animation: gradient 50s ease infinite;
+  height: 1em;
+}

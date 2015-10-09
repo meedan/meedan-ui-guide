@@ -1,6 +1,7 @@
 ////
 /// This is the main stylesheet for the UI guide. 
 
+// Colors
 $firefly2: #fafbfb;
 $firefly: #10212f;
 $checkdesk-yellow: #e4ba2a;
@@ -9,25 +10,33 @@ $tanzanite-blue: #4910db;
 $bridge-orange: #ff4f00;
 $link-color: black;
 $link-color-hover: #333333;
+$meedan-orange: #f17522;
+$meedan-rich-orange: #ea4918;
+$meedan-burnt-orange: #843f18;
+$meedan-green: #9dc538;
+$meedan-green-dark: #01722f;
+$meedan-green-saturated: #00a013;
+$meedan-green-alt: #91a000;
+$meedan-yellow: #fbd202;
+$meedan-blue: #37a0de;
+$meedan-grey: #7f7f7f;
 
-$meedanlabs-orange: #f17522;
-$meedanlabs-rich-orange: #ea4918;
-$meedanlabs-burnt-orange: #843f18;
-$meedanlabs-green: #9dc538;
-$meedanlabs-green-dark: #01722f;
-$meedanlabs-green-saturated: #00a013;
-$meedanlabs-green-alt: #91a000;
-$meedanlabs-yellow: #fbd202;
-$meedanlabs-blue: #37a0de;
-$meedanlabs-grey: #7f7f7f;
-
+// Google fonts
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic,900);
+
+// Animated gradient technique
+@import "animated_gradient";
+
+// Images as base64 uri-data
+@import "data";
 
 * {
   box-sizing: border-box;
 }
 
+/// Typography defaults
+/// 
 %typography-default {
   h1, h2, h3, h4 {
     margin: 0;
@@ -87,41 +96,12 @@ body {
   @extend %typography-default;
 }
 
-@keyframes gradient { 
-  0%{background-position:0% 0%}
-  10%{background-position:10% 15%}
-  20%{background-position:20% 25%}
-  30%{background-position:30% 35%}
-  40%{background-position:40% 45%}
-  50%{background-position:50% 55%}
-  60%{background-position:60% 65%}
-  70%{background-position:70% 75%}
-  80%{background-position:80% 85%}
-  90%{background-position:90% 95%}
-  100%{background-position:100% 100%}
-}
-
-.stripe {
-  background: linear-gradient(120deg, 
-    black,
-    $meedanlabs-green-dark,
-    $meedanlabs-blue,
-    $meedanlabs-green, 
-    $meedanlabs-green-saturated,
-    $meedanlabs-yellow,
-    $meedanlabs-orange,
-    $meedanlabs-rich-orange,
-    $meedanlabs-burnt-orange,
-    black);
-  background-size: 600% 600%;
-  animation: gradient 14s ease infinite;
-  height: 1em;
-}
-
+/// Header
 %header {
-  // background: linear-gradient(110deg, $bridge-orange, $tanzanite-blue );
-
+  @extend .stripe;
   padding: 1em;
+  height: 300px;
+
   h1, h2 {
     color: black;
     padding: 10px;
@@ -137,6 +117,8 @@ body {
   }
 }
 
+/// Fancy counters 
+/// Lists with special section numbers
 %fancy-counters { 
   ol {
     counter-reset: section;
@@ -259,17 +241,13 @@ li.deprecated a {
   text-decoration: line-through;
 }
 
-/// Generated with http://www.patternify.com
-%image-pattern {
-  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQYV2NcvWXv/1AfZ0YGAoCgApj+UYV4Q5Lo4AEAZS8EC9qICkMAAAAASUVORK5CYII=") repeat;
-}
-
 /// Documentation styles
 ///
 /// General styles used in the UI guide.
 %docs {
   color: $firefly;
   @extend %image-pattern;
+  @extend %noisy-texture;
   font-family: Lato, sans-serif;
   font-size: 16px;
   line-height: 1.7;
@@ -311,6 +289,7 @@ li.deprecated a {
   background-color: white;
   border: 1px solid $light-keyboard-grey;
   margin-right: 2em;
+  margin-top: -5em;
 
   @media all and (min-width: 1000px) {
     columns: 2;
@@ -358,3 +337,5 @@ li.deprecated a {
     @extend %nav;
   }
 }
+
+
