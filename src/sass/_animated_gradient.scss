@@ -1,31 +1,34 @@
+/// Colors array
+$colors--tie-dye: 
+  purple,
+  $meedan-blue,
+  $meedan-green, 
+  $meedan-yellow,
+  $meedan-yellow,
+  $meedan-yellow,
+  $meedan-green,
+  $firefly,
+  $meedan-blue,
+  $meedan-grey;
 
-@keyframes gradient { 
-  0%{background-position:0% 0%}
-  10%{background-position:10% 15%}
-  20%{background-position:20% 25%}
-  30%{background-position:30% 35%}
-  40%{background-position:40% 45%}
-  50%{background-position:50% 55%}
-  60%{background-position:60% 65%}
-  70%{background-position:70% 75%}
-  80%{background-position:80% 85%}
-  90%{background-position:90% 95%}
-  100%{background-position:100% 100%}
+/// Tie-dye Keyframe
+/// Loop through each of the colors to define animation
+@keyframes animation--tie-dye { 
+  @for $i from 1 through length($colors--tie-dye) {
+    #{$i*10}%{ 
+      background-position:#{$i*10}% #{$i*5}% 
+    }
+  }
 }
 
-.stripe {
-  background: linear-gradient(120deg, 
-    black,
-    $meedan-green-dark,
-    $meedan-blue,
-    $meedan-green, 
-    $meedan-green-saturated,
-    $meedan-yellow,
-    $meedan-orange,
-    $meedan-rich-orange,
-    $meedan-burnt-orange,
-    black);
+$timing--smooth: cubic-bezier(0.17, 0.67, 0.48, 1.28);
+
+/// Tie Dye
+/// The placeholder that uses the animation
+/// Extend this to make an animated gradient
+%tie-dye {
+  background: aqua;
+  background: linear-gradient(120deg, $colors--tie-dye);
   background-size: 600% 600%;
-  animation: gradient 50s ease infinite;
-  height: 1em;
+  animation: animation--tie-dye 50s $timing--smooth infinite;
 }

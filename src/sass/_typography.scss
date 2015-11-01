@@ -1,0 +1,60 @@
+/// Typography defaults
+/// 
+%typography-default {
+  h1, h2, h3, h4 {
+    margin: 0;
+    padding: 2em 0 1em 0;
+  }
+  a {
+    color: $link-color;
+    text-decoration: none;
+  }
+  a:hover {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
+
+  small {
+    font-size: 0.8em;
+  }
+  strong {
+    font-weight: bold;
+  }
+  em {
+    font-style: italic;
+  }
+  cite {
+    font-style: normal;
+  }
+  ul, ol {
+    padding: 0;
+    margin: 0;
+    list-style-position: inside;
+  }
+  ul ul,
+  ul ol,
+  ol ol,
+  ol ul {
+    margin-bottom: 0;
+  }
+  hr {
+    margin: 1em 0;
+    border: 0;
+    border-top: 1px solid #c3c3c3;
+    border-bottom: 1px solid #ffffff;
+  }
+  abbr[title] {
+    cursor: help;
+    border-bottom: 1px dotted #333;
+  }
+  blockquote {
+    margin: 2em;
+    padding: 1em;
+    border-left: 5px solid #333;
+    font-size: 0.8;
+  }
+}
+
+body {
+  @extend %typography-default;
+}

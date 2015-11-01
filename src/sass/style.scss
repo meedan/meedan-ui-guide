@@ -2,6 +2,7 @@
 /// This is the main stylesheet for the UI guide. 
 
 // Colors
+// 
 $firefly2: #fafbfb;
 $firefly: #10212f;
 $checkdesk-yellow: #e4ba2a;
@@ -22,320 +23,167 @@ $meedan-blue: #37a0de;
 $meedan-grey: #7f7f7f;
 
 // Google fonts
+// 
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400,900);
 @import url(http://fonts.googleapis.com/css?family=Lato:400,300,300italic,900);
 
 // Animated gradient technique
+// 
 @import "animated_gradient";
 
+// Basic Typography
+// 
+@import "typography";
+
+// Navigation
+// 
+@import "navigation";
+
 // Images as base64 uri-data
+// 
 @import "data";
 
+// Border-box model
+// 
 * {
   box-sizing: border-box;
 }
 
-/// Typography defaults
-/// 
-%typography-default {
-  h1, h2, h3, h4 {
-    margin: 0;
-    padding: 2em 0 1em 0;
-  }
-  a {
-    color: $link-color;
-    text-decoration: none;
-  }
-  a:hover {
-    color: $link-color-hover;
-    text-decoration: underline;
-  }
 
-  small {
-    font-size: 0.8em;
-  }
-  strong {
-    font-weight: bold;
-  }
-  em {
-    font-style: italic;
-  }
-  cite {
-    font-style: normal;
-  }
-  ul, ol {
-    padding: 0;
-    margin: 0;
-    list-style-position: inside;
-  }
-  ul ul,
-  ul ol,
-  ol ol,
-  ol ul {
-    margin-bottom: 0;
-  }
-  hr {
-    margin: 1em 0;
-    border: 0;
-    border-top: 1px solid #c3c3c3;
-    border-bottom: 1px solid #ffffff;
-  }
-  abbr[title] {
-    cursor: help;
-    border-bottom: 1px dotted #333;
-  }
-  blockquote {
-    margin: 2em;
-    padding: 1em;
-    border-left: 5px solid #333;
-    font-size: 0.8;
-  }
-}
-
-body {
-  @extend %typography-default;
-}
-
-/// Header
-%header {
-  @extend .stripe;
-  padding: 1em;
-  height: 300px;
-
-  h1, h2 {
-    color: black;
-    padding: 10px;
-    font-size: 1.5em;
-  }
-  h2 {
-    font-size: 1em;
-  }
-  .version {
-    font-family: Lato, sans-serif;
-    font-weight: 200;
-    font-size: 0.4em;
-  }
-}
-
-/// Fancy counters 
-/// Lists with special section numbers
-%fancy-counters { 
-  ol {
-    counter-reset: section;
-    list-style-type: none;
-  }
-  li::before {
-    counter-increment: section;
-    content: "§" counters(section,".") " ";
-  }
-}
-
-/// UI Guide Navigation
-///
-%nav {
-  margin: 0 auto;
-  padding: 2em;
-  width: 100%;
-  font-size: 16px;
-  line-height: 1.4;
-  @extend %fancy-counters;
-  max-width: 500px;
-  min-width: 400px;
-
-  h3 {
-    // border-bottom: 1px solid $light-keyboard-grey;
-    padding: 1em;
-
-  }
-  h4 {
-    font-size: 18px;
-    color: black;
-    padding: 0.6em;
-  }
-
-  & > ol {
-    padding: 2em 0em;
-    width: 100%;
-    list-style-position: inside;
-
-    & > li {
-      border-bottom: 1px solid $light-keyboard-grey;
-      width: 100%;
-      padding: 0.3em;
-      text-indent: 0.5em;
-      font-weight: 600;
-
-      & > ol {
-        text-indent: 1em;
-        & > li {
-          font-weight: 600;
-          padding: 0.2em;
-
-          & > ol {
-            font-weight: 400;
-            text-indent: 1em; 
-            li {
-              margin: 0.3em;
-            }
-          }
-        }
-      }
-    }
-  }
-  a {
-    text-decoration: none;
-    padding: 0.2em 1em;
-    display: inline;
-    color: black;
-    vertical-align: middle;
-    &:hover {
-      background-color: lighten($light-keyboard-grey, 10%);
-    }
-  }
-  .tag {
-    clear: both;
-    &:after {
-      content: "W.I.P.";
-      background-color: #5B7A8A;
-      padding: 0.2em 0.4em;
-      border-radius: 4px;
-      color: white;
-      font-size: 0.8em;
-      float: right;
-      text-indent: 0; 
-      display: inline-block;
-    }
-    &.embeddable {
-      &:after {
-        background-color: #F2C052;
-        color: black;
-        content: "embeddable";  
-      }
-    }
-    &.static {
-      &:after {
-        background-color: #1FB731;
-        content: "static";
-      }
-    }
-    &.graphics {
-      &:after {
-        background-color: #4100AC;
-        content: "graphics";
-      }
-    } 
-    &.form {
-      &:after {
-        background-color: #BA3C1D;
-        content: "form";
-      }
-    }
-  }
-}
-
-.wip {
-  opacity: 0.3;
-}
-
-li.deprecated a {
-  text-decoration: line-through;
-}
-
-/// Documentation styles
-///
-/// General styles used in the UI guide.
-%docs {
-  color: $firefly;
-  @extend %image-pattern;
+// Render
+// 
+// Compose the page with the placeholders defined above.
+// 
+.docs, 
+.style-guide {
   @extend %noisy-texture;
+  color: $firefly;
   font-family: Lato, sans-serif;
   font-size: 16px;
   line-height: 1.7;
   padding: 0;
   margin: 0;
-  main {
-    padding: 1em;
-  }
-
+  width: 100%;
+  
   a {
-    color: $firefly;
+    color: blue;
   }
   
   .doc-note {
-    background-color: yellow;
+    background-color: lighten(yellow, 20%);
   }
   
   main {
-    margin-top: 100px;
-    padding: 10px 1em;
+    margin-top: 2em;
+    padding: 10px 3em;
     margin: 0 auto;
     border-radius: 10px;
     display: flex;
-    // At larger sizes
-    @media all and (min-width: 500px) {
-      max-width: 100%;
-    }
+    
     p {
       padding: 0.5em 0;
       margin: 0;
-      font-family: 'Playfair Display', serif;
+      font-family: Lato, serif;
     }
+  }
+
+  .header {
+    padding: 1em;
+    height: 120px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    div {
+      width: 500px;
+    }
+
+    img { 
+      width: 50px;
+    }
+
+    h1, h2 {
+      color: black;
+      padding: 0em 1em;
+      font-size: 1em;
+    }
+
+    h2 {
+      font-size: 0.8em;
+    }
+
+    .version {
+      font-family: Lato, sans-serif;
+      font-weight: 200;
+      font-size: 0.4em;
+    }
+  }
+
+  .ui-guide-navigation {
+    @extend %nav;
   }
 }
 
-.written-style {
-  padding: 5em;
+//  Written style guide
+//  contains prose
+.docs .written-style {
+  padding: 4em;
   font-size: 19px;
   background-color: white;
   border: 1px solid $light-keyboard-grey;
-  margin-right: 2em;
   margin-top: -5em;
-
+  max-width: 70%;
+  min-width: 500px;
   @media all and (min-width: 1000px) {
     columns: 2;
-    column-gap: 10em;
+    column-gap: 3em;
   }
+
+  // The first paragrah
   p:first-of-type {
     font-size: 2em;
+    font-family: "Playfair Display", serif;
+    color: lighten(black, 2%);
+    font-weight: 400;
   }
-  table {
-    border: 4px double $light-keyboard-grey;
-    width: 100%;
-    td {
-      padding: 1em;
-      vertical-align: top;
-      ul {
-        list-style-type: none;
-        li {
-          padding: 0.2em;
-        }
-      }
-      li:first-of-type {
-        font-weight: bold;
-      }
-    }
+
+  // Second paragrah
+  p:nth-of-type(2) {
+    font-size: 0.8em;
+    font-family: "Lato", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: lighten(black, 20%);
+    margin: 2em 0;
   }
 }
 
-.logos {
-  width: 100%;
+// Logos in the documentation
+.docs .logos {
+  width: 200px;
+  padding: 4em;
   img {
     max-width: 40px;
     max-height: 20px;
   }
 }
 
-
-.docs, 
-.style-guide {
-  @extend %docs;
-
-  .header {
-    @extend %header;
-  }
-  .ui-guide-navigation {
-    @extend %nav;
+// Tables in the documentation
+.docs table {
+  border: 4px double $light-keyboard-grey;
+  width: 100%;
+  font-size: 12px;
+  td {
+    padding: 1em;
+    vertical-align: top;
+    ul {
+      list-style-type: none;
+      li {
+        padding: 0.2em;
+      }
+    }
+    li:first-of-type {
+      font-weight: bold;
+    }
   }
 }
-
-
