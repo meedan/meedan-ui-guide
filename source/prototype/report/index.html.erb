@@ -1,0 +1,14 @@
+---
+title: Report Detail View
+status: prototype
+layout: default
+---
+<!-- This is a full page view of a single report -->
+<div class="page--report page">
+  <%= partial "partials/sidebar" %>
+  <div class="main">
+    <%= partial "partials/header" %>
+
+    <%= partial "partials/report", :locals => { :report => report } %>
+  </div>
+</div>

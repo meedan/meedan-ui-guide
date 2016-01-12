@@ -1,0 +1,30 @@
+// Stylesheet switcher
+// 
+ul.project--stylesheet-switcher {
+  background-color: white;
+  display: flex;
+  font-size: 14px!important;
+  list-style-type: none;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1em;
+  li {
+    margin: 0 1em;
+    a {
+      text-decoration: none;
+      color: $firefly40;
+      &:hover {
+        color: $dodger-blue;
+        transition: color 0.4s;
+      }
+    }
+  }
+  i {
+    padding: 0.5em;
+  }
+
+  &.grid a.grid, 
+  &.timeline a.timeline {
+    color: $firefly80;
+  }
+}

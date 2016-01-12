@@ -1,0 +1,47 @@
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css";
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,300);
+@import "colors";
+@import "global";
+@import "stylesheet-switcher";
+@import "team-members";
+@import "report";
+@import "report-forms";
+@import "modal";
+
+// Project themes
+// 
+@import "project-grid";
+@import "project-timeline";
+
+// Reports list
+// 
+.project--reports {
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  display: flex;
+  margin: 0 auto;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+// Color themes
+%dark-theme {
+  background: $firefly80;
+  .stylesheet-switcher a {
+    color: white;
+  }
+}
+
+%light-theme {
+  background-color: $thatch5-warm;
+  .report {
+    box-shadow: 0 0px 3px $firefly20;
+  }
+}
+
+// Apply the color themes
+.page--project {
+  @extend %light-theme;
+  // @extend %dark-theme;
+}

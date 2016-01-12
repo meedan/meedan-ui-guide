@@ -1,0 +1,97 @@
+// Meme Buster Forms
+// 
+form {
+  padding: 0 1em;
+  margin-top: -70px;
+
+  // Labels
+  // 
+  .checkbox-group label {
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+
+  h2 {
+    margin-bottom: 0em;
+    font-size: $form--font-size;
+    color: $firefly80;
+    padding: $pad 0 0;
+    &:first-of-type {
+      border-top-width: 0;
+    }
+  }
+
+  // Groups in the form
+  // 
+  .form-group {
+    background-color: white;
+    padding: $pad $pad*2 $pad * 2;
+    border: 1px solid $firefly10;
+    border-bottom-width: 0;
+
+    &:first-of-type {
+      border-top-left-radius: $radius;
+      border-top-right-radius: $radius;
+    }
+    &:last-of-type {
+      margin-top: 0;
+      border-bottom-left-radius: $radius;
+      border-bottom-right-radius: $radius;
+      border-bottom-width: 1px!important;
+    }
+
+    &.more-options-button {
+      border: 1px solid $firefly10;
+    }
+  }
+
+  // Form base styles
+  // 
+  select,
+  input[type="text"],
+  input[type="range"],
+  .checkbox-group {
+    width: 100%;
+    overflow: hidden;
+    font-size: $form--font-size;
+    min-height: 1.8em;
+    padding: $pad;
+  }
+
+  // Inputs
+  // 
+  input[type="text"] {
+    border: 1px solid $firefly10;
+    line-height: 2.8;
+    outline: 0;
+
+    &:focus {
+      border: 1px solid $dodgerBlue;
+      transition: border 0.3s;
+    }
+  }
+
+  // Select
+  // 
+  select,
+  option {
+    border: 1px solid #cfcfcf;
+    border-radius: 0;
+  }
+
+  // Fieldset
+  // 
+  fieldset {
+    border: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+.more-options-button a {
+  text-align: center;
+  display: block;
+  color: $dodgerBlue;
+  text-decoration: none;
+  padding-bottom: 1em;
+}

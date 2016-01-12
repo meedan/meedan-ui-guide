@@ -1,0 +1,87 @@
+<div class="report js-queries <%= report.type %> <%= report.archive_status %>">
+  
+  <div class="report--contextual-action-menu">
+    <a href="#"><i class="fa fa-ellipsis-h"></i></a>
+  </div>
+    <!-- Media object -->
+    <div class="report--media-object">
+      <img src="/images/prototype/<%=report.media_object%>">
+    </div>
+
+    <!-- Helper text (optional per report) -->
+    <% if report.helper_text %>
+      <div class="report--helper-text">
+        <%= report.helper_text %>
+      </div>
+    <% end %>
+
+    <!-- Title -->
+    <div class="report--title">
+      <i class="fa fa-<%= report.source_type_icon %>"></i>
+      <%= report.title %>
+    </div>
+
+    <!-- Description -->
+    <div class="report--description">
+      <%= report.description %>
+    </div>
+
+    <!-- Source: Often A username, or channel name -->
+    <div class="report--source-username">
+      <%= report.source_username %>
+    </div>
+
+    <!-- Source domain: eg youtube -->
+    <div class="report--added-by">
+      <span class="source-domain">
+        <i class="fa fa-<%= report.source_domain_icon %>"></i>
+      </span>
+      <span class="datestamp"><%= report.added_datestamp %></span>
+      <span class="username"><%= report.added_by %></span>
+    </div>
+
+    <div class="report--checklog">
+      <div class="checklog--header">
+        <h4><%= report.checklog.count %> Verification notes</h4>
+        <div class="checklog--actions">
+          <i class="fa fa-share"></i>
+          <i class="fa fa-flag"></i>
+        </div>
+      </div>
+      <ul>
+
+      <% report.checklog.reverse_each do |entry| %>
+        <li class="checklog--entry">
+          <div class="checklog--entry-icons">
+            <img class="avatar" src="/images/prototype/<%= entry.username %>.png">
+          </div>
+          <div class="checklog--entry-body">
+            <span class="username"><%= entry.username %></span>
+            <span class="log-entry"><%= entry.log_entry %></span>
+            <span class="timestamp"><%= entry.timestamp %></span>
+          </div>
+        </li>
+      <% end %>
+
+      <li class="checklog--entry">
+        <div class="checklog--entry-icons">
+          <img class="avatar" src="/images/prototype/admin.png">
+        </div>
+        <div class="checklog--entry-body">
+          <div class="report--form">
+            <p class="helper-text"><span class="username">You</span> <a href="#" class="js-toggle-input">Add a comment or link</a></p>
+            <form>
+              <input type="text"></input>
+              <input type="submit"></input>
+            </form>
+          </div>
+        </div>
+      </li>
+      </ul>
+    </div>
+
+    <!-- Verification status: eg, false -->
+    <div class="report--verification-status js-show-report <%= report.verification_status %>">
+      <%= report.verification_status %> <span class="attribution-team">by Bellingcat</span>
+    </div>
+  </div>

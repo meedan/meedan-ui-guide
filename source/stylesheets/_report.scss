@@ -1,0 +1,205 @@
+// A Report: base styles
+// 
+// The report is themed by different views of the desk. 
+// 
+// See: desk-grid and desk-timeline.
+//
+//
+// Base report has a white background
+.report {
+  // is hidden until revealed by js.
+  display: none;
+  background-color: white;
+  border-radius: 5px;
+  color: $firefly60;
+  overflow: hidden;
+  font-size: 12px;
+  margin: 1em auto;
+  padding: 0.6em 0em 0em;
+
+  & > * {
+    padding: 0.2em 1em;
+  }
+
+  .report--title {
+    font-size: 12px;
+    .fa {
+      color: $firefly40;
+    }
+  }
+
+  // Description is hidden
+  // 
+  .report--description {
+    // display: none;
+  }
+
+  p {
+    margin: 0!important;
+    padding: 0 1em;
+  }
+
+  // Contextual action buttons on each report
+  //
+  .report--contextual-action-menu {
+    color: $firefly50;
+    font-size: 22px;
+    float: left;
+  }
+  // The media object core
+  // 
+  // By default it's full size.
+  // 
+  .report--media-object {
+    img {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  // The status on a report
+  // 
+  .report--verification-status {
+    color: $firefly60;
+    padding: 0.5em 1em!important;
+    &:hover {
+      cursor: pointer;
+    }
+    &.false {
+      color: $false-red;
+    }
+    &.verified {
+      color: $verified-green;
+    }
+  } 
+
+  // The upstream origin URL
+  // 
+  .report--source-username {
+   color: $firefly60;
+  }
+
+  // Added-by whom
+  // 
+  .report--added-by {
+    background-color: $firefly20!important;
+    .source-domain {
+      color: $firefly;
+      padding: 0.5em 0;
+      .fa-youtube-play {
+        color: $youtube-red;
+      }
+      .fa-facebook-official {
+        color: $facebook-blue;
+      }
+      .fa-twitter {
+        color: $twitter-blue;
+      }
+    }
+    .datestamp { 
+      color: $firefly30;
+    }
+    .username { 
+      font-weight: 700; 
+      &:before {
+        content: "by ";
+      }
+    }
+  }
+
+  // The checklog
+  // 
+  .report--checklog {
+    // Toggled with js
+    display: none;
+    background-color: $firefly50;
+    padding: 1em;
+    font-size: smaller;
+    line-height: 1.4;
+    .checklog--header {
+      display: flex;
+      h4 {
+        flex: 4 auto;
+        margin: 0;
+        width: 80%;
+      }
+      .checklog--actions {
+        flex: 1 auto;
+        width: 20%;
+        color: $firefly40;
+        text-align: right;
+      }
+    }
+
+    p {
+      margin: 0.6em 0;
+    }
+
+    a {
+      vertical-align: bottom;
+      display: inline-block;
+      max-width: 250px;
+      color: $dodger-blue;
+      text-decoration: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-radius: 4px;
+      white-space: nowrap;
+      line-height: 1.4
+    }
+
+    ul {
+      list-style-type: none;
+      
+      li.checklog--entry {
+        display: flex;
+        
+        .checklog--entry-icons {
+          width: 30px;
+          border-left: 1px solid $firefly30;
+          position: relative;
+          .avatar {
+            position: absolute;
+            width: 30px;
+            border-radius: 4px;
+            vertical-align: middle;
+            left: -15px;
+            margin-top: 0.5em;
+          } 
+        }
+
+        .checklog--entry-body {
+          padding: 0.5em;
+          width: 100%;
+          .username {
+            font-size: 1.2em;
+            font-weight: bold;
+            display: block;
+          }
+          .status-change {
+            font-weight: bold;
+            em {
+              font-style: normal;
+              text-transform: capitalize;
+            }
+            &.verified {
+              color: green;
+            }
+          }
+
+          .log-entry {
+            p {
+              padding: 0;
+            }
+          }
+
+          .timestamp {
+            font-size: 0.7em;
+            color: $firefly40;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

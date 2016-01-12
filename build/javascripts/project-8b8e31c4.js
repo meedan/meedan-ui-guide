@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".page--project.js-view-class").addClass(queries.view),$(".project--stylesheet-switcher.js-view-class").addClass(queries.view),$(".report").hide(),$(window).load(function(){$(".report").each(function(e){$(this).delay(80*(e+1)).fadeIn()})})});

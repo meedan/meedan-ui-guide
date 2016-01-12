@@ -1,0 +1,54 @@
+// A page contains a .header, .sidebar and .main
+// 
+.page {
+  display: flex;
+
+  // Header
+  // 
+  .page--header {
+    background-color: white;
+    padding: 1em 2em;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    border-bottom: 1px solid $firefly30;
+
+    // inner headers wrapper
+    &>.headers {
+      width: 50%;
+      h2 {
+        margin-right: 1em;
+        padding-right: 1em;
+        font-size: 14px;
+        margin-bottom: 0;
+      }  
+      h3 {
+        font-size: 14px;
+        font-weight: normal;
+        padding: 0;
+        margin: 0;
+        color: $firefly30;
+      }
+    }
+  }
+
+  .page--sidebar {
+    flex: 1 auto;
+    background: white;
+    padding: 1em;
+    border-right: 1px solid $firefly30;
+    min-height: 100vh;
+    @media all and (max-width: 700px) {
+      display: none;
+    }
+    .branding {
+      margin-top: 15px;
+    }
+  }
+  .main {
+    flex: 20 auto;
+    background-color: $firefly90;
+  }
+}

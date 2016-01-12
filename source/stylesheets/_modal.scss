@@ -1,0 +1,38 @@
+#overlay {
+  position:fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+#modal {
+  position: fixed;
+  background: $dodger-blue;
+  padding: 1em;
+  overflow: hidden;
+  height: 90vh!important;
+  width: 90vh!important;
+  z-index: 100;
+  display: flex;
+  margin: auto auto;
+}
+
+#content {
+  border-radius: 8px;
+  background: #fff;
+  padding: 20px;
+}
+
+#close {
+  position:absolute;
+  background: red url(close.png) 0 0 no-repeat;
+  width: 24px;
+  height: 27px;
+  display: block;
+  text-indent: -9999px;
+  top: -7px;
+  right: -7px;
+}

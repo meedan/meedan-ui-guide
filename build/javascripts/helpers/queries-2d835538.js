@@ -1,0 +1,1 @@
+var queries={};$.each(document.location.search.substr(1).split("&"),function(e,i){var t=i.split("=");t[1]&&(queries[t[0].toString()]=t[1].toString()),"undefined"==typeof queries.view&&(queries.view="timeline")});
