@@ -21,6 +21,26 @@
     padding: 0.2em 1em;
   }
 
+  .js-hidden {
+    display: none;
+  }
+
+  .report--menu {
+    border: 1px solid red;
+    background-color: white;
+    position: absolute;
+    padding: 1em;
+    margin: 0;
+    color: black;
+    list-style-type: none;
+    font-size: 0.8em;
+    li {
+      padding: 0.5em 0.3em;
+    }
+  }
+
+  // Report title
+  // 
   .report--title {
     font-size: 12px;
     .fa {
