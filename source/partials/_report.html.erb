@@ -17,6 +17,10 @@
       <%= report.description %>
     </div>
 
+    <!-- Verification status: eg, false -->
+    <div class="report--verification-status js-show-report <%= report.verification_status %>">
+      <%= report.verification_status %> <span class="attribution-team">by Bellingcat</span>
+    </div>
   </div>
 
   <!-- report section -->
@@ -67,7 +71,7 @@
         </div>
         <div class="checklog--entry-body">
           <div class="report--form">
-            <p class="helper-text"><span class="username">You</span> <a href="#" class="js-toggle-input">Add a comment or link</a></p>
+            <p class="helper-text"><span class="username">You</span> <a href="#" class="js--toggle-input">Add a comment or link</a></p>
             <form>
               <input type="text"></input>
               <input type="submit"></input>
@@ -83,25 +87,43 @@
   <div class="report--section">
 
     <!-- Mockup of the checklist -->
-    <img src="/images/prototype/checklist.png" />
+    <img class="checklist js--hide" src="/images/prototype/checklist.png" />
 
-    <!-- Verification status: eg, false -->
-    <div class="report--verification-status js-show-report <%= report.verification_status %>">
-      <%= report.verification_status %> <span class="attribution-team">by Bellingcat</span>
-    </div>
-  
     <div class="report--contextual-action-menu">
-      <a href="#" class="report-menu-trigger"><i class="fa fa-ellipsis-h"></i></a>
-      <ul class="report--menu js-visible">
-      <% data.actions.each do |action| %>
-        <li class="report--action">
-          <i class="fa <%= action.icon %>"></i>
-          <a href="<%= action.link %>">
-            <%= action.title %>
-          </a>
-        </li>
+      <a href="#" class="report--menu-trigger">
+        <i class="fa fa-ellipsis-h"></i>
+      </a>
+      
+      <%# loop through all of the subactions %>
+      <div class="report--actions">
+      <% data.actions.each do |action| %>      
+        <% if action.subactions %>
+          <%# If there are subactions on this button, the button is a trigger to show them %>
+          <div class="report--action">
+            <i class="fa <%= action.icon %>"></i>
+            <a class="js--toggle-subactions" href="<%= action.link %>">
+              <%= action.title %>
+            </a>
+          </div>
+          <% action.subactions.each do |subaction| %>
+            <div class="report--action action--subaction js--hide">
+              <a href="<%= subaction.link %>"><%= subaction.title %> </a>
+            </div>
+            <p class="helper-text"><%= subaction.helper_text %></p>
+          <% end %>
+        <% else %>
+
+          <%# Otherwise, if there not subactions, it's just a button %>
+          <div class="report--action">
+            <a href="<%= action.link %>">
+              <i class="fa <%= action.icon %>"></i>
+              <%= action.title %>
+            </a>
+          </div>
+          <p class="helper-text"><%= action.helper_text %></p>
+        <% end %>
       <% end %>
-      </ul>
+      </div>
     </div>
   </div>
 </div>

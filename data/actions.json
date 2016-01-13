@@ -2,13 +2,15 @@
   "title": "Reverse image search",
   "helper_text": "Perform a reverse image search to determine if an image is original",
   "works_on_type": "image",
-  "icon": "fa-image"
+  "icon": "fa-image",
+  "link": "/prototype/report/1"
 },
 {
   "title": "Geolocate",
   "helper_text": "Determine the location of the report",
   "works_on_type": "image",
-  "icon": "fa-map"
+  "icon": "fa-map",
+  "link": "/prototype/report/1"
 }, 
 {
   "title": "Flag",
@@ -25,9 +27,23 @@
   "icon": "fa-share"
 }, 
 {
-  "title": "Edit",
+  "title": "Edit Report Metadata",
   "helper_text": "Edit this report",
   "works_on_type": "any",
   "link": "/prototype/report/1",
-  "icon": "fa-edit"
+  "icon": "fa-edit",
+  "subactions": [
+    {
+      "icon": "fa-share",
+      "title": "Edit Description", 
+      "link": "#edit-description",
+      "helper_text": "Edit the description of the report"
+    },
+    {
+      "icon": "fa-share",
+      "title": "Edit Title", 
+      "link": "#edit-title",
+      "helper_text": "Edit the title of the report"
+    }
+  ]
 }]
