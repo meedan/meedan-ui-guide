@@ -13,6 +13,12 @@ description: A media accountability project started by Eliot Higgins 15 days ago
     <div class="kanban--reports">
       <!-- Loop through each report in 'data/reports' -->
       <div class="report-group--unstarted">
+        
+        <!-- Progress bar -->
+        <div class="meter green">
+          <span style="width: 0%"></span>
+        </div>
+
         <h3>Unstarted</h3>
         <% data.reports.each do |report| %>
           <% if report.verification_status == ""  %>
@@ -20,7 +26,14 @@ description: A media accountability project started by Eliot Higgins 15 days ago
           <% end %>
         <% end %>
       </div>
+
       <div class="report-group--in-progress">
+
+        <!-- Progress bar -->
+        <div class="meter greenorange">
+          <span style="width: 50%"></span>
+        </div>
+
         <h3><i class="fa fa-random"></i> In Progress</h3>
         <% data.reports.each do |report| %>
           <% if report.verification_status == "In Progress"  %>
@@ -28,7 +41,14 @@ description: A media accountability project started by Eliot Higgins 15 days ago
           <% end %>
         <% end %>
       </div>
+
       <div class="report-group--false">
+
+        <!-- Progress bar -->
+        <div class="meter red">
+          <span style="width: 100%"></span>
+        </div>
+
         <h3><i class='fa fa-close'></i>  False</h3>
         <% data.reports.each do |report| %>
           <% if report.verification_status == "False"  %>
@@ -36,7 +56,13 @@ description: A media accountability project started by Eliot Higgins 15 days ago
           <% end %>
         <% end %>
       </div>
+
       <div class="report-group--verified">
+
+        <!-- Progress bar -->
+        <div class="meter green">
+          <span style="width: 100%"></span>
+        </div>
         <h3><i class='fa fa-check-circle-o'></i> Verified</h3>
         <% data.reports.each do |report| %>
           <% if report.verification_status == "Verified"  %>

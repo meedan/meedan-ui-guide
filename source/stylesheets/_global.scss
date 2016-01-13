@@ -1,3 +1,4 @@
+@import 'fonts';
 
 // Global declarations
 // 
@@ -10,7 +11,7 @@ body {
   line-height: 1.2;
   margin: 0;
   padding: 0;
-  font-family: Lato, helvetica, Arial, sans-serif;
+  font-family: Roboto, helvetica, Arial, sans-serif;
   color: $firefly60;
   background-color: $thatch5-warm;
   a {
