@@ -14,7 +14,8 @@
     max-width: 100%;
     overflow: hidden;
     border-bottom: 1px solid $firefly30;
-
+    justify-content: space-between;
+    
     // inner headers wrapper
     &>.headers {
       width: 50%;
