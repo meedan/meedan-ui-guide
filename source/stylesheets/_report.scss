@@ -215,6 +215,18 @@
           } 
         }
 
+          .log-entry {
+            p {
+              padding: 0;
+            }
+          }
+
+          .timestamp {
+            font-size: 0.8em;
+            color: $firefly40;
+            display: block;
+          }
+
         // A "primary" entry in the checklog
         //
         &.primary {
@@ -250,19 +262,7 @@
                 color: green;
               }
             }
-
-            .log-entry {
-              p {
-                padding: 0;
-              }
-            }
-
-            .timestamp {
-              font-size: 0.8em;
-              color: $firefly40;
-              display: block;
-            }
-          }      
+          }
         }
       }
     }
