@@ -2,16 +2,47 @@
 // 
 // The report is expanded to fill three columns
 .page--report {
+  background-color: $soft-blue;
 
   // Override the styles set in report.scss
+  // 
   .report {
-    width: 500px;
     width: 100%;
+    width: 98vw;
     display: flex;
-
+    align-content: stretch;
+    
+    // Report sections
+    // 
     // These inner sections create the columns
+    // 
     .report--section {
-      border: 1px solid aqua;
+      padding: 1em;
+      flex: 1 auto;
+
+      // Column two
+      // 
+      &:nth-of-type(2) {
+        flex: 2 auto;
+        img {
+          width: 300px;
+        }
+      }
+
+      // Column three
+      // 
+      &:nth-of-type(3) {
+        background-color: white;
+        img {
+          width: 300px;
+        }
+      }
+
+      // Hide the menu trigger in on this page
+      // 
+      .report-menu-trigger {
+        display: none;
+      }
     }
   }
 }

@@ -2,19 +2,9 @@
   <!-- report section -->
   <div class="report--section">
     <!-- Media object -->
-    <div id="report--media-object">
+    <div class="report--media-object">
       <img src="/images/prototype/<%=report.media_object%>">
     </div>
-  </div>
-
-  <!-- report section -->
-  <div class="report--section">
-    <!-- Helper text (optional per report) -->
-    <% if report.helper_text %>
-      <div class="report--helper-text">
-        <%= report.helper_text %>
-      </div>
-    <% end %>
 
     <!-- Title -->
     <div class="report--title">
@@ -26,6 +16,17 @@
     <div class="report--description">
       <%= report.description %>
     </div>
+
+  </div>
+
+  <!-- report section -->
+  <div class="report--section">
+    <!-- Helper text (optional per report) -->
+    <% if report.helper_text %>
+      <div class="report--helper-text">
+        <%= report.helper_text %>
+      </div>
+    <% end %>
 
     <!-- Source: Often A username, or channel name -->
     <div class="report--source-username">
@@ -84,6 +85,10 @@
 
   <!-- report section -->
   <div class="report--section">
+
+    <!-- Mockup of the checklist -->
+    <img src="/images/prototype/checklist.png" />
+
     <!-- Verification status: eg, false -->
     <div class="report--verification-status js-show-report <%= report.verification_status %>">
       <%= report.verification_status %> <span class="attribution-team">by Bellingcat</span>
@@ -93,7 +98,12 @@
       <a href="#" class="report-menu-trigger"><i class="fa fa-ellipsis-h"></i></a>
       <ul class="report--menu js-visible">
       <% data.actions.each do |action| %>
-        <li class="report--action"><a href="<%= action.link %>"><%= action.title %></a></li>
+        <li class="report--action">
+          <i class="fa <%= action.icon %>"></i>
+          <a href="<%= action.link %>">
+            <%= action.title %>
+          </a>
+        </li>
       <% end %>
       </ul>
     </div>

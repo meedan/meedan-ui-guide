@@ -10,7 +10,6 @@
 // This is shared across all views of the report.
 // 
 .report {
-  background-color: white;
   border-radius: 5px;
   color: $firefly60;
   overflow: hidden;
@@ -31,15 +30,28 @@
   // Contains actions. 
   // 
   .report--menu {
-    background-color: white;
-    position: absolute;
     padding: 1em;
     margin: 0;
     color: black;
     list-style-type: none;
     font-size: 0.8em;
     li {
-      padding: 0.5em 0.3em;
+      padding: 0.5em 1.3em;
+      border: 1px solid $dodger-blue;
+      border-radius: 5px;
+      margin: 1em;
+      color: $dodger-blue;
+      text-align: center;
+      font-size: 14px;
+
+      a {
+        text-decoration: none;
+      }
+
+      // The icon
+      i {
+        margin: 0 0.4em;
+      }
     }
   }
 
@@ -52,10 +64,20 @@
     }
   }
 
+  // Report helper text
+  // 
+  .report--helper-text {
+    background: $soft-yellow;
+    padding: 1em;
+    margin: 1em 0;
+  }
+  
   // Description is hidden
   // 
   .report--description {
-    // display: none;
+    p {
+      padding: 0.5em 0;
+    }
   }
 
   p {
@@ -106,7 +128,6 @@
   // Added-by whom
   // 
   .report--added-by {
-    background-color: $firefly20!important;
     .source-domain {
       color: $firefly;
       padding: 0.5em 0;
@@ -134,9 +155,7 @@
   // The checklog
   // 
   .report--checklog {
-    background-color: $firefly50;
     padding: 1em;
-    font-size: smaller;
     line-height: 1.4;
     .checklog--header {
       display: flex;
@@ -216,7 +235,7 @@
           }
 
           .timestamp {
-            font-size: 0.7em;
+            font-size: 0.8em;
             color: $firefly40;
             display: block;
           }

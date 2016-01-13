@@ -1,16 +1,33 @@
 [{
   "title": "Reverse image search",
   "helper_text": "Perform a reverse image search to determine if an image is original",
-  "works_on_type": "image"
+  "works_on_type": "image",
+  "icon": "fa-image"
 },
 {
   "title": "Geolocate",
   "helper_text": "Determine the location of the report",
-  "works_on_type": "image"
+  "works_on_type": "image",
+  "icon": "fa-map"
 }, 
 {
-  "title": "Permalink",
-  "helper_text": "Go to the permanent link for this report",
+  "title": "Flag",
+  "helper_text": "Flag this report",
   "works_on_type": "any",
-  "link": "/prototype/report/1"
+  "link": "/prototype/report/1",
+  "icon": "fa-flag"
+}, 
+{
+  "title": "Share",
+  "helper_text": "Share this report on social media",
+  "works_on_type": "any",
+  "link": "/prototype/report/1",
+  "icon": "fa-share"
+}, 
+{
+  "title": "Edit",
+  "helper_text": "Edit this report",
+  "works_on_type": "any",
+  "link": "/prototype/report/1",
+  "icon": "fa-edit"
 }]
