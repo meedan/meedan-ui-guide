@@ -215,17 +215,24 @@
           } 
         }
 
+        // The default entry body
+        .checklog--entry-body {
+          .username {
+            display: inline-block;
+          }
           .log-entry {
-            p {
+            p, div {
               padding: 0;
+              margin: 0;
             }
           }
+        }
 
-          .timestamp {
-            font-size: 0.8em;
-            color: $firefly40;
-            display: block;
-          }
+        .timestamp {
+          font-size: 0.8em;
+          color: $firefly40;
+          display: block;
+        }
 
         // A "primary" entry in the checklog
         //

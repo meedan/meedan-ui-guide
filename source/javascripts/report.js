@@ -11,7 +11,7 @@ $(document).ready(function() {
   // Toggle the input in the checklog
   // 
   $('.report form').hide();
-  $('.js-toggle-input').click(function(e) {
+  $('.js--toggle-input').click(function(e) {
     $(this).closest('.report--form').find('form').slideToggle(200);
     e.preventDefault();
   });
@@ -43,5 +43,28 @@ $(document).ready(function() {
 
   $('.js--toggle-checklist').click(function(e){
     $(".checklist").slideToggle(200);
+  });
+
+  // Edit button
+  var editorButton = document.getElementById('js--edit-mode');
+  editorButton.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Selectively enable some elements to be edited
+    // 
+    // if (element.isContentEditable) {
+    //   // Disable Editing
+    //   element.contentEditable = 'false';
+    //   editorButton.innerHTML = 'Enable Editing';
+
+    //   // You could save any changes here.
+    // } else {
+    //   element.contentEditable = 'true';
+    //   editorButton.innerHTML = 'Disable Editing';
+    // }
+    
+    // Or just allow the whole doc to be edited
+    // 
+    document.designMode = 'on';
   });
 });
