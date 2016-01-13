@@ -11,16 +11,16 @@ description: A report shared by Eliot Higgins 15 days ago
     <div class="page--header">
       <div class="headers">
         <h2>
+          <i class="fa fa-<%= report.source_domain_icon %>"></i>
           <%= report.title %>
         </h2>
-        <h3>A media accountability project started by Eliot Higgins 15 days ago</h3>
+        <h3>Part of <a href="/prototype"><i class="fa fa-folder"></i> <%= data.projects[0].title %></a> started by <a href="#">Eliot Higgins</a> 15 days ago</h3>
       </div>
 
       <%= partial "partials/team" %>
     </div>
 
     <%= partial "partials/report", :locals => { :report => report } %>
+    <button id="js--edit-mode">Edit mode</button>
   </div>
-
-  <button id="js--edit-mode">Edit mode</button>
 </div>

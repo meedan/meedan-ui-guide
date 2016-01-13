@@ -65,13 +65,3 @@ var modal = (function(){
 
   return method;
 }());
-
-$(document).ready(function(){
-  $('.report--contextual-action-menu a').click(function(e){
-    // modal.open({content: "Hows it going?"});
-    // e.preventDefault();
-    $.get('/report.html', function(data){
-      modal.open({content: data});
-    });
-  });
-});
