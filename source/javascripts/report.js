@@ -32,4 +32,12 @@ $(document).ready(function() {
     $(this).closest('.report--action').find('.action--subaction').slideToggle(200);
     e.preventDefault();
   });
+
+  $('.action--subaction a').click(function(e){
+    modal.open({content: $(this).closest(".action--subaction").find('.helper-text').text()});
+    e.preventDefault();
+    // $.get('/share.html', function(data){
+    //   modal.open({content: data});
+    // });
+  });
 });
