@@ -8,7 +8,6 @@
   // 
   .report {
     width: 100%;
-    width: 98vw;
     display: flex;
     align-content: stretch;
     
@@ -25,7 +24,7 @@
       &:nth-of-type(2) {
         flex: 2 auto;
         img {
-          width: 300px;
+          max-width: 300px;
         }
       }
 
@@ -36,7 +35,9 @@
         height: 100vh;
         border-left: 1px solid $firefly30;
         img {
-          width: 300px;
+          width: 100%;
+          max-width: 300px;
+          border: 1px solid red;
         }
       }
 

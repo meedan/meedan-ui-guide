@@ -60,7 +60,7 @@
     // Contains actions. 
     // 
     .report--actions {
-      padding: 1em;
+      padding: 1em 0;
       margin: 0;
       color: black;
       font-size: 0.8em;
@@ -241,5 +241,16 @@
         }
       }
     }
+  }
+}
+
+.js--toggle-checklist {
+  font-size: 10px;
+  display: block;
+  text-decoration: none;
+  text-align: right;
+  padding: 1em;
+  a {
+    color: $firefly40;
   }
 }

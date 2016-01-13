@@ -40,4 +40,8 @@ $(document).ready(function() {
     //   modal.open({content: data});
     // });
   });
+
+  $('.js--toggle-checklist').click(function(e){
+    $(".checklist").slideToggle(200);
+  });
 });
