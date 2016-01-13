@@ -48,7 +48,7 @@ var modal = (function(){
   $overlay = $('<div id="overlay"></div>');
   $modal = $('<div id="modal"></div>');
   $content = $('<div id="content"></div>');
-  $close = $('<a id="close" href="#">close</a>');
+  $close = $('<a id="close" href="#">x</a>');
 
   $modal.hide();
   $overlay.hide();

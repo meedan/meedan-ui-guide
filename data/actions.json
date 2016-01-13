@@ -27,13 +27,13 @@
   "icon": "fa-share",
   "subactions": [
     {
-      "icon": "fa-share",
+      "icon": "fa-facebook",
       "title": "Share on Facebook", 
       "link": "#share-fb",
       "helper_text": "Post this as a Facebook post with comment"
     },
     {
-      "icon": "fa-share",
+      "icon": "fa-twitter",
       "title": "Share on Twitter", 
       "link": "#share-twitter",
       "helper_text": "Share this as a tweet"

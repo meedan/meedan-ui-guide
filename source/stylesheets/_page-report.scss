@@ -33,6 +33,8 @@
       // 
       &:nth-of-type(3) {
         background-color: white;
+        height: 100vh;
+        border-left: 1px solid $firefly30;
         img {
           width: 300px;
         }

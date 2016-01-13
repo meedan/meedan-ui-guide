@@ -106,6 +106,7 @@
             </a>
             <% action.subactions.each do |subaction| %>
               <div class="report--action action--subaction js--hide">
+              <i class="fa <%= subaction.icon %>"></i>
                 <a href="<%= subaction.link %>"><%= subaction.title %> </a>
                 <p class="helper-text"><%= subaction.helper_text %></p>
               </div>

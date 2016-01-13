@@ -21,18 +21,20 @@
 }
 
 #content {
-  border-radius: 8px;
-  background: #fff;
-  padding: 20px;
+  // border-radius: 8px;
+  // background: #fff;
+  // padding: 20px;
+  color: white;
 }
 
 #close {
   position:absolute;
-  background: red url(close.png) 0 0 no-repeat;
   width: 24px;
   height: 27px;
   display: block;
-  text-indent: -9999px;
-  top: -7px;
-  right: -7px;
+  top: 2px;
+  right: 2px;
+  text-decoration: none;
+  font-size: 2em;
+  color: white;
 }
