@@ -1,0 +1,49 @@
+---
+title: Geolocation and Analysis of Ministry of Defence Airstrike Videos
+status: prototype 
+layout: default
+description: A media accountability project started by Eliot Higgins 15 days ago
+---
+<div class="page--kanban page js-view-class">
+  <%= partial "partials/sidebar" %>
+
+  <div class="main">
+    <%= partial "partials/header" %>
+
+    <div class="kanban--reports">
+      <!-- Loop through each report in 'data/reports' -->
+      <div class="report-group--unstarted">
+        <h3>Unstarted</h3>
+        <% data.reports.each do |report| %>
+          <% if report.verification_status == ""  %>
+            <%= partial "partials/report", :locals => { :report => report } %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="report-group--in-progress">
+        <h3><i class="fa fa-random"></i> In Progress</h3>
+        <% data.reports.each do |report| %>
+          <% if report.verification_status == "In Progress"  %>
+            <%= partial "partials/report", :locals => { :report => report } %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="report-group--false">
+        <h3><i class='fa fa-close'></i>  False</h3>
+        <% data.reports.each do |report| %>
+          <% if report.verification_status == "False"  %>
+            <%= partial "partials/report", :locals => { :report => report } %>
+          <% end %>
+        <% end %>
+      </div>
+      <div class="report-group--verified">
+        <h3><i class='fa fa-check-circle-o'></i> Verified</h3>
+        <% data.reports.each do |report| %>
+          <% if report.verification_status == "Verified"  %>
+            <%= partial "partials/report", :locals => { :report => report } %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

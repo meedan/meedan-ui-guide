@@ -1,0 +1,21 @@
+.page--kanban {
+  .kanban--reports {
+    display: flex;
+    &>div {
+      flex: 1 auto;
+      width: 25%;
+      border: 1px solid $firefly50;
+      height: 95vh;
+      overflow-x: scroll;
+      padding: 1em;
+      background-color: $soft-blue;
+      .report>* {
+        padding: 0;
+      }
+      .report--checklog, 
+      .report--actions {
+        display: none;
+      }
+    }
+  }
+}

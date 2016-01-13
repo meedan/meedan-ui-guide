@@ -19,6 +19,13 @@
 
     <!-- Verification status: eg, false -->
     <div class="report--verification-status js-show-report <%= report.verification_status %>">
+      <% if report.verification_status == "In Progress"  %>
+        <i class="fa fa-random"></i>
+      <% elsif report.verification_status == "False"  %>
+        <i class='fa fa-close'></i> 
+      <% elsif report.verification_status == "Verified"  %>
+        <i class='fa fa-check-circle-o'></i>
+      <% end %>
       <%= report.verification_status %> <span class="attribution-team">by Bellingcat</span>
     </div>
   </div>

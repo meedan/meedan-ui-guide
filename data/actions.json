@@ -1,4 +1,12 @@
-[{
+[
+{
+  "title": "Meme Buster",
+  "helper_text": "Design an image to help debunk this on social media",
+  "works_on_type": "image",
+  "icon": "fa-fire-extinguisher ",
+  "link": "/prototype/report/1"
+}, 
+{
   "title": "Reverse image search",
   "helper_text": "Perform a reverse image search to determine if an image is original",
   "works_on_type": "image",
@@ -6,10 +14,73 @@
   "link": "/prototype/report/1"
 },
 {
+  "title": "Tip the team",
+  "helper_text": "Give a tip to the folks verifying this report",
+  "works_on_type": "image",
+  "icon": "fa-bitcoin",
+  "link": "/prototype/report/1"
+},
+{
   "title": "Geolocate",
   "helper_text": "Determine the location of the report",
   "works_on_type": "image",
   "icon": "fa-map",
+  "link": "/prototype/report/1"
+}, 
+{
+  "title": "Invite collaborators",
+  "helper_text": "Determine the location of the report",
+  "works_on_type": "image",
+  "icon": "fa-map",
+  "link": "/prototype/report/1"
+}, 
+{
+  "title": "Add related link",
+  "helper_text": "Add a related link to this report",
+  "works_on_type": "image",
+  "icon": "fa-chain",
+  "link": "/prototype/report/1"
+}, 
+{
+  "title": "Sources Database",
+  "helper_text": "Track sources from this report",
+  "works_on_type": "all",
+  "icon": "fa-archive",
+  "link": "/prototype/report/1"
+}, 
+{
+  "title": "Fork this report",
+  "helper_text": "Make a copy of this report",
+  "works_on_type": "all",
+  "icon": "fa-clone",
+  "link": "/prototype/report/1"
+}, 
+{
+  "title": "Comment on this report",
+  "helper_text": "Add a comment to the checklog",
+  "works_on_type": "all",
+  "icon": "fa-comment",
+  "link": "/prototype/report/1"
+}, 
+{
+  "title": "Notify me",
+  "helper_text": "Set notifications for this report",
+  "works_on_type": "image",
+  "icon": "fa-bell",
+  "link": "/prototype/report/1"
+}, 
+{
+  "title": "Download",
+  "helper_text": "Download the full HTML of this report",
+  "works_on_type": "image",
+  "icon": "fa-download",
+  "link": "/prototype/report/1"
+}, 
+{
+  "title": "Search",
+  "helper_text": "Search content related to this report",
+  "works_on_type": "image",
+  "icon": "fa-binoculars",
   "link": "/prototype/report/1"
 }, 
 {
