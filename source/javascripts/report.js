@@ -34,10 +34,7 @@ $(document).ready(function() {
   });
 
   $('.action--subaction a').click(function(e){
-    var modalContent = {
-      content: $(this).closest(".action--subaction").find('.helper-text').text()
-    }
-    modal.open(modalContent);
+    modal.open({content: $(this).closest(".action--subaction").find('.helper-text').text()});
     e.preventDefault();
     // $.get('/share.html', function(data){
     //   modal.open({content: data});
