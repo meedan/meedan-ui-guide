@@ -6,9 +6,10 @@
 //
 //
 // Base report has a white background
+// 
+// This is shared across all views of the report.
+// 
 .report {
-  // is hidden until revealed by js.
-  display: none;
   background-color: white;
   border-radius: 5px;
   color: $firefly60;
@@ -25,8 +26,11 @@
     display: none;
   }
 
+  // The menu 
+  // 
+  // Contains actions. 
+  // 
   .report--menu {
-    border: 1px solid red;
     background-color: white;
     position: absolute;
     padding: 1em;
@@ -130,8 +134,6 @@
   // The checklog
   // 
   .report--checklog {
-    // Toggled with js
-    display: none;
     background-color: $firefly50;
     padding: 1em;
     font-size: smaller;

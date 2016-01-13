@@ -1,12 +1,16 @@
 [{
-  "id": "1",
   "title": "Reverse image search",
   "helper_text": "Perform a reverse image search to determine if an image is original",
   "works_on_type": "image"
 },
 {
-  "id": "2",
   "title": "Geolocate",
   "helper_text": "Determine the location of the report",
   "works_on_type": "image"
+}, 
+{
+  "title": "Permalink",
+  "helper_text": "Go to the permanent link for this report",
+  "works_on_type": "any",
+  "link": "/prototype/report/1"
 }]

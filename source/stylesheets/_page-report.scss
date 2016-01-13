@@ -1,0 +1,17 @@
+// Report detail page
+// 
+// The report is expanded to fill three columns
+.page--report {
+
+  // Override the styles set in report.scss
+  .report {
+    width: 500px;
+    width: 100%;
+    display: flex;
+
+    // These inner sections create the columns
+    .report--section {
+      border: 1px solid aqua;
+    }
+  }
+}

@@ -16,7 +16,9 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  $('.report--contextual-action-menu ul').hide();
+  // On the project page, collapse the checklog
+  // 
+  $('.page--project .report--contextual-action-menu ul').hide();
   $('.report-menu-trigger').click(function(e) {
     $(this).closest('.report--contextual-action-menu').find('ul').slideToggle(200);
     e.preventDefault();
