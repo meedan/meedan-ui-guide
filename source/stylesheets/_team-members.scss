@@ -22,16 +22,34 @@
       margin: 0;
     }
   }
-  .members {
-    width: 100%;
-    display: flex;
-    align-items: flex-start;
 
+  // Shared styles: both you and your team
+  // 
+  .member {
+    display: flex;
+    align-items: center;
     img {
       padding: 0;
       width: 35px;
       height: 35px;
     }
+    i {
+      padding: 0.5em;
+    }
+  }
+
+  // Only your avi
+  // 
+  .you img { 
+    border-radius: 4px;
+  }
+
+  // Your team
+  // 
+  .your-team {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
     
     // At larger sizes, do a row
     // 
