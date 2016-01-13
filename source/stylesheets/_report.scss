@@ -193,51 +193,76 @@
       
       li.checklog--entry {
         display: flex;
-        
+        padding-top: 0.5em;
+        border-left: 1px solid $firefly30;
+
         .checklog--entry-icons {
           width: 30px;
-          border-left: 1px solid $firefly30;
           position: relative;
-          .avatar {
+
+          // The default avatar (A "secondary" sized update
+          // )
+          .dot {
+            width: 4px;
+            height: 4px;
+            margin-top: 30px;
+            background-color: $firefly60;
+            outline: 2px solid $soft-blue;
+            left: -2px;
+            border-radius: 2px;
+            display: block;
             position: absolute;
-            width: 30px;
-            border-radius: 4px;
-            vertical-align: middle;
-            left: -15px;
-            margin-top: 0.5em;
           } 
         }
 
-        .checklog--entry-body {
-          padding: 0.5em;
-          width: 100%;
-          .username {
-            font-size: 1.2em;
-            font-weight: bold;
-            display: block;
-          }
-          .status-change {
-            font-weight: bold;
-            em {
-              font-style: normal;
-              text-transform: capitalize;
-            }
-            &.verified {
-              color: green;
+        // A "primary" entry in the checklog
+        //
+        &.primary {
+          .checklog--entry-icons {
+            .avatar {
+              position: absolute;
+              width: 30px;
+              height: 30px;
+              border-radius: 4px;
+              vertical-align: middle;
+              left: -15px;
+              margin-top: 0.5em;
             }
           }
+          .checklog--entry-body {
+            background-color: white;
+            border-radius: 4px;
+            border: 1px solid $firefly10;
+            padding: 0.5em;
+            width: 100%;
+            .username {
+              font-size: 1.2em;
+              font-weight: bold;
+              display: block;
+            }
+            .status-change {
+              font-weight: bold;
+              em {
+                font-style: normal;
+                text-transform: capitalize;
+              }
+              &.verified {
+                color: green;
+              }
+            }
 
-          .log-entry {
-            p {
-              padding: 0;
+            .log-entry {
+              p {
+                padding: 0;
+              }
             }
-          }
 
-          .timestamp {
-            font-size: 0.8em;
-            color: $firefly40;
-            display: block;
-          }
+            .timestamp {
+              font-size: 0.8em;
+              color: $firefly40;
+              display: block;
+            }
+          }      
         }
       }
     }

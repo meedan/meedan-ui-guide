@@ -118,7 +118,8 @@
     }, {
       "username": "eliot",
       "log_entry": "<p>This is around 50km away from the location claimed, false.</p>",
-      "timestamp": "Oct 11 5:45AM PST"
+      "timestamp": "Oct 11 5:45AM PST",
+      "entry_type": "primary"
     },
     {
       "username": "surpher",
@@ -127,11 +128,13 @@
     }, {
       "username": "trbrtc",
       "log_entry": "<p>Location: <a href='http://wikimapia.org/#lang=en&lat=35.798636&lon=38.221457&z=16&m=b&search=Khafsa%20Kabir'>http://wikimapia.org/#lang=en&lat=35.798636&lon=38.221457&z=16&m=b&searc...</a> <br> Has been struck before: <a href='https://twitter.com/trbrtc/status/669924616689840132'>https://twitter.com/trbrtc/status/669924616689840132</a></p>",
-      "timestamp": "Oct 11 3:05AM PST"
+      "timestamp": "Oct 11 3:05AM PST",
+      "entry_type": "primary"
     },
     {
       "username": "trbrtc",
       "log_entry": "<p class='status-change progress'>changed the status to <em>In Progress</em></p>",
+      "entry_type": "primary",
       "timestamp": "Oct 11 5:45AM PST"
     },
     {
@@ -171,11 +174,13 @@
     }, {
       "username": "trbrtc",
       "log_entry": "<p>Location: <a href='http://wikimapia.org/#lang=en&lat=35.798636&lon=38.221457&z=16&m=b&search=Khafsa%20Kabir'>http://wikimapia.org/#lang=en&lat=35.798636&lon=38.221457&z=16&m=b&searc...</a></p> <p>Has been struck before: <a href='https://twitter.com/trbrtc/status/669924616689840132'>https://twitter.com/trbrtc/status/669924616689840132</a></p>",
-      "timestamp": "Oct 11 5:45AM PST"
+      "timestamp": "Oct 11 5:45AM PST",
+      "entry_type": "primary"
     },
     {
       "username": "trbrtc",
       "log_entry": "<p class='status-change progress'>changed the status to <em>In Progress</em></p>",
+      "entry_type": "primary",
       "timestamp": "Oct 11 5:45AM PST"
     },
     {
@@ -215,6 +220,7 @@
     {
       "username": "surpher",
       "log_entry": "<p class='status-change progress'>changed the status to <em>In Progress</em></p>",
+      "entry_type": "primary",
       "timestamp": "Oct 13 5:30AM PST"
     },
     {
@@ -279,6 +285,7 @@
     {
       "username": "maxim",
       "log_entry": "<p class='status-change progress'>changed the status to <em>In Progress</em></p>",
+      "entry_type": "primary",
       "timestamp": "Oct 11 5:35AM PST"
     },
     {
@@ -319,6 +326,7 @@
     {
       "username": "tomt",
       "log_entry": "<p class='status-change progress'>changed the status to <em>In Progress</em></p>",
+      "entry_type": "primary",
       "timestamp": "Oct 11 5:35AM PST"
     },
     {
@@ -345,6 +353,7 @@
     {
       "username": "aric",
       "log_entry": "<p class='status-change progress'>changed the status to <em>In Progress</em></p>",
+      "entry_type": "primary",
       "timestamp": "Oct 11 5:35AM PST"
     },
     {

@@ -9,6 +9,9 @@
       overflow-x: scroll;
       padding: 1em;
       background-color: $soft-blue;
+      .report {
+        background-color: white;
+      }
       .report>* {
         padding: 0;
       }

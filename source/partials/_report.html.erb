@@ -60,9 +60,13 @@
       <ul>
 
       <% report.checklog.reverse_each do |entry| %>
-        <li class="checklog--entry">
+        <li class="checklog--entry <%= entry.entry_type %>">
           <div class="checklog--entry-icons">
-            <img class="avatar" src="/images/prototype/<%= entry.username %>.png">
+            <% if entry.entry_type == "primary" %>
+              <img class="avatar" src="/images/prototype/<%= entry.username %>.png">
+            <% else %>
+              <span class="dot"></span>
+            <% end %>
           </div>
           <div class="checklog--entry-body">
             <span class="username"><%= entry.username %></span>
