@@ -9,8 +9,6 @@ helpers do
   end
 end
 
-activate :livereload
-
 ###
 # Config
 ###

@@ -63,8 +63,8 @@
 }
 
 form {
-  width: 400px;
   font-size: 1.4em;
+  width: 400px;
 
   [contenteditable] {
     border-bottom: 1px solid $dodger-blue;
@@ -90,44 +90,47 @@ form {
     color: $firefly;
     max-width: 300px;
   }
+}
 
-  .report--action {
-    border: 1px solid $dodger-blue;
-    border-radius: 5px;
-    color: $dodger-blue;
-    font-size: 14px;
-    margin: 1em 0;
-    padding: .5em .3em;
+input[type='submit'],
+button,
+.report--action {
+  background-color: $white;
+  border: 1px solid $dodger-blue;
+  border-radius: 5px;
+  color: $dodger-blue;
+  font-size: 14px;
+  margin: 1em 0;
+  padding: .5em .3em;
+  text-align: center;
+
+  .helper-text {
+    color: $firefly40;
     text-align: center;
-
-    .helper-text {
-      color: $firefly40;
-      text-align: center;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    // The icon
-    i {
-      margin: 0 .4em;
-    }
   }
 
-  // At smaller sizes
-  // 
-  @media all and (max-width: 1000px) {
-    .report-action {
-      font-size: 12px;
-      margin: 1em;
-      padding: .5em 1.3em;
-    }
+  a {
+    text-decoration: none;
+  }
 
-    .helper-text {
-      display: none;
-      font-size: smaller;
-    }
+  // The icon
+  i {
+    margin: 0 .4em;
+  }
+}
+
+// At smaller sizes
+// 
+@media all and (max-width: 1000px) {
+  .report-action {
+    font-size: 12px;
+    margin: 1em;
+    padding: .5em 1.3em;
+  }
+
+  .helper-text {
+    display: none;
+    font-size: smaller;
   }
 }
 
@@ -199,6 +202,13 @@ form {
       content: 'by ';
     }
   }
+}
+
+// On the report page the checklog always shows
+// so hide the button that toggles it
+// 
+.page--report .js--show-report {
+  display: none;
 }
 
 // The checklog
@@ -284,11 +294,19 @@ form {
   }
 
   .log-entry {
+    display: flex;
+
     p,
     div {
       display: inline-block;
       margin: 0;
       padding: 0;
+    }
+
+    .embed {
+      border: 1px solid $firefly40;
+      display: block;
+      padding: 1em;
     }
   }
 }

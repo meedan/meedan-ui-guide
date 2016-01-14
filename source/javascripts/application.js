@@ -15,3 +15,4 @@
 //
 //= require "vendor/progress.js"
 //= require "helpers/outline.js"
+//= require "vendor/jquery.embedly.js"

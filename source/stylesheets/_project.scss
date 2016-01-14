@@ -1,24 +1,24 @@
 // Project themes
 // 
-@import "project-grid";
-@import "project-timeline";
+@import 'project-grid';
+@import 'project-timeline';
 
 // Reports list
 // 
 .project--reports {
   align-items: flex-start;
-  flex-flow: column nowrap;
   display: flex;
-  margin: 0 auto;
+  flex-flow: column nowrap;
   margin: 0;
-  width: 100%;
   max-width: 100%;
+  width: 100%;
 }
 
 // Apply the color themes
 .page--project {
   background-color: $thatch5-warm;
+
   .report {
-    box-shadow: 0 0px 3px $firefly20;
+    box-shadow: 0 0 3px $firefly20;
   }
 }

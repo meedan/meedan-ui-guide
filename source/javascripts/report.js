@@ -3,8 +3,8 @@
 $(document).ready(function() {
   // Toggle the reports
   //
-  $('.js-show-report').click(function(e) {
-    $(this).prev().slideToggle();
+  $('.js--show-report').click(function(e) {
+    $(this).closest('.report').find('.report--checklog').slideToggle();
     e.preventDefault();
   });
 
@@ -57,4 +57,11 @@ $(document).ready(function() {
 
   // Start a progress bar on the checklist
   progressJs('.checklist').start().set(100);
+
+  // Embed links in the log
+  // 
+  // Using a throwaway key ...
+  // 
+  $.embedly.defaults.key = 'ac0065388fd046efba9bf4eae348e2e2';
+  $('.log-entry a').embedly();
 });

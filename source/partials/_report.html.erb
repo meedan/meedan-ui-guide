@@ -22,7 +22,7 @@
     </div>
 
     <!-- Verification status: eg, false -->
-    <div class="report--verification-status js-show-report <%= report.verification_status.downcase %>">
+    <div class="report--verification-status <%= report.verification_status.downcase %>">
 
       <% if report.verification_status == "" %>
         <button>
@@ -51,6 +51,7 @@
 
     <!-- Source: Often A username, or channel name -->
     <div class="report--source-username">
+      <i class="fa fa-user"></i>
       <%= report.source_username %>
     </div>
 
@@ -63,53 +64,51 @@
       <span class="username"><%= report.added_by %></span>
     </div>
 
+    <button class="js--show-report">Show Checklog</button>
     <div class="report--checklog">
       <div class="checklog--header">
         <h4><%= report.checklog.count %> Verification notes</h4>
       </div>
       <ul>
 
-      <% if report.original_creator == "unknown" %>
+      <% unless report.original_creator %>
         <li class="checklog--entry primary">
           <div class="checklog--entry-icons">
-            <i class="fa fa-puzzle-piece"></i>
           </div>
-            <div class="checklog--entry-body">
-              <span class="username">
-                Unknown
-              </span>
-              <span class="log-entry">
-                <p>The person who created this media and uploaded it is unknown.</p>
-                <button class="add-original-creator">Add creator</button>
-              </span>
-              <span class="timestamp">Date unconfirmed</span>
-            </div>
+          <div class="checklog--entry-body">
+            <span class="username">
+              Unknown
+            </span>
+            <span class="log-entry">
+              <p>The person who created this media and uploaded it is unknown.</p>
+              <button class="add-original-creator">Add creator</button>
+            </span>
+            <span class="timestamp">Date unconfirmed</span>
           </div>
         </li>
 
-      <% else %>
+      <% end %>
 
-        <% report.checklog.reverse_each do |entry| %>
-          <li class="checklog--entry <%= entry.entry_type %>">
-            <div class="checklog--entry-icons">
-              <% if entry.entry_type == "primary" %>
-                <img class="avatar" src="/images/prototype/<%= entry.username %>.png">
-              <% else %>
-                <span class="dot"></span>
-              <% end %>
-            </div>
-            <div class="checklog--entry-body">
-              <span class="username"><%= entry.username %></span>
-              <span class="log-entry"><%= entry.log_entry %></span>
-              <span class="timestamp"><%= entry.timestamp %></span>
-            </div>
-          </li>
-        <% end %>
+      <% report.checklog.reverse_each do |entry| %>
+        <li class="checklog--entry <%= entry.entry_type %>">
+          <div class="checklog--entry-icons">
+            <% if entry.entry_type == "primary" %>
+              <img class="avatar" src="/images/prototype/<%= entry.username %>.png">
+            <% else %>
+              <span class="dot"></span>
+            <% end %>
+          </div>
+          <div class="checklog--entry-body">
+            <span class="username"><%= entry.username %></span>
+            <span class="log-entry"><%= entry.log_entry %></span>
+            <span class="timestamp"><%= entry.timestamp %></span>
+          </div>
+        </li>
       <% end %>
 
       <li class="checklog--entry primary">
         <div class="checklog--entry-icons">
-          <img class="avatar" src="/images/prototype/admin.png">
+          <img class="avatar" src="/images/prototype/vp.kivimaki_17.png">
         </div>
         <div class="checklog--entry-body">
           <div class="report--form">

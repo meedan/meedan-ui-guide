@@ -127,7 +127,7 @@
       "timestamp": "Oct 11 3:45AM PST"
     }, {
       "username": "trbrtc",
-      "log_entry": "<p>Location: <a href='http://wikimapia.org/#lang=en&lat=35.798636&lon=38.221457&z=16&m=b&search=Khafsa%20Kabir'>http://wikimapia.org/#lang=en&lat=35.798636&lon=38.221457&z=16&m=b&searc...</a> <br> Has been struck before: <a href='https://twitter.com/trbrtc/status/669924616689840132'>https://twitter.com/trbrtc/status/669924616689840132</a></p>",
+      "log_entry": "<p>Location: <a href='http://wikimapia.org/#lang=en&lat=35.798636&lon=38.221457&z=16&m=b&search=Khafsa%20Kabir'>http://wikimapia.org/#lang=en&lat=35.798636&lon=38.221457&z=16&m=b&searc...</a> Has been struck before: <a href='https://twitter.com/trbrtc/status/669924616689840132'>https://twitter.com/trbrtc/status/669924616689840132</a></p>",
       "timestamp": "Oct 11 3:05AM PST",
       "entry_type": "primary"
     },
@@ -211,13 +211,13 @@
     "entry_type": "primary"
     }, {
       "username": "trbrtc",
-      "log_entry": "RSF Media Office uploaded a video showing the aftermath of the strikes. <a href='https://www.youtube.com/watch?v=SPlHYsTChqg'https://www.youtube.com/watch?v=SPlHYsTChqg>https://www.youtube.com/watch?v=SPlHYsTChqg</a>",
+      "log_entry": "RSF Media Office uploaded a video showing the aftermath of the strikes. <a class='embed' href='https://www.youtube.com/watch?v=SPlHYsTChqg'</a>",
       "timestamp": "Oct 14 5:45AM PST",
       "entry_type": "primary"
     },
     {
       "username": "trbrtc",
-      "log_entry": "North of Ahras, Aleppo Governorate. Wikimapia: <a href='http://wikimapia.org/#lang=en&amp;lat=36.407295&amp;lon=37.145419&amp;z=16&amp;m=bs' target='_blank'>http://wikimapia.org/#lang=en&amp;lat=36.407295&amp;lon=37.145419&amp;z=16&amp;m=bs</a>",
+      "log_entry": "North of Ahras, Aleppo Governorate. Wikimapia: <a class='embed' href='http://wikimapia.org/#lang=en&amp;lat=36.407295&amp;lon=37.145419&amp;z=16&amp;m=bs' target='_blank'>http://wikimapia.org/#lang=en&amp;lat=36.407295&amp;lon=37.145419&amp;z=16&amp;m=bs</a>",
       "entry_type": "primary"
     },
     {
