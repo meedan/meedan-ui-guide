@@ -22,7 +22,7 @@
     </div>
 
     <!-- Verification status: eg, false -->
-    <div class="report--verification-status js-show-report <%= report.verification_status %>">
+    <div class="report--verification-status js-show-report <%= report.verification_status.downcase %>">
 
       <% if report.verification_status == "" %>
         <button>
@@ -69,21 +69,42 @@
       </div>
       <ul>
 
-      <% report.checklog.reverse_each do |entry| %>
-        <li class="checklog--entry <%= entry.entry_type %>">
+      <% if report.original_creator == "unknown" %>
+        <li class="checklog--entry primary">
           <div class="checklog--entry-icons">
-            <% if entry.entry_type == "primary" %>
-              <img class="avatar" src="/images/prototype/<%= entry.username %>.png">
-            <% else %>
-              <span class="dot"></span>
-            <% end %>
+            <i class="fa fa-puzzle-piece"></i>
           </div>
-          <div class="checklog--entry-body">
-            <span class="username"><%= entry.username %></span>
-            <span class="log-entry"><%= entry.log_entry %></span>
-            <span class="timestamp"><%= entry.timestamp %></span>
+            <div class="checklog--entry-body">
+              <span class="username">
+                Unknown
+              </span>
+              <span class="log-entry">
+                <p>The person who created this media and uploaded it is unknown.</p>
+                <button class="add-original-creator">Add creator</button>
+              </span>
+              <span class="timestamp">Date unconfirmed</span>
+            </div>
           </div>
         </li>
+
+      <% else %>
+
+        <% report.checklog.reverse_each do |entry| %>
+          <li class="checklog--entry <%= entry.entry_type %>">
+            <div class="checklog--entry-icons">
+              <% if entry.entry_type == "primary" %>
+                <img class="avatar" src="/images/prototype/<%= entry.username %>.png">
+              <% else %>
+                <span class="dot"></span>
+              <% end %>
+            </div>
+            <div class="checklog--entry-body">
+              <span class="username"><%= entry.username %></span>
+              <span class="log-entry"><%= entry.log_entry %></span>
+              <span class="timestamp"><%= entry.timestamp %></span>
+            </div>
+          </li>
+        <% end %>
       <% end %>
 
       <li class="checklog--entry primary">
@@ -94,7 +115,7 @@
           <div class="report--form">
             <p class="helper-text"><span class="username">You</span> <a href="#" class="js--toggle-input">Add a comment or link</a></p>
             <form>
-              <div contenteditable="true" type="text"></div>
+              <div class="input" contenteditable="true"></div>
               <input type="submit"></input>
             </form>
           </div>
@@ -105,22 +126,11 @@
   </div>
 
   <!-- report section -->
-  <div class="report--section">
+  <div class="report--section action-pane">
+    <img class="checklist" src="/images/prototype/checklist.png" />
 
-    <!-- Progress bar -->
-    <div class="meter green">
-      <span style="width: 100%"></span>
-    </div>
-
-    <!-- Mockup of the checklist -->
-    <img class="checklist js--hide" src="/images/prototype/checklist.png" />
-
-    <a class="js--toggle-checklist" href="#">Toggle checklist (4/4 completed)</a>
-
-    <div class="report--contextual-action-menu">
-      <a href="#" class="report--menu-trigger">
-        <i class="fa fa-ellipsis-h"></i>
-      </a>
+    <div class="report--contextual-actions">
+        <button class="js--more-actions"><i class="fa fa-ellipsis-h"></i> More Actions</button>
       
       <%# loop through all of the subactions %>
       <div class="report--actions js--hide">

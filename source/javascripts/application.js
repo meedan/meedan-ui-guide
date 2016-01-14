@@ -12,3 +12,6 @@
 //= require "vendor/vue.min"
 //= require "vendor/firebase.js"
 //= require "team.js"
+//
+//= require "vendor/progress.js"
+//= require "helpers/outline.js"

@@ -4,13 +4,19 @@
   "helper_text": "Design an image to help debunk this on social media",
   "icon": "fa-fire-extinguisher",
   "link": "/prototype/report/1"
+},
+{
+  "title": "Checklist",
+  "helper_text": "Manage a verification checklist",
+  "icon": "fa-edit",
+  "link": "#add-checklist"
 }, 
 {
   "title": "Translate",
   "helper_text": "Translate content from this report",
   "icon": "fa-language",
   "link": "/prototype/report/1"
-}, 
+},
 {
   "title": "Reverse image search",
   "helper_text": "Perform a reverse image search to determine if an image is original",
@@ -126,6 +132,33 @@
       "title": "Edit Title", 
       "link": "#edit-title",
       "helper_text": "Edit the title of the report"
+    }
+  ]
+}, 
+{
+  "title": "Contact source",
+  "helper_text": "Contact a source and take notes",
+  "works_on_type": "any",
+  "link": "/prototype/report/1",
+  "icon": "fa-archive",
+  "subactions": [
+    {
+      "icon": "fa-edit",
+      "title": "Transcribe a quote", 
+      "link": "#contact-source--voip",
+      "helper_text": "Make a Skype or Viber call and record the audio."
+    },
+    {
+      "icon": "fa-skype",
+      "title": "Make a VOIP call", 
+      "link": "#contact-source--voip",
+      "helper_text": "Make a Skype or Viber call and record the audio."
+    },
+    {
+      "icon": "fa-share",
+      "title": "Record microphone", 
+      "link": "#contact-source--microphone",
+      "helper_text": "Use your computer or phone's microphone to record audio."
     }
   ]
 }]

@@ -8,18 +8,10 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  // Toggle the input in the checklog
-  // 
-  $('.report form').hide();
-  $('.js--toggle-input').click(function(e) {
-    $(this).closest('.report--form').find('form').slideToggle(200);
-    e.preventDefault();
-  });
-
   // On the project page, collapse the checklog
   // 
   $('.page--project .report--menu').hide();
-  $('.report-menu-trigger').click(function(e) {
+  $('.page--project .report-menu-trigger').click(function(e) {
     $(this).closest('.report--contextual-action-menu').find('ul').slideToggle(200);
     e.preventDefault();
   });
@@ -41,11 +33,14 @@ $(document).ready(function() {
     // });
   });
 
+  // Show and hide the checklist
+  // 
   $('.js--toggle-checklist').click(function(e){
-    $(".checklist").slideToggle(200);
+    $(".checklist img").slideToggle(200);
   });
 
-  // Silly Edit button
+  // Silly Edit button, demoing click-to-edit UI
+  // 
   $('#js--edit-mode').click(function(e) {
     e.preventDefault();
     document.designMode = 'on';
@@ -55,8 +50,11 @@ $(document).ready(function() {
   // Hide the buttons on the project page
   // 
   $('.page--project .report--actions').hide();
-  $('.report--menu-trigger').click(function(e) {
+  $('.js--more-actions').click(function(e) {
     e.preventDefault();
-    $(this).closest(".report--contextual-action-menu").find('.report--actions').slideToggle(200);
-  }) ;
+    $(this).closest(".report--contextual-actions").find('.report--actions').slideToggle(200);
+  });
+
+  // Start a progress bar on the checklist
+  progressJs('.checklist').start().set(100);
 });
