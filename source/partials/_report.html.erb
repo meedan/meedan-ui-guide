@@ -1,6 +1,25 @@
 <div class="report js-queries <%= report.type %> <%= report.archive_status %>">
   <!-- report section -->
   <div class="report--section">
+
+    <!-- Verification status: eg, false -->
+    <div class="report--verification-status <%= report.verification_status.downcase %>">
+
+      <% if report.verification_status == "" %>
+        <button>
+          <i class="fa fa-flag"></i> Add Verification Status</button>
+      <% else %>
+          <% if report.verification_status == "In Progress"  %>
+            <i class="fa fa-random"></i>
+          <% elsif report.verification_status == "False"  %>
+            <i class='fa fa-close'></i> 
+          <% elsif report.verification_status == "Verified"  %>
+            <i class='fa fa-check-circle-o'></i>
+          <% end %>
+          <%= report.verification_status %> <span class="attribution-team">by Bellingcat</span>
+      <% end %>
+    </div>
+
     <!-- Media object -->
     <div class="report--media-object">
       <img src="/images/prototype/<%=report.media_object%>">
@@ -20,24 +39,6 @@
         <%= report.description %>
       <% end %>
     </div>
-
-    <!-- Verification status: eg, false -->
-    <div class="report--verification-status <%= report.verification_status.downcase %>">
-
-      <% if report.verification_status == "" %>
-        <button>
-          <i class="fa fa-flag"></i> Add Verification Status</button>
-      <% else %>
-          <% if report.verification_status == "In Progress"  %>
-            <i class="fa fa-random"></i>
-          <% elsif report.verification_status == "False"  %>
-            <i class='fa fa-close'></i> 
-          <% elsif report.verification_status == "Verified"  %>
-            <i class='fa fa-check-circle-o'></i>
-          <% end %>
-          <%= report.verification_status %> <span class="attribution-team">by Bellingcat</span>
-        </div>
-      <% end %>
   </div>
 
   <!-- report section -->
@@ -65,29 +66,27 @@
     </div>
 
     <button class="js--show-report">Show Checklog</button>
+    
     <div class="report--checklog">
       <div class="checklog--header">
         <h4><%= report.checklog.count %> Verification notes</h4>
       </div>
       <ul>
 
-      <% unless report.original_creator %>
-        <li class="checklog--entry primary">
-          <div class="checklog--entry-icons">
-          </div>
-          <div class="checklog--entry-body">
-            <span class="username">
-              Unknown
-            </span>
-            <span class="log-entry">
-              <p>The person who created this media and uploaded it is unknown.</p>
-              <button class="add-original-creator">Add creator</button>
-            </span>
-            <span class="timestamp">Date unconfirmed</span>
-          </div>
-        </li>
-
-      <% end %>
+      <li class="checklog--entry primary">
+        <div class="checklog--entry-icons">
+        </div>
+        <div class="checklog--entry-body">
+          <span class="username">
+            Unknown
+          </span>
+          <span class="log-entry">
+            <p>The person who created this media and uploaded it is unknown.</p>
+            <button class="add-original-creator">Add creator</button>
+          </span>
+          <span class="timestamp">Date unconfirmed</span>
+        </div>
+      </li>
 
       <% report.checklog.reverse_each do |entry| %>
         <li class="checklog--entry <%= entry.entry_type %>">
@@ -115,6 +114,7 @@
             <p class="helper-text"><span class="username">You</span> <a href="#" class="js--toggle-input">Add a comment or link</a></p>
             <form>
               <div class="input" contenteditable="true"></div>
+
               <input type="submit"></input>
             </form>
           </div>
@@ -122,12 +122,37 @@
       </li>
       </ul>
     </div>
+
+
+
+
+
+
+    <h4>testing</h4>
+    <div class="updater">
+      <i class="fa fa-pencil"></i>
+      <div class="inner">
+        <i class="up-arrow"></i>
+        <textarea id="id_status" placeholder="What's going on?">
+        </textarea>
+      </div>
+      <div class="selector-wrapper">
+      </div>
+      <div class="options">
+        <a class="button">Post</a>
+      </div>
+    </div>
+    <div id="feed"></div>
+
+
+
+
+
+
+
   </div>
 
-  <!-- report section -->
   <div class="report--section action-pane">
-    <img class="checklist" src="/images/prototype/checklist.png" />
-
     <div class="report--contextual-actions">
         <button class="js--more-actions"><i class="fa fa-ellipsis-h"></i> More Actions</button>
       
@@ -163,5 +188,10 @@
       <% end %>
       </div>
     </div>
+  </div>
+
+  <!-- report section -->
+  <div class="report--section action-pane">
+    <img class="checklist" src="/images/prototype/checklist.png" />
   </div>
 </div>

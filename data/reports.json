@@ -63,7 +63,7 @@
   "added_by": "hak",
   "checklog": [{
     "username": "hak",
-    "log_entry": "changed status to In Progress",
+    "log_entry": "<p>changed status to In Progress</p>",
     "timestamp": "Oct 11 2:45AM PST"
     }, {
       "username": "hak",
@@ -211,13 +211,13 @@
     "entry_type": "primary"
     }, {
       "username": "trbrtc",
-      "log_entry": "RSF Media Office uploaded a video showing the aftermath of the strikes. <a class='embed' href='https://www.youtube.com/watch?v=SPlHYsTChqg'</a>",
+      "log_entry": "<p>RSF Media Office uploaded a video showing the aftermath of the strikes. </p><a class='embed' href='https://www.youtube.com/watch?v=SPlHYsTChqg'</a>",
       "timestamp": "Oct 14 5:45AM PST",
       "entry_type": "primary"
     },
     {
       "username": "trbrtc",
-      "log_entry": "North of Ahras, Aleppo Governorate. Wikimapia: <a class='embed' href='http://wikimapia.org/#lang=en&amp;lat=36.407295&amp;lon=37.145419&amp;z=16&amp;m=bs' target='_blank'>http://wikimapia.org/#lang=en&amp;lat=36.407295&amp;lon=37.145419&amp;z=16&amp;m=bs</a>",
+      "log_entry": "<p>North of Ahras, Aleppo Governorate. Wikimapia:</p> <a class='embed' href='http://wikimapia.org/#lang=en&amp;lat=36.407295&amp;lon=37.145419&amp;z=16&amp;m=bs' target='_blank'>http://wikimapia.org/#lang=en&amp;lat=36.407295&amp;lon=37.145419&amp;z=16&amp;m=bs</a>",
       "entry_type": "primary"
     },
     {
@@ -232,7 +232,7 @@
     },
     {
       "username": "surpher",
-      "log_entry": "Added this report",
+      "log_entry": "<p>Added this report</p>",
       "timestamp": "Oct 11 2:45AM PST"
     }
     ]
@@ -258,11 +258,13 @@
     }, {
       "username": "samir",
       "log_entry": "<p class='status-change progress'>changed the status to <em>In Progress</em></p> <p>impact at these two sites here <a href='https://twitter.com/obretix/status/674353190654115841'>https://twitter.com/obretix/status/674353190654115841</a></p>",
-      "timestamp": "Oct 11 6:45AM PST"
+      "timestamp": "Oct 11 6:45AM PST",
+      "entry_type": "primary"
     },
     {
       "username": "vp.kivimaki_17",
-      "log_entry": "<p class='status-change verified'>changed the status to <em>verified</em></p> <p>And 1:15-1:18 is also from the first strike site. So two sites in this video, both geolocated. Locations are in Raqqa governorate as indicated by the video.</p>"
+      "log_entry": "<p class='status-change verified'>changed the status to <em>verified</em></p> <p>And 1:15-1:18 is also from the first strike site. So two sites in this video, both geolocated. Locations are in Raqqa governorate as indicated by the video.</p>",
+      "entry_type": "primary"
     },
     {
       "username": "vp.kivimaki_17",
@@ -272,17 +274,20 @@
     {
       "username": "vp.kivimaki_17",
       "log_entry": "<p>Second strike between 1:04-1:15 is in Al-Thawrah. Impact approx at 35.84126, 38.54340. Wide view: <a href='http://i.imgur.com/X64ylF0.jpg'>http://i.imgur.com/X64ylF0.jpg</a> Closeup: <a href='http://i.imgur.com/gHyLs2W.jpg'>http://i.imgur.com/gHyLs2W.jpg</a></p>",
-      "timestamp": "Oct 11 5:45AM PST"
+      "timestamp": "Oct 11 5:45AM PST",
+      "entry_type": "primary"
     },
     {
       "username": "vp.kivimaki_17",
       "log_entry": "<p>First strike area looks right from comparison of the roads, river & buildings. Impact is around 35.79028, 38.54096. (not exact) Comparison from close-up. <a href='http://i.imgur.com/TptAamu.jpg'>http://i.imgur.com/TptAamu.jpg</a></p>",
-      "timestamp": "Oct 11 5:45AM PST"
+      "timestamp": "Oct 11 5:45AM PST",
+      "entry_type": "primary"
     },
     {
       "username": "maxim",
-      "log_entry": "<p>The first strike depicted at 0:54 seems to be here:<a href='http://wikimapia.org/#lang=en&lat=35.791361&lon=38.545017&z=13'>http://wikimapia.org/#lang=en&lat=35.791361&lon=38.545017&z=13</a></p>",
-      "timestamp": "Oct 11 5:45AM PST"
+      "log_entry": "<p>The first strike depicted at 0:54 seems to be here:<a href='http://wikimapia.org/#lang=en&lat=35.791361&lon=38.545017&z=13'>http://wikimapia.org/#lang=en&amp;lat=35.791361&amp;lon=38.545017&z=13</a></p>",
+      "timestamp": "Oct 11 5:45AM PST",
+      "entry_type": "primary"
     },
     {
       "username": "maxim",

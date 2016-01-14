@@ -20,5 +20,10 @@
 
   .report {
     box-shadow: 0 0 3px $firefly20;
+
+    .checklog,
+    .checklist {
+      display: none;
+    }
   }
 }

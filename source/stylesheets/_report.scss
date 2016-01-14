@@ -58,7 +58,7 @@
 // 
 .report--description {
   p {
-    padding: 1em 0;
+    padding: 0;
   }
 }
 
@@ -149,18 +149,22 @@ button,
 // 
 .report--verification-status {
   color: $firefly60;
+  font-size: 2em;
   font-weight: bold;
-  padding: .5em 0;
+  padding: .5em;
+  text-align: center;
 
   &:hover {
     cursor: pointer;
   }
 
   &.false {
+    background-color: lighten($false-red, 30%);
     color: $false-red;
   }
 
   &.verified {
+    background-color: lighten($verified-green, 30%);
     color: $verified-green;
   }
 } 
@@ -299,13 +303,17 @@ button,
     p,
     div {
       display: inline-block;
+      flex: 1 auto;
       margin: 0;
       padding: 0;
     }
 
     .embed {
-      border: 1px solid $firefly40;
+      box-shadow: 0 0 4px $firefly20;
       display: block;
+      flex: 1 auto;
+      margin: 1em 0;
+      max-width: 300px;
       padding: 1em;
     }
   }
@@ -336,6 +344,7 @@ button,
     background-color: $white;
     border: 1px solid $firefly20;
     border-radius: 4px;
+    max-width: 800px;
     padding: .5em 1em;
     width: auto;
 
@@ -347,16 +356,21 @@ button,
   }
 
   .status-change {
+    display: block;
     font-weight: bold;
+    width: 100%;
 
     em {
       font-style: normal;
       text-transform: capitalize;
     }
 
+    &.in-prorgess {
+      color: $firefly;
+    }
+
     &.verified {
       color: $verified-green;
-      display: block;
     }
   }
 }

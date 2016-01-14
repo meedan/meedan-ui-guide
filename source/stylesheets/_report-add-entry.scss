@@ -1,0 +1,316 @@
+
+
+/* -----------------------------------------
+   Preview
+----------------------------------------- */
+.up-arrow
+{
+    position: absolute;
+    top: -7px;
+    left: 4px; 
+
+    display: block;
+
+    width: 11px;
+    height: 8px;
+
+    background-image: url(../images/demos/up.png);
+}
+
+.updater .fa-pencil
+{
+    display: block;
+    overflow: hidden;
+
+    width: 14px;
+    height: 14px;
+    margin: 7px;
+}
+.updater textarea
+{
+    overflow: hidden;
+
+    max-height: 30px; 
+    margin: 0;
+
+    resize: none;
+
+    color: #777;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: 0;
+    box-shadow: none;
+
+    -webkit-appearance: none;
+}
+.updater .inner
+{
+    position: relative; 
+
+    border: 1px solid #ddd;
+    background: #fff;
+}
+.updater.active textarea
+{
+    min-height: 50px;
+}
+.updater.active .inner
+{
+    border-bottom: 0;
+}
+.updater.active .options
+{
+    display: block;
+}
+.updater .options
+{
+    display: none; 
+
+    padding: 2px;
+
+    text-align: right;
+
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background-color: #e1e1e1;
+}
+.updater .options .button
+{
+    padding: 7px 12px 8px;
+}
+
+.update
+{
+    margin: 10px 0; 
+    padding: 10px;
+
+    background-color: #fff;
+}
+.update > p
+{
+    padding: 10px;
+
+    border-bottom: 1px solid #ddd;
+}
+.update .thumbnail
+{
+    float: left;
+
+    width: 30%;
+}
+.update .attributes
+{
+    float: left;
+
+    width: 70%;
+}
+.update .attributes span
+{
+    display: block;
+}
+
+.selector-wrapper .selector
+{
+    position: relative;
+
+    min-height: 85px;
+    padding: 10px 5px;
+
+    border-top: 1px dashed #ddd;
+    border-right: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    background-color: #fff;
+}
+.selector-wrapper .selector .attributes
+{
+    float: left;
+
+    width: 80%;
+}
+.selector-wrapper .selector .attributes .title
+{
+    font-weight: bold;
+    line-height: 16px; 
+
+    display: block;
+
+    margin-bottom: 2px;
+}
+.selector-wrapper .selector .attributes .provider
+{
+    font-size: 12px; 
+
+    display: block;
+
+    color: #666;
+}
+.selector-wrapper .selector .attributes p
+{
+    font-size: 12px;
+    line-height: 1.2;
+
+    margin-bottom: 0;
+    padding: 5px 15px 0 0; 
+
+    text-align: left;
+
+    border: 0;
+}
+.selector-wrapper .selector .attributes .meta .favicon
+{
+    display: block;
+    float: left; 
+
+    max-width: 16px;
+}
+.selector-wrapper .selector .attributes .meta a
+{
+    display: block;
+    float: left;
+
+    width: 25px; 
+    height: 22px;
+
+    color: #000;
+}
+.selector-wrapper .selector .attributes .meta ul
+{
+    margin: 0; 
+
+    list-style: none;
+}
+.selector-wrapper .selector .attributes .meta ul li
+{
+    float: left;
+
+    margin: 0;
+
+    text-align: center;
+}
+.selector-wrapper .selector .attributes .meta ul li:last-child
+{
+    margin-right: 5px; 
+    margin-left: -1px;
+}
+.selector-wrapper .selector .attributes .meta .pages
+{
+    font-size: 11px;
+
+    display: block;
+    display: block;
+
+    color: #333;
+}
+.selector-wrapper .selector .attributes .meta .pages span
+{
+    color: #000;
+}
+.selector-wrapper .selector .attributes .meta .no-thumbnail
+{
+    display: block;
+}
+.selector-wrapper .selector .action
+{
+    position: absolute;
+    top: 5px;
+    right: 7px;
+}
+
+.thumb
+{
+    position: relative;
+
+    float: left;
+
+    width: 100px; 
+    margin: 0 10px 0 0;
+}
+.thumb .items
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100px; 
+    height: 100px;
+    padding: 0;
+}
+.thumb .items .images
+{
+    position: absolute;
+    left: 0; 
+
+    width: 300em;
+    margin: 0;
+    padding: 0;
+}
+.thumb .items .images li
+{
+    float: left;
+
+    width: 100px;
+    height: 100px; 
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+.thumb .items .images img
+{
+    max-width: 100px;
+    max-height: 100px;
+}
+.thumb .controls
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100px;
+    height: 16px;
+
+    opacity: .5; 
+    background-color: #222;
+}
+.thumb .controls .left,
+.thumb .controls .right,
+.thumb .controls .nothumb
+{
+    position: absolute;
+    top: 2px;
+
+    display: block;
+
+    color: #fff;
+}
+.thumb .controls .left:hover,
+.thumb .controls .right:hover,
+.thumb .controls .nothumb:hover
+{
+    text-decoration: none;
+}
+.thumb .controls .nothumb
+{
+    font-weight: bold;
+
+    top: 1px; 
+    right: 2px;
+}
+.thumb .controls .left
+{
+    left: 2px;
+}
+.thumb .controls .right
+{
+    left: 16px;
+}
+.thumb .nothumb
+{
+    font-weight: bold;
+
+    top: 1px; 
+    right: 2px;
+}

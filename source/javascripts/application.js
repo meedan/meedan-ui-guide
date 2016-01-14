@@ -16,3 +16,5 @@
 //= require "vendor/progress.js"
 //= require "helpers/outline.js"
 //= require "vendor/jquery.embedly.js"
+//= require "vendor/jquery.preview.js"
+//= require "vendor/handlebars.js"
