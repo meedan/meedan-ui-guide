@@ -1,1 +1,0 @@
-$(document).ready(function(){$(".js-show-report").click(function(e){$(this).prev().slideToggle(),e.preventDefault()}),$(".report form").hide(),$(".js-toggle-input").click(function(e){$(this).closest(".report--form").find("form").slideToggle(),e.preventDefault()})});
