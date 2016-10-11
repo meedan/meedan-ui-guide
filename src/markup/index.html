@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Patterns</title>
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/css/prototype.css">
+    </head>
+    <body class="prototype">
+      <h2 class="prototype">Claim</h2>
+
+      §include("./_verification_status.html")
+
+      <div class="media-detail__media media-detail__media--in-progress">
+        <div id="pender-card" class="pender-card">
+          <p class="media-detail__claim-text">"Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car."</p>
+          <p class="media-detail__claim-attribution">— Anonymous</p>
+          <p class="media-detail__claim-attribution-link">http://cnn.com/1234...</p>
+        </div>
+      </div>
+
+      <h2 class="prototype">Claim Form</h2>
+
+      <form class="claim">
+        <div class="form-header">
+          §include("./_verification_status.html")
+          <div class="buttons">
+            <span class="cancel">Cancel</span>
+            <button class="submit">Submit</button>
+          </div>
+        </div>
+        <input placeholder="Add a headline">
+        <input placeholder="Add a description">
+        <label>Claim<span class="required">*</span>
+          <input class="claim-text" placeholder="Claim text">
+        </label>
+        <label>Attribution<span class="required">*</span>
+          <input placeholder="— Anonymous">
+        </label>
+        <input placeholder="Add a link">
+        <input placeholder="Add a tag">
+        <label>Electionland Categories 
+          <div class="buttons">
+            <span class="active button">Polling place problems</span>
+            <span class="button button">Registration problems</span>
+            <span class="button button">Voter ID problems</span>
+            <span class="button button">Arrest impacting ability to vote</span>
+            <span class="button button">Ballots — not enough/provisional</span>
+            <span class="button button">Equipment problems</span>
+            <span class="button button">Accessibility — language or disabled</span>
+            <span class="button button">General information</span>
+            <span class="button">Intimidation or challenges</span>
+          </div>
+        </label>
+
+        <label>Location<span class="required"></span>
+          <input class="location" placeholder="Add a location"></label>
+      </form>
+    </body>
+</html>
