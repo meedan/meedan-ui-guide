@@ -1,0 +1,57 @@
+
+// Variables 
+// 
+$claim-icon-offset: 50px;
+$prototype-input-width: 500px;
+
+// Colors
+// 
+$check-blue: #2E77FC;
+$firefly-10: #E7E8EA;
+$firefly-20: #CFD3D5;
+$firefly-30: #B7BCC0;
+$firefly-40: #9FA6AC;
+$firefly-5: #F3F4F4;
+$firefly-60: #6F7A82;
+$firefly-80: #404D59;
+$firefly-90: #283743;
+$firefly: #10212F;
+$heather-grey: #C4D1DB;
+$monza-red: #D0021B;
+$porcelain-white: #FAFBFB;
+$regent-grey: #8799A6;
+
+
+// Prototype only styles
+// 
+body.prototype {
+  background-color: $porcelain-white;
+  padding: 1em;
+}
+
+h2.prototype {
+  border-bottom: 1px solid #888;
+  font-family: $font-stack-sans-condensed;
+  margin-top: 4em;
+}
+
+// Custom categories get a "chicklet style"
+// 
+.chicklet {
+  background-color: $firefly-60;
+  border-radius: 3px;
+  color: $firefly-5;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 200;
+  padding: 2px 10px!important;
+  &.unselected {
+    background-color: $firefly-10;
+    color: $regent-grey;
+  }
+  &:hover {
+    background-color: $firefly;
+    color: $firefly-5;
+    cursor: pointer;
+  }
+}

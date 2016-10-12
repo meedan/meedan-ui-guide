@@ -1,0 +1,39 @@
+
+// Report: Claim
+// 
+.media-detail__media {
+  background-color: white;
+  max-width: 800px;
+  .pender-card {
+    border: 1px solid $firefly-10;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  .media-detail__claim-text {
+    font-size: 24px;
+    font-weight: 100;
+    margin-left: $claim-icon-offset;
+    &:before {
+      color: $firefly-20;
+      content: "\f10d";
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 30px;
+      margin-left: -$claim-icon-offset;
+      padding: 0 10px;
+    }
+  }
+  .check-metadata {
+    color: $firefly-30;
+    li {
+      display: inline-block;
+      padding: 3px;
+    }
+  }
+  .media-detail__claim-attribution,
+  .media-detail__claim-attribution-link {
+    color: $firefly-30;
+    margin: 7px;
+    text-align: right;
+  }
+}
