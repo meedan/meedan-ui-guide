@@ -1,21 +1,66 @@
 §include("./_head.html")
-<h2 class="prototype">Search with filters and sort</h2>
+<div class="page search">
+  <div class="header">
+    <input class="search"></input>
+    </>
+  </div>
+  
+  <section class="filters">
+    <h3>Filters</h3>
+    
+    <div>
+      <h4>Electionland categories</h4> §include("./_electionland_categories.html")
+    </div>
 
-<input class="search"></input>
-<div class="filters">
-  <ul class="custom-categories">
-    <li class="unselected chicklet">Polling place problems</li>
-    <li class="unselected chicklet">Registration problems</li>
-    <li class="unselected chicklet">Voter ID problems</li>
-    <li class="unselected chicklet">Arrest impacting ability to vote</li>
-    <li class="unselected chicklet">Ballots — not enough/provisional</li>
-    <li class="unselected chicklet">Equipment problems</li>
-    <li class="unselected chicklet">Accessibility — language or disabled</li>
-    <li class="unselected chicklet">General information</li>
-    <li class="unselected chicklet">Intimidation or challenges</li>
-  </ul>
+    <div>
+      <h4>Tags</h4>
+      <ul>
+        <li class="chicklet selected">#humanrights</li>
+        <li class="chicklet">#bobandalice</li>
+        <li class="chicklet">#purple</li>
+        <li class="chicklet selected">#trump</li>
+        <li class="chicklet">#elephant</li>
+        <li class="chicklet">#augmentedreality</li>
+      </ul>
+    </div>
 
-  <ul class="tags"></ul>
+    <div>
+      <h4>Projects</h4>
+      <ul>
+        <li class="chicklet selected">California</li>
+        <li class="chicklet selected">Colorado</li>
+        <li class="chicklet">Connecticut</li>
+        <li class="chicklet">Colorado</li>
+        <li class="chicklet">Delaware</li>
+        <li class="chicklet">Florida</li>
+        <li class="chicklet">Georgia</li>
+        <li class="chicklet">Hawaii</li>
+        <li class="chicklet">Idaho</li>
+        <li class="chicklet">Kentucky</li>
+        <li class="chicklet">Louisiana</li>
+        <li class="chicklet selected">Michigan</li>
+        <li class="chicklet">Montana</li>
+        <li class="chicklet selected">Nevada</li>
+        <li class="chicklet selected">Ohio</li>
+        <li class="chicklet selected">Pennsylvania</li>
+        <li class="chicklet">Rhode Island</li>
+        <li class="chicklet">Texas</li>
+        <li class="chicklet">Utah</li>
+        <li class="chicklet">Virginia</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="results">
+    <h3>5 Results</h3>
+    <h4>Most recent activity first <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i></h4>
+    <ul class="results">
+      <li>§include("./claim.html")</li>
+      <li>§include("./claim.html")</li>
+      <li>§include("./claim.html")</li>
+      <li>§include("./claim.html")</li>
+      <li>§include("./claim.html")</li>
+    </ul>
+  </section>
 </div>
-
 §include("./_foot.html")

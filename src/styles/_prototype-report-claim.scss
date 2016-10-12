@@ -2,8 +2,7 @@
 // Report: Claim
 // 
 .media-detail__media {
-  background-color: white;
-  max-width: 800px;
+  max-width: $report-max-width;
   .pender-card {
     border: 1px solid $firefly-10;
     border-radius: 4px;

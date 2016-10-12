@@ -3,6 +3,7 @@
 // 
 $claim-icon-offset: 50px;
 $prototype-input-width: 500px;
+$report-max-width: 800px;
 
 // Colors
 // 
@@ -38,16 +39,17 @@ h2.prototype {
 // Custom categories get a "chicklet style"
 // 
 .chicklet {
-  background-color: $firefly-60;
   border-radius: 3px;
-  color: $firefly-5;
+  background-color: $firefly-10;
+  color: $regent-grey;
   display: inline-block;
   font-size: 14px;
   font-weight: 200;
   padding: 2px 10px!important;
-  &.unselected {
-    background-color: $firefly-10;
-    color: $regent-grey;
+  margin: 2px;
+  &.selected {
+    background-color: $firefly-60;
+    color: $firefly-5;
   }
   &:hover {
     background-color: $firefly;
