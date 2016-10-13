@@ -29,6 +29,10 @@ $firefly-60-2: rgba($firefly-60, 0.2);
 $firefly-60-5: rgba($firefly-60, 0.5);
 $firefly-60-8: rgba($firefly-60, 0.8);
 
+body {
+  padding-top: 80px;
+}
+
 // Custom categories get a "chicklet style"
 // 
 .chicklet {
