@@ -1,7 +1,6 @@
 
 // Variables 
 // 
-$claim-icon-offset: 50px;
 $prototype-input-width: 500px;
 $report-max-width: 800px;
 
@@ -19,16 +18,19 @@ $firefly-90: #283743;
 $firefly: #10212F;
 $heather-grey: #C4D1DB;
 $monza-red: #D0021B;
-$porcelain-white: #FAFBFB;
+$porcelain-grey: #FAFBFB;
 $regent-grey: #8799A6;
+$seashell-peach: #FFF6F0;
+$white: #ffffff;
 
+// Firefly with alpha for blending
+$firefly-60-1: rgba($firefly-60, 0.1);
+$firefly-60-2: rgba($firefly-60, 0.2);
+$firefly-60-5: rgba($firefly-60, 0.5);
+$firefly-60-8: rgba($firefly-60, 0.8);
 
 // Prototype only styles
 // 
-body.prototype {
-  background-color: $porcelain-white;
-  padding: 1em;
-}
 
 h2.prototype {
   border-bottom: 1px solid #888;
@@ -40,20 +42,29 @@ h2.prototype {
 // 
 .chicklet {
   border-radius: 3px;
-  background-color: $firefly-10;
+  background-color: $firefly-60-1;
   color: $regent-grey;
   display: inline-block;
   font-size: 14px;
   font-weight: 200;
   padding: 2px 10px!important;
   margin: 2px;
+  transition: background-color 0.2s ease, color 0.2s ease;
   &.selected {
-    background-color: $firefly-60;
+    background-color: $firefly-60-1;
     color: $firefly-5;
+  }
+  &:active {
+
   }
   &:hover {
-    background-color: $firefly;
-    color: $firefly-5;
     cursor: pointer;
   }
+}
+
+
+%ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

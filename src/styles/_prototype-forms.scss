@@ -1,85 +1,8 @@
-// Claim form 
+
+// Input float style
 // 
-form {
-  max-width: 800px;
-  background-color: #ffffff;
-  padding: 16px;
-  font-size: 18px;
-  @extend %input-floats;
-
-  & section > div {
-    margin-top: 40px;
-  }
-  section.form-header {
-    display: flex;
-    .media-status__current {
-      flex: 4;
-    }
-    .buttons {
-      color: $firefly-20;
-      padding-top: 11px;
-      flex: 1;
-      font-size: 14px;
-      min-width: 130px;
-      .claim-text input {
-        font-size: 24px;
-        letter-spacing: 1px;
-      }
-    }
-    button.submit {
-      background-color: $check-blue;
-      color: $firefly-5;
-      border-radius: 4px;
-      padding: 8px 10px;
-      margin-left: 10px;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
-  }
-
-  label {
-    font-size: 14px;
-    font-weight: 200;
-    letter-spacing: 1px;
-    color: $firefly-40;
-    text-transform: capitalize;
-  }
-
-  input {
-    border-width: 0;
-    border-bottom: 1px solid $firefly-20;
-    border-radius: 0;
-    display: block;
-    font-size: 16px;
-    font-weight: 100;
-    line-height: 32px;
-    margin-top: 0;
-    margin: 0;
-    outline: 0;
-    width: $prototype-input-width;
-  }
-
-  .required {
-    color: $monza-red;
-    padding: 0 2px;
-  }
-
-  ul.options {
-    margin-top: 5px;
-  }
-}
-
-%active-label {
-  top: -20px;
-  font-size: 1 4px;
-  color: $check-blue;
-  text-transform: uppercase;
-  font-weight: bold;
-}
-
-// Input float
-// Material Input Boxes with CSS only
-// https://codepen.io/sevilayha/pen/IdGKH
+// Material Input Boxes with CSS
+// based on https://codepen.io/sevilayha/pen/IdGKH
 // 
 %input-floats {
 
@@ -97,14 +20,19 @@ form {
     left: 5px;
     top: 10px;
     transition: 0.2s ease all;
-    &.prototype__no-reposition {
+    &.label__select-a-category {
       display: none;
     }
   }
 
   input:focus ~ label,
   input:valid ~ label {
-    @extend %active-label;
+    top: -20px;
+    left: 0;
+    color: $check-blue;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
   }
 
   .bar {
@@ -159,5 +87,77 @@ form {
       width: 0;
       background: transparent;
     }
+  }
+}
+
+// Check form styles
+// 
+form {
+  max-width: $report-max-width;
+  background-color: $white;
+  padding: 16px;
+  font-size: 18px;
+  @extend %input-floats;
+
+  & section > div {
+    margin-top: 40px;
+  }
+
+  section.form-header {
+    display: flex;
+    .media-status__current {
+      flex: 4;
+    }
+    .buttons {
+      color: $firefly-20;
+      padding-top: 11px;
+      flex: 1;
+      font-size: 14px;
+      min-width: 130px;
+      .claim-text input {
+        font-size: 24px;
+        letter-spacing: 1px;
+      }
+      button.submit {
+        background-color: $check-blue;
+        color: $firefly-5;
+        border-radius: 4px;
+        padding: 8px 10px;
+        margin-left: 10px;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 200;
+    letter-spacing: 1px;
+    color: $firefly-40;
+    text-transform: capitalize;
+  }
+
+  input {
+    border-width: 0;
+    border-bottom: 1px solid $firefly-20;
+    border-radius: 0;
+    display: block;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 32px;
+    margin-top: 0;
+    margin: 0;
+    outline: 0;
+    width: $prototype-input-width;
+  }
+
+  .required {
+    color: $monza-red;
+    padding: 0 2px;
+  }
+
+  ul.options {
+    margin-top: 5px;
   }
 }

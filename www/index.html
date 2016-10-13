@@ -4,18 +4,37 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Patterns</title>
+  <title>Check Patterns</title>
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="/css/prototype.css">
 </head>
 
 <body class="prototype">
 
-  <h2 class="prototype"><a href="claim.html">Claim</a></h2> 
-  <h2 class="prototype"><a href="claim_form.html">Claim Form</a></h2>
-  <h2 class="prototype"><a href="search.html">Search</a></h2>
+  <div class="pattern_list">
+    <h2 class="prototype"><a href="report_claim.html">Claim</a></h2> 
+    <h2 class="prototype"><a href="form_report_claim.html">Claim Form</a></h2>
+    <h2 class="prototype"><a href="search.html">Search</a></h2>
+    <h2 class="prototype"><a href="report_facebook_post.html">Report: Facebook Post</a></h2>
+  </div>
 
+<script type="text/javascript">
+document.onreadystatechange = function() {
+  if (document.readyState == "complete") {
+    
+    // Toggle chicklets
+    var chicklets = document.getElementsByClassName('chicklet');
 
+    var toggleSelection = function() {
+      this.classList.toggle('selected');
+    }
+
+    for (var i = 0; i < chicklets.length; i++) {
+      chicklets[i].addEventListener("click", toggleSelection, false);
+    }
+  }
+}
+</script>
 </body>
 
 </html>

@@ -20,7 +20,7 @@ module.exports = {
     dest: dest + "/css"
   },
   images: {
-    src: src + "/images/**",
+    src: src + "/images/*",
     dest: dest + "/images",
     imagemin: {
       optimizationLevel: 6,
@@ -32,6 +32,6 @@ module.exports = {
   },
   markup: {
     dest: dest,
-    src: src + ["/markup/{*.html,!_*.html,*.md}"]
+    src: src + ["/markup/{*.html,_*.html,*.md}"]
   }
 };
