@@ -7,11 +7,11 @@ $report-max-width: 800px;
 // Colors
 // 
 $check-blue: #2E77FC;
+$firefly-5: #F3F4F4;
 $firefly-10: #E7E8EA;
 $firefly-20: #CFD3D5;
 $firefly-30: #B7BCC0;
 $firefly-40: #9FA6AC;
-$firefly-5: #F3F4F4;
 $firefly-60: #6F7A82;
 $firefly-80: #404D59;
 $firefly-90: #283743;
@@ -28,15 +28,6 @@ $firefly-60-1: rgba($firefly-60, 0.1);
 $firefly-60-2: rgba($firefly-60, 0.2);
 $firefly-60-5: rgba($firefly-60, 0.5);
 $firefly-60-8: rgba($firefly-60, 0.8);
-
-// Prototype only styles
-// 
-
-h2.prototype {
-  border-bottom: 1px solid #888;
-  font-family: $font-stack-sans-condensed;
-  margin-top: 4em;
-}
 
 // Custom categories get a "chicklet style"
 // 
@@ -67,4 +58,18 @@ h2.prototype {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+%metadata {
+  color: $firefly-60-5;
+  font-weight: 200;
+  padding: 5px 10px;
+  font-size: 14px;
+  .tags {
+    color: $firefly-60-5;
+  }
+  li {
+    display: inline-block;
+    padding: 3px;
+  }
 }

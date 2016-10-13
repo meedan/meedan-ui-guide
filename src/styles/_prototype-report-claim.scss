@@ -10,8 +10,16 @@ $header-offset: 100px;
 .media-detail__media {
   max-width: $report-max-width;
   margin: 16px auto;
-  // border: 1px solid $firefly-10;
-  background-color: #FFF6F0;
+
+  // Statuses
+  &.media-detail__media--undetermined {
+    background-color: #E4EEFC;
+  }
+  &.media-detail__media--in-progress {
+    background-color: $seashell-peach; 
+  }
+
+  // Pender cards
   .pender-card {
     background-color: $white;
     border: 1px solid $firefly-60-2;
@@ -19,53 +27,102 @@ $header-offset: 100px;
     padding: 10px;
     margin: 0 10px;
     min-height: none;
-  }
-  .media-detail__claim-text {
-    font-size: 24px;
-    font-weight: 100;
-    margin-left: $claim-icon-offset;
-    &:before {
-      color: $firefly-20;
-      content: "\f10d";
-      display: inline-block;
-      font-family: FontAwesome;
-      font-size: 30px;
-      margin-left: -$claim-icon-offset;
-      padding: 0 10px;
+    color: $firefly-80;
+
+    img {
+      border-radius: 3px;
+    }
+
+    // FB Post card
+    &.facebook-post {
+      .attribution {
+        display: flex;
+        .network-icon {
+          width: 18px;
+          margin-right: 14px;
+        }
+        .author-avatar {
+          margin-right: 14px;
+        }
+
+        .name-and-username {
+          display: flex;
+          flex-direction: column;
+          flex: 10;
+          .name {
+            font-size: 16px;
+            font-weight: 800;
+          }
+          .username {
+            font-size: 14px;
+            color: $firefly-40;
+          }
+        }
+        .datetimestamp-created {
+          font-size: 14px;
+          color: $firefly-40; 
+          margin-right: 20px;
+        }
+      }
+      .body {
+        margin: 18px 20px 18px 36px;
+        display: flex;
+        font-size: 18px;
+        .body-text {
+          padding-right: 10px;
+        }
+        .body-image {
+          align-self: flex-end;
+        }
+      }
+      .upstream-metadata {
+        @extend %metadata;
+        margin-left: 24px;
+      }
+    }
+
+    // Claim card
+    &.claim {
+      .claim-text {
+        font-size: 24px;
+        font-weight: 100;
+        margin-left: $claim-icon-offset;
+        &:before {
+          color: $firefly-20;
+          content: "\f10d";
+          display: inline-block;
+          font-family: FontAwesome;
+          font-size: 30px;
+          margin-left: -$claim-icon-offset;
+          padding: 0 10px;
+        }
+      }
+      .claim-attribution {
+        display: flex;
+        justify-content: flex-end;
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+        .claim-attribution-name,
+        .claim-attribution-link {
+          color: $firefly-30;
+          margin: 3px 7px;
+          font-weight: 200;
+          font-size: 14px;
+          max-width: 200px;
+          @extend %ellipsis;
+        }
+        .claim-attribution-name {
+          font-size: 16px;
+          max-width: 300px;
+        }
+      }
     }
   }
+
+  // Final metadata row
   .check-metadata {
-    color: $firefly-60-5;
-    font-weight: 200;
-    padding: 5px 10px;
-    font-size: 14px;
-    .check-metadata__tags {
-      color: $firefly-60-5;
-    }
-    li {
-      display: inline-block;
-      padding: 3px;
-    }
-  }
-  .attribution {
-    display: flex;
-    justify-content: flex-end;
-    div {
-      display: flex;
-      flex-direction: column;
-    }
-    .media-detail__claim-attribution,
-    .media-detail__claim-attribution-link {
-      color: $firefly-30;
-      margin: 3px 7px;
-      font-weight: 200;
-      font-size: 14px;
-      max-width: 200px;
-      @extend %ellipsis;
-    }
-    .media-detail__claim-attribution {
-      font-size: 16px;
-      max-width: 300px;
-    }
+    @extend %metadata;
   }
 }
