@@ -12,7 +12,7 @@ module.exports = {
     }
   },
   js: {
-    src: src + "/js",
+    src: src + "/js/**/*.js",
     dest: dest + "/js"
   },
   sass: {

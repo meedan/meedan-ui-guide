@@ -6,10 +6,10 @@ document.onreadystatechange = function () {
 
     var toggleSelection = function () {
       this.classList.toggle('selected');
-    }
+    };
 
     for (var i = 0; i < chicklets.length; i++) {
       chicklets[i].addEventListener("click", toggleSelection, false);
     }
   }
-}
+};
