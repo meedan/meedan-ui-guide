@@ -46,7 +46,7 @@ body {
   margin: 2px;
   transition: background-color 0.2s ease, color 0.2s ease;
   &.selected {
-    background-color: $firefly-60-1;
+    background-color: $firefly-60;
     color: $firefly-5;
   }
   &:active {
