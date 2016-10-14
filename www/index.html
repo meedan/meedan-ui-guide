@@ -16,25 +16,10 @@
     <h2><a href="page_search.html">Search</a></h2>
     <h2><a href="page_report_claim.html">Report: Claim</a></h2> 
     <h2><a href="page_report_facebook_post.html">Report: Facebook Post</a></h2>
+    <h2><a href="page_report_fallback.html">Report: Fallback</a></h2>
   </div>
 
-<script type="text/javascript">
-document.onreadystatechange = function() {
-  if (document.readyState == "complete") {
-    
-    // Toggle chicklets
-    var chicklets = document.getElementsByClassName('chicklet');
-
-    var toggleSelection = function() {
-      this.classList.toggle('selected');
-    }
-
-    for (var i = 0; i < chicklets.length; i++) {
-      chicklets[i].addEventListener("click", toggleSelection, false);
-    }
-  }
-}
-</script>
+<script src="/js/app.js"></script>
 </body>
 
 </html>
