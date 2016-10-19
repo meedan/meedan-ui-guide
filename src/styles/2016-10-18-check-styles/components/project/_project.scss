@@ -1,28 +1,25 @@
+.project {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  position: relative;
 
-@media all and (min-width: 680px) {
-  .project {
-    flex: 1;
-    height: 100%;
-    width: 100%;
-    position: relative;
+  display: flex;
+}
 
-    display: flex;
-  }
+.project__team-sidebar {
+  flex: 0 0 $layout-sidebar-width;
+  width: $layout-sidebar-width;
+}
 
-  .project__team-sidebar {
-    flex: 0 0 $layout-sidebar-width;
-    width: $layout-sidebar-width;
-  }
+.project__content {
+  flex: 1;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
-  .project__content {
-    flex: 1;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-
-  .create-project {
-    display: inline;
-  }  
+.create-project {
+  display: inline;
 }
