@@ -1,14 +1,18 @@
 @@include("./_header.html")
 
 <div class="page report">  
-  @@include("./_report_page_header.html")
+  @@include("./_report_page_header.html", {
+    "page-title": "Facebook post by Fred Scharmen",
+    "network": "Facebook.com",
+    "username": "Fred Scharmen"
+  }) 
 
   @@include('./_report_social.html', {
-    "status": "verified",
+    "status": "undetermined",
     "title": "Post by Username",
     "network": "facebook",
-    "user-full-name": "User Name",
-    "username": "username",
+    "user-full-name": "Fred Scharmen",
+    "username": "",
     "network-icon": "<i class='fa fa-facebook-official'></i>",
     "author-avatar": "https://api.adorable.io/avatars/40/a.png",
     "body-text": "Όλοι οι άνθρωποι γεννιούνται ελεύθεροι και ίσοι στην αξιοπρέπεια και τα δικαιώματα. Είναι προικισμένοι με λογική και συνείδηση, και οφείλουν να συμπεριφέρονται μεταξύ τους με πνεύμα αδελφοσύνης.",

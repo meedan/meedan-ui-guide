@@ -1,0 +1,25 @@
+@@include("./_header.html")
+
+<div class="page report">  
+  @@include("./_report_page_header.html", {
+    "page-title": "Tweet by @alolita",
+    "network": "Twitter.com",
+    "username": "@alolita"
+  }) 
+
+  @@include('./_report_social.html', {
+    "status": "verified",
+    "network": "twitter",
+    "user-full-name": "User Name",
+    "username": "@alolita",
+    "network-icon": "<i class='fa fa-twitter'></i>",
+    "author-avatar": "https://api.adorable.io/avatars/40/b.png",
+    "body-text": "Good piece on the danger of contempt culture. Calls out Python. <a href='http://blog.aurynn.com/contempt-culture'>blog.aurynn.com/contempt...</a>",
+    "body-image": "/images/placeholder-3.png" ,
+    "metadata-primary": "29 Likes",
+    "metadata-secondary": "18 Retweets",
+    "metadata-tertiary": "21 Replies"
+  })
+</div>
+
+@@include("./_footer.html")
