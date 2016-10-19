@@ -1,0 +1,41 @@
+
+// Smaller viewports 
+// 
+// Hide sidebar
+// Unfixed header
+// 
+@media all and (max-width: 680px) {
+  
+  body {
+    padding-top: 0;
+    overflow-x: hidden;
+  }
+  
+  .home__content {
+    padding: 10px;
+  }
+
+  .project-header__project {
+    margin-top: 15px;
+  }
+
+  .header {
+    font-size: 0.6em;
+    position: static;
+    width: 100%;
+    display: block;
+  }
+
+  .header__team {
+    display: block;
+    width: 100%;
+  }
+
+  .team-header__clickable {
+    height: auto;
+  }
+
+  .project__team-sidebar {
+    display: none;
+  }
+}
