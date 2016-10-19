@@ -1,7 +1,10 @@
 <!-- Fallback-type report -->
 <!-- For unrecognized URLs we pull as many values as we can -->
 <div class="media-detail__media media-detail__media--verified">
-  @@include("./_status_verified.html")
+  <div class="media-status__current media-status__current--verified">
+    <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
+    <span class="media-status__label">Verified</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+  </div>
   <div id="pender-card" class="pender-card fallback">
     <div class="card-header">
       <div class="network-icon">
