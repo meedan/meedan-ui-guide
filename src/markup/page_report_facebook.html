@@ -1,0 +1,23 @@
+@@include("./_header.html")
+
+<div class="page report">  
+  @@include("./_report_page_header.html")
+
+  @@include("./_report_social.html", {
+    "title": "Post by Username",
+    "network": "facebook",
+    "user-full-name": "User Name",
+    "username": "username",
+    "network-icon": "http://placehold.it/24x24",
+    "author-avatar": "http://placehold.it/40x40",
+    "body-text": "Όλοι οι άνθρωποι γεννιούνται ελεύθεροι και ίσοι στην αξιοπρέπεια και τα δικαιώματα. Είναι προικισμένοι με λογική και συνείδηση, και οφείλουν να συμπεριφέρονται μεταξύ τους με πνεύμα αδελφοσύνης.",
+    "body-image": "http://placehold.it/72x72",
+    "metadata": {
+      "primary": "2.8k Likes",
+      "secondary": "88 Comments",
+      "tertiary": "570 Shares"
+    }
+  })
+</div>
+
+@@include("./_footer.html")

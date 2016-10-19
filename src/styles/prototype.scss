@@ -7,5 +7,15 @@
 
 .pattern_list {
   margin: 0 auto; 
-  width: 600px;
+  max-width: 800px;
+  padding: 1em;
+
+  p { 
+    color: $firefly-60; 
+  }
+  h2 {
+    border-top: 1px solid $firefly-10;
+    padding-top: 1em;
+    margin-bottom: 0.2em;
+  }
 }
