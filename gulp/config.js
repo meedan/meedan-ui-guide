@@ -2,15 +2,15 @@ var dest = "./www";
 var src = './src';
 
 module.exports = {
-  misc: {
-    src: src + '/{CNAME, *.pdf, images/favicons/*, robots.txt}',
-    dest: dest
-  },
   browserSync: {
     port: 6779,
     server: {
       baseDir: dest
     }
+  },
+  images: {
+    src: src + "/images/*",
+    dest: dest + "/images"
   },
   js: {
     src: src + "/js/**/*.js",
@@ -23,17 +23,6 @@ module.exports = {
     },
     src: src + "/styles/**/*.scss",
     dest: dest + "/css"
-  },
-  images: {
-    src: src + "/images/*",
-    dest: dest + "/images",
-    imagemin: {
-      optimizationLevel: 6,
-      progressive: true,
-      svgoPlugins: [{
-        removeViewBox: false
-      }]
-    }
   },
   markup: {
     dest: dest,
