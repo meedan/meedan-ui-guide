@@ -10,8 +10,9 @@ WORKDIR ${DEPLOYDIR}
 COPY package.json ${DEPLOYDIR}/package.json 
 RUN npm install
 COPY ./ ${DEPLOYDIR}
-RUN gulp build
+RUN rm -rf ${DEPLOYDIR}/www \
+    && gulp build
 
 # serve static content from 8080
 EXPOSE 8080
-CMD static www -a 0.0.0.0
+CMD static ${DEPLOYDIR}/www -a 0.0.0.0
