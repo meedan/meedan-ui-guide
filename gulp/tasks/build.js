@@ -1,4 +1,3 @@
 var gulp = require('gulp');
 
-// Default task
-gulp.task('build', ['sass', 'js', 'misc', 'markup']);
+gulp.task('build', ['sass', 'js', 'images', 'markup']);
