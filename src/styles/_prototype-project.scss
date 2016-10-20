@@ -5,6 +5,10 @@
 // 
 @media all and (max-width: 680px) {
 
+  body.page__project {
+    overflow-x: hidden;
+  }
+  
   // Refine padding
   .home__content {
     padding-top: 0;
@@ -103,7 +107,7 @@
 @media all and (min-width: 1600px) {
   body.page__project {
     .annotations-list {
-      columns: 450px;
+      columns: 250px;
     }
     .media-card-link {
       page-break-inside: avoid;
