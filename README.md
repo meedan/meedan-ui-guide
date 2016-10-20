@@ -12,7 +12,7 @@ Gulp manages the build.
 
 Browsersync handles livereloading.
 
-* `git clone https://github.com/meedan/meedan-ui-guide.git`
+* `git clone https://github.com/meedan/meedan-ui-guide.git && cd meedan-ui-guide`
 * `npm install`
 * `gulp`
 
