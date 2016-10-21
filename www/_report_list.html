@@ -1,153 +1,37 @@
-<!DOCTYPE html>
-<html>
+      
+<li><!-- Claim-type report -->
+<div class="media-detail__media media-detail__media--undetermined">
+  <div class="media-status__current media-status__current--undetermined">
+    <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
+    <span class="media-status__label">Undetermined</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+  </div>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>Check Patterns</title>
-  <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="/css/prototype.css">
-</head>
-
-<body class="prototype">
-<div class="page search">
-  <header class="header">
-    <a class="breadcrumb" title="« Back to Project" href="/">
-      <span class="fa fa-angle-left caret caret--left" ></span>
-    </a>
-    <div class="search-header">
-      <input class="search" placeholder="Search">
+  <div id="pender-card" class="pender-card claim">
+    <p class="claim-text">"Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car."</p>
+    <div class="claim-attribution">
+      <div>
+        <p class="claim-attribution-name">— Anonymous Username McUsername</p>
+        <p class="claim-attribution-link">http://cnn.com/1234/1234/1234/1234/1234/1234/1234/1234/1234/1234/1234/1234/1234/1234</p>
+      </div>
     </div>
-    <div class="header-actions">
-      <span class="fa fa-ellipsis-h header-actions__settings-icon">
-    </span>
-  </header>
-
-  <section class="filters">
-    <h3>Filters</h3>
-    <div>
-      <h4>Status</h4>
-      <ul>
-        <li class="chicklet">Undetermined</li>
-        <li class="chicklet">Verified</li>
-        <li class="chicklet">In Progress</li>
-        <li class="chicklet">False</li>
-      </ul>
-    </div>
-    
-    <div>
-      <h4>Project</h4>
-      <ul>
-        <li class="chicklet">California</li>
-        <li class="chicklet">Colorado</li>
-        <li class="chicklet">Connecticut</li>
-        <li class="chicklet">Colorado</li>
-        <li class="chicklet">Delaware</li>
-        <li class="chicklet">Florida</li>
-        <li class="chicklet">Georgia</li>
-        <li class="chicklet">Hawaii</li>
-        <li class="chicklet">Idaho</li>
-        <li class="chicklet">Kentucky</li>
-        <li class="chicklet">Louisiana</li>
-        <li class="chicklet">Michigan</li>
-        <li class="chicklet">Montana</li>
-        <li class="chicklet">Nevada</li>
-        <li class="chicklet">Ohio</li>
-        <li class="chicklet">Pennsylvania</li>
-        <li class="chicklet">Rhode Island</li>
-        <li class="chicklet">Texas</li>
-        <li class="chicklet">Utah</li>
-        <li class="chicklet">Virginia</li>
-      </ul>
-    </div>
-    <div>
-      <h4>Electionland category</h4> 
-      <ul class="electionland_categories">
-  <li class="chicklet">Polling place problems</li>
-  <li class="chicklet">Registration problems</li>
-  <li class="chicklet">Voter ID problems</li>
-  <li class="chicklet">Arrest impacting ability to vote</li>
-  <li class="chicklet">Ballots — not enough/provisional</li>
-  <li class="chicklet">Equipment problems</li>
-  <li class="chicklet">Accessibility — language or disabled</li>
-  <li class="chicklet">General information</li>
-  <li class="chicklet">Intimidation or challenges</li>
+  </div>
+  <ul class="check-metadata">
+  <li class="contributor">Added by Lucas Graves <span class="datetime-contributed" title="2016-10-10 at 4:15 AM PST">4h ago</span></li>
+  <li class="note-count">2 notes</li>
+  <li class="tags">
+    <ul>
+      <li>#eyewitness</li>
+      <li>#storm</li>
+      <li>#for_saturday</li>
+    </ul>
+  </li>
+  <li class="custom-categories chicklet">
+    Polling place problems
+  </li>
 </ul>
-
-    </div>
-    <div>
-      <h4>Tag</h4>
-      <ul>
-        <li class="chicklet">#barabarashouldseethis</li>
-        <li class="chicklet">#bill</li>
-        <li class="chicklet">#bill_investigating</li>
-        <li class="chicklet">#bobandalice</li>
-        <li class="chicklet">#bush</li>
-        <li class="chicklet">#clinton</li>
-        <li class="chicklet">#curious</li>
-        <li class="chicklet">#double-review</li>
-        <li class="chicklet">#graves</li>
-        <li class="chicklet">#important</li>
-        <li class="chicklet">#library-freedom</li>
-        <li class="chicklet">#mccain</li>
-        <li class="chicklet">#mexico</li>
-        <li class="chicklet">#needs_more</li>
-        <li class="chicklet">#newthings</li>
-        <li class="chicklet">#of_interest</li>
-        <li class="chicklet">#orange</li>
-        <li class="chicklet">#perot</li>
-        <li class="chicklet">#scary</li>
-        <li class="chicklet">#scary</li>
-        <li class="chicklet">#significant</li>
-        <li class="chicklet">#suspicious</li>
-        <li class="chicklet">#sweden</li>
-        <li class="chicklet">#thoughtful</li>
-        <li class="chicklet">#triple-check</li>
-        <li class="chicklet">#trumppence</li>
-        <li class="chicklet">#typoe</li>
-        <li class="chicklet">#yellowpence</li>
-        <li class="chicklet">#significant</li>
-        <li class="chicklet">#barabarashouldseethis</li>
-        <li class="chicklet">#bill</li>
-        <li class="chicklet">#bill_investigating</li>
-        <li class="chicklet">#bobandalice</li>
-        <li class="chicklet">#bush</li>
-        <li class="chicklet">#clinton</li>
-        <li class="chicklet">#curious</li>
-        <li class="chicklet">#double-review</li>
-        <li class="chicklet">#graves</li>
-        <li class="chicklet">#important</li>
-        <li class="chicklet">#library-freedom</li>
-        <li class="chicklet">#mccain</li>
-        <li class="chicklet">#mexico</li>
-        <li class="chicklet">#needs_more</li>
-        <li class="chicklet">#newthings</li>
-        <li class="chicklet">#of_interest</li>
-        <li class="chicklet">#orange</li>
-        <li class="chicklet">#perot</li>
-        <li class="chicklet">#scary</li>
-        <li class="chicklet">#scary</li>
-        <li class="chicklet">#significant</li>
-        <li class="chicklet">#suspicious</li>
-        <li class="chicklet">#sweden</li>
-        <li class="chicklet">#thoughtful</li>
-        <li class="chicklet">#triple-check</li>
-        <li class="chicklet">#trumppence</li>
-        <li class="chicklet">#typoe</li>
-        <li class="chicklet">#yellowpence</li>
-        <li class="chicklet">#significant</li>
-        <li class="chicklet">#humanrights</li>
-        <li class="chicklet">#purple</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="results">
-    <h3>5 Results</h3>
-    <h4>Most recent activity first <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i></h4>
-    <ul class="results">
-      <li>
-        <!-- FB-post-type report -->
+</div></li>
+<li>
+  <!-- FB-post-type report -->
 <!-- Basically the same for tweets, youtube, etc. -->
 <div class="media-detail__media media-detail__media--undetermined">
   <div class="media-status__current media-status__current--undetermined">
@@ -199,8 +83,8 @@
   </li>
 </ul>
 </div>
-      </li>  
-      <li><!-- Fallback-type report -->
+</li>  
+<li><!-- Fallback-type report -->
 <!-- For unrecognized URLs we pull as many values as we can -->
 <div class="media-detail__media media-detail__media--in-progress">
   <div class="media-status__current media-status__current--in-progress">
@@ -252,8 +136,8 @@
   </li>
 </ul>
 </div></li>
-      <li>
-        <!-- FB-post-type report -->
+<li>
+  <!-- FB-post-type report -->
 <!-- Basically the same for tweets, youtube, etc. -->
 <div class="media-detail__media media-detail__media--verified">
   <div class="media-status__current media-status__current--verified">
@@ -305,9 +189,9 @@
   </li>
 </ul>
 </div>
-      </li>  
-      <li>
-          <!-- FB-post-type report -->
+</li>  
+<li>
+    <!-- FB-post-type report -->
 <!-- Basically the same for tweets, youtube, etc. -->
 <div class="media-detail__media media-detail__media--false">
   <div class="media-status__current media-status__current--false">
@@ -359,9 +243,9 @@
   </li>
 </ul>
 </div>
-      </li>
-      <li>
-        <!-- FB-post-type report -->
+</li>
+<li>
+  <!-- FB-post-type report -->
 <!-- Basically the same for tweets, youtube, etc. -->
 <div class="media-detail__media media-detail__media--undetermined">
   <div class="media-status__current media-status__current--undetermined">
@@ -413,14 +297,4 @@
   </li>
 </ul>
 </div>
-      </li>
-    </ul>
-  </section>
-</div>
-
-<script src="/js/app.js"></script>
-</body>
-
-</html>
-
-
+</li>

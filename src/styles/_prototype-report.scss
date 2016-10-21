@@ -14,18 +14,22 @@ $header-offset: 100px;
   // Statuses
   &.media-detail__media--verified {
     background-color: $hint-green;
+    border: 1px solid $green-500;
   }
 
   &.media-detail__media--undetermined {
     background-color: $hawkes-blue;
+    border: 1px solid $blue-500;
   }
 
   &.media-detail__media--in-progress {
-    background-color: $seashell-peach; 
+    background-color: $seashell-peach;
+    border: 1px solid $orange-500;
   }
 
   &.media-detail__media--false {
-    background-color: $pippin-red; 
+    background-color: $pippin-red;
+    border: 1px solid $red-500;
   }
 
   // Pender cards
