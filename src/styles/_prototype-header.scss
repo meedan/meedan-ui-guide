@@ -1,0 +1,15 @@
+
+// Headers
+
+// Add logo to the team and team manage pages
+.page__team, 
+.page__team-manage {
+  .header {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header-logo {
+    flex: 20;
+  }
+}

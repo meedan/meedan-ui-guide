@@ -92,7 +92,7 @@
 
 // Check form styles
 // 
-form {
+body.prototype form {
   max-width: $report-max-width;
   background-color: $white;
   padding: 16px;
