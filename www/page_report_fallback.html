@@ -14,23 +14,33 @@
 <div class="page report">  
   <!-- Classnames untouched from upstream -->
 <!-- — CGB 2016-10-12 -->
-<header class="header header--media"><a class="breadcrumb" title="« Back to Project" href="/"><span class="fa fa-angle-left caret caret--left"></span></a>
+<header class="header header--media">
+  <a class="breadcrumb" title="« Back to Project" href="/page_project.html">
+    <span class="fa fa-angle-left caret caret--left"></span>
+  </a>
   <div class="media-header">
     <div class="media-header__copy">
-      <h1 class="media-header__title">@@page-title</h1>
-      <div class="media-metadata-summary"><span class="media-metadata-summary__datum"><span>5</span><span> notes</span></span><span class="media-metadata-summary__datum">@@network</span><span class="media-metadata-summary__datum">@@username</span></div>
+      <h1 class="media-header__title">Page on domainname</h1>
+      <div class="media-metadata-summary">
+        <span class="media-metadata-summary__datum">
+        <span>5 notes</span>
+        <span class="media-metadata-summary__datum">domainname.com</span>
+        <span class="media-metadata-summary__datum">Undated</span>
+      </div>
     </div>
   </div>
-  <div class="header-actions"><span class="fa fa-ellipsis-h header-actions__settings-icon"></span>
-
+  <div class="header-actions">
+    <span class="fa fa-ellipsis-h header-actions__settings-icon"></span>
 </header>
+ 
 
   <!-- Fallback-type report -->
 <!-- For unrecognized URLs we pull as many values as we can -->
-<div class="media-detail__media media-detail__media--verified">
-  <div class="media-status__current media-status__current--verified">
+<a href="/_page_report_fallback.html" class="media-detail__media media-detail__media--in-progress">
+  <div class="media-status__current media-status__current--in-progress">
     <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
-    <span class="media-status__label">Verified</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+    <span class="media-status__label">In Progress</span>
+    <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
   </div>
   <div id="pender-card" class="pender-card fallback">
     <div class="card-header">
@@ -39,7 +49,7 @@
       </div>
       <div class="header-text-primary">
         <div class="name">
-          <a class="url" href="#">domainname.com</a>
+          <em class="url">domainname.com</em>
         </div>
       </div>
       <div class="header-text-secondary">
@@ -53,12 +63,12 @@
         </div>
         <ul class="card-footer">
           <li>First metadata item with long text going about this far perhaps.</li>
-          <li>Second metadata item which could have long text going on and on and perhaps even longer going to a second line or otherwise taking up lots of space like this.</li>
-          <li>Second metadata item which also might have pretty long text depending on what it is.</li>
+          <li>@metadata-secondary</li>
+          <li>@metadata-tertiary</li>
         </ul>
       </div>
       <div class="body-image">
-        <img title="thumbnail of an image" alt=" " src="http://placehold.it/72x72">
+        <img title='thumbnail of an image' alt=' ' src='/images/placeholder-2.png'>
       </div>
     </div>
   </div>
@@ -76,7 +86,7 @@
     Polling place problems
   </li>
 </ul>
-</div>
+</a>
 </div>
 
 <script src="/js/app.js"></script>

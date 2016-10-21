@@ -1,5 +1,11 @@
-      
-<li>@@include("./_report_claim.html")</li>
+<!-- Claim -->
+<li>@@include("./_report_claim.html", {
+    "text": "Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car.",
+    "link": "/page_report_claim.html"
+  })
+</li>
+
+<!-- Facebook -->
 <li>
   @@include('./_report_social.html', {
     "status": "undetermined",
@@ -11,10 +17,12 @@
     "body-image": "/images/placeholder.png" ,
     "metadata-primary": "28k Likes",
     "metadata-secondary": "88 Comments",
-    "metadata-tertiary": "570 Shares"
+    "metadata-tertiary": "570 Shares",
+    "link": "/page_report_facebook.html"
   })
 </li>  
-<li>@@include("./_report_fallback.html")</li>
+
+<!-- Tweet -->
 <li>
   @@include('./_report_social.html', {
     "status": "verified",
@@ -22,13 +30,16 @@
     "username": "@alolita",
     "network-icon": "<i class='fa fa-twitter'></i>",
     "author-avatar": "https://api.adorable.io/avatars/40/b.png",
-    "body-text": "Good piece on the danger of contempt culture. Calls out Python. <a href='http://blog.aurynn.com/contempt-culture'>blog.aurynn.com/contempt...</a>",
+    "body-text": "Good piece on the danger of contempt culture. Calls out Python. <em>blog.aurynn.com/contempt...</em>",
     "body-image": "/images/placeholder-3.png" ,
     "metadata-primary": "29 Likes",
     "metadata-secondary": "18 Retweets",
-    "metadata-tertiary": "21 Replies"
+    "metadata-tertiary": "21 Replies",
+    "link": "/page_report_twitter.html"
   })
 </li>  
+
+<!-- Youtube -->
 <li>
     @@include('./_report_social.html', {
       "status": "false",
@@ -37,12 +48,15 @@
       "network-icon": "<i class='fa fa-youtube-play'></i>",
       "author-avatar": "https://api.adorable.io/avatars/40/c.png",
       "body-text": "Rigging the Election - Video II: Mass Voter Fraud",
-      "body-image": "/images/placeholder-3.png" ,
+      "body-image": "/images/placeholder-2.png" ,
       "metadata-primary": "1,823,411 Views",
       "metadata-secondary": "88 Comments",
-      "metadata-tertiary": ""
+      "metadata-tertiary": "",
+      "link": "/page_report_youtube.html"
     })
 </li>
+
+<!-- Reddit -->
 <li>
   @@include('./_report_social.html', {
     "status": "undetermined",
@@ -54,6 +68,22 @@
     "body-image": "/images/placeholder-3.png",
     "metadata-primary": "5 comments",
     "metadata-secondary": "14 points",
-    "metadata-tertiary": "73% upvoted"
+    "metadata-tertiary": "73% upvoted",
+    "link": "/page_report_reddit.html"
+  })
+</li>
+
+
+<!-- Fallback -->
+<li>
+  @@include("./_report_fallback.html", {
+    "domain": "domainname.com",
+    "title": "This is the title element of the post",
+    "date": "Undated",
+    "metadata-primary": "First metadata item with long text going about this far perhaps.",
+    "metadata-secondary": "Second metadata item which could have long text going on and on and perhaps even longer going to a second line or otherwise taking up lots of space like this.",
+    "metadata-tertiary": "Third metadata item which also might have pretty long text depending on what it is.",
+    "image": "<img title='thumbnail of an image' alt=' ' src='/images/placeholder-2.png'>",
+    "link": "/page_report_fallback.html"
   })
 </li>

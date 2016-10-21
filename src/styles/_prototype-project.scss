@@ -1,3 +1,4 @@
+
 // Project page: Small screens
 // 
 // Note: Some of these rules could be avoided if the desktop styles were in a breakpoint. 
@@ -16,7 +17,7 @@
   }
 
   // Adjust header from desktop defaults
-  .header {
+  .home__content .header {
     display: block;
     font-size: 0.6em;
     position: static;
@@ -98,8 +99,8 @@
   }
 }
 
-// Responsive project page: Big screens
-// 
+// // Responsive project page: Big screens
+// // 
 // @media all and (min-width: 1800px) {
 //   body.page__project {
 //     ul.medias-list {

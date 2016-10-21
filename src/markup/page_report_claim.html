@@ -1,8 +1,15 @@
 @@include("./_header.html")
 
 <div class="page report">
-  @@include("./_report_page_header.html")
-  @@include("./_report_claim.html")
+  @@include("./_report_page_header.html", {
+    "page-title": "Page on domainname",
+    "network": "domainname.com",
+    "username": "Undated"
+  }) 
+  @@include("./_report_claim.html", {
+    "text": "Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car.",
+    "link": "/page_report_claim.html"
+  })
 </div>
 
 @@include("./_footer.html")

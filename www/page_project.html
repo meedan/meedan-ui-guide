@@ -444,7 +444,7 @@
             <section class="team-sidebar__projects" data-reactid=".0.1.2.1.0.0.0.0">
               <h2 class="team-sidebar__projects-heading" data-reactid=".0.1.2.1.0.0.0.0.0">Verification Projects</h2>
               <ul class="team-sidebar__projects-list" data-reactid=".0.1.2.1.0.0.0.0.1">
-                <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:0"><a class="team-sidebar__project-link" href="/project/255" data-reactid=".0.1.2.1.0.0.0.0.1.0:0.0">Misc (State Undetermined)</a></li>
+                <li class="team-sidebar__project--current" data-reactid=".0.1.2.1.0.0.0.0.1.0:0"><a class="team-sidebar__project-link" href="/project/255" data-reactid=".0.1.2.1.0.0.0.0.1.0:0.0">Misc</a></li>
                 <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:1"><a class="team-sidebar__project-link" href="/project/254" data-reactid=".0.1.2.1.0.0.0.0.1.0:1.0">Wyoming</a></li>
                 <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:2"><a class="team-sidebar__project-link" href="/project/253" data-reactid=".0.1.2.1.0.0.0.0.1.0:2.0">Wisconsin</a></li>
                 <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:3"><a class="team-sidebar__project-link" href="/project/252" data-reactid=".0.1.2.1.0.0.0.0.1.0:3.0">West Virginia</a></li>
@@ -494,7 +494,7 @@
                 <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:1b"><a class="team-sidebar__project-link" href="/project/44" data-reactid=".0.1.2.1.0.0.0.0.1.0:1b.0">California</a></li>
                 <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:1c"><a class="team-sidebar__project-link" href="/project/43" data-reactid=".0.1.2.1.0.0.0.0.1.0:1c.0">Rhode Island</a></li>
                 <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:1d"><a class="team-sidebar__project-link" href="/project/42" data-reactid=".0.1.2.1.0.0.0.0.1.0:1d.0">New York</a></li>
-                <li class="team-sidebar__project team-sidebar__project--current" data-reactid=".0.1.2.1.0.0.0.0.1.0:1e"><a class="team-sidebar__project-link" href="/project/41" data-reactid=".0.1.2.1.0.0.0.0.1.0:1e.0">Virginia</a></li>
+                <li class="team-sidebar__project team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:1e"><a class="team-sidebar__project-link" href="/project/41" data-reactid=".0.1.2.1.0.0.0.0.1.0:1e.0">Virginia</a></li>
                 <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:1f"><a class="team-sidebar__project-link" href="/project/40" data-reactid=".0.1.2.1.0.0.0.0.1.0:1f.0">Arizona</a></li>
                 <li class="team-sidebar__project" data-reactid=".0.1.2.1.0.0.0.0.1.0:1g"><a class="team-sidebar__project-link" href="/project/39" data-reactid=".0.1.2.1.0.0.0.0.1.0:1g.0">Colorado</a></li>
                 <noscript data-reactid=".0.1.2.1.0.0.0.0.1.1"></noscript>
@@ -574,16 +574,17 @@
         
           <div class="medias-and-annotations" data-reactid=".0.1.2.1.0.1.0">
             <ul class="medias-list annotations-list" data-reactid=".0.1.2.1.0.1.0.0">
-                    
+              <!-- Claim -->
 <li><!-- Claim-type report -->
-<div class="media-detail__media media-detail__media--undetermined">
+<a href="/page_report_claim.html" class="media-detail__media media-detail__media--undetermined">
   <div class="media-status__current media-status__current--undetermined">
     <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
-    <span class="media-status__label">Undetermined</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+    <span class="media-status__label">Undetermined</span>
+    <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
   </div>
 
   <div id="pender-card" class="pender-card claim">
-    <p class="claim-text">"Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car."</p>
+    <p class="claim-text">Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car.</p>
     <div class="claim-attribution">
       <div>
         <p class="claim-attribution-name">— Anonymous Username McUsername</p>
@@ -605,14 +606,18 @@
     Polling place problems
   </li>
 </ul>
-</div></li>
+</a>
+</li>
+
+<!-- Facebook -->
 <li>
   <!-- FB-post-type report -->
 <!-- Basically the same for tweets, youtube, etc. -->
-<div class="media-detail__media media-detail__media--undetermined">
+<a href="/page_report_facebook.html" class="media-detail__media media-detail__media--undetermined">
   <div class="media-status__current media-status__current--undetermined">
     <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
-    <span class="media-status__label">undetermined</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+    <span class="media-status__label">undetermined</span>
+    <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
   </div>
   <div id="pender-card" class="pender-card facebook-post">
     <div class="card-header">
@@ -658,67 +663,18 @@
     Polling place problems
   </li>
 </ul>
-</div>
+</a>
 </li>  
-<li><!-- Fallback-type report -->
-<!-- For unrecognized URLs we pull as many values as we can -->
-<div class="media-detail__media media-detail__media--in-progress">
-  <div class="media-status__current media-status__current--in-progress">
-    <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
-    <span class="media-status__label">In Progress</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
-  </div>
-  <div id="pender-card" class="pender-card fallback">
-    <div class="card-header">
-      <div class="network-icon">
-        <i class="fa fa-link"></i>
-      </div>
-      <div class="header-text-primary">
-        <div class="name">
-          <a class="url" href="#">domainname.com</a>
-        </div>
-      </div>
-      <div class="header-text-secondary">
-        Undated
-      </div>
-    </div>
-    <div class="card-body">
-      <div>
-        <div class="body-text">
-          This is the title element of the post
-        </div>
-        <ul class="card-footer">
-          <li>First metadata item with long text going about this far perhaps.</li>
-          <li>Second metadata item which could have long text going on and on and perhaps even longer going to a second line or otherwise taking up lots of space like this.</li>
-          <li>Second metadata item which also might have pretty long text depending on what it is.</li>
-        </ul>
-      </div>
-      <div class="body-image">
-        <img title="thumbnail of an image" alt=" " src="/images/placeholder-2.png">
-      </div>
-    </div>
-  </div>
-  <ul class="check-metadata">
-  <li class="contributor">Added by Lucas Graves <span class="datetime-contributed" title="2016-10-10 at 4:15 AM PST">4h ago</span></li>
-  <li class="note-count">2 notes</li>
-  <li class="tags">
-    <ul>
-      <li>#eyewitness</li>
-      <li>#storm</li>
-      <li>#for_saturday</li>
-    </ul>
-  </li>
-  <li class="custom-categories chicklet">
-    Polling place problems
-  </li>
-</ul>
-</div></li>
+
+<!-- Tweet -->
 <li>
   <!-- FB-post-type report -->
 <!-- Basically the same for tweets, youtube, etc. -->
-<div class="media-detail__media media-detail__media--verified">
+<a href="/page_report_twitter.html" class="media-detail__media media-detail__media--verified">
   <div class="media-status__current media-status__current--verified">
     <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
-    <span class="media-status__label">verified</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+    <span class="media-status__label">verified</span>
+    <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
   </div>
   <div id="pender-card" class="pender-card facebook-post">
     <div class="card-header">
@@ -738,7 +694,7 @@
     </div>
     <div class="card-body">
       <div class="body-text">
-        Good piece on the danger of contempt culture. Calls out Python. <a href='http://blog.aurynn.com/contempt-culture'>blog.aurynn.com/contempt...</a>
+        Good piece on the danger of contempt culture. Calls out Python. <em>blog.aurynn.com/contempt...</em>
       </div>
       <div class="body-image">
         <img title=" " alt=" " src="/images/placeholder-3.png">
@@ -764,15 +720,18 @@
     Polling place problems
   </li>
 </ul>
-</div>
+</a>
 </li>  
+
+<!-- Youtube -->
 <li>
     <!-- FB-post-type report -->
 <!-- Basically the same for tweets, youtube, etc. -->
-<div class="media-detail__media media-detail__media--false">
+<a href="/page_report_youtube.html" class="media-detail__media media-detail__media--false">
   <div class="media-status__current media-status__current--false">
     <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
-    <span class="media-status__label">false</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+    <span class="media-status__label">false</span>
+    <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
   </div>
   <div id="pender-card" class="pender-card facebook-post">
     <div class="card-header">
@@ -818,15 +777,18 @@
     Polling place problems
   </li>
 </ul>
-</div>
+</a>
 </li>
+
+<!-- Reddit -->
 <li>
   <!-- FB-post-type report -->
 <!-- Basically the same for tweets, youtube, etc. -->
-<div class="media-detail__media media-detail__media--undetermined">
+<a href="/page_report_reddit.html" class="media-detail__media media-detail__media--undetermined">
   <div class="media-status__current media-status__current--undetermined">
     <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
-    <span class="media-status__label">undetermined</span><i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+    <span class="media-status__label">undetermined</span>
+    <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
   </div>
   <div id="pender-card" class="pender-card facebook-post">
     <div class="card-header">
@@ -872,7 +834,65 @@
     Polling place problems
   </li>
 </ul>
-</div>
+</a>
+</li>
+
+
+<!-- Fallback -->
+<li>
+  <!-- Fallback-type report -->
+<!-- For unrecognized URLs we pull as many values as we can -->
+<a href="/page_report_fallback.html" class="media-detail__media media-detail__media--in-progress">
+  <div class="media-status__current media-status__current--in-progress">
+    <i class="media-status__icon media-status__icon--circle / fa fa-circle"></i>
+    <span class="media-status__label">In Progress</span>
+    <i class="media-status__icon media-status__icon--caret fa fa-caret-down"></i>
+  </div>
+  <div id="pender-card" class="pender-card fallback">
+    <div class="card-header">
+      <div class="network-icon">
+        <i class="fa fa-link"></i>
+      </div>
+      <div class="header-text-primary">
+        <div class="name">
+          <em class="url">domainname.com</em>
+        </div>
+      </div>
+      <div class="header-text-secondary">
+        Undated
+      </div>
+    </div>
+    <div class="card-body">
+      <div>
+        <div class="body-text">
+          This is the title element of the post
+        </div>
+        <ul class="card-footer">
+          <li>First metadata item with long text going about this far perhaps.</li>
+          <li>@metadata-secondary</li>
+          <li>@metadata-tertiary</li>
+        </ul>
+      </div>
+      <div class="body-image">
+        <img title='thumbnail of an image' alt=' ' src='/images/placeholder-2.png'>
+      </div>
+    </div>
+  </div>
+  <ul class="check-metadata">
+  <li class="contributor">Added by Lucas Graves <span class="datetime-contributed" title="2016-10-10 at 4:15 AM PST">4h ago</span></li>
+  <li class="note-count">2 notes</li>
+  <li class="tags">
+    <ul>
+      <li>#eyewitness</li>
+      <li>#storm</li>
+      <li>#for_saturday</li>
+    </ul>
+  </li>
+  <li class="custom-categories chicklet">
+    Polling place problems
+  </li>
+</ul>
+</a>
 </li>
             </ul>
             <form class="add-annotation" name="addannotation" data-reactid=".0.1.2.1.0.1.0.1">

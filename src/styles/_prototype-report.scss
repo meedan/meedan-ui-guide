@@ -7,9 +7,14 @@ $header-offset: 100px;
 
 // Reports
 // 
-.media-detail__media {
+a.media-detail__media {
   max-width: $report-max-width;
   margin: 16px auto;
+  display: block!important;
+
+  &:hover {
+    text-decoration: none;
+  }
 
   // Statuses
   &.media-detail__media--verified {
@@ -39,7 +44,7 @@ $header-offset: 100px;
     border-radius: 4px;
     padding: 10px;
     margin: 0 10px;
-    min-height: none;
+    min-height: 0;
     color: $firefly-80;
 
     img {
@@ -154,5 +159,33 @@ $header-offset: 100px;
   // Final metadata row
   .check-metadata {
     @extend %metadata;
+  }
+}
+
+// Reports on project page
+//
+.page__project {
+  .author-avatar,
+  ul.card-footer, 
+  p.claim-attribution-link {
+    display: none;
+  }
+
+  .card-body {
+    font-size: 14px;
+    .body-image img {
+      width: 40px;
+    }
+  }
+
+  .header-text-primary {
+    flex-direction: row!important;
+  }
+
+  .name, 
+  .username {
+    width: auto;
+    overflow: hidden;
+    padding-right: 8px;
   }
 }
