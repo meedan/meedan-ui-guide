@@ -6,19 +6,23 @@
     "network": "Youtube",
     "username": "Project Veritas Action"
   }) 
+  <article class="media__contents">
+    @@include('./_report_social.html', {
+      "status": "false",
+      "user-full-name": "Veritas Action",
+      "username": "username",
+      "network-icon": "<i class='fa fa-youtube-play'></i>",
+      "author-avatar": "https://api.adorable.io/avatars/40/c.png",
+      "body-text": "Rigging the Election - Video II: Mass Voter Fraud",
+      "body-image": "/images/placeholder-3.png" ,
+      "metadata-primary": "1,823,411 Views",
+      "metadata-secondary": "88 Comments",
+      "metadata-tertiary": ""
+    })
 
-  @@include('./_report_social.html', {
-    "status": "false",
-    "user-full-name": "Veritas Action",
-    "username": "username",
-    "network-icon": "<i class='fa fa-youtube-play'></i>",
-    "author-avatar": "https://api.adorable.io/avatars/40/c.png",
-    "body-text": "Rigging the Election - Video II: Mass Voter Fraud",
-    "body-image": "/images/placeholder-3.png" ,
-    "metadata-primary": "1,823,411 Views",
-    "metadata-secondary": "88 Comments",
-    "metadata-tertiary": ""
-  })
+    @@include('./_report_annotation_timeline.html')
+    
+  </article>
 </div>
 
 @@include("./_footer.html")

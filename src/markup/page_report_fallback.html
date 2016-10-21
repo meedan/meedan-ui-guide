@@ -5,18 +5,23 @@
     "page-title": "Page on domainname",
     "network": "domainname.com",
     "username": "Undated"
-  }) 
-
-  @@include("./_report_fallback.html", {
-    "domain": "domainname.com",
-    "title": "This is the title element of the post",
-    "date": "Undated",
-    "metadata-primary": "First metadata item with long text going about this far perhaps.",
-    "metadata-secondary": "Second metadata item which could have long text going on and on and perhaps even longer going to a second line or otherwise taking up lots of space like this.",
-    "metadata-tertiary": "Third metadata item which also might have pretty long text depending on what it is.",
-    "image": "<img title='thumbnail of an image' alt=' ' src='/images/placeholder-2.png'>",
-    "link": "/_page_report_fallback.html"
   })
+
+  <article class="media__contents">
+    @@include("./_report_fallback.html", {
+      "domain": "domainname.com",
+      "title": "This is the title element of the post",
+      "date": "Undated",
+      "metadata-primary": "First metadata item with long text going about this far perhaps.",
+      "metadata-secondary": "Second metadata item which could have long text going on and on and perhaps even longer going to a second line or otherwise taking up lots of space like this.",
+      "metadata-tertiary": "Third metadata item which also might have pretty long text depending on what it is.",
+      "image": "<img title='thumbnail of an image' alt=' ' src='/images/placeholder-2.png'>",
+      "link": "/_page_report_fallback.html"
+    })
+
+    @@include('./_report_annotation_timeline.html')
+    
+  </article>
 </div>
 
 @@include("./_footer.html")

@@ -35,6 +35,10 @@ $firefly-60-2: rgba($firefly-60, 0.2);
 $firefly-60-5: rgba($firefly-60, 0.5);
 $firefly-60-8: rgba($firefly-60, 0.8);
 
+.page {
+  background-color: #fbfcfc;
+}
+
 // Custom categories get a "chicklet style"
 // 
 .chicklet {
@@ -72,7 +76,7 @@ $firefly-60-8: rgba($firefly-60, 0.8);
   padding: 5px 10px;
   font-size: 14px;
   .tags {
-    color: $firefly-60-5;
+    color: $firefly-60-8;
   }
   li {
     display: inline-block;

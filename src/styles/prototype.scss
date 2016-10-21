@@ -22,26 +22,3 @@
     margin-bottom: 0.2em;
   }
 }
-
-
-// Fade in things
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-
-.fade-in {
-  opacity:0;  /* start hidden */
-  animation:fadeIn ease-in 1;
-  animation-fill-mode:forwards;
-  animation-duration:1s;
-}
-
-.fade-in.one {
-  animation-delay: 0.7s;
-}
-
-.fade-in.two {
-  animation-delay: 1.2s;
-}
-
-.fade-in.three {
-  animation-delay: 1.6s;
-}

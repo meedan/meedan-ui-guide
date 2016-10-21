@@ -5,8 +5,9 @@
     "page-title": "Facebook post by Fred Scharmen",
     "network": "Facebook.com",
     "username": "Fred Scharmen"
-  }) 
+  })
 
+  <article class="media__contents">
   @@include('./_report_social.html', {
     "status": "undetermined",
     "title": "Post by Username",
@@ -22,6 +23,10 @@
     "metadata-tertiary": "570 Shares",
     "link": ""
   })
+    
+  @@include('./_report_annotation_timeline.html')
+
+</article>
 </div>
 
 @@include("./_footer.html")

@@ -7,18 +7,24 @@
     "username": "@alolita"
   }) 
 
-  @@include('./_report_social.html', {
-    "status": "verified",
-    "user-full-name": "Alolita Sharma",
-    "username": "@alolita",
-    "network-icon": "<i class='fa fa-twitter'></i>",
-    "author-avatar": "https://api.adorable.io/avatars/40/b.png",
-    "body-text": "Good piece on the danger of contempt culture. Calls out Python. <em href='http://blog.aurynn.com/contempt-culture'>blog.aurynn.com/contempt...</em>",
-    "body-image": "/images/placeholder-3.png" ,
-    "metadata-primary": "29 Likes",
-    "metadata-secondary": "18 Retweets",
-    "metadata-tertiary": "21 Replies"
-  })
+  <article class="media__contents">
+    @@include('./_report_social.html', {
+      "status": "verified",
+      "user-full-name": "Alolita Sharma",
+      "username": "@alolita",
+      "network-icon": "<i class='fa fa-twitter'></i>",
+      "author-avatar": "https://api.adorable.io/avatars/40/b.png",
+      "body-text": "Good piece on the danger of contempt culture. Calls out Python. <em href='http://blog.aurynn.com/contempt-culture'>blog.aurynn.com/contempt...</em>",
+      "body-image": "/images/placeholder-3.png" ,
+      "metadata-primary": "29 Likes",
+      "metadata-secondary": "18 Retweets",
+      "metadata-tertiary": "21 Replies"
+    })
+
+    @@include('./_report_annotation_timeline.html')
+    
+  </article>
+
 </div>
 
 @@include("./_footer.html")
