@@ -1,6 +1,6 @@
 var gulp = require('gulp');
-var changed = require('gulp-changed');
 var config = require('../config');
+var changed = require('gulp-changed');
 var browserSync = require('browser-sync');
 
 gulp.task('images', function () {

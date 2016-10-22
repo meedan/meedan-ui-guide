@@ -1,7 +1,7 @@
 var gulp = require('gulp');
+var config = require('../config');
 var notify = require('gulp-notify');
 var changed = require('gulp-changed');
-var config = require('../config');
 var browserSync = require('browser-sync');
 var debug = require('gulp-debug');
 var colors = require('colors');
@@ -15,6 +15,7 @@ gulp.task('markup', function () {
       prefix: config.markup.prefix
     }))
     .on('error', handleErrors)
+    .pipe(debug({title: 'markup:'}))
     .pipe(gulp.dest(config.markup.dest))
     .pipe(browserSync.reload({
       stream: true

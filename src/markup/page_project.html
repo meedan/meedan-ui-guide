@@ -154,29 +154,9 @@
         </div>
         <div class="project__content" data-reactid=".0.1.2.1.0.1">
 
-          <div class="create-media" data-reactid=".0.1.2.1.0.1.1">
-            <noscript data-reactid=".0.1.2.1.0.1.1.0"></noscript>
-            <div id="media-preview" class="create-media__preview" data-reactid=".0.1.2.1.0.1.1.1"></div>
-            <div id="media-url-container" class="create-media__form" data-reactid=".0.1.2.1.0.1.1.2">
-              <button class="create-media__button create-media__button--new" data-reactid=".0.1.2.1.0.1.1.2.0">+</button>
-              <div class="create-media__input" style="font-size:16px;line-height:24px;width:100%;height:48px;display:inline-block;position:relative;background-color:transparent;font-family:Roboto, sans-serif;transition:height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;" data-reactid=".0.1.2.1.0.1.1.2.1">
-                <div style="position:absolute;opacity:1;color:rgba(0,0,0,0.3);transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;bottom:12px;" data-reactid=".0.1.2.1.0.1.1.2.1.1">Paste a Twitter, Instagram, Facebook or YouTube link</div>
-                <input name="url" id="create-media-url" style="tap-highlight-color:rgba(0,0,0,0);padding:0;position:relative;width:100%;height:100%;border:none;outline:none;background-color:transparent;color:rgba(0, 0, 0, 0.87);font:inherit;" type="text" data-reactid=".0.1.2.1.0.1.1.2.1.2">
-                <div data-reactid=".0.1.2.1.0.1.1.2.1.3">
-                  <hr style="border:none;border-bottom:solid 1px;border-color:#e0e0e0;bottom:8px;box-sizing:content-box;margin:0;position:absolute;width:100%;" data-reactid=".0.1.2.1.0.1.1.2.1.3.0">
-                  <hr style="border:none;border-bottom:solid 2px;border-color:#2196f3;bottom:8px;box-sizing:content-box;margin:0;position:absolute;width:100%;transform:scaleX(0);transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;" data-reactid=".0.1.2.1.0.1.1.2.1.3.1">
-                </div>
-              </div>
-              <div class="create-media__buttons" data-reactid=".0.1.2.1.0.1.1.2.2">
-                <button id="create-media-preview" class="create-media__button create-media__button--preview" style="border:10px;background:none;box-sizing:border-box;display:inline-block;font:inherit;font-family:Roboto, sans-serif;tap-highlight-color:rgba(0, 0, 0, 0);appearance:button;cursor:pointer;text-decoration:none;outline:none;transform:translate3d(0, 0, 0);color:#2196f3;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;font-size:14px;letter-spacing:0;text-transform:uppercase;font-weight:500;border-radius:2px;user-select:none;position:relative;overflow:hidden;background-color:rgba(0, 0, 0, 0);line-height:36px;min-width:88px;padding:0;margin:0;" tabindex="0" type="button" data-reactid=".0.1.2.1.0.1.1.2.2.0">
-                  <div data-reactid=".0.1.2.1.0.1.1.2.2.0.0"><span style="position:relative;padding-left:16px;padding-right:16px;" data-reactid=".0.1.2.1.0.1.1.2.2.0.0.1">Preview</span></div>
-                </button>
-                <button id="create-media-submit" class="create-media__button create-media__button--submit" style="border:10px;background:none;box-sizing:border-box;display:inline-block;font:inherit;font-family:Roboto, sans-serif;tap-highlight-color:rgba(0, 0, 0, 0);appearance:button;cursor:pointer;text-decoration:none;outline:none;transform:translate3d(0, 0, 0);color:#1e88e5;transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;font-size:14px;letter-spacing:0;text-transform:uppercase;font-weight:500;border-radius:2px;user-select:none;position:relative;overflow:hidden;background-color:rgba(0, 0, 0, 0);line-height:36px;min-width:88px;padding:0;margin:0;" tabindex="0" type="button" data-reactid=".0.1.2.1.0.1.1.2.2.1">
-                  <div data-reactid=".0.1.2.1.0.1.1.2.2.1.0"><span style="position:relative;padding-left:16px;padding-right:16px;" data-reactid=".0.1.2.1.0.1.1.2.2.1.0.1">Post</span></div>
-                </button>
-              </div>
-            </div>
-          </div>
+          @@include("./_report_input.html", {
+            "placeholder": "Type or paste link for verification"
+          })
         
           <div class="medias-and-annotations" data-reactid=".0.1.2.1.0.1.0">
             <ul class="medias-list annotations-list" data-reactid=".0.1.2.1.0.1.0.0">
