@@ -1,5 +1,7 @@
-@@include("./_header.html")
-
+<!DOCTYPE html>
+<html>
+@@include("./_head.html")
+<body>
 <div class="page report">  
   @@include("./_report_page_header.html", {
     "page-title": "Page on domainname",
@@ -19,9 +21,7 @@
       "link": "/_page_report_fallback.html"
     })
 
-    @@include('./_report_input.html')
-    
+    @@include('./_report_annotations.html')
   </article>
 </div>
-
-@@include("./_footer.html")
+</body>

@@ -222,3 +222,36 @@ a.media-detail__media {
     padding-right: 8px;
   }
 }
+
+// Report tips for Electionland
+.report-tips {
+  font-size: 14px;
+  padding: 1em;
+  color: $firefly-60;
+
+  h3 {
+    @extend .media__notes-heading;
+  }
+  ul {
+    margin-left: 1em;
+    display: flex;
+    li {
+      border: 1px solid $firefly-20;
+      width: 33%;
+      padding: 1em;
+      &:nth-of-type(2),
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        border-left-width: 0;
+      }
+
+    }
+    span {
+      font-weight: bold;
+      display: block;
+    }
+    em {
+      font-style: normal;
+    }
+  }
+}

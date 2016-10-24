@@ -1,15 +1,17 @@
-@@include("./_header.html")
-
-<div class="page report">
-  @@include("./_report_page_header.html", {
-    "page-title": "Quote from Username McUsername",
-    "network": "",
-    "username": "Undated"
-  }) 
-  @@include("./_report_claim.html", {
-    "text": "Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car.",
-    "link": "/page_report_claim.html"
-  })
-</div>
-
-@@include("./_footer.html")
+<!DOCTYPE html>
+  <html>
+  @@include("./_head.html")
+  <body>
+    <div class="page report">
+      @@include("./_report_page_header.html", {
+        "page-title": "Quote from Username McUsername",
+        "network": "",
+        "username": "Undated"
+      }) 
+      @@include("./_report_claim.html", {
+        "text": "Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car.",
+        "link": "/page_report_claim.html"
+      })
+    </div>
+  </body>
+</html>

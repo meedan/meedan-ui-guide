@@ -1,4 +1,7 @@
-@@include("./_header.html")
+<!DOCTYPE html>
+<html>
+@@include("./_head.html")
+<body>
 
 <div class="page report">  
   @@include("./_report_page_header.html", {
@@ -25,6 +28,11 @@
     
   </article>
 
+  @@include("./_report_input.html", {
+    "placeholder": "Add comment"
+  })
+
+  @@include('./_report_tips.html')
 </div>
 
-@@include("./_footer.html")
+</body>

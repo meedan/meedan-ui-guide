@@ -26,7 +26,7 @@ module.exports = {
   },
   markup: {
     dest: dest,
-    src: src + ["/markup/{*.html,_*.html,*.md}"],
+    src: [src + "/markup/{*.html,_*.html,*.md}"],
     prefix: "@@"
   }
 };
