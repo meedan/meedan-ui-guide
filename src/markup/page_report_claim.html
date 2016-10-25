@@ -7,11 +7,18 @@
         "page-title": "Quote from Username McUsername",
         "network": "",
         "username": "Undated"
-      }) 
-      @@include("./_report_claim.html", {
-        "text": "Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car.",
-        "link": "/page_report_claim.html"
       })
+      <article class="media__contents">
+        @@include("./_report_claim.html", {
+          "text": "Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car.",
+          "link": "/page_report_claim.html"
+        })
+
+        @@include('./_report_annotations.html')
+        @@include('./_report_input.html', {
+          "placeholder": "Paste a link or add a comment to help verify"
+        })
+      </article>
     </div>
   </body>
 </html>
