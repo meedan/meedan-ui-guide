@@ -98,9 +98,19 @@ form.prototype {
   padding: 16px;
   font-size: 18px;
   @extend %input-floats;
+  background-color: $hawkes-blue;
 
-  & section > div {
+  & section > div,
+  & section > section {
     margin-top: 40px;
+  }
+
+  .supergroup {
+    border: 1px solid $firefly-20;
+    padding: 16px;
+    background-color: white;
+    border-radius: 4px;
+    width: $prototype-input-width + 10%;
   }
 
   section.form-header {
@@ -150,6 +160,7 @@ form.prototype {
     margin: 0;
     outline: 0;
     width: $prototype-input-width;
+    background-color: transparent;
   }
 
   .required {
