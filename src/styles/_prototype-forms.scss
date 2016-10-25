@@ -95,7 +95,7 @@
 form.prototype {
   max-width: $report-max-width;
   background-color: $white;
-  padding: 16px;
+  padding: 16px 16px 64px;
   font-size: 18px;
   @extend %input-floats;
   background-color: $hawkes-blue;
