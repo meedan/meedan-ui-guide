@@ -1,7 +1,7 @@
 
 // Variables 
 // 
-$prototype-input-width: 80%;
+$prototype-input-width: 100%;
 $report-max-width: 800px;
 
 // Colors
@@ -35,7 +35,7 @@ $firefly-60-2: rgba($firefly-60, 0.2);
 $firefly-60-5: rgba($firefly-60, 0.5);
 $firefly-60-8: rgba($firefly-60, 0.8);
 
-.page {
+body {
   background-color: #fbfcfc;
 }
 

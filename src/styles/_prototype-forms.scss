@@ -93,24 +93,25 @@
 // Check form styles
 // 
 form.prototype {
-  max-width: $report-max-width;
-  background-color: $white;
-  padding: 16px 16px 64px;
-  font-size: 18px;
   @extend %input-floats;
   background-color: $hawkes-blue;
+  border: 1px solid $check-blue;
+  font-size: 18px;
+  margin: 0 auto;
+  max-width: $report-max-width;
+  padding: 16px 16px 64px;
 
   & section > div,
   & section > section {
     margin-top: 40px;
   }
 
-  .supergroup {
+  .card {
     border: 1px solid $firefly-20;
     padding: 16px;
     background-color: white;
     border-radius: 4px;
-    width: $prototype-input-width + 10%;
+    // width: $prototype-input-width + 100px;
   }
 
   section.form-header {
@@ -149,6 +150,7 @@ form.prototype {
   }
 
   input {
+    background-color: transparent;
     border-width: 0;
     border-bottom: 1px solid $firefly-20;
     border-radius: 0;
@@ -160,7 +162,6 @@ form.prototype {
     margin: 0;
     outline: 0;
     width: $prototype-input-width;
-    background-color: transparent;
   }
 
   .required {
