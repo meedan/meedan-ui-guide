@@ -1,14 +1,11 @@
 
 // Project page: Small screens
 // 
-// Note: Some of these rules could be avoided if the desktop styles were in a breakpoint. 
-// But for now I'm just assuming desktop-first design, with this query added on top. — CGB 2016-10-17
-// 
 @media all and (max-width: 680px) {
 
   // Refine padding
   .home__content {
-    padding-top: 0;
+    padding: 0 8px;
   }
 
   // Hide the sidebar

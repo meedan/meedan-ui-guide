@@ -1,68 +1,70 @@
-$claim-icon-offset: 50px;
 $header-offset: 100px;
 
 .page.report {
   padding-top: $header-offset;
 }
 
-
 // Fade in things
 @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
 
-// Reports on the project page and report detail page
-// should fade in
-ul.medias-list > li,
-a.media-detail__media
- {
+.medias-list li, 
+.annotations-list li {
   opacity:0;  /* start hidden */
   animation:fadeIn ease-in 1;
   animation-fill-mode:forwards;
   animation-duration:0.6s;
-}
-
-ul.medias-list {
-  & > li:nth-of-type(1) {
+  &:nth-of-type(1) {
     animation-duration:0.2s;
   }
-  & > li:nth-of-type(2) {
+  &:nth-of-type(2) {
     animation-duration:0.4s;
   }
-  & > li:nth-of-type(3) {
+  &:nth-of-type(3) {
     animation-duration:0.5s;
   }
 }
-
 
 // Reports
 // 
 .media-detail__media {
   max-width: $report-max-width;
-  margin: 16px auto;
+  margin: 24px auto;
   display: block!important;
+  border: 1px solid $firefly-20;
+  @include box_shadow(1);
+  border-left: 8px solid $firefly-40;
+  background-color: white;
+  transition: 0.4s box-shadow;
 
+  // Align the status icon with the network icon
+  .media-status__current {
+    margin-left: 8px;
+  }
+
+  // Ensure text is not hyper linked
   &:hover {
     text-decoration: none;
   }
 
-  // Statuses
-  &.media-detail__media--verified {
-    background-color: $hint-green;
-    border: 1px solid $green-500;
+  img {
+    border-radius: 3px;
   }
 
-  &.media-detail__media--undetermined {
-    background-color: $hawkes-blue;
-    border: 1px solid $blue-500;
+  // Statuses 
+  &--verified {
+    border-left-color: $green-500;
+  }
+  
+  &--undetermined {
+    border-left-color: $blue-500;
+  }
+  
+  &--in-progress {
+    border-left-color: $orange-500;
   }
 
-  &.media-detail__media--in-progress {
-    background-color: $seashell-peach;
-    border: 1px solid $orange-500;
-  }
-
-  &.media-detail__media--false {
-    background-color: $pippin-red;
-    border: 1px solid $red-500;
+  &--false {
+    border-left-color: $red-500;
   }
 
   // Final metadata row
@@ -71,29 +73,26 @@ ul.medias-list {
   }
 }
 
-// Pender cards
+// Pender cards inside reports
+//
 .pender-card {
   background-color: $white;
-  border: 1px solid $firefly-60-2;
+  border: 1px solid $firefly-60-1;
   border-radius: 4px;
-  padding: 10px;
-  margin: 0 10px;
+  padding: 8px;
+  margin: 0 8px;
   min-height: 0;
   color: $firefly-80;
 
-  img {
-    border-radius: 3px;
-  }
-
   .card-header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     .network-icon {
-      width: 24px;
+      width: 20px;
+      margin-right: 8px;
       & > .fa { 
-        font-size: 24px;
+        font-size: 20px;
       }
-      margin-right: 10px;
     }
     .author-avatar {
       margin-right: 14px;
@@ -128,19 +127,19 @@ ul.medias-list {
       color: $firefly-40; 
       margin-right: 20px;
       text-align: right;
-      padding-left: 10px;
+      padding-left: 8px;
     }
   }
 
   .card-body {
-    margin: 18px 20px 18px 36px;
+    margin: 14px 20px 14px 28px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     font-size: 18px;
 
     .body-text {
-      padding-right: 10px;
+      padding-right: 8px;
     }
   }
 
@@ -153,19 +152,13 @@ ul.medias-list {
 
 // Claim only
 .pender-card.claim {
+  .claim-body {
+    display: flex;
+  }
   .claim-text {
     font-size: 24px;
     font-weight: 100;
-    margin-left: $claim-icon-offset;
-    &:before {
-      color: $firefly-20;
-      content: "\f10d";
-      display: inline-block;
-      font-family: FontAwesome;
-      font-size: 30px;
-      margin-left: -$claim-icon-offset;
-      padding: 0 10px;
-    }
+    margin-left: 8px;
   }
   .claim-attribution {
     display: flex;
@@ -190,20 +183,36 @@ ul.medias-list {
   }
 }
 
-// Annotation timeline 
-.page.report {
-
-}
-
 // Reports on project page
 //
 .page__project {
+
+  // Hide some elements
   .author-avatar,
   ul.card-footer, 
   p.claim-attribution-link {
     display: none;
   }
 
+  // Greyscale images
+  .media-detail__media {
+    img {
+      border-radius: 3px;
+      filter: grayscale(100%);
+      transition: 0.4s filter;
+    }
+
+    // Fade in on hover 
+    &:hover {
+      text-decoration: none;
+      @include box-shadow(2)
+      img {
+        filter: grayscale(0%); 
+      }
+    }
+  }
+
+  // Smaller typography and image
   .card-body {
     font-size: 14px;
     .body-image img {
@@ -211,8 +220,10 @@ ul.medias-list {
     }
   }
 
+  // Re-flow the header text
   .header-text-primary {
     flex-direction: row!important;
+    align-content: center;
   }
 
   .name, 
@@ -220,6 +231,7 @@ ul.medias-list {
     width: auto;
     overflow: hidden;
     padding-right: 8px;
+    line-height: 16px;
   }
 }
 

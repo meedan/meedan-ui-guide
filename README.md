@@ -25,6 +25,5 @@ The console will also indicate an IP address that you can open on other devices.
 ## Todos
 
 - Enhancement: Automatically import the latest stylesheets — for now do something like `cp -R ~/git/check-app/check-web/src/app/styles ~/git/meedan-ui-guide/src/styles/$(date +%Y-%m-%d)-check-styles` and update the import statement in `prototype.scss` appropriately.
-- Bug: Child templates (that are §included) do not automatically refresh the page for some reason TBD (presumably a bad gulp src glob). For now you have to save the parent HTML page to trigger a refresh.
-- Bug: images are not automatically copied from `src` to `www`.
-- Bug: anchors inside reports break the layout for an unknown reason.
+- Bug: Child templates (that are @@included) do not always automatically refresh the page for some reason — for now you have to save the _parent_ or _grandparent_ HTML page to trigger a refresh.
+- Bug: images are not automatically copied from `src` to `www`. Run `gulp build` to copy them over.
