@@ -3,11 +3,11 @@
   @@include("./_head.html")
   <body>
     <div class="page report">
-    @@include("./_report_page_header.html", {
-        "page-title": "Quote from Anonymous",
-        "network": "",
-        "username": "Undated"
-      })
+      @@include("./_report_page_header.html", {
+        "page-title": "Tweet by @alolita",
+        "network": "Twitter.com",
+        "username": "@alolita"
+      }) 
 
       <article class="media__contents">
         <form class="prototype media-detail__media media-detail__media--undetermined">
@@ -22,25 +22,20 @@
             </div>
           </section>
           <section>
-            <div class="group">
-              <input type="text" required>
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Headline</label>
-            </div>
-  <!--           <div class="group">
-              <input type="text" required>
-              <span class="highlight"></span>
-              <span class="bar"></span>
-              <label>Description</label>
-            </div> -->
-            
-            @@include("./_report_pender_card_claim.html", {
-              "text": "Walking thru the community. Only some tree limbs and minor debris in the area. This is the biggest I see and happy it missed my little car.",
-              "link": "/page_report_claim.html",
-              "contenteditable": "true"
+            @@include('./_report_pender_card_social.html', {
+              "status": "verified",
+              "user-full-name": "Alolita Sharma",
+              "username": "@alolita",
+              "network-icon": "<i class='fa fa-twitter'></i>",
+              "author-avatar": "https://api.adorable.io/avatars/40/b.png",
+              "body-text": "Good piece on the danger of contempt culture. Calls out Python. <em href='http://blog.aurynn.com/contempt-culture'>blog.aurynn.com/contempt...</em>",
+              "body-image": "/images/placeholder-3.png" ,
+              "metadata-primary": "29 Likes",
+              "metadata-secondary": "18 Retweets",
+              "metadata-tertiary": "21 Replies"
             })
-
+          </section>
+          <section>
             <div class="group">
               <input type="text" required>
               <span class="highlight"></span>

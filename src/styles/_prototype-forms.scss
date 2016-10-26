@@ -108,7 +108,13 @@ form.prototype {
     padding: 16px;
     background-color: white;
     border-radius: 4px;
-    // width: $prototype-input-width + 100px;
+  }
+
+  .group {
+    &.link, 
+    &.attribution {
+      margin-left: 50%;
+    }
   }
 
   section.form-header {
@@ -122,10 +128,6 @@ form.prototype {
       flex: 1;
       font-size: 14px;
       min-width: 130px;
-      .claim-text input {
-        font-size: 24px;
-        letter-spacing: 1px;
-      }
       button.submit {
         background-color: $check-blue;
         color: $firefly-5;
@@ -169,9 +171,15 @@ form.prototype {
   ul.options {
     margin-top: 5px;
   }
-}
 
-// Electionland categories
-.electionland_categories {
-  padding-top: 36px;
+  // Electionland categories
+  .electionland_categories {
+    padding-top: 36px;
+  }
+
+  // When editing claims with contenteditable
+  p:focus {
+    border-bottom: 1px solid $check-blue;
+    outline: 0px solid transparent;
+  }
 }
