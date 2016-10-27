@@ -1,0 +1,234 @@
+
+
+.login-menu {
+  .login-menu__disclaimer {
+    background-color: yellow;
+    color: rgba(black, 0.8);
+    padding: 0.4em;
+    span.icon-warning {
+      font-size: 2em;
+      vertical-align: middle;
+      margin-right: 1em;
+    }
+  }
+
+  .login-menu__button--twitter {
+    background-color: $firefly-40;
+    &:hover { background-color: darken(saturate(#0095FF, 10%), 10%); }
+  }
+
+  .login-menu__button--facebook {
+    background-color: $firefly-40;
+    &:hover { background-color: darken(saturate(#3B5999, 10%), 10%); }
+  }
+
+  .login-menu__button--google {
+    background-color: $firefly-40;
+    &:hover { background-color: darken(saturate(#DB4437, 10%), 10%); }
+  }
+
+  .login-menu__button--slack {
+    background-color: $firefly-40;
+    &:hover { background-color: darken(saturate(#2AB27B, 10%), 10%); }
+  }
+
+
+  #login-email {
+    @include button-medium;
+    @extend .login-menu__button;
+    background-color: $firefly-40;
+    text-align: center;
+    text-decoration: none;
+    &:hover { background-color: $firefly-80; }
+  }
+
+  /**
+   * tab panel widget
+   * http://codepen.io/thierry/full/gPoWxj
+   */
+  .tabPanel-widget {
+    position: relative;  /* containing block for headings (top:0) */
+    border: 1px solid $firefly-20;
+    @include box_shadow(1);
+    margin: 1em 0 1em;
+    & > label {
+      position: absolute;
+      z-index: 1;
+    }
+    & > label,
+    & > h2 {
+      width: 50%;
+      height: 4em;
+      line-height: 4em;
+    }
+    & > h2 {
+      margin: 0;
+      text-align: center;
+      background: white;
+      color: $firefly-60;
+      border-bottom: 1px solid $firefly-20;
+      font-weight: 400;
+      font-size: 16px;
+      text-transform: uppercase;
+    }
+    & > div {
+      margin-top: 2em;
+    }
+
+    h3 em {
+      // background-color: yellow;
+      font-style: normal;
+    }
+  }
+
+  /**
+   * all first level labels and headings after the very first ones 
+   */
+  .tabPanel-widget > label ~ label,
+  .tabPanel-widget > h2 ~ h2 {
+    position: absolute;
+    top: 0;
+  }
+
+
+  /**
+   * We target all the label/heading pairs
+   * we increment the :nth-child() params by 4 as well as the left value (according to "tab" width)
+   */
+
+  .tabPanel-widget label:nth-child(1),
+  .tabPanel-widget h2:nth-child(3) {
+    left: 0em;
+  }
+
+  .tabPanel-widget label:nth-child(5),
+  .tabPanel-widget h2:nth-child(7) {
+    left: 50%;
+  }
+
+  // .tabPanel-widget label:nth-child(9),
+  // .tabPanel-widget h2:nth-child(11) {
+  //   left: 18em;
+  //   border: 1px solid green;
+  // }
+
+  /**
+   * we visually hide all the panels
+   * https://developer.yahoo.com/blogs/ydn/clip-hidden-content-better-accessibility-53456.html
+   */
+  .tabPanel-widget input + h2 + div {
+    position: absolute !important;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+  }
+  /**
+   * we reveal a panel depending on which control is selected 
+   */
+  .tabPanel-widget input:checked + h2 + div {
+    position: static !important;
+    padding: 1em !important;
+    height: auto !important; 
+    width: auto !important; 
+  }
+
+  /**
+   * shows a hand cursor only to pointing device users
+   */
+  .tabPanel-widget label:hover {
+    cursor: pointer;
+  }
+
+  .tabPanel-widget > div {
+    background: transparent;
+    padding: 1em;
+  }
+
+  /**
+   * we hide radio buttons and also remove them from the flow
+   */
+  .tabPanel-widget input[name="tabs"] {
+    opacity: 0;
+    position: absolute;
+  }
+
+
+  /** 
+   * this is to style the tabs when they get focus (visual cue)
+   */
+
+  .tabPanel-widget input[name="tabs"]:focus + h2 {
+    outline: 1px dotted #000;
+    outline-offset: 10px;
+  }
+
+
+  /**
+   * reset of the above within the tab panel (for pointing-device users)
+   */
+  .tabPanel-widget:hover h2 {
+    outline: none !important;
+  }
+
+  /**
+   * visual cue of the selection
+   */
+  .tabPanel-widget input[name="tabs"]:checked + h2 {
+    color: $check-blue;
+    border-bottom: 2px solid $check-blue;
+  }
+
+  // /**
+  //  * the marker for tabs (down arrow)
+  //  */
+  // .tabPanel-widget input[name="tabs"]:checked + h2:after {
+  //   content: '';
+  //   margin: auto;
+  //   position: absolute;
+  //   bottom: -10px;
+  //   left: 0;
+  //   right: 0;
+  //   width: 0;
+  //   height: 0;
+  //   border-left: 10px solid transparent;
+  //   border-right: 10px solid transparent;
+  //   border-top: 10px solid #333;
+  // }
+
+  /**
+   * Make it plain/simple below 45em (stack everything)
+   */
+  // @media screen and (max-width: 45em) {
+    
+  //   /* hide unecessary label/control pairs */
+  //   .tabPanel-widget label,
+  //   .tabPanel-widget input[name="tabs"] {
+  //     display: none;
+  //   }
+    
+  //   /* reveal all panels */
+  //   .tabPanel-widget > input + h2 + div {
+  //     display: block !important;
+  //     position: static !important;
+  //     padding: 1em !important;
+  //     height: auto !important; 
+  //     width: auto !important; 
+  //   }
+    
+  //   /* "unstyle" the heading */
+  //   .tabPanel-widget h2 {
+  //     width: auto;
+  //     position: static !important;
+  //     // background: red !important;
+  //   }
+    
+  //   /* "kill" the marker */
+  //   .tabPanel-widget h2:after {
+  //     display: none !important;
+  //   }
+
+  // }
+}
