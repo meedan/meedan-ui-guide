@@ -1,5 +1,4 @@
 <html>
-
 @@include("./_head.html")
 
 <body>
@@ -10,35 +9,45 @@
       <div class="login-menu__content" data-reactid=".0.3">
         <!-- <p class="login-menu__blurb" data-reactid=".0.3.0">Welcome to Check. Verify breaking news content with your team or online community. Then show your work to your audience on social media or your news site.</p> -->
 
-        <div class="tabPanel-widget">
-           <label for="tab-1" tabindex="0"></label>
-             <input id="tab-1" type="radio" name="tabs" checked="true" aria-hidden="true">
-           <h2>Register</h2>
-           <div>
+        <div class="electionland">
+          <img width="30" src="/images/Electionland_small.svg" alt=" " title=" " />  <h2>I’m with Electionland</h2>
+            <div>
+              <button id="slack-login" class="login-menu__button login-menu__button--slack">
+                <i class='fa fa-slack'></i> Slack sign in
+              </button>
+            </div> 
+            <!-- <p>Happy Election Day!</p>
+            <p>Register and log in with your Electionland Slack team.</p> -->
+        </div>
 
-            <h3>Create a <em>new</em> Check account via</h3>
-            <p class="login-menu__disclaimer">Be sure to use the account you were invited with! For help email check@meedan.com.</p>
+        <!-- <p class="login-menu__disclaimer" data-reactid=".0.3.1">Currently in Beta and optimized for Chrome desktop. Having trouble logging in? Contact <a href="mailto:check@meedan.com">check@meedan.com</a> for assistance.</p> -->
 
-            @@include("_authentication_menu.html", {
-              "text": ""
-            })
-           </div>
-           <label for="tab-2" tabindex="0"></label>
-           <input id="tab-2" type="radio" name="tabs" aria-hidden="true">
-           <h2>Sign in</h2>
-           <div>
-            <h3>Sign in <em>again</em> with</h3>
-             @@include("_authentication_menu.html", {
-              "text": ""
-            })
-           </div>
-         </div>
-
-        <p class="login-menu__footer" data-reactid=".0.3.3">Reports discovered via social media are meant solely as <em>tips</em>. Always contact the source before sharing publicly. <span data-reactid=".0.3.3.0">By signing in, you agree to the Check </span><a class="login-menu__footer-link" href="/tos" data-reactid=".0.3.3.1">Terms of Service</a><span data-reactid=".0.3.3.2"> and </span><a class="login-menu__footer-link" href="/privacy" data-reactid=".0.3.3.3">Privacy&nbsp;Policy</a><span data-reactid=".0.3.3.4">.</span></p>
+        <div class="not-electionland">
+          <h2>I’m with HKU, Amnesty, Berkeley</h2>
+          <ul class="login-menu__options" data-reactid=".0.3.2">
+            <li class="item" data-reactid=".0.3.2.0">
+              <button id="twitter-login" class="login-menu__button login-menu__button--twitter" data-reactid=".0.3.2.0.0"> Twitter</button>
+            </li>
+            <li data-reactid=".0.3.2.1">
+              <button id="facebook-login" class="login-menu__button login-menu__button--facebook" data-reactid=".0.3.2.1.0"> Facebook</button>
+            </li>
+            <li data-reactid=".0.3.2.2">
+              <button id="slack-login" class="login-menu__button login-menu__button--slack" data-reactid=".0.3.2.2.0"> Slack</button>
+            </li>
+            <li data-reactid=".0.3.2.3"><span class="login-email" data-reactid=".0.3.2.3.0"><a id="login-email" class="login-email__link" data-reactid=".0.3.2.3.0.0"> Email</a><section class="login-email__modal" data-reactid=".0.3.2.3.0.1"><noscript data-reactid=".0.3.2.3.0.1.0"></noscript><form name="login" class="login-email__form" data-reactid=".0.3.2.3.0.1.1"><div class="login-email__email" data-reactid=".0.3.2.3.0.1.1.1"><input type="email" name="email" value="" class="login-email__email-input" placeholder="Email address" data-reactid=".0.3.2.3.0.1.1.1.0"><label class="login-email__email-label login-email__email-label--text-entered" data-reactid=".0.3.2.3.0.1.1.1.1">Email address</label></div><div class="login-email__password" data-reactid=".0.3.2.3.0.1.1.2"><input type="password" name="password" value="" class="login-email__password-input" placeholder="Password" data-reactid=".0.3.2.3.0.1.1.2.0"><label class="login-email__password-label login-email__password-label--text-entered" data-reactid=".0.3.2.3.0.1.1.2.1">Password (minimum 8 characters)</label></div><div class="login-email__actions" data-reactid=".0.3.2.3.0.1.1.5"><button type="submit" id="submit-register-or-login" class="login-email__submit login-email__submit--login" data-reactid=".0.3.2.3.0.1.1.5.0">Sign in »</button><button type="button" id="register-or-login" class="login-email__register-or-login" data-reactid=".0.3.2.3.0.1.1.5.1">Create a new account</button><button type="button" id="cancel-register-or-login" class="login-email__cancel" data-reactid=".0.3.2.3.0.1.1.5.2">Sign in with Twitter, Facebook, or Slack</button></div></form><p class="login-email__help-text" data-reactid=".0.3.2.3.0.1.2"><span data-reactid=".0.3.2.3.0.1.2.0">Having trouble logging in? Please email </span><a href="mailto:check@meedan.com" data-reactid=".0.3.2.3.0.1.2.1">check@meedan.com</a><span data-reactid=".0.3.2.3.0.1.2.2"> for&nbsp;assistance.</span></p>
+              </section>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="confused">
+          <h2>I’m confused!</h2>
+          <p>If you’re having trouble with Check sign in, contact a human at <a href="mailto:check@meedan.com">check@meedan.com</a>.</p>
+        </div>
+        <p class="login-menu__footer" data-reactid=".0.3.3"><span data-reactid=".0.3.3.0">By signing in, you agree to the Check </span><a class="login-menu__footer-link" href="/tos" data-reactid=".0.3.3.1">Terms of Service</a><span data-reactid=".0.3.3.2"> and </span><a class="login-menu__footer-link" href="/privacy" data-reactid=".0.3.3.3">Privacy&nbsp;Policy</a><span data-reactid=".0.3.3.4">.</span></p>
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
