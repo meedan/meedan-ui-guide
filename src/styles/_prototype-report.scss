@@ -36,6 +36,26 @@ $header-offset: 100px;
   // @include box_shadow(1);
   // transition: 0.4s box-shadow;
 
+  h3.headline {
+    @include media-title(24px);
+    margin: 8px 16px;
+    &:empty {
+      display: none;
+    }
+  }
+
+  p.description {
+    // @extend .media-detail__description;
+    margin: 8px 16px 16px;
+    line-height: 1.4;
+    font-weight: 100;
+    color: $firefly-60-8;
+    // color: theme-gray(45%);
+    &:empty {
+      display: none;
+    }
+  }
+
   // Align the status icon with the network icon
   .media-status__current {
     margin-left: 8px;
