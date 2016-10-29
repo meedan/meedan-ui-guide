@@ -1,9 +1,12 @@
 
+// ========================================
 // Input float style
 // 
+// (Prototype only)
 // Material Input Boxes with CSS
 // based on https://codepen.io/sevilayha/pen/IdGKH
 // 
+//
 %input-floats {
 
   .group {
@@ -87,7 +90,8 @@
   }
 }
 
-// Check form styles
+// ========================================
+// Check form styles (supplement existing styles)
 // 
 form.prototype {
   @extend %input-floats;

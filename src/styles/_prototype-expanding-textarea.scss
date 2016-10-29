@@ -1,0 +1,34 @@
+// ========================================
+// Expanding text area styles 
+//
+// REQUIREMENTS
+// • The HTML is changed from <input> to <textarea>.
+// • In app.js, use autosize() — 
+//     autosize(document.querySelectorAll('textarea'));
+
+
+// Make sure the button stays at the bottom when textarea expands.
+.create-media__form {
+  align-items: flex-end;
+}
+
+// Overrides the existing CSS height on this outer element, 
+// to ensure it can grow
+// 
+.create-media__input {
+  height: auto!important;
+}
+
+// • Ensure the resize handle doesn't appear
+// • Ensure a max height
+// • Recreate (partially) the blue border effect on focus
+//
+textarea#create-media-url {
+  resize: none!important;
+  max-height: 320px;
+  transition: border 450ms ease-in;
+  &:focus {
+    outline: none!important;
+    border-bottom: 1px solid $check-blue!important;
+  }
+}

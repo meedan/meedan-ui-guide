@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <!-- Changes from upstream:  Added app.js. Removed other js. -->
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google" content="notranslate" />
     <title>Check</title>
     <link href="/css/prototype.css" rel="stylesheet">
     <link href="/images/logo/favicon.ico" rel="icon">
-    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script src="/js/config.js"></script>
+    <script src="/js/autosize.js"></script>
+    <script src="/js/app.js"></script>
+
+    <!-- <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script src="/js/config.js"></script> -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700,400|Merriweather:400|Roboto:400,700,500,300|" rel="stylesheet" type="text/css">
     <style type="text/css">
     /**
@@ -529,17 +534,6 @@
         </section>
       </div>
     </li>
-    <li>
-      <div class="annotation annotation--comment" id="annotation-AVeJG2fAixCZIeguhpDS">
-        <div class="annotation__avatar" style="background-image:url(http://pbs.twimg.com/profile_images/743824003844837377/oTeU_xyb_normal.jpg);"></div>
-        <section class="annotation__content">
-          <div class="annotation__header">
-            <h4 class="annotation__author-name">ed bice</h4><span class="annotation__timestamp"><time datetime="2016-10-03T05:54:07.000Z" title="2016-10-03 05:54:07 UTC">3 weeks ago</time></span>
-          </div>
-          <div class="annotation__body"><span class="Linkify">oh, and I am really wanting to post closer to where my words are going to fall - disorienting from down here on the bottom of the page. :) </span></div>
-        </section>
-      </div>
-    </li>
   </ul>
 </div>
     <div class="create-media" data-reactid=".0.1.2.1.0.1.1">
@@ -548,10 +542,10 @@
   <div id="media-url-container" class="create-media__form" data-reactid=".0.1.2.1.0.1.1.2">
     <button class="create-media__button create-media__button--new" data-reactid=".0.1.2.1.0.1.1.2.0">+</button>
     <div class="create-media__input" style="font-size:16px;line-height:24px;width:100%;height:48px;display:inline-block;position:relative;background-color:transparent;font-family:Roboto, sans-serif;transition:height 200ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;" data-reactid=".0.1.2.1.0.1.1.2.1">
-      <div style="position:absolute;opacity:1;color:rgba(0,0,0,0.3);transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;bottom:12px;" data-reactid=".0.1.2.1.0.1.1.2.1.1">
+      <!-- <div style="position:absolute;opacity:1;color:rgba(0,0,0,0.3);transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;bottom:12px;" data-reactid=".0.1.2.1.0.1.1.2.1.1">
         Paste a link or add a comment to help verify
-      </div>
-      <input name="url" id="create-media-url" style="tap-highlight-color:rgba(0,0,0,0);padding:0;position:relative;width:100%;height:100%;border:none;outline:none;background-color:transparent;color:rgba(0, 0, 0, 0.87);font:inherit;" type="text" data-reactid=".0.1.2.1.0.1.1.2.1.2">
+      </div> -->
+      <textarea rows="1" name="url" id="create-media-url" style="tap-highlight-color:rgba(0,0,0,0);padding:0;position:relative;width:100%;height:100%;border:none;outline:none;background-color:transparent;color:rgba(0, 0, 0, 0.87);font:inherit;" type="text" data-reactid=".0.1.2.1.0.1.1.2.1.2"></textarea>
       <div data-reactid=".0.1.2.1.0.1.1.2.1.3">
         <hr style="border:none;border-bottom:solid 1px;border-color:#e0e0e0;bottom:8px;box-sizing:content-box;margin:0;position:absolute;width:100%;" data-reactid=".0.1.2.1.0.1.1.2.1.3.0">
         <hr style="border:none;border-bottom:solid 2px;border-color:#2196f3;bottom:8px;box-sizing:content-box;margin:0;position:absolute;width:100%;transform:scaleX(0);transition:all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;" data-reactid=".0.1.2.1.0.1.1.2.1.3.1">

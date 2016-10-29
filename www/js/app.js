@@ -2,6 +2,9 @@ document.onreadystatechange = function () {
   if (document.readyState == "complete") {
 
     // Toggle chicklets
+    // 
+    // This is throwaway code, doesn't work very well. — CB 
+    // 
     var chicklets = document.getElementsByClassName('chicklet');
 
     var toggleSelection = function () {
@@ -12,4 +15,12 @@ document.onreadystatechange = function () {
       chicklets[i].addEventListener("click", toggleSelection, false);
     }
   }
+
+  // Resize textareas automatically
+  // 
+  // This is straight from the autosize docs, see
+  // https://github.com/jackmoore/autosize/blob/master/example/index.html
+  //  — CB
+  // 
+  autosize(document.querySelectorAll('textarea'));
 };
