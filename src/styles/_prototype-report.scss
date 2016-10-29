@@ -145,11 +145,12 @@ $header-offset: 100px;
   }
 
   .card-body {
-    margin: 14px 20px 14px 28px;
-    display: flex;
-    justify-content: space-between;
     align-items: flex-start;
+    display: flex;
     font-size: 18px;
+    justify-content: space-between;
+    margin: 14px 20px 14px 28px;
+    position: relative;
 
     .body-text {
       padding-right: 8px;
@@ -266,4 +267,27 @@ $header-offset: 100px;
       font-style: normal;
     }
   }
+}
+
+.report.youtube {
+  .card-body {
+    position: relative;
+    .body-image img {
+      width: 100px;
+      height: 60px;
+    }
+    .body-image:before {
+      color: rgba(white, 0.7);
+      content: "\f04b";
+      display: block;
+      font-family: FontAwesome;
+      font-size: 1.5em;
+      height: 40px;
+      position: absolute;
+      right: 40px;
+      text-align: center;
+      top: 15px;
+    }
+  }
+  
 }
