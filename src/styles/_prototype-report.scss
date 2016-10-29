@@ -30,11 +30,6 @@ $header-offset: 100px;
   max-width: $report-max-width;
   margin: 24px auto;
   display: block!important;
-  // border: 1px solid $firefly-20;
-  // border-left: 8px solid $firefly-40;
-  // background-color: white;
-  // @include box_shadow(1);
-  // transition: 0.4s box-shadow;
 
   h3.headline {
     @include media-title(24px);
@@ -45,12 +40,10 @@ $header-offset: 100px;
   }
 
   p.description {
-    // @extend .media-detail__description;
     margin: 8px 16px 16px;
     line-height: 1.4;
     font-weight: 100;
     color: $firefly-60-8;
-    // color: theme-gray(45%);
     &:empty {
       display: none;
     }
@@ -73,22 +66,18 @@ $header-offset: 100px;
   // Statuses 
   &--verified {
     border: 1px solid $green-500;
-    // border-left-color: $green-500;
   }
   
   &--undetermined {
     border:1px solid $blue-500;
-    // border-left-color: $blue-500;
   }
   
   &--in-progress {
     border: 1px solid $orange-500;
-    // border-left-color: $orange-500;
   }
 
   &--false {
     border: 1px solid $red-500;
-    // border-left-color: $red-500;
   }
 
   // Final metadata row
@@ -110,7 +99,7 @@ $header-offset: 100px;
 
   .card-header {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     .network-icon {
       width: 20px;
       margin-right: 8px;
@@ -218,30 +207,17 @@ $header-offset: 100px;
     display: none;
   }
 
-  // Greyscale images
-  // .media-detail__media {
-  //   img {
-  //     border-radius: 3px;
-  //     filter: grayscale(100%);
-  //     transition: 0.4s filter;
-  //   }
-
-  //   // Fade in on hover 
-  //   &:hover {
-  //     text-decoration: none;
-  //     @include box-shadow(2)
-  //     img {
-  //       filter: grayscale(0%); 
-  //     }
-  //   }
-  // }
-
   // Smaller typography and image
   .card-body {
     font-size: 14px;
     .body-image img {
       width: 40px;
     }
+  }
+
+  // Ensure center alignment since there is only one row in this view
+  .pender-card .card-header {
+    align-items: center;
   }
 
   // Re-flow the header text
