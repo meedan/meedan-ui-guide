@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+@@include("./_head.html")
+<body>
+
+<div class="page report">  
+  @@include("./_report_page_header.html", {
+    "page-title": "Tweet by @alolita",
+    "network": "Twitter.com",
+    "username": "@alolita"
+  }) 
+
+  <article class="media__contents">
+
+   <div class="deleted">
+    <span class="fa fa-exclamation-triangle"></span>
+    <h2>Media deleted by creator</h2>
+    <div class="error-code">
+      Code 144 Twitter::Error::NotFound: No status found with that ID
+    </div>
+   </div>
+
+    @@include('./_report_annotations.html')
+    
+    @@include("./_report_input.html", {
+      "placeholder": "Add comment"
+    })
+
+    @@include('./_report_tips.html')
+  </article>
+
+</div>
+
+</body>

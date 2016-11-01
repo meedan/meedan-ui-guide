@@ -259,3 +259,28 @@ $header-offset: 100px;
     }
   }
 }
+
+// Deleted reports
+.deleted {
+    padding: 80px;
+    background-color: $firefly-5;
+  h2 {
+    text-align: center;
+    color: $firefly-30;
+  }
+  .fa-exclamation-triangle {
+    font-family: FontAwesome;
+    font-size: 100px;
+    margin: 0 auto;
+    display: block;
+    color: $firefly-20;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .error-code {
+    color: $firefly-30;
+    text-align: center;
+    width: 100%;
+    font-family: Courier, Monaco, monospace;
+  }
+}
