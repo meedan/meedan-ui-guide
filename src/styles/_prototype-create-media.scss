@@ -1,6 +1,7 @@
 #media-url-container {
   display: flex;
   padding-left: 10px;
+  margin-top: 16px;
 }
 
 .create-media {
@@ -37,4 +38,12 @@
   #create-media-preview {
     display: none!important;
   }
+}
+
+p.electionland.slack-heads-up {
+  font-size: 12px;
+  color: $firefly-60;
+  padding: 4px 8px;
+  margin-right: 80px;
+  margin-bottom: 0;
 }
