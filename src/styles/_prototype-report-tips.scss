@@ -1,0 +1,45 @@
+
+// Report tips for Electionland
+.report-tips {
+  font-size: 14px;
+  padding: 1em;
+  color: $firefly-60;
+  width: 90%;
+  max-width: 44em;
+  margin: 0 auto;
+  h3 {
+    @extend .media__notes-heading;
+  }
+  p {
+    margin: 1em auto;
+    text-align: center;
+    color: $firefly-60;
+    a {
+
+    }
+  }
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    display: flex;
+    flex-flow: column;
+    padding-left: 2em;
+    li {
+      padding: 0.5em 0;
+    }
+    span {
+      font-weight: bold;
+      display: block;
+    }
+    mark {
+      background-color: transparent;
+      font-weight: 700;
+      color: $firefly-80;
+    }
+    em {
+      font-style: normal;
+      font-family: Courier, Monaco, mono;
+      color: $thatch;
+    }
+  }
+}
