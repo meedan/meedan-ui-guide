@@ -11,22 +11,16 @@
   }) 
 
   <article class="media__contents">
+      @@include('./_report_deleted.html')
 
-   <div class="deleted">
-    <span class="fa fa-exclamation-triangle"></span>
-    <h2>Media deleted by creator</h2>
-    <div class="error-code">
-      Code 144 Twitter::Error::NotFound: No status found with that ID
-    </div>
-   </div>
+      @@include('./_report_annotations.html')
+      
+      @@include("./_report_input.html", {
+        "placeholder": "Add comment"
+      })
 
-    @@include('./_report_annotations.html')
-    
-    @@include("./_report_input.html", {
-      "placeholder": "Add comment"
-    })
+      @@include('./_report_tips.html')
 
-    @@include('./_report_tips.html')
   </article>
 
 </div>

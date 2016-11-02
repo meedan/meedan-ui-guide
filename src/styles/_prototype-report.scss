@@ -197,44 +197,6 @@ $header-offset: 100px;
   }
 }
 
-// Reports on project page
-//
-.page__project {
-
-  // Hide some elements
-  .author-avatar,
-  ul.card-footer, 
-  p.claim-attribution-link {
-    display: none;
-  }
-
-  // Smaller typography and image
-  .card-body {
-    font-size: 14px;
-    .body-image img {
-      width: 40px;
-    }
-  }
-
-  // Ensure center alignment since there is only one row in this view
-  .pender-card .card-header {
-    align-items: center;
-  }
-
-  // Re-flow the header text
-  .header-text-primary {
-    flex-direction: row!important;
-    align-content: center;
-  }
-
-  .name, 
-  .username {
-    width: auto;
-    overflow: hidden;
-    padding-right: 8px;
-    line-height: 16px;
-  }
-}
 
 // Clickable card for videos
 //
@@ -263,7 +225,6 @@ $header-offset: 100px;
 // Deleted reports
 .deleted {
     padding: 80px;
-    background-color: $firefly-5;
   h2 {
     text-align: center;
     color: $firefly-30;
@@ -282,5 +243,55 @@ $header-offset: 100px;
     text-align: center;
     width: 100%;
     font-family: Courier, Monaco, monospace;
+  }
+
+}
+
+// Overrides:
+// Reports in project page context
+//
+.page__project {
+
+  // Hide some elements on project page 
+  .author-avatar,
+  ul.card-footer, 
+  p.claim-attribution-link {
+    display: none;
+  }
+
+  // Smaller typography and image on project page 
+  .card-body {
+    font-size: 14px;
+    .body-image img {
+      width: 40px;
+    }
+  }
+
+  // Ensure center alignment since there is only one row on project page 
+  .pender-card .card-header {
+    align-items: center;
+  }
+
+  // Re-flow the header text on project page 
+  .header-text-primary {
+    flex-direction: row!important;
+    align-content: center;
+  }
+
+  .name, 
+  .username {
+    width: auto;
+    overflow: hidden;
+    padding-right: 8px;
+    line-height: 16px;
+  }
+
+  // Deleted reports are smaller on projet page 
+  .deleted {
+    padding: 8px;
+    .fa-exclamation-triangle, 
+    .error-code {
+      display: none;
+    }
   }
 }
