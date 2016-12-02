@@ -1,0 +1,185 @@
+// Keyframes, variables, placeholders
+//
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+$loader-grid-unit: 16px;
+
+@function theme-gray($brightness: 50%) {
+  @return hsl(205, 18%, $brightness);
+}
+
+%shimmer {
+  animation: placeHolderShimmer .7s ease-out infinite;
+  animation-fill-mode: forwards;
+  background: linear-gradient(90deg, theme-gray(97%), theme-gray(97%), theme-gray(98%), theme-gray(98%), theme-gray(100%), theme-gray(98%), theme-gray(97%), theme-gray(97%));
+  background-size: 400%;
+}
+
+// Boilerplate (becase we don't want to load the whole stylesheet)
+//
+body {
+  background-color: theme-gray(98.7%);
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Layout
+//
+main {
+  display: flex;
+  padding: $loader-grid-unit;
+  width: 100%;
+}
+
+.content {
+  flex: 3;
+}
+
+
+// Loading header
+//
+header {
+  background-color: #fff;
+  border-bottom: 1px solid theme-gray(93%);
+  display: flex;
+  // padding: $loader-grid-unit;
+  width: 100%;
+
+  // Team header
+  //
+  .team-header {
+    display: flex;
+    flex: 1;
+    padding: $loader-grid-unit;
+
+    .team-icon {
+      background-color: theme-gray(97%);
+      height: 40px;
+      width: 40px;
+    }
+
+    .team-name {
+      background-color: theme-gray(97%);
+      height: $loader-grid-unit;
+      margin-left: $loader-grid-unit;
+      width: 100px;
+    }
+
+    .team-description {
+      background-color: theme-gray(97%);
+      height: $loader-grid-unit / 2;
+      margin-left: $loader-grid-unit;
+      margin-top: $loader-grid-unit / 2;
+      width: 80%;
+    }
+  }
+
+  // Project header
+  //
+  .project-header {
+    flex: 3;
+    padding: $loader-grid-unit;
+
+    .project-name {
+      background-color: theme-gray(97%);
+      height: $loader-grid-unit;
+      width: 80%;
+    }
+
+    .project-description {
+      background-color: theme-gray(97%);
+      height: $loader-grid-unit / 2;
+      margin-top: $loader-grid-unit / 2;
+      width: 30%;
+    }
+  }
+}
+
+// Loading sidebar
+//
+.sidebar {
+  padding: $loader-grid-unit;
+  flex: 1;
+  @media all and (max-width: 600px) {
+    display: none;
+  }
+
+  li {
+    background-color: theme-gray(96%);
+    height: $loader-grid-unit;
+    margin-top: 8px;
+    width: 100%;
+
+    &:nth-of-type(1) {
+      width: 75%;
+    }
+
+    &:nth-of-type(2) {
+      width: 85%;
+    }
+
+    &:nth-of-type(3) {
+      width: 78%;
+    }
+
+    &:nth-of-type(4) {
+      width: 80%;
+    }
+
+    &:nth-of-type(5) {
+      width: 85%;
+    }
+  }
+}
+
+// Loading reports
+//
+.report {
+  background: #fff;
+  border: 1px solid theme-gray(93%);
+  border-radius: 3px;
+  margin: $loader-grid-unit 0;
+  min-height: 200px;
+  padding: $loader-grid-unit;
+  position: relative;
+
+  div {
+    @extend %shimmer;
+    height: $loader-grid-unit;
+
+    &:nth-of-type(1) {
+      margin-top: $loader-grid-unit;
+      width: 30%;
+    }
+
+    &:nth-of-type(2) {
+      margin-top: $loader-grid-unit;
+    }
+
+    &:nth-of-type(3) {
+      margin-top: $loader-grid-unit;
+    }
+
+    &:nth-of-type(4) {
+      margin-top: $loader-grid-unit;
+      width: 80%;
+    }
+  }
+}

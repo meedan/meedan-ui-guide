@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+@@include("./_head.html")
+<body>
+<div class="page report">  
+  @@include("./_report_page_header.html", {
+    "page-title": "Page on domainname",
+    "network": "domainname.com",
+    "username": "Undated"
+  })
+
+  <article class="media__contents">
+    @@include("./_report_fallback.html", {
+      "domain": "domainname.com",
+      "title": "This is the title element of the post",
+      "date": "Undated",
+      "metadata-primary": "First metadata item with long text going about this far perhaps.",
+      "metadata-secondary": "Second metadata item which could have long text going on and on and perhaps even longer going to a second line or otherwise taking up lots of space like this.",
+      "metadata-tertiary": "Third metadata item which also might have pretty long text depending on what it is.",
+      "image": "<img title='thumbnail of an image' alt=' ' src='/images/placeholder-2.png'>",
+      "link": "/_page_report_fallback.html"
+    })
+
+    @@include('./_report_annotations.html')
+    @@include('./_report_input.html', {
+      "placeholder": "Paste a link or add a comment to help verify"
+    })
+
+    @@include('./_report_tips.html')
+  </article>
+</div>
+</body>

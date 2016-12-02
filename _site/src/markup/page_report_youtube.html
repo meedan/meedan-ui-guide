@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  @@include("./_head.html")
+
+<body>
+
+<div class="page report youtube">  
+  @@include("./_report_page_header.html", {
+    "page-title": "Video by Project Veritas Action",
+    "network": "Youtube",
+    "username": "Project Veritas Action"
+  }) 
+  <article class="media__contents">
+    @@include('./_report_social.html', {
+      "headline": "A strange case of augmented identity?",
+      "description": "We’re investigating how long this hardware hack will actually hold.",
+      "status": "false",
+      "user-full-name": "Veritas Action",
+      "username": "username",
+      "network-icon": "<i class='fa fa-youtube-play'></i>",
+      "author-avatar": "https://api.adorable.io/avatars/40/c.png",
+      "body-text": "Rigging the Election - Video II: Mass Voter Fraud",
+      "body-image": "/images/placeholder-3.png" ,
+      "metadata-primary": "1,823,411 Views",
+      "metadata-secondary": "88 Comments",
+      "metadata-tertiary": ""
+    })
+
+    @@include('./_report_annotations.html')
+    @@include('./_report_input.html', {
+      "placeholder": "Paste a link or add a comment to help verify"
+    })
+
+    @@include('./_report_tips.html')
+  </article>
+
+</div>
+
+</body>

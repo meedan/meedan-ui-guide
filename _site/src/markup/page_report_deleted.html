@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+@@include("./_head.html")
+<body>
+
+<div class="page report">  
+  @@include("./_report_page_header.html", {
+    "page-title": "Tweet by @alolita",
+    "network": "Twitter.com",
+    "username": "@alolita"
+  }) 
+
+  <article class="media__contents">
+      @@include('./_report_deleted.html')
+
+      @@include('./_report_annotations.html')
+      
+      @@include("./_report_input.html", {
+        "placeholder": "Add comment"
+      })
+
+      @@include('./_report_tips.html')
+
+  </article>
+
+</div>
+
+</body>

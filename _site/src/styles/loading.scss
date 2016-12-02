@@ -11,6 +11,10 @@
 
 $loader-grid-unit: 16px;
 
+@function theme-gray($brightness: 50%) {
+  @return hsl(205, 18%, $brightness);
+}
+
 %shimmer {
   animation: placeHolderShimmer .7s ease-out infinite;
   animation-fill-mode: forwards;
@@ -23,7 +27,7 @@ $loader-grid-unit: 16px;
   border: 1px solid theme-gray(93%);
   border-radius: 3px;
   margin: 24px auto;
-  max-width: $report-max-width;
+  max-width: 600px;
   min-height: 200px;
   padding: $loader-grid-unit;
   position: relative;
@@ -54,12 +58,36 @@ $loader-grid-unit: 16px;
   }
 }
 
-.projects-list-loading {
+.loading-team-header {
+  display: flex;
+  margin-left: $loader-grid-unit;
+
+  .loading-team-icon {
+    background-color: theme-gray(97%);
+    height: 40px;
+    width: 40px;
+  }
+
+  .loading-team-name {
+    background-color: theme-gray(97%);
+    height: $loader-grid-unit;
+    margin-left: $loader-grid-unit;
+    width: 100px;
+  }
+
+  .loading-team-description {
+    background-color: theme-gray(97%);
+    height: $loader-grid-unit / 2;
+    margin-left: $loader-grid-unit;
+    margin-top: $loader-grid-unit / 2;
+  }
+}
+
+.loading-projects-list {
   padding: $loader-grid-unit;
 
   li {
-    @extend %shimmer;
-    background-color: theme-gray(95%);
+    background-color: theme-gray(96%);
     height: $loader-grid-unit;
     margin-top: 8px;
     width: 100%;
@@ -84,4 +112,18 @@ $loader-grid-unit: 16px;
       width: 85%;
     }
   }
+}
+
+.loading-project-name {
+  background-color: theme-gray(97%);
+  height: $loader-grid-unit;
+  margin-top: 3px;
+  width: 80%;
+}
+
+.loading-project-description {
+  background-color: theme-gray(97%);
+  height: $loader-grid-unit / 2;
+  margin-top: $loader-grid-unit / 2;
+  width: 30%;
 }
