@@ -28,8 +28,17 @@ $header-offset: 100px;
 // 
 .media-detail__media {
   max-width: $report-max-width;
-  margin: 24px auto;
+  margin: 24px auto 32px;
   display: block!important;
+  background-color: white;
+  border: 1px solid $firefly-60-1;
+  padding: 16px;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    @include box-shadow(1);
+    transition: box-shadow 0.3s;
+  }
 
   h3.headline {
     @include media-title(24px);
@@ -65,19 +74,19 @@ $header-offset: 100px;
 
   // Statuses 
   &--verified {
-    border: 1px solid $green-500;
+    border-left: 4px solid $green-500;
   }
   
   &--undetermined {
-    border:1px solid $blue-500;
+    border-left: 4px solid $blue-500;
   }
   
   &--in-progress {
-    border: 1px solid $orange-500;
+    border-left: 4px solid $orange-500;
   }
 
   &--false {
-    border: 1px solid $red-500;
+    border-left: 4px solid $red-500;
   }
 
   // Final metadata row
@@ -90,7 +99,8 @@ $header-offset: 100px;
 //
 .pender-card {
   background-color: $white;
-  border: 1px solid $firefly-60-1;
+  border-top: 1px solid $firefly-60-1;
+  border-bottom: 1px solid $firefly-60-1;
   border-radius: 4px;
   padding: 8px;
   margin: 0 8px;
