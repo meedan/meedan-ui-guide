@@ -11,18 +11,18 @@ $viber-purple: #655bac;
   }
 
   .card {
+    $size: 600px;
     align-content: center;
     background-color: $viber-purple;
     color: #ffffff;
     display: flex;
     flex-flow: nowrap column;
-    height: 48vw;
+    height: $size;
     justify-content: center;
     margin: 5px;
-    min-width: 500px;
+    width: $size;
     overflow: hidden;
-    padding: 32px;
-    width: 48vw;
+    padding: 45px;
   }
 
   h1 {
