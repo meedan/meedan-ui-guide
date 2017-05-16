@@ -21,7 +21,6 @@
           animation: placeHolderShimmer .7s ease-out infinite;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  background: -webkit-linear-gradient(0deg, #f6f8f9, #f6f8f9, #f9fafb, #f9fafb, white, #f9fafb, #f6f8f9, #f6f8f9);
   background: linear-gradient(90deg, #f6f8f9, #f6f8f9, #f9fafb, #f9fafb, white, #f9fafb, #f6f8f9, #f6f8f9);
   background-size: 400%;
 }

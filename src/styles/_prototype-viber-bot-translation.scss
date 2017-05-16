@@ -1,0 +1,39 @@
+$viber-purple: #655BAC;
+@import url(//fonts.googleapis.com/earlyaccess/notonaskharabic.css);
+
+
+.viber-bot-translation {
+	display: flex;
+	flex-wrap: wrap;
+
+	[lang="ar"] {
+		direction: rtl;
+	}
+
+	.card {
+		background-color: $viber-purple;
+		color: #ffffff;
+		padding: 32px;
+		width: 48vw;
+		height: 48vw;
+		overflow: hidden;
+		margin: 5px;
+		display: flex;
+		flex-flow: nowrap column; 
+		align-content: center;
+		justify-content: center;
+		min-width: 500px;
+	}
+
+	h1 {
+		font-family: 'Noto Naskh Arabic', serif;
+	}
+
+	p {
+		font-family: Roboto;
+		color: inherit;
+		text-align: right;
+		color: rgba(256, 256, 256, 0.50);
+	}
+}
+
