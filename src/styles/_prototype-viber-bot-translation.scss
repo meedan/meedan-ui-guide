@@ -8,6 +8,8 @@ $viber-purple: #655bac;
 
   [lang='ar'] {
     direction: rtl;
+    font-family: 'Noto Naskh Arabic', serif;
+    line-height: 1.7;
   }
 
   .card {
@@ -20,14 +22,9 @@ $viber-purple: #655bac;
     height: $size;
     justify-content: center;
     margin: 5px;
-    width: $size;
     overflow: hidden;
     padding: 45px;
-  }
-
-  h1 {
-    font-family: 'Noto Naskh Arabic', serif;
-    line-height: 1.7;
+    width: $size;
   }
 
   p {

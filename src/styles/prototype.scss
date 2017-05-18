@@ -9,17 +9,16 @@
 @import "prototype-authentication.scss";
 @import "prototype-expanding-textarea.scss";
 @import "prototype-report-tips.scss";
-@import "prototype-viber-bot-translation.scss";
 
 .pattern_list {
-  margin: 0 auto; 
+  margin: 0 auto;
   max-width: 800px;
   padding: 1em;
 
-  p { 
-    color: $firefly-60; 
+  p {
+    color: $firefly-60;
   }
-  
+
   h2 {
     border-top: 1px solid $firefly-10;
     padding-top: 1em;
