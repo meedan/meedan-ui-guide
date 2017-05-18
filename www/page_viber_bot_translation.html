@@ -12,6 +12,7 @@
       .viber-bot-translation {
         display: flex;
         flex-wrap: wrap;
+        font-family: Roboto;
       }
 
       .viber-bot-translation [lang='ar'] {
@@ -34,11 +35,20 @@
         width: 600px;
       }
 
+      .viber-bot-translation p[lang='ar'] {
+        text-align: left;
+      }
+
       .viber-bot-translation p {
         color: rgba(256, 256, 256, 0.50);
-        font-family: Roboto;
         text-align: right;
       }
+
+      .viber-bot-translation p span:before {
+        content: " — ";
+        display: inline;
+      }
+
     </style>
 </head>
 
@@ -46,7 +56,7 @@
   <div class="viber-bot-translation">
 		<section class="card">
   		<h1 class="target-text" lang="ar"><span>ساعدنى من فضلك</span></h1>
-    	<p class="source-text"><span>— Arabic translation from English: “Help please”</span>
+    	<p class="source-text"><span>Arabic translation from English: “Help please”</span>
 			</p>
 		</section>
   </div>
