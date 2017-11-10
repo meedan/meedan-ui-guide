@@ -101,6 +101,20 @@ const StyledSwatch = styled.div`
   }
 `;
 
+const StyledAvatar = styled.div`
+  width: ${props => props.size};
+  height: ${props => props.size};
+  background-color: ${shared.black16};
+  padding: ${shared.units(1)};
+  border-radius: ${props => (props.round ? '100%' : '2px')};
+  flex-shrink: 0;
+  margin-right: ${shared.units(1)};
+  &::before, &::after {
+    content: ${props => (props.round ? 'Member' : 'Source')};;
+    display: block;
+  }
+`;
+
 class App extends Component {
   render() {
     return (
@@ -163,7 +177,26 @@ class App extends Component {
               <StyledSwatch color={shared.black38} colorName="black38" />
               <StyledSwatch color={shared.black54} colorName="black54" />
               <StyledSwatch color={shared.black87} colorName="black87" />
+              <StyledSwatch color={shared.alertRed} colorName="alertRed" />
+              <StyledSwatch invert color={shared.highlightBlue} colorName="highlightBlue" />
+              <StyledSwatch color={shared.modalBlue} colorName="modalBlue" />
             </shared.Row>
+          </StyledInset>
+        </StyledSection>
+        <StyledSection>
+          <StyledInset>
+            <h2>Typography</h2>
+            <shared.Text font={shared.display3}>display3</shared.Text>
+            <shared.Text font={shared.display2}>display2</shared.Text>
+            <shared.Text font={shared.display1}>display1</shared.Text>
+            <shared.Text font={shared.headline}>headline</shared.Text>
+            <shared.Text font={shared.title}>title</shared.Text>
+            <shared.Text font={shared.subheading2}>subheading2</shared.Text>
+            <shared.Text font={shared.subheading1}>subheading1</shared.Text>
+            <shared.Text font={shared.body2}>body2</shared.Text>
+            <shared.Text font={shared.body1}>body1</shared.Text>
+            <shared.Text font={shared.caption}>caption</shared.Text>
+            <shared.Text font={shared.tiny}>tiny</shared.Text>
           </StyledInset>
         </StyledSection>
         <StyledSection>
@@ -181,7 +214,6 @@ class App extends Component {
         </StyledSection>
 
         <StyledSection>
-
           <StyledInset>
             <h3>Menus</h3>
 
@@ -366,9 +398,24 @@ class App extends Component {
 
         <StyledSection>
           <StyledInset>
-            <h3>User names</h3>
-            <p>Generally user names should appear written out as full first and last name.</p>
-            <p>User names should link to the profile page.</p>
+            <h3>User names and avatars</h3>
+            <p>Generally user names should appear written out as full first and last name. User names should link to the profile page.</p>
+
+            <p>Both user names and avatars should reveal a user tooltip in most contexts.</p>
+
+            <p>Avatars can appear in three sizes, and be square (sources) or round (for members.)</p>
+
+            <shared.Row>
+              {/* Todo: replace this with the real avatar component */}
+              <StyledAvatar round size={shared.avatarSizeLarge} />
+              <StyledAvatar round size={shared.avatarSize} />
+              <StyledAvatar round size={shared.avatarSizeSmall} />
+              <StyledAvatar round size={shared.avatarSizeExtraSmall} />
+              <StyledAvatar square size={shared.avatarSizeLarge} />
+              <StyledAvatar square size={shared.avatarSize} />
+              <StyledAvatar round size={shared.avatarSizeSmall} />
+            </shared.Row>
+
           </StyledInset>
         </StyledSection>
 
