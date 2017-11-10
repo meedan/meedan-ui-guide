@@ -519,11 +519,6 @@ class App extends Component {
         </StyledSection>
         <StyledSection>
           <StyledInset>
-            <h3>Color</h3>
-          </StyledInset>
-        </StyledSection>
-        <StyledSection>
-          <StyledInset>
             <h3>The 8px grid</h3>
           </StyledInset>
         </StyledSection>
