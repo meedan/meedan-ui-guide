@@ -1,4 +1,4 @@
-# 
+#
 FROM meedan/nodejs
 
 MAINTAINER sysops@meedan.com
@@ -7,11 +7,11 @@ ENV IMAGE=meedan/meedan-ui-guide \
 
 RUN mkdir -p ${DEPLOYDIR}
 WORKDIR ${DEPLOYDIR}
-COPY package.json ${DEPLOYDIR}/package.json 
+COPY package.json ${DEPLOYDIR}/package.json
 RUN npm install
 COPY ./ ${DEPLOYDIR}
 RUN rm -rf ${DEPLOYDIR}/www \
-    && gulp build
+    && npm run build
 
 # serve static content from 8080
 EXPOSE 8080
