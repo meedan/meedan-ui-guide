@@ -1,10 +1,53 @@
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
+import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import styled from 'styled-components';
 import { injectGlobal } from 'styled-components';
 import logo from './meedan-white.svg';
+import * as shared from './lib/check-web/src/app/styles/js/shared';
 
+// Icons
+import IconSearch from 'material-ui/svg-icons/action/search';
+import IconInsertPhoto from 'material-ui/svg-icons/editor/insert-photo';
+import IconLink from 'material-ui/svg-icons/content/link';
+import IconMoreHoriz from 'material-ui/svg-icons/navigation/more-horiz';
+import IconArrowBack from 'material-ui/svg-icons/navigation/arrow-back';
+import KeyboardArrowRight from 'material-ui/svg-icons/hardware/keyboard-arrow-right';
+import IconDelete from 'material-ui/svg-icons/action/delete';
+import IconEdit from 'material-ui/svg-icons/image/edit';
+
+// Buttons
+import RaisedButton from 'material-ui/RaisedButton';
+import IconButton from 'material-ui/IconButton';
+import FlatButton from 'material-ui/FlatButton';
+import IconMenu from 'material-ui/IconMenu';
+import Drawer from 'material-ui/Drawer';
+
+// Menus
+import MenuItem from 'material-ui/MenuItem';
+import Menu from 'material-ui/Menu';
+
+// Forms
+import TextField from 'material-ui/TextField';
+import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
+import DatePicker from 'material-ui/DatePicker';
+
+// Other components
+import { Card } from 'material-ui/Card';
+import CircularProgress from 'material-ui/CircularProgress';
+import Divider from 'material-ui/Divider';
+import { Tabs, Tab } from 'material-ui/Tabs';
+import AutoComplete from 'material-ui/AutoComplete';
+import Popover from 'material-ui/Popover';
+import Checkbox from 'material-ui/Checkbox';
+import Dialog from 'material-ui/Dialog';
+import Chip from 'material-ui/Chip';
+import { List, ListItem } from 'material-ui/List';
+import Avatar from 'material-ui/Avatar';
+import DropDownMenu from 'material-ui/DropDownMenu';
+
+// Internal
+import EnhancedButton from 'material-ui/internal/EnhancedButton';
 
 injectGlobal`
   body {
@@ -12,6 +55,10 @@ injectGlobal`
     line-height: 1.5;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
+`;
+
+const StyledOutdent = styled.div`
+  margin-right: -300px;
 `;
 
 const StyledLogo = styled.img`
@@ -32,7 +79,7 @@ const StyledSection = styled.section`
 class App extends Component {
   render() {
     return (
-      <MuiThemeProvider>
+      <MuiThemeProvider muiTheme={getMuiTheme(shared.muiThemeWithoutRtl)}>
         <StyledSection inverted>
           <StyledInset>
             <StyledLogo src={logo} alt="" />
@@ -48,16 +95,7 @@ class App extends Component {
 
         <StyledSection>
           <StyledInset>
-            <p>This guide is intended as an extension of the Material UI guide. In general we adopt the Material guidelines. In some cases, documented here, we deviate from them. This guide is being developed in tandem with the 2017 Check copywriting spreadsheet.</p>
-          </StyledInset>
-        </StyledSection>
-
-        <StyledSection>
-          <StyledInset>
-            <h2>Components</h2>
-            <h3>Buttons</h3>
-            <p>Buttons are important because ...</p>
-            <RaisedButton label="Save" />
+            <p>This guide is intended as an extension of the <a href="https://material.io/guidelines">Material UI Guidelines</a>. In some cases, as documented here, we deviate from them. This guide is being developed in tandem with the <a href="https://docs.google.com/spreadsheets/d/1u8Dio9qLhQJRAFcsvZ04rXcM2_ZH5s_iuX9SpIH-VBY/edit#gid=1985553520">2017 Check copywriting audit</a>.</p>
           </StyledInset>
         </StyledSection>
 
@@ -72,37 +110,58 @@ class App extends Component {
             <p>Use consistent terms throughout.</p>
             <p>Try not to use "We" inside the app, it's not about us, it's about the user. We use "We"  with cautious on boarding and mail confirming, after user login we don't use "We".</p>
             <p>We address Check users by second person (you, your) only in dialogic interactions such as success, confirmation and acknowledgment messages, but avoid it for information architecture: for example we prefer “My teams” not “Your teams.”</p>
+
             <h3>Tone</h3>
             <p>Use tone of voice communicate values and vision. Prefer words that connote values, such as "group" instead of "organization" and "we believe in collaboration" instead of "build a team." Communicate why we are building this, not just what we are building.</p>
+
             <h3>Capitalization and punctuation</h3>
             <p>In general, use sentence-style capitalization.</p>
             <p>Avoid periods after hyperlinks and emails.</p>
             <p>Using numerals instead of words.</p>
             <p>Fully capitalize buttons.</p>
+
             <h3>Global writing</h3>
             <p>Check supports Arabic, French, Portuguese, and English.</p>
             <p>We strive to build tools that anyone in the world can use.</p>
             <p>Use simple English to be easily understood by our international users.</p>
 
+            <h3>Further reading</h3>
+            <p>Refer to the <a href="https://material.io/guidelines/style/writing.html">Material guidelines on writing</a>.</p>
+          </StyledInset>
+        </StyledSection>
 
+        <StyledSection>
+
+          <StyledInset>
             <h2>Structural overview</h2>
+            <shared.Row>
+              <div style={{ width: '400px', flexShrink: 0 }}>
+                <p>AppBar</p>
+                <p>Main icon</p>
+                <p>My avatar</p>
+                <p>“Me” menu</p>
+                <p>Title</p>
+                <p>Drawer</p>
+                <p>Body</p>
+                <p>Report</p>
+                <p>Metadata row</p>
+                <p>Actions menu</p>
+                <p>Source</p>
+                <p>Metadata row</p>
+                <p>Actions menu</p>
+                <p>Footer</p>
+              </div>
 
-            <p>AppBar</p>
-            <p>Main icon</p>
-            <p>My avatar</p>
-            <p>“Me” menu</p>
-            <p>Title</p>
-            <p>Drawer</p>
-            <p>Body</p>
-            <p>Report</p>
-            <p>Metadata row</p>
-            <p>Actions menu</p>
-            <p>Source</p>
-            <p>Metadata row</p>
-            <p>Actions menu</p>
-            <p>Footer</p>
+              <div>
+                <img src="http://placehold.it/500x500" />
+              </div>
+            </shared.Row>
+          </StyledInset>
 
+        </StyledSection>
 
+        <StyledSection>
+          <StyledInset>
             <h3>Body</h3>
             <p>The layout should always have at least 2 units of padding on the bottom, so no body content ever touches the bottom row of the screen (except flush footers).</p>
 
@@ -129,7 +188,7 @@ class App extends Component {
             <p>Tooltips should be fewer than 5 words, and not show rich multi-line or multimedia information.</p>
 
             <h3>Blank State</h3>
-            <p>There are two ways to deal with blank states: Displaying or avoiding</p>
+            <p>There are at least two ways to deal with blank states: Displaying or avoiding.</p>
             <p>Displaying blank state: you need to consider to be clear and welcoming in the same time, or just go simply with a copy like "No activity yet"</p>
             <p>Avoiding blank state: Show the user what kind of content can be added, small tips to use the platform, remember to keep it brief.</p>
 
@@ -149,13 +208,41 @@ class App extends Component {
             <h3>Flat button</h3>
             <p>Use by default for app behaviors.</p>
 
+            <FlatButton label="Add task" />
+
             <h3>Raised button</h3>
+
             <p>Use raised buttons in a busy space where there are competing calls to action, or the button could be missed by the user.</p>
+
+            <RaisedButton label="Save" />
+
+            <p>If there are multiple possible buttons for a given interaction, one should be more visually prominent with the <code>primary</code> prop.</p>
+
+            <shared.Row>
+              <shared.Offset>
+                <RaisedButton label="Cancel" />
+              </shared.Offset>
+              <RaisedButton primary label="Save" />
+            </shared.Row>
 
             <h3>Big button</h3>
             <p>In Check we use big buttons on the sign in page, to show our different way to sign in.</p>
 
             <h3>Forms</h3>
+
+            <div>
+              <TextField
+                floatingLabelText="Hello world"
+              />
+            </div>
+
+            <div>
+              <TextField
+                floatingLabelText="Hello world"
+                errorText="I'm sorry Dave"
+              />
+            </div>
+
 
             <h4>Labels</h4>
             <p>Labels describe the purpose of text input elements. There are different types of labels (floating or Fixed), it's important that every text field have a label.</p>
@@ -233,6 +320,15 @@ class App extends Component {
             <h3>Filter/sort</h3>
             <p>Filtering and sorting should apply immediately.</p>
             <p>The total number of items hidden by filters should be indicated.</p>
+
+            <IconSearch />
+            <IconInsertPhoto />
+            <IconLink />
+            <IconMoreHoriz />
+            <IconArrowBack />
+            <KeyboardArrowRight />
+            <IconDelete />
+            <IconEdit />
 
           </StyledInset>
         </StyledSection>

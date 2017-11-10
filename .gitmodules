@@ -1,0 +1,3 @@
+[submodule "src/lib/check-web"]
+	path = src/lib/check-web
+	url = git@github.com:meedan/check-web.git
