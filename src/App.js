@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { injectGlobal } from 'styled-components';
 import logo from './meedan-white.svg';
 import * as shared from './lib/check-web/src/app/styles/js/shared';
+import { stripUnit, rgba } from 'polished';
 
 // Icons
 import IconSearch from 'material-ui/svg-icons/action/search';
@@ -57,13 +58,20 @@ injectGlobal`
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   }
 
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300');
+
   code {
-    font-size: 1.2em;
-    background-color: ${shared.black05};
-    padding: 2px 4px;
-    border-radius: 4px;
     font-weight: 600;
+    font-family: "Roboto Mono", monospace;
   }
+
+  h5 {
+    text-transform: uppercase;
+    margin-bottom: ${shared.units(1)};
+    padding-bottom: ${shared.units(1)};
+    border-bottom: 1px solid ${shared.black05};
+  }
+
 `;
 
 const StyledLogo = styled.img`
@@ -88,6 +96,7 @@ const StyledSwatch = styled.div`
   padding: ${shared.units(1)};
   border-radius: ${shared.defaultBorderRadius};
   flex-shrink: 0;
+  margin: 0 ${shared.units(1)} ${shared.units(1)} 0;
   &::before, &::after {
     content: "${props => props.colorName}";
     display: block;
@@ -105,14 +114,44 @@ const StyledAvatar = styled.div`
   width: ${props => props.size};
   height: ${props => props.size};
   background-color: ${shared.black16};
-  padding: ${shared.units(1)};
   border-radius: ${props => (props.round ? '100%' : '2px')};
   flex-shrink: 0;
-  margin-right: ${shared.units(1)};
-  &::before, &::after {
-    content: ${props => (props.round ? 'Member' : 'Source')};;
+  align-self: flex-start;
+  margin: ${shared.units(3)} ${shared.units(10)} ${shared.units(3)} 0;
+  font: ${shared.caption};
+  position: relative;
+  &::before {
+    content: "${props => (props.label)}";
     display: block;
+    color: ${shared.black54};
+    margin-top: -24px;
   }
+`;
+
+const StyledPaper = styled(Paper)`
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  margin-right: ${shared.units(1)};
+  font: ${shared.caption};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: ${shared.black54};
+`;
+
+const StyledExampleGrid = styled.div`
+  display: grid;
+  grid-template-columns: 8px 8px 8px;
+  grid-gap: 8px;
+  background-color: pink;
+  div {
+    border: 1px solid red;
+  }
+`;
+
+const StyledAppLayout = styled.div`
+
 `;
 
 class App extends Component {
@@ -129,6 +168,9 @@ class App extends Component {
             <p>
               2017 November
             </p>
+            <p>
+              <code>check-web@eee4ace0</code> • <code>material-ui@0.18.7</code>
+            </p>
           </StyledInset>
         </StyledSection>
 
@@ -141,6 +183,17 @@ class App extends Component {
         <StyledSection>
           <StyledInset>
             <h2>Structural overview</h2>
+
+            <div className="wrapper">
+              <header className="header">My header</header>
+              <aside className="sidebar">Sidebar</aside>
+              <article className="content">
+                <h1>2 column, header and footer</h1>
+                <p>This example uses line-based positioning, to position the header and footer, stretching them across the grid.</p>
+              </article>
+              <footer className="footer">My footer</footer>
+            </div>
+
             <shared.Row>
               <div style={{ width: '400px', flexShrink: 0 }}>
                 <p>AppBar</p>
@@ -405,15 +458,20 @@ class App extends Component {
 
             <p>Avatars can appear in three sizes, and be square (sources) or round (for members.)</p>
 
-            <shared.Row>
+            <h5>Users</h5>
+            <shared.Row wrap>
               {/* Todo: replace this with the real avatar component */}
-              <StyledAvatar round size={shared.avatarSizeLarge} />
-              <StyledAvatar round size={shared.avatarSize} />
-              <StyledAvatar round size={shared.avatarSizeSmall} />
-              <StyledAvatar round size={shared.avatarSizeExtraSmall} />
-              <StyledAvatar square size={shared.avatarSizeLarge} />
-              <StyledAvatar square size={shared.avatarSize} />
-              <StyledAvatar round size={shared.avatarSizeSmall} />
+              <StyledAvatar round label="avatarSizeLarge" size={shared.avatarSizeLarge} />
+              <StyledAvatar round label="avatarSize" size={shared.avatarSize} />
+              <StyledAvatar round label="avatarSizeSmall" size={shared.avatarSizeSmall} />
+              <StyledAvatar round label="avatarSizeExtraSmall" size={shared.avatarSizeExtraSmall} />
+            </shared.Row>
+
+            <h5>Sources</h5>
+            <shared.Row wrap>
+              <StyledAvatar square label="avatarSizeLarge" size={shared.avatarSizeLarge} />
+              <StyledAvatar square label="avatarSize" size={shared.avatarSize} />
+              <StyledAvatar square label="avatarSizeSmall" size={shared.avatarSizeSmall} />
             </shared.Row>
 
           </StyledInset>
@@ -471,11 +529,42 @@ class App extends Component {
         </StyledSection>
 
         <StyledSection>
+          <StyledInset>
+            <h3>Paper</h3>
+            <p>Paper has a white background and can have a shadow.</p>
+            <p>Material design allows 5 shadow heights; we only use three of them.</p>
+            <shared.Row>
+              <StyledPaper zDepth={1}>Level 1</StyledPaper>
+              <StyledPaper zDepth={2}>Level 2</StyledPaper>
+              <StyledPaper zDepth={4}>Level 4</StyledPaper>
+            </shared.Row>
+          </StyledInset>
+        </StyledSection>
+
+        <StyledSection>
+          <StyledInset>
+            <h3>Cards</h3>
+            <p>Try to group lists of content in cards.</p>
+            <p>Cards are a type of Material UI <code>Paper</code> that can have a header, body and bottom <code>actions</code>.</p>
+
+
+          </StyledInset>
+        </StyledSection>
+
+        <StyledSection>
 
           <StyledInset>
             <h3>Tab navigation</h3>
             <p>Tab-based navigation should flow in a logical order.</p>
             <p>Test with appropriate accessibility software, not just browsers.</p>
+
+            <Card>
+              <Tabs>
+                <Tab label="One"><shared.Text center font={shared.caption}>One</shared.Text></Tab>
+                <Tab label="Two"><shared.Text center font={shared.caption}>Two</shared.Text></Tab>
+                <Tab label="Three"><shared.Text center font={shared.caption}>Three</shared.Text></Tab>
+              </Tabs>
+            </Card>
           </StyledInset>
         </StyledSection>
 
@@ -517,10 +606,31 @@ class App extends Component {
             <h3>The Ink ripple</h3>
           </StyledInset>
         </StyledSection>
+
         <StyledSection>
           <StyledInset>
             <h3>The 8px grid</h3>
           </StyledInset>
+          <p>The 8px grid is an essential point of standardization.</p>
+          <p>All horizontal spacing (with some rare exceptions) use 8px increments.</p>
+          <p>The vertical baseline allows 4px increments.</p>
+
+          <StyledExampleGrid>
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+          </StyledExampleGrid>
+        </StyledSection>
+
+        <StyledSection>
+          <StyledInset>
+            <h3>Transitions</h3>
+          </StyledInset>
+
+          <p>In general, we prefer very fast transitions.</p>
         </StyledSection>
 
         <StyledSection>
