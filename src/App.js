@@ -80,8 +80,12 @@ const StyledLogo = styled.img`
 `;
 
 const StyledInset = styled.div`
-  padding: 32px 16px;
-  max-width: 600px;
+  padding: 32px;
+  border-right: 1px solid ${shared.black05};
+  ${shared.mediaQuery.desktop`
+    max-width: ${shared.units(60)};
+  `}
+  position: relative;
 `;
 
 const StyledSection = styled.section`
@@ -150,8 +154,27 @@ const StyledExampleGrid = styled.div`
   }
 `;
 
-const StyledAppLayout = styled.div`
+const StyledNote = styled.aside`
+  font: ${shared.caption};
 
+  ${shared.mediaQuery.desktop`
+    position: absolute;
+    right: -${shared.unitless(27)}px;
+    width: ${shared.units(25)};
+  `}
+
+  a {
+    text-decoration: none;
+    color: ${shared.black54};
+  }
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    li {
+      margin-top: ${shared.units(2)};
+      line-height: 1.2;
+    }
+  }
 `;
 
 class App extends Component {
@@ -176,52 +199,19 @@ class App extends Component {
 
         <StyledSection>
           <StyledInset>
+
             <p>This guide is intended as an extension of the <a href="https://material.io/guidelines">Material UI Guidelines</a> as implemented by the <a href="http://material-ui.com">Material-UI React library</a>, developed in tandem with the <a href="https://docs.google.com/spreadsheets/d/1u8Dio9qLhQJRAFcsvZ04rXcM2_ZH5s_iuX9SpIH-VBY/edit#gid=1985553520">2017 Check copywriting audit</a>.</p>
           </StyledInset>
         </StyledSection>
 
         <StyledSection>
           <StyledInset>
-            <h2>Structural overview</h2>
-
-            <div className="wrapper">
-              <header className="header">My header</header>
-              <aside className="sidebar">Sidebar</aside>
-              <article className="content">
-                <h1>2 column, header and footer</h1>
-                <p>This example uses line-based positioning, to position the header and footer, stretching them across the grid.</p>
-              </article>
-              <footer className="footer">My footer</footer>
-            </div>
-
-            <shared.Row>
-              <div style={{ width: '400px', flexShrink: 0 }}>
-                <p>AppBar</p>
-                <p>Main icon</p>
-                <p>My avatar</p>
-                <p>“Me” menu</p>
-                <p>Title</p>
-                <p>Drawer</p>
-                <p>Body</p>
-                <p>Report</p>
-                <p>Metadata row</p>
-                <p>Actions menu</p>
-                <p>Source</p>
-                <p>Metadata row</p>
-                <p>Actions menu</p>
-                <p>Footer</p>
-              </div>
-
-              <div>
-                <img src="http://placehold.it/500x500" />
-              </div>
-            </shared.Row>
-          </StyledInset>
-        </StyledSection>
-
-        <StyledSection>
-          <StyledInset>
             <h2>Colors</h2>
+            <StyledNote>
+              <ul>
+                <li>Colors and all standard design "tokens" live in <a href="https://github.com/meedan/check-web/blob/develop/src/app/styles/js/shared.js">shared.js</a>.</li>
+              </ul>
+            </StyledNote>
             <shared.Row wrap>
               <StyledSwatch color={shared.checkBlue} colorName="checkBlue" />
               <StyledSwatch invert color={shared.black02} colorName="black02" />
@@ -238,10 +228,20 @@ class App extends Component {
         </StyledSection>
         <StyledSection>
           <StyledInset>
+            <StyledNote>
+              <ul>
+                <li>Typographic settings are defined as tokens in <a href="https://github.com/meedan/check-web/blob/develop/src/app/styles/js/shared.js">shared.js</a> with a CSS shorthand style that combines the font-family, line-height and weight.</li>
+                <li />
+
+                <li>So to implement a "title" style you could use: <code>{'font: \$\{title\};'}</code></li>
+
+                <li>Typically for styling text we'd create a styled component and pass a font token (eg. <code>body2</code>) into the tagged template literal (eg between the backticks) as an interpolated expression.
+                </li>
+
+                <li>In <a href="https://github.com/meedan/check-web/blob/develop/src/app/styles/js/shared.js">shared.js</a> there is also a <code>Text</code> which accepts a <code>font</code> prop.</li>
+              </ul>
+            </StyledNote>
             <h2>Typography</h2>
-            <shared.Text font={shared.display3}>display3</shared.Text>
-            <shared.Text font={shared.display2}>display2</shared.Text>
-            <shared.Text font={shared.display1}>display1</shared.Text>
             <shared.Text font={shared.headline}>headline</shared.Text>
             <shared.Text font={shared.title}>title</shared.Text>
             <shared.Text font={shared.subheading2}>subheading2</shared.Text>
@@ -249,19 +249,41 @@ class App extends Component {
             <shared.Text font={shared.body2}>body2</shared.Text>
             <shared.Text font={shared.body1}>body1</shared.Text>
             <shared.Text font={shared.caption}>caption</shared.Text>
-            <shared.Text font={shared.tiny}>tiny</shared.Text>
+            <p>The font is Roboto, which is served as a webfont. The primary font size is <code>body2</code> which is 14px with a line-height of 24px.</p>
           </StyledInset>
+
         </StyledSection>
         <StyledSection>
           <StyledInset>
-            <h3>Body</h3>
-            <p>The layout should always have at least 2 units of padding on the bottom, so no body content ever touches the bottom row of the screen (except flush footers).</p>
 
-            <h3>AppBar (Header)</h3>
-            <p>The icon of the current team context (if any) should appear.</p>
-            <p>A title should be present to describe the current page.</p>
-            <p>A team search affordance should appear prominently.</p>
-            <p>Your own avatar should appear prominently.</p>
+            <h3>Header (AppBar)</h3>
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/app-bar"><code>AppBar</code></a></li>
+                <li><a href="https://github.com/meedan/check-web/blob/develop/src/app/components/Header.js">Check <code>Header</code></a></li>
+              </ul>
+            </StyledNote>
+            <p>The icon of the current team context (if any) should appear and a title should be present to describe the current page.</p>
+            <p>A team search affordance should appear prominently. and the signed-in person's avatar should appear prominently.</p>
+
+            <h3>Body</h3>
+            <StyledNote>
+              <ul>
+                <li><a href="https://github.com/meedan/check-web/blob/develop/src/app/styles/js/shared.js">Check <code>ContentColumn</code></a></li>
+              </ul>
+            </StyledNote>
+            <p>The layout should always have at least 2 units of padding on the bottom, so no body content ever touches the bottom row of the screen (except flush footers). We use <code>ContentColumn</code> when vertically-stacked content is needed.</p>
+
+            <h3>Sidebar (Drawer)</h3>
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/drawer"><code>Drawer</code></a></li>
+              </ul>
+            </StyledNote>
+            <p>There is a hidden sidebar which appears as a modal overlay.</p>
+
+            <h3>Footer</h3>
+            <p>In general do not use a footer inside the app. There is a text-only footer on the sign in page.</p>
 
           </StyledInset>
         </StyledSection>
@@ -269,6 +291,14 @@ class App extends Component {
         <StyledSection>
           <StyledInset>
             <h3>Menus</h3>
+
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/menu">Menu</a></li>
+                <li><a href="http://www.material-ui.com/#/components/icon-menu">IconMenu</a></li>
+                <li><a href="http://www.material-ui.com/#/components/dropdown-menu">Menu</a></li>
+              </ul>
+            </StyledNote>
 
             <p>Menu items may be disabled if not applicable to a certain context. Inactive menu items still appear in the menu, but they are visibly disabled (appear in a lighter shade of grey).</p>
 
@@ -279,8 +309,6 @@ class App extends Component {
                 <MenuItem disabled primaryText="Grumpy" />
               </Menu>
             </Paper>
-
-            <p>See the <a href="http://www.material-ui.com/#/components/menu">Material-UI API for Menus</a></p>
 
           </StyledInset>
         </StyledSection>
@@ -299,6 +327,12 @@ class App extends Component {
 
           <StyledInset>
             <h3>Verification status</h3>
+
+            <StyledNote>
+              <ul>
+                <li>Default statuses (text label and color) are defined at the API level and can be configured by team admins in the Check Admin section.</li>
+              </ul>
+            </StyledNote>
             <p>Status are very important part of the user experience on Check, as a collaborative verification platform, users change reports status from "UNSTARTED" to "IN PROGRESS" or "VERIFIED", status label the report.</p>
             <p>Statuses are one of the few things in Check that have a color, which is carefully chosen for usability purposes, not decoration.</p>
             <p>When it appears as a button, we capitalize it.</p>
@@ -312,20 +346,44 @@ class App extends Component {
             <p>Buttons direct users towards action easily and clearly. Capitalize all the buttons.</p>
 
             <h3>Links</h3>
+            <StyledNote>
+              <ul>
+                <li>For links within the app, use <code>Link</code> from react-router to prevent a full page reload.</li>
+                <li>For external links, use an <code>a</code> element with <code> target="_blank" rel="noopener noreferrer"</code>.</li>
+              </ul>
+            </StyledNote>
             <p>Links are sentence case.</p>
             <p>Links are used for secondary actions which open new views, not for app behaviors.</p>
             <p>Link color should be distinct from surrounding text.</p>
 
             <h3>Flat button</h3>
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/flat-button"><code>FlatButton</code></a></li>
+              </ul>
+            </StyledNote>
             <p>Use by default for app behaviors.</p>
 
             <FlatButton label="Add task" />
 
             <h3>Raised button</h3>
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/raised-button"><code>RaisedButton</code></a></li>
+              </ul>
+            </StyledNote>
 
             <p>Use raised buttons in a busy space where there are competing calls to action, or the button could be missed by the user.</p>
 
             <RaisedButton label="Save" />
+
+            <h3>Button Group</h3>
+
+            <StyledNote>
+              <ul>
+                <li>If there are multiple buttons, they'll need space between them — use a <code>Row</code> with <code>Offset</code>, found in <a href="https://github.com/meedan/check-web/blob/develop/src/app/styles/js/shared.js">shared.js</a>.</li>
+              </ul>
+            </StyledNote>
 
             <p>If there are multiple possible buttons for a given interaction, one should be more visually prominent with the <code>primary</code> prop.</p>
 
@@ -340,6 +398,11 @@ class App extends Component {
             <p>In Check we use big buttons on the sign in page, to show our different way to sign in.</p>
 
             <h3>IconButton with Tooltip</h3>
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/icon-button"><code>IconButton</code></a></li>
+              </ul>
+            </StyledNote>
             <p>An IconButton can have a tooltip.</p>
             <p>A tooltip is a hidden text that only appears if the user hovers over it. We use tooltips to explain a button or an action, but only when there is not room for regular helper text.</p>
             <p>Tooltips should be fewer than 5 words, and not show rich multi-line or multimedia information.</p>
@@ -357,6 +420,12 @@ class App extends Component {
         <StyledSection>
           <StyledInset>
             <h3>Forms</h3>
+
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/text-field"><code>TextField</code></a></li>
+              </ul>
+            </StyledNote>
 
             <p>In general use the float label pattern. Labels describe the purpose of text input elements. By "floating" they keep the size of the input to a minimum. </p>
 
@@ -400,6 +469,13 @@ class App extends Component {
 
 
             <h4> Helper text</h4>
+
+            <StyledNote>
+              <ul>
+                <li>This style of helper text is not provided by the Material UI library. Use a <code>div</code> with <code>caption</code> font in <code>black54</code>.</li>
+              </ul>
+            </StyledNote>
+
             <p>Helper text is optional copy that explains something in detail than the text field. On forms, errors appear in the same position. Helper text is always in a smaller fonts.</p>
 
             <div>
@@ -412,11 +488,16 @@ class App extends Component {
             </div>
 
             <h4>Errors</h4>
+
             <p>Communicate the error message in a human way to the user; why is it happening? Make it clear: is it a user-input error, or is it an app-error? Don't be afraid to use the word "error" to address an error.</p>
             <p>Communicate what should happen next: Make sure to address how user can resolve it or at least how to report it to team using a "Contact Human" link.</p>
             <p>When possible we put the validation message directly on the field in question. When the error relates to a combination of two fields, the validation message goes directly above the form. For example: when you type your password twice and it doesn't match, the error goes above the form instead of on both of the fields.</p>
-            <p>Errors should be red.</p>
 
+            <StyledNote>
+              <ul>
+                <li>Errors are in <code>alertRed</code>.</li>
+              </ul>
+            </StyledNote>
             <div>
               <TextField
                 floatingLabelText="Label text with no default value"
@@ -425,9 +506,17 @@ class App extends Component {
             </div>
 
             <h4>Validation timing</h4>
+
+            <StyledNote>
+              <ul>
+                <li>See the <a href="https://material.io/guidelines/patterns/errors.html#errors-usage">Material UI validation guidelines</a>.</li>
+              </ul>
+            </StyledNote>
+
             <p>When possible and logical, validate after a user interacts with a form element, for example after changing focus from password box to submit button, not after the form is submitted.</p>
 
             <h4>Form submission</h4>
+
             <p>There should always be a button that submits the form.</p>
             <p>When I press <code>return</code> the form submits.</p>
             <p>The form should pass basic validation to be submittable. The submit button should be disabled if the form can not be submitted.</p>
@@ -445,13 +534,19 @@ class App extends Component {
             <h4>Prevent lost data</h4>
             <p>Give a warning if a user is navigating away from an input with partially submitted data. When possible, cache partial form data in the user's browser.</p>
 
-            <p>See the <a href="https://material.io/guidelines/patterns/errors.html#errors-usage">Material UI validation guidelines</a>.</p>
           </StyledInset>
         </StyledSection>
 
         <StyledSection>
           <StyledInset>
             <h3>User names and avatars</h3>
+
+            <StyledNote>
+              <ul>
+                <li>Check's <a href="https://github.com/meedan/check-web/blob/develop/src/app/components/source/SourcePicture.js">SourcePicture</a> provides a standard way to display both User and Source avatars.</li>
+              </ul>
+            </StyledNote>
+
             <p>Generally user names should appear written out as full first and last name. User names should link to the profile page.</p>
 
             <p>Both user names and avatars should reveal a user tooltip in most contexts.</p>
@@ -488,9 +583,14 @@ class App extends Component {
 
           <StyledInset>
             <h3>Tags</h3>
-            <p>Clicking on the tag should always open a search in the same window for that tag.</p>
 
-            <p>Tags appear as Material design <em>Chips</em>.</p>
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/chip">Chip</a></li>
+              </ul>
+            </StyledNote>
+
+            <p>Clicking on the tag should always open a search in the same window for that tag. Tags appear as Material design <em>Chips</em>.</p>
 
             <Chip onRequestDelete>Super important</Chip>
           </StyledInset>
@@ -518,6 +618,11 @@ class App extends Component {
         <StyledSection>
           <StyledInset>
             <h3>Success messages</h3>
+            <StyledNote>
+              <ul>
+                <li>Check <a href="https://github.com/meedan/check-web/blob/develop/src/app/components/Message.js">Message</a></li>
+              </ul>
+            </StyledNote>
             <p>You don't have to use the word success in your success message.</p>
             <p>Try to guide the user to what's next.</p>
             <p>Links in user-generated content</p>
@@ -531,8 +636,12 @@ class App extends Component {
         <StyledSection>
           <StyledInset>
             <h3>Paper</h3>
-            <p>Paper has a white background and can have a shadow.</p>
-            <p>Material design allows 5 shadow heights; we only use three of them.</p>
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/paper"><code>Paper</code></a></li>
+              </ul>
+            </StyledNote>
+            <p>Paper is a low-level component that you might never see directly — usually Paper is part of a Card component. It is defined by having a white background and a shadow. Material design allows 5 shadow heights; we usually only use three of them.</p>
             <shared.Row>
               <StyledPaper zDepth={1}>Level 1</StyledPaper>
               <StyledPaper zDepth={2}>Level 2</StyledPaper>
@@ -544,10 +653,12 @@ class App extends Component {
         <StyledSection>
           <StyledInset>
             <h3>Cards</h3>
-            <p>Try to group lists of content in cards.</p>
-            <p>Cards are a type of Material UI <code>Paper</code> that can have a header, body and bottom <code>actions</code>.</p>
-
-
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/card"><code>Card</code></a></li>
+              </ul>
+            </StyledNote>
+            <p>We often content in cards. Cards structure Material UI <code>Paper</code> to have an (optional) header, body and (optional) bottom actions.</p>
           </StyledInset>
         </StyledSection>
 
@@ -555,6 +666,11 @@ class App extends Component {
 
           <StyledInset>
             <h3>Tab navigation</h3>
+            <StyledNote>
+              <ul>
+                <li><a href="http://www.material-ui.com/#/components/tabs"><code>Tabs</code></a></li>
+              </ul>
+            </StyledNote>
             <p>Tab-based navigation should flow in a logical order.</p>
             <p>Test with appropriate accessibility software, not just browsers.</p>
 
@@ -579,6 +695,11 @@ class App extends Component {
         <StyledSection>
 
           <StyledInset>
+            <StyledNote>
+              <ul>
+                <li>Filtering and Sorting is currently an aspect of the Check <a href="https://github.com/meedan/check-web/blob/develop/src/app/components/Search.js"><code>Search</code></a> component.</li>
+              </ul>
+            </StyledNote>
             <h3>Filter/sort</h3>
             <p>Filtering and sorting should apply immediately.</p>
             <p>The total number of items hidden by filters should be indicated.</p>
@@ -586,6 +707,15 @@ class App extends Component {
         </StyledSection>
         <StyledSection>
           <StyledInset>
+            <StyledNote>
+              <ul>
+                <li>To use one of these icons you have to first find it on the <a href="https://material.io/icons/">Material-UI icons</a> index and import it with the section name in the path.</li>
+
+                <li>When an icon is used as a button, use <code>IconButton</code> to achieve the ink ripple effect.</li>
+
+                <li>When used as a menu, use <code>IconMenu</code>.</li>
+              </ul>
+            </StyledNote>
             <h3>Icons</h3>
             <p>Whenever possible, icons from the official Material-UI icon set should be used.</p>
 
@@ -603,18 +733,32 @@ class App extends Component {
 
         <StyledSection>
           <StyledInset>
+            <StyledNote>
+              <ul>
+                <li>The Check ripple color is <code>highlightBlue</code>, as defined in the <code>MuiTheme</code>.</li>
+              </ul>
+            </StyledNote>
             <h3>The Ink ripple</h3>
+            <p>The ink ripple gives user feedback about where and when a component has been clicked or tapped.</p>
           </StyledInset>
+
         </StyledSection>
 
         <StyledSection>
           <StyledInset>
+            <StyledNote>
+              <ul>
+                <li><code>units(1)</code> returns <code>8px</code></li>
+                <li><code>unitless(1)</code>returns <code>8</code></li>
+                <li>The horizontal grid uses non-negative integers. The vertical grid uses half-steps (multiples of 4px) like <code>units(1.5)</code>. To do math or negative numbers, use <code>unitless()</code>.</li>
+              </ul>
+            </StyledNote>
             <h3>The 8px grid</h3>
+            <p>The 8px grid is an essential point of standardization.</p>
+            <p>All horizontal spacing (with some rare exceptions) use 8px increments.</p>
+            <p>The vertical baseline allows 4px increments.</p>
           </StyledInset>
-          <p>The 8px grid is an essential point of standardization.</p>
-          <p>All horizontal spacing (with some rare exceptions) use 8px increments.</p>
-          <p>The vertical baseline allows 4px increments.</p>
-
+          {/*
           <StyledExampleGrid>
             <div>A</div>
             <div>B</div>
@@ -622,21 +766,49 @@ class App extends Component {
             <div>D</div>
             <div>E</div>
             <div>F</div>
-          </StyledExampleGrid>
+          </StyledExampleGrid> */}
         </StyledSection>
 
         <StyledSection>
           <StyledInset>
+            <h3>Media queries</h3>
+            <StyledNote>
+              <ul>
+                <li><code>mediaQuery</code> <a href="https://github.com/meedan/check-web/blob/develop/src/app/styles/js/shared.js">shared.js</a></li>
+              </ul>
+            </StyledNote>
+            <p>Depending on the size of the viewport, we conditionally render different CSS, usually to create appropriate layouts for a given screen size. We make changes like this for mobile (448px), tablet (680px) and desktop sizes (800px).</p>
+            <p>Avoid removing functionality when space is limited — perfer reflowing the page with a column layout, wrapping text or truncating, if necessary.</p>
+          </StyledInset>
+        </StyledSection>
+
+        <StyledSection>
+          <StyledInset>
+
+            <StyledNote>
+              <ul>
+                <li><code>transitionSpeedFast</code></li>
+                <li><code>transitionSpeedDefault</code></li>
+                <li><code>transitionSpeedFast</code></li>
+                <li>in <a href="https://github.com/meedan/check-web/blob/develop/src/app/styles/js/shared.js">shared.js</a></li>
+              </ul>
+            </StyledNote>
             <h3>Transitions</h3>
+            <p>In general, we prefer very fast transitions which complete in 300 milliseconds or less. A "slow" transition is 500 milliseconds.</p>
           </StyledInset>
 
-          <p>In general, we prefer very fast transitions.</p>
         </StyledSection>
 
         <StyledSection>
           <StyledInset>
 
             <h2>Copywriting guidelines</h2>
+
+            <StyledNote>
+              <ul>
+                <li>Refer to the <a href="https://material.io/guidelines/style/writing.html">Material guidelines on writing</a>.</li>
+              </ul>
+            </StyledNote>
 
             <h3>Language</h3>
             <p>Keep it short.</p>
@@ -658,9 +830,6 @@ class App extends Component {
             <p>Check supports Arabic, French, Portuguese, and English.</p>
             <p>We strive to build tools that anyone in the world can use.</p>
             <p>Use simple English to be easily understood by our international users.</p>
-
-            <h3>Further reading</h3>
-            <p>Refer to the <a href="https://material.io/guidelines/style/writing.html">Material guidelines on writing</a>.</p>
           </StyledInset>
         </StyledSection>
 
