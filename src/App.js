@@ -1,10 +1,12 @@
+import logo from './meedan-white.svg';
+import logoCheck from './Check.png';
+import * as shared from './lib/check-web/src/app/styles/js/shared';
+
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import styled from 'styled-components';
 import { injectGlobal } from 'styled-components';
-import logo from './meedan-white.svg';
-import * as shared from './lib/check-web/src/app/styles/js/shared';
 import { stripUnit, rgba } from 'polished';
 
 // Icons
@@ -21,8 +23,6 @@ import IconEdit from 'material-ui/svg-icons/image/edit';
 import RaisedButton from 'material-ui/RaisedButton';
 import IconButton from 'material-ui/IconButton';
 import FlatButton from 'material-ui/FlatButton';
-import IconMenu from 'material-ui/IconMenu';
-import Drawer from 'material-ui/Drawer';
 
 // Menus
 import MenuItem from 'material-ui/MenuItem';
@@ -30,22 +30,11 @@ import Menu from 'material-ui/Menu';
 
 // Forms
 import TextField from 'material-ui/TextField';
-import { RadioButton, RadioButtonGroup } from 'material-ui/RadioButton';
-import DatePicker from 'material-ui/DatePicker';
 
 // Other components
 import { Card } from 'material-ui/Card';
-import CircularProgress from 'material-ui/CircularProgress';
-import Divider from 'material-ui/Divider';
 import { Tabs, Tab } from 'material-ui/Tabs';
-import AutoComplete from 'material-ui/AutoComplete';
-import Popover from 'material-ui/Popover';
-import Checkbox from 'material-ui/Checkbox';
-import Dialog from 'material-ui/Dialog';
 import Chip from 'material-ui/Chip';
-import { List, ListItem } from 'material-ui/List';
-import Avatar from 'material-ui/Avatar';
-import DropDownMenu from 'material-ui/DropDownMenu';
 import Paper from 'material-ui/Paper';
 
 // Internal
@@ -124,11 +113,30 @@ const StyledAvatar = styled.div`
   margin: ${shared.units(3)} ${shared.units(10)} ${shared.units(3)} 0;
   font: ${shared.caption};
   position: relative;
+
   &::before {
     content: "${props => (props.label)}";
     display: block;
     color: ${shared.black54};
     margin-top: -24px;
+  }
+
+  &.pro {
+    background-image: url('${logoCheck}');
+    background-size: contain;
+  }
+
+  .badge {
+    background-color: ${shared.opaqueBlack87};
+    border-radius: ${shared.borderWidthMedium};
+    color: ${shared.white};
+    font: ${shared.tiny};
+    line-height: 1.2;
+    padding: ${shared.units(0.25)} ${shared.units(0.5)};
+    position: absolute; 
+    right: -${shared.units(1)};
+    text-transform: uppercase;
+    top: ${shared.units(0.5)};
   }
 `;
 
@@ -142,16 +150,6 @@ const StyledPaper = styled(Paper)`
   align-items: center;
   justify-content: center;
   color: ${shared.black54};
-`;
-
-const StyledExampleGrid = styled.div`
-  display: grid;
-  grid-template-columns: 8px 8px 8px;
-  grid-gap: 8px;
-  background-color: pink;
-  div {
-    border: 1px solid red;
-  }
 `;
 
 const StyledNote = styled.aside`
@@ -243,7 +241,7 @@ class App extends Component {
             </StyledNote>
             <h2>Typography</h2>
             <shared.Text font={shared.headline}>headline</shared.Text>
-            <shared.Text font={shared.title}>title</shared.Text>
+            <shared.Text font={shared.title1}>title1</shared.Text>
             <shared.Text font={shared.subheading2}>subheading2</shared.Text>
             <shared.Text font={shared.subheading1}>subheading1</shared.Text>
             <shared.Text font={shared.body2}>body2</shared.Text>
@@ -265,6 +263,7 @@ class App extends Component {
             </StyledNote>
             <p>The icon of the current team context (if any) should appear and a title should be present to describe the current page.</p>
             <p>A team search affordance should appear prominently. and the signed-in person's avatar should appear prominently.</p>
+
 
             <h3>Body</h3>
             <StyledNote>
@@ -557,16 +556,23 @@ class App extends Component {
             <shared.Row wrap>
               {/* Todo: replace this with the real avatar component */}
               <StyledAvatar round label="avatarSizeLarge" size={shared.avatarSizeLarge} />
-              <StyledAvatar round label="avatarSize" size={shared.avatarSize} />
+              <StyledAvatar round label="avatarSizeDefault" size={shared.avatarSize} />
               <StyledAvatar round label="avatarSizeSmall" size={shared.avatarSizeSmall} />
               <StyledAvatar round label="avatarSizeExtraSmall" size={shared.avatarSizeExtraSmall} />
             </shared.Row>
 
-            <h5>Sources</h5>
+            <h5>Sources and Teams</h5>
             <shared.Row wrap>
               <StyledAvatar square label="avatarSizeLarge" size={shared.avatarSizeLarge} />
-              <StyledAvatar square label="avatarSize" size={shared.avatarSize} />
+              <StyledAvatar square label="avatarSizeDefault" size={shared.avatarSize} />
               <StyledAvatar square label="avatarSizeSmall" size={shared.avatarSizeSmall} />
+            </shared.Row>
+
+            <h5>Pro Teams</h5>
+
+            <p>Pro teams have a small badge in the corner.</p>
+            <shared.Row wrap>
+              <StyledAvatar square label="avatarSizeLarge" className="pro" size={shared.avatarSizeLarge}><span className="badge">PRO</span></StyledAvatar>
             </shared.Row>
 
           </StyledInset>
