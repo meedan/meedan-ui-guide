@@ -36,9 +36,7 @@ import { Card } from 'material-ui/Card';
 import { Tabs, Tab } from 'material-ui/Tabs';
 import Chip from 'material-ui/Chip';
 import Paper from 'material-ui/Paper';
-
-// Internal
-import EnhancedButton from 'material-ui/internal/EnhancedButton';
+import CircularProgress from 'material-ui/CircularProgress';
 
 injectGlobal`
   body {
@@ -231,7 +229,7 @@ class App extends Component {
                 <li>Typographic settings are defined as tokens in <a href="https://github.com/meedan/check-web/blob/develop/src/app/styles/js/shared.js">shared.js</a> with a CSS shorthand style that combines the font-family, line-height and weight.</li>
                 <li />
 
-                <li>So to implement a "title" style you could use: <code>{'font: \$\{title\};'}</code></li>
+                <li>So to implement a "title" style you could use: <code>{'font: $\{title\};'}</code></li>
 
                 <li>Typically for styling text we'd create a styled component and pass a font token (eg. <code>body2</code>) into the tagged template literal (eg between the backticks) as an interpolated expression.
                 </li>
@@ -689,6 +687,27 @@ class App extends Component {
             </Card>
           </StyledInset>
         </StyledSection>
+
+        <StyledSection>
+          <StyledInset>
+            <StyledNote>
+              <ul>
+                <li>This should appear in context where an object is loading.</li>
+                <li>Small is <code>thickness={2} size={20}</code></li>
+                <li>Medium is <code>thickness={3} size={35}</code></li>
+              </ul>
+            </StyledNote>
+            <h3>Circular progress indicator</h3>
+
+            <p>Small</p>
+            <CircularProgress thickness={2} size={20} />
+
+            <p>Medium</p>
+            <CircularProgress thickness={3} size={35} />
+
+          </StyledInset>
+        </StyledSection>
+
 
         <StyledSection>
 
