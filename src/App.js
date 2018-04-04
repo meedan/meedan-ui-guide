@@ -102,6 +102,14 @@ const StyledSwatch = styled.div`
 `;
 
 const StyledBlankState = styled.div`
+  font: ${shared.headline};
+  color: ${shared.black38};
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 `;
 
 const StyledAvatar = styled.div`
@@ -1069,7 +1077,8 @@ class App extends Component {
 
             <Card>
               <StyledBlankState>
-                No activity yet
+                Add a link or claim <br />
+                to start verifying
               </StyledBlankState>
             </Card>
 
