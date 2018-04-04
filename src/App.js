@@ -412,22 +412,32 @@ class App extends Component {
         </StyledSection>
 
         <StyledSection>
-
           <StyledInset>
-            <h3>Blank State</h3>
+
+            <h3>Blank state text</h3>
+
+            <StyledNote>
+              <ul>
+                <li>
+                  This is one of the few cases where we use the lowest-contrast
+                  text, <code>black38</code>, but we pair it with the largest
+                  font style, <code>headline</code>.
+                </li>
+              </ul>
+            </StyledNote>
+
             <p>
-              There are at least two ways to deal with blank states: Displaying
-              or avoiding.
+              The text should be vertically and horizontally centered in the
+              container where the content would appear.
             </p>
-            <p>
-              Displaying blank state: you need to consider to be clear and
-              welcoming in the same time, or just go simply with a copy like "No
-              activity yet"
-            </p>
-            <p>
-              Avoiding blank state: Show the user what kind of content can be
-              added, small tips to use the platform, remember to keep it brief.
-            </p>
+
+            <Card>
+              <StyledBlankState>
+                Add a link or claim <br />
+                to start verifying
+              </StyledBlankState>
+            </Card>
+
           </StyledInset>
         </StyledSection>
 
@@ -1066,21 +1076,6 @@ class App extends Component {
 
             <p>Medium</p>
             <CircularProgress thickness={3} size={35} />
-
-          </StyledInset>
-        </StyledSection>
-
-        <StyledSection>
-          <StyledInset>
-            <StyledNote />
-            <h3>Blank state text</h3>
-
-            <Card>
-              <StyledBlankState>
-                Add a link or claim <br />
-                to start verifying
-              </StyledBlankState>
-            </Card>
 
           </StyledInset>
         </StyledSection>
