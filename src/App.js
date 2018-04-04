@@ -196,7 +196,7 @@ class App extends Component {
 
           <StyledInset>
             <p>
-              2017 November
+              2018 April
             </p>
             <p>
               <code>check-web@eee4ace0</code> • <code>material-ui@0.18.7</code>
